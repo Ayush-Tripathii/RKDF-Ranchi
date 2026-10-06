@@ -1,0 +1,57 @@
+<?php
+/**
+ * RKDF University — Gallery Page
+ */
+require_once dirname(__DIR__) . '/config/config.php';
+require_once dirname(__DIR__) . '/includes/functions.php';
+
+$page_title     = 'Campus Gallery — ' . SITE_NAME;
+$page_meta_desc = 'Explore photos of RKDF University campus life — convocations, cultural festivals, academic blocks, labs and sports.';
+
+require_once dirname(__DIR__) . '/includes/header.php';
+?>
+
+<!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
+<section class="inner-page-hero">
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative mx-auto max-w-5xl px-6 text-center">
+    <!-- Breadcrumb Badge -->
+    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+      <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
+      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
+      <span class="text-white/90">Campus Gallery</span>
+    </div>
+
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
+      Moments from <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">campus life</em>.
+    </h1>
+
+    <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
+      Glimpses of convocations, cultural celebrations, academic life and memories at RKDF University.
+    </p>
+
+    <!-- Badges -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
+      <span class="hero-pill px-4 py-2 rounded-full">
+        <?= lucide_icon('camera', 'w-3.5 h-3.5 text-gold shrink-0') ?> Convocations &amp; Events
+      </span>
+      <span class="hero-pill px-4 py-2 rounded-full">
+        <?= lucide_icon('sparkles', 'w-3.5 h-3.5 text-gold shrink-0') ?> Cultural Festivals
+      </span>
+      <span class="hero-pill px-4 py-2 rounded-full">
+        <?= lucide_icon('trophy', 'w-3.5 h-3.5 text-gold inline-block shrink-0') ?> Sports &amp; Student Clubs
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<?php require_once dirname(__DIR__) . '/sections/gallery.php'; ?>
+
+<!-- Student Life Highlights -->
+<?php require_once dirname(__DIR__) . '/sections/campus_life.php'; ?>
+
+<?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>
+<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>

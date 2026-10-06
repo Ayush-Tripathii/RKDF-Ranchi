@@ -1,0 +1,557 @@
+{
+    "board_of_governors": {
+        "tables": [
+            [
+                [
+                    "Name",
+                    "Designation",
+                    ""
+                ],
+                [
+                    "Dr. Sadhnakapoor",
+                    "Chancellor  ",
+                    "RKDF University Ranchi"
+                ],
+                [
+                    "Prof. (Dr.) S. Chatterjee",
+                    "Vice Chancellor",
+                    "RKDF University Ranchi"
+                ],
+                [
+                    "Shri Rahul Kumar Purwar, IAS",
+                    " Secretary to Government",
+                    "Dept. of Higher & Technical Education, Jharkhand"
+                ],
+                [
+                    "Dr. Shruti Kapoor  ",
+                    "Chancellor  ",
+                    "Dr. A. P. J Abdul Kalam University, Indore "
+                ],
+                [
+                    "Mr.Siddharth Kapoor",
+                    "Chancellor",
+                    "Shri Satya Sai University of Technology & Medical Science, Sehore"
+                ],
+                [
+                    "Dr. Manoj Chopra  ",
+                    "Dean, Faculty of Engineering & Technology",
+                    "SRK University, Bhopal"
+                ],
+                [
+                    "Dr. Mukesh Tiwari",
+                    "Vice Chancellor  ",
+                    "Shri Satya Sai University of Technology & Medical Science, Sehore"
+                ],
+                [
+                    "Dr. Sunil Patil  ",
+                    "Examination Controller",
+                    "RKDF University, Bhopal"
+                ],
+                [
+                    "Dr. B.N. Singh  ",
+                    "Director Management  ",
+                    "RKDF University, Bhopal"
+                ],
+                [
+                    "Mr. Manish Dawani  ",
+                    "Finance Expert",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Amit Kumar Pandey  ",
+                    "Registrar",
+                    "RKDF University, Ranchi"
+                ]
+            ]
+        ],
+        "headings": []
+    },
+    "board_members": {
+        "tables": [
+            [
+                [
+                    "Name",
+                    "Designation",
+                    ""
+                ],
+                [
+                    "Prof. (Dr.) S. Chatterjee",
+                    "Vice Chancellor",
+                    "RKDF University Ranchi"
+                ],
+                [
+                    "Secretary to Government",
+                    "Dept. of Higher & Technical Education",
+                    "Jharkhand"
+                ],
+                [
+                    "Dr. B. N. Singh",
+                    "Director General, Management",
+                    "RKDF University, Bhopal"
+                ],
+                [
+                    "Dr. Sunil Patil",
+                    "Examination Controller",
+                    "RKDF University, Bhopal"
+                ],
+                [
+                    "Dr. Amit Kumar Pandey",
+                    "Registrar",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Nimesh Mehta",
+                    "HOD, Mechanical Engineering",
+                    "Bhabha University, Bhopal"
+                ],
+                [
+                    "Dr. Anita Kumari",
+                    "DSW",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. KoomkoomKhawas",
+                    "Examination Controller",
+                    "RKDF University Ranchi"
+                ],
+                [
+                    "Dr. SheetalTopno",
+                    "Dean Academics",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. SantanuBiswas",
+                    "Director Research",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Rajeev Ranjan",
+                    "Dean Engineering",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Nilu Kumar",
+                    "Assistant Registrar (Examination)",
+                    "RKDF University, Ranchi"
+                ]
+            ]
+        ],
+        "headings": []
+    },
+    "board_of_studies": {
+        "tables": [
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. FedelicAshishToppo",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. Rajeev ranjan",
+                    "Member"
+                ],
+                [
+                    "Mr. ManabDey",
+                    "Member"
+                ],
+                [
+                    "Mr. Milan Nandi",
+                    "Member"
+                ],
+                [
+                    "Dr. Deepak Kumar",
+                    "External Academics Member"
+                ],
+                [
+                    "Mr. Kishor",
+                    "External Academics Member"
+                ],
+                [
+                    "Ms. KritikaModak",
+                    "External Academics Member"
+                ],
+                [
+                    "Mr. KanchanDey",
+                    "Industry expert"
+                ],
+                [
+                    "Mr. Subashish Dash",
+                    "Industry expert"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. SnehaPandey",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. NiluKumari",
+                    "Member"
+                ],
+                [
+                    "Dr. Mainak Banerjee",
+                    "Member"
+                ],
+                [
+                    "Dr. KoomkoomKhawas",
+                    "Member"
+                ],
+                [
+                    "Dr. VinayOraon",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Dibyarupa pal",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. Niranjan Mishra",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. DeeptiKumari",
+                    "Member"
+                ],
+                [
+                    "Mr. Rajeev kumar",
+                    "Member"
+                ],
+                [
+                    "Ms. PriyankaPandey",
+                    "Member"
+                ],
+                [
+                    "Dr. CSP Lujun",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Dharmendra Singh",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. SoumenDey",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. AbhishekWaibhaw",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. SheetalTopno",
+                    "Member"
+                ],
+                [
+                    "Dr. Anita Kumari",
+                    "Member"
+                ],
+                [
+                    "Dr. Nibha Rani",
+                    "Member"
+                ],
+                [
+                    "Dr. RenukaPoddar",
+                    "Member"
+                ],
+                [
+                    "Dr. JyotiPrakash",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Prabhat Kumar Singh",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Jagdish Kumar Mahto",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. Somnath Roy Choudhary",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. Baljit Singh Kalsi",
+                    "Member"
+                ],
+                [
+                    "Dr. Shilpi Bose",
+                    "Member"
+                ],
+                [
+                    "Dr. Pankaj Chatterjee",
+                    "Member"
+                ],
+                [
+                    "Dr. ArchanaAtish",
+                    "Member"
+                ],
+                [
+                    "Ms. Manirathi",
+                    "Member"
+                ],
+                [
+                    "Dr. Nitish Bhatia",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. PranayParashar",
+                    "External Academics Member"
+                ],
+                [
+                    "Mrs. Ratna Singh",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. Anita Kumari",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. LalitaKumari",
+                    "Member"
+                ],
+                [
+                    "Dr. SheetalTopno",
+                    "Member"
+                ],
+                [
+                    "Dr. Somanth Roy Choudhary",
+                    "Member"
+                ],
+                [
+                    "Dr. Umesh Kumar Saxena",
+                    "Member"
+                ],
+                [
+                    "Dr. Piyushbala",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. B P Sinha",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. SantanuBiswas",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. ArunMaity",
+                    "Member"
+                ],
+                [
+                    "Dr. Prakash Kumar sahoo",
+                    "Member"
+                ],
+                [
+                    "Dr. Subhranath",
+                    "Member"
+                ],
+                [
+                    "Dr. Jayanta Mete",
+                    "External Academics Member"
+                ],
+                [
+                    "Prof. PrakashBiswas",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. Amitra S Chakraborty",
+                    "Chairperson"
+                ],
+                [
+                    "Mr. RishabhPandey",
+                    "Member"
+                ],
+                [
+                    "Ms. AmitJha",
+                    "Member"
+                ],
+                [
+                    "Ms. PoojaSoni",
+                    "Member"
+                ],
+                [
+                    "Dr. SangeetaLaha",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Munan Ray",
+                    "External Academics Member"
+                ]
+            ],
+            [
+                [
+                    "Name",
+                    "Designation"
+                ],
+                [
+                    "Dr. Rajeev Ranjan",
+                    "Chairperson"
+                ],
+                [
+                    "Dr. Niranjan Mishra",
+                    "Member"
+                ],
+                [
+                    "Mr. BRP Singh",
+                    "Member"
+                ],
+                [
+                    "Mr. Deepak Kumar Gupta",
+                    "Member"
+                ],
+                [
+                    "Mr. PrasoonJha",
+                    "Member"
+                ],
+                [
+                    "Mr. Harshit Kumar",
+                    "Member"
+                ],
+                [
+                    "Ms. Shubhangnidey",
+                    "Member"
+                ],
+                [
+                    "Ms. KhusbooKumari",
+                    "Member"
+                ],
+                [
+                    "Ms. KritiVerma",
+                    "Member"
+                ],
+                [
+                    "Dr. M K Paswan",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Subhash Chandra Yadav",
+                    "External Academics Member"
+                ],
+                [
+                    "Dr. Sumit Kumar pandey",
+                    "External Academics Member"
+                ]
+            ]
+        ],
+        "headings": []
+    },
+    "academic_council_members": {
+        "tables": [
+            [
+                [
+                    "Name",
+                    "Designation",
+                    ""
+                ],
+                [
+                    "Prof. (Dr.) S. Chatterjee  ",
+                    "Vice Chancellor  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Amit Kumar Pandey",
+                    "Registrar  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Prof. (Dr.) Taposh Ghoshal  ",
+                    "Principal Mentor  ",
+                    "Astra Knowledge Foundation, Ranchi"
+                ],
+                [
+                    "Dr. Tanusree Dutta  ",
+                    "Professor  ",
+                    "Indian Institute of Management, Ranchi"
+                ],
+                [
+                    "Mr.Abhijeet Ghosh  ",
+                    "Former CMD, HEC & Former Director (Mining)  ",
+                    "Hindustan Corporation Ltd."
+                ],
+                [
+                    "Prof. Subhash Chandra Yadav  ",
+                    "HOD, Dept. of CSE  ",
+                    "Central University of Jharkhand, Ranchi"
+                ],
+                [
+                    "Dr. Anita Kumari  ",
+                    "Dean Student’s Welfare  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Koomkoom Khawas  ",
+                    "Controller of Examinations  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Santanu Biswas  ",
+                    "Director Research  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Rajeev Ranjan  ",
+                    "Dean Engineering  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Sneha Pandey  ",
+                    "Dean, Life Sciences  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Sheetal Topno  ",
+                    "Dean Academics  ",
+                    "RKDF University, Ranchi"
+                ],
+                [
+                    "Dr. Fedelic Ashish Topoo  ",
+                    "Principal Pharmaceutical Sciences  ",
+                    "RKDF University, Ranchi"
+                ]
+            ]
+        ],
+        "headings": []
+    }
+}
