@@ -320,6 +320,149 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
+    <!-- ==================== CORPORATE RECRUITERS SHOWCASE ==================== -->
+    <div class="section-block" id="recruiters">
+      <div class="rkdf-section-header">
+        <div>
+          <span class="rkdf-section-tag">
+            <?= lucide_icon('building-2', 'w-3.5 h-3.5') ?> Corporate Ecosystem
+          </span>
+          <h3 class="rkdf-section-title">Our Esteemed Corporate Recruiters</h3>
+          <p class="rkdf-section-desc">Leading multinational technology giants, pharmaceutical corporations, BFSI conglomerates, and hospitality brands hiring from RKDF University.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 items-center">
+        <?php
+        $recruiters = [
+            ['name' => 'Infosys', 'logo' => 'infosys.jpg'],
+            ['name' => 'Cipla', 'logo' => 'cipla.jpg'],
+            ['name' => 'Lupin Pharma', 'logo' => 'lupin.jpg'],
+            ['name' => 'Reliance', 'logo' => 'reliance.jpg'],
+            ['name' => 'ICICI Bank', 'logo' => 'icici-150x43.jpg'],
+            ['name' => 'Axis Bank', 'logo' => 'axis-150x39.jpg'],
+            ['name' => 'Bharti Airtel', 'logo' => 'airtel-150x64.jpg'],
+            ['name' => 'Voltas', 'logo' => 'voltas-150x55.jpg'],
+            ['name' => 'Domino\'s', 'logo' => 'dominos-150x64.jpg'],
+            ['name' => 'IndiGo Airlines', 'logo' => 'indigo-150x59.jpg'],
+            ['name' => 'Taj Hotels', 'logo' => 'taj.jpg'],
+            ['name' => 'Oberoi Group', 'logo' => 'oberoi.jpg'],
+            ['name' => 'Hyatt Regency', 'logo' => 'hyatt-150x55.jpg'],
+            ['name' => 'Marriott International', 'logo' => 'mariott-150x50.jpg'],
+            ['name' => 'Hilton Hotels', 'logo' => 'hilton-150x84.jpg'],
+            ['name' => 'Trident Hotels', 'logo' => 'trident.jpg'],
+            ['name' => 'BYJU\'S', 'logo' => 'byjus-150x48.jpg'],
+            ['name' => 'Nagarro', 'logo' => 'nagarro-150x39.jpg'],
+        ];
+        foreach ($recruiters as $rec):
+        ?>
+          <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-center h-24 hover:border-gold/50 hover:shadow-md transition-all group">
+            <img 
+              src="<?= url('images/' . $rec['logo']) ?>" 
+              alt="<?= e($rec['name']) ?>" 
+              class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition duration-300"
+              loading="lazy"
+            >
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
+    <!-- ==================== OFFICIAL PLACEMENT REPORTS ==================== -->
+    <div class="section-block" id="placement-reports">
+      <div class="rkdf-section-header">
+        <div>
+          <span class="rkdf-section-tag">
+            <?= lucide_icon('file-text', 'w-3.5 h-3.5') ?> Verified Corporate Audits
+          </span>
+          <h3 class="rkdf-section-title">Official Campus Placement Reports &amp; Records</h3>
+          <p class="rkdf-section-desc">Download annual campus placement brochures, batch recruitment statistics, and corporate selection summaries.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="prog-spec-card">
+          <div class="prog-spec-header">
+            <div>
+              <span class="prog-spec-badge">
+                <?= lucide_icon('award', 'w-3 h-3') ?>
+                <span>Placement Audit • PDF</span>
+              </span>
+              <h4 class="prog-spec-title">Placement Report 2023–24</h4>
+            </div>
+            <div class="prog-spec-iconbox">
+              <?= lucide_icon('file-text', 'w-6 h-6') ?>
+            </div>
+          </div>
+          <div class="prog-spec-body">
+            <p class="prog-spec-desc">Detailed company-wise selection list, highest CTC allocations, and multidisciplinary recruiter audits for 2023–24.</p>
+            <div class="pt-2 flex flex-col gap-2">
+              <a href="<?= url('documents/PLACEMENT-2023-1.pdf') ?>" target="_blank" class="prog-spec-btn">
+                <?= lucide_icon('download', 'w-4 h-4') ?>
+                <span>Download Report Part 1 (PDF)</span>
+              </a>
+              <a href="<?= url('documents/PLACEMENT-2023-2.pdf') ?>" target="_blank" class="prog-spec-btn">
+                <?= lucide_icon('download', 'w-4 h-4') ?>
+                <span>Download Report Part 2 (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prog-spec-card">
+          <div class="prog-spec-header">
+            <div>
+              <span class="prog-spec-badge">
+                <?= lucide_icon('award', 'w-3 h-3') ?>
+                <span>Placement Audit • PDF</span>
+              </span>
+              <h4 class="prog-spec-title">Placement Report 2022–23</h4>
+            </div>
+            <div class="prog-spec-iconbox">
+              <?= lucide_icon('file-text', 'w-6 h-6') ?>
+            </div>
+          </div>
+          <div class="prog-spec-body">
+            <p class="prog-spec-desc">Verified placement logs, student company allotments, corporate drive records, and sector-wise recruitment split.</p>
+            <div class="pt-2 flex flex-col gap-2">
+              <a href="<?= url('documents/PLACEMENT-2022-1.pdf') ?>" target="_blank" class="prog-spec-btn">
+                <?= lucide_icon('download', 'w-4 h-4') ?>
+                <span>Download Report Part 1 (PDF)</span>
+              </a>
+              <a href="<?= url('documents/PLACEMENT-2023-3.pdf') ?>" target="_blank" class="prog-spec-btn">
+                <?= lucide_icon('download', 'w-4 h-4') ?>
+                <span>Download Report Part 3 (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prog-spec-card">
+          <div class="prog-spec-header">
+            <div>
+              <span class="prog-spec-badge">
+                <?= lucide_icon('briefcase', 'w-3 h-3') ?>
+                <span>Career Brochure • PDF</span>
+              </span>
+              <h4 class="prog-spec-title">Placement Brochure 2025–26</h4>
+            </div>
+            <div class="prog-spec-iconbox">
+              <?= lucide_icon('file-check', 'w-6 h-6') ?>
+            </div>
+          </div>
+          <div class="prog-spec-body">
+            <p class="prog-spec-desc">Recruiter guide detailing student demographics, laboratory infrastructure, academic curriculum, and hiring procedures.</p>
+            <div class="pt-2">
+              <a href="<?= url('documents/RKDF-PROSPECTUS.pdf') ?>" target="_blank" class="prog-spec-btn">
+                <?= lucide_icon('download', 'w-4 h-4') ?>
+                <span>Download Corporate Brochure (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Final CTA Banner -->
     <div class="rkdf-admission-banner section-block">
       <div class="rkdf-admission-content space-y-2">

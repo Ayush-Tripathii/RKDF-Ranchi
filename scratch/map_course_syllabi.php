@@ -1,0 +1,82 @@
+<?php
+$root = dirname(__DIR__);
+$docsDir = $root . '/documents';
+
+$pdfFiles = glob($docsDir . '/*.pdf');
+$pdfMap = [];
+foreach ($pdfFiles as $pdf) {
+    $fn = basename($pdf);
+    $pdfMap[strtolower(str_replace(['-', '_', '.'], '', $fn))] = $fn;
+}
+
+echo "Total indexed PDFs: " . count($pdfMap) . "\n";
+
+// Check all course and school files
+$courseFiles = glob($root . '/courses/*.php');
+$schoolFiles = glob($root . '/schools/*.php');
+
+echo "\nCourse files count: " . count($courseFiles) . "\n";
+echo "School files count: " . count($schoolFiles) . "\n";
+
+$courseSyllabusMap = [
+    'b-tech-computer-science' => 'BTECH-CSE-new-RKDFRANCHI-final.pdf',
+    'b-tech-civil-engineering' => 'BTECH-CIVIL-ENGG-RKDF-UNIVERSITY-RANCHI.pdf',
+    'b-tech-mechanical-engineering' => 'BTECH-MECHANICAL-ENGG-RKDF-UNIVERSITY-RANCHI-1.pdf',
+    'b-tech-electrical-electronics-engineering' => 'BTECH-EEE-RKDF-UNIVERSITY-RANCHI.pdf',
+    'b-tech-mining-engineering' => 'btech_mining.pdf',
+    'diploma-in-civil-engineering' => 'DIPLOMA-CIVIL-ENGG-RKDF-UNIVERSITY-RANCHI.pdf',
+    'diploma-in-mechanical-engineering' => 'DIPLOMA-MECHANICAL-ENGG-RKDF-UNIVERSITY-RANCHI.pdf',
+    'diploma-in-mining' => 'DIPLOMA-MINING.pdf',
+    'diploma-in-computer-application' => 'DCA.pdf',
+    'bca' => 'BCA-NEP.pdf',
+    'mca' => 'MCA.pdf',
+    'b-sc-computer-science' => 'BSC-COMPUTER-SCIENCE.pdf',
+    'm-sc-computer-science' => 'MSc-Computer-Science.pdf',
+    'b-sc-physics' => 'BSC-PHYSICS.pdf',
+    'm-sc-physics' => 'M.Sc_.-Physics.pdf',
+    'b-sc-chemistry' => 'BSC-Chemistry.pdf',
+    'm-sc-chemistry' => 'M.Sc_.-Chemistry.pdf',
+    'b-sc-mathematics' => 'BSC-MATHEMATICS.pdf',
+    'm-sc-mathematics' => 'M.Sc_.-Maths.pdf',
+    'b-sc-botany' => 'BSC-Botany.pdf',
+    'm-sc-botany' => 'MSc_Botany_Syllabus.pdf',
+    'b-sc-zoology' => 'BSC-Zoology.pdf',
+    'm-sc-zoology' => 'M.Sc_.-Zoology-syllabus.pdf',
+    'b-sc-biotechnology' => 'BSC-Biotechnology.pdf',
+    'm-sc-biotechnology' => 'MSc_Biotech_Syllabus_new.pdf',
+    'b-sc-microbiology' => 'BSC-Microbiology.pdf',
+    'm-sc-microbiology' => 'M.Sc-Microbiology-syllabus-2025.pdf',
+    'b-sc-biochemistry' => 'BSC-Biochemistry.pdf',
+    'm-sc-biochemistry' => 'MSC-Biochemistry-RKDF-UNIVERSITY-RANCHI.pdf',
+    'm-sc-environmental-science' => 'M.Sc_.-EVS-Syllabus.pdf',
+    'bba' => 'BMS-Syllabus.pdf',
+    'mba' => 'MBA.pdf',
+    'mba-finance' => 'MBA-FINANCE.pdf',
+    'mba-construction-management' => 'MBA-Construction-Management.pdf',
+    'mba-hotel-management' => 'MBA-Hotel-Management.pdf',
+    'mba-logistics' => 'MBA-Logistics-Management.pdf',
+    'b-com' => 'BCOM-Corp.pdf',
+    'm-com' => 'M.Com_.pdf',
+    'llb' => 'LLB-RKDF-UNIVERSITY-RANCHI.pdf',
+    'llm' => 'Masters-of-Law-RKDF-UNIVERSITY-RANCHI.pdf',
+    'd-pharm' => 'D-Pharma-syllabus.pdf',
+    'b-lib' => 'BLib.pdf',
+    'm-lib' => 'MLib.pdf',
+    'msw' => 'MSW-SYLLABUS.pdf',
+    'ma-economics' => 'MA-ECONOMICS.pdf',
+    'ma-history' => 'MA-HISTORY.pdf',
+    'ma-sociology' => 'MA-Sociology.pdf',
+    'ma-hindi' => 'MA-Hindi.pdf',
+    'ma-geography' => 'MA-Geography.pdf',
+    'ma-political-science' => 'MA-Political-Science.pdf',
+    'fashion-design' => 'fashion_design.pdf',
+    'fashion-diploma' => 'fashion_diploma.pdf',
+    'fashion-mba' => 'fashion_mba.pdf',
+    'fashion-msc-interior' => 'fashion_msc_interior.pdf',
+    'mba-interior' => 'mba_interior.pdf',
+    'diploma-interior-designing' => 'Diploma-Interior-Designing.pdf',
+    'pgdca' => 'PGDCA.pdf'
+];
+
+echo "Mapped courses with official syllabus: " . count($courseSyllabusMap) . "\n";
+file_put_contents(__DIR__ . '/course_syllabus_map.json', json_encode($courseSyllabusMap, JSON_PRETTY_PRINT));

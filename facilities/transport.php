@@ -228,10 +228,19 @@ require_once dirname(__DIR__) . '/includes/header.php';
           <h3 class="rkdf-section-title">Bus Routes &amp; Transit Services</h3>
           <p class="rkdf-section-desc">Reliable university transit operations ensuring punctuality, passenger safety, and subsidized travel.</p>
         </div>
-        <a href="<?= url('contact.php') ?>" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm shrink-0">
-          <span>Route &amp; Stop Details</span>
-          <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
-        </a>
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <?php if (file_exists(dirname(__DIR__) . '/documents/Bus-Registration-Form.pdf')): ?>
+            <a href="<?= url('documents/Bus-Registration-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm">
+              <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
+              <span>Bus Registration Form (PDF)</span>
+              <?= lucide_icon('download', 'w-3.5 h-3.5') ?>
+            </a>
+          <?php endif; ?>
+          <a href="<?= url('contact.php') ?>" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm">
+            <span>Route &amp; Stop Details</span>
+            <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

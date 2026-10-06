@@ -114,6 +114,122 @@ require_once dirname(__DIR__) . '/includes/header.php';
   </div>
 </section>
 
+<!-- ==================== OFFICIAL ADMISSION DOWNLOADS ==================== -->
+<section class="py-20 bg-slate-50 border-y border-border" id="downloads">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="rkdf-section-header">
+      <div>
+        <span class="rkdf-section-tag">
+          <?= lucide_icon('file-text', 'w-3.5 h-3.5') ?> Statutory &amp; Academic Docs
+        </span>
+        <h3 class="rkdf-section-title">Official Prospectus &amp; Admission Downloads</h3>
+        <p class="rkdf-section-desc">Download authentic university prospectuses, verified program fee breakdowns, and offline enrollment application forms.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1: Prospectus -->
+      <div class="prog-spec-card">
+        <div class="prog-spec-header">
+          <div>
+            <span class="prog-spec-badge">
+              <?= lucide_icon('book-open', 'w-3 h-3') ?>
+              <span>Official Brochure • PDF</span>
+            </span>
+            <h4 class="prog-spec-title">University Prospectus 2026–27</h4>
+          </div>
+          <div class="prog-spec-iconbox">
+            <?= lucide_icon('file-text', 'w-6 h-6') ?>
+          </div>
+        </div>
+        <div class="prog-spec-body">
+          <p class="prog-spec-desc">Comprehensive guide detailing academic programs, infrastructure, research laboratories, faculty credentials, and campus life.</p>
+          <ul class="prog-spec-feature-list">
+            <li class="prog-spec-feature-item">
+              <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+              <span>Complete Course Directory &amp; Eligibility</span>
+            </li>
+            <li class="prog-spec-feature-item">
+              <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+              <span>Campus Facilities &amp; Research Centers</span>
+            </li>
+          </ul>
+          <a href="<?= url('documents/RKDF-PROSPECTUS.pdf') ?>" target="_blank" class="prog-spec-btn">
+            <?= lucide_icon('download', 'w-4 h-4') ?>
+            <span>Download Prospectus (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Fee Structure -->
+      <div class="prog-spec-card">
+        <div class="prog-spec-header">
+          <div>
+            <span class="prog-spec-badge">
+              <?= lucide_icon('coins', 'w-3 h-3') ?>
+              <span>Fee Policy • PDF</span>
+            </span>
+            <h4 class="prog-spec-title">Academic Fee Structure</h4>
+          </div>
+          <div class="prog-spec-iconbox">
+            <?= lucide_icon('receipt', 'w-6 h-6') ?>
+          </div>
+        </div>
+        <div class="prog-spec-body">
+          <p class="prog-spec-desc">Transparent program-wise tuition schedules, examination fee details, hostel room charges, and bus transit tariffs.</p>
+          <ul class="prog-spec-feature-list">
+            <li class="prog-spec-feature-item">
+              <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+              <span>Semester-Wise Tuition Breakdowns</span>
+            </li>
+            <li class="prog-spec-feature-item">
+              <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+              <span>Installment &amp; Scholarship Provisions</span>
+            </li>
+          </ul>
+          <a href="<?= url('documents/RKDF-FEE-STRUCTURE.pdf') ?>" target="_blank" class="prog-spec-btn">
+            <?= lucide_icon('download', 'w-4 h-4') ?>
+            <span>Download Fee Schedule (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Offline Registration Form -->
+      <div class="prog-spec-card">
+        <div class="prog-spec-header">
+          <div>
+            <span class="prog-spec-badge">
+              <?= lucide_icon('clipboard', 'w-3 h-3') ?>
+              <span>Application Form • PDF</span>
+            </span>
+            <h4 class="prog-spec-title">University Registration Form</h4>
+          </div>
+          <div class="prog-spec-iconbox">
+            <?= lucide_icon('file-check', 'w-6 h-6') ?>
+          </div>
+        </div>
+        <div class="prog-spec-body">
+          <p class="prog-spec-desc">Printable offline registration application for walk-in admissions, document submission, and counter enrollment at campus.</p>
+          <ul class="prog-spec-feature-list">
+            <li class="prog-spec-feature-item">
+              <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+              <span>Official Verification Proforma</span>
+            </li>
+            <li class="prog-spec-feature-item">
+              <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+              <span>Checklist of Mandatory Enclosures</span>
+            </li>
+          </ul>
+          <a href="<?= url('documents/University-Registration-Form.pdf') ?>" target="_blank" class="prog-spec-btn">
+            <?= lucide_icon('download', 'w-4 h-4') ?>
+            <span>Download Admission Form (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Application Form Section -->
 <section class="py-24 bg-gradient-to-b from-surface via-slate-50/50 to-surface border-t border-border relative overflow-hidden" id="apply-form">
   <!-- Ambient Soft Accents -->

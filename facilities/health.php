@@ -285,6 +285,49 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
+    <!-- ==================== HEALTHCARE VISUAL GALLERY & TREE AMBULANCE ==================== -->
+    <div class="section-block" id="health-gallery">
+      <div class="rkdf-section-header">
+        <div>
+          <span class="rkdf-section-tag">
+            <?= lucide_icon('camera', 'w-3.5 h-3.5') ?> Medical Infrastructure
+          </span>
+          <h3 class="rkdf-section-title">On-Campus Dispensary &amp; Care Facilities</h3>
+          <p class="rkdf-section-desc">Visual overview of our on-site medical dispensary, first-aid examination units, nursing care staff, and environmental health initiatives.</p>
+        </div>
+        <?php if (file_exists(dirname(__DIR__) . '/documents/Tree-Ambulance.pdf')): ?>
+          <a href="<?= url('documents/Tree-Ambulance.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm shrink-0">
+            <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
+            <span>Tree Ambulance Initiative (PDF)</span>
+            <?= lucide_icon('download', 'w-3.5 h-3.5') ?>
+          </a>
+        <?php endif; ?>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        <?php 
+        $health_photos = ['health-1.jpg', 'health-2.jpg', 'health-3.jpg', 'health-4.jpg', 'health-6.jpg'];
+        $health_labels = ['First-Aid Dispensary', 'Doctor Examination Room', 'Medical Checkup Camp', 'Emergency Care Equipment', 'Student Wellness Care'];
+        foreach ($health_photos as $idx => $hp): 
+        ?>
+          <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs aspect-4/3 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <img 
+              src="<?= url('images/' . $hp) ?>" 
+              alt="<?= e($health_labels[$idx]) ?>" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+              <span class="text-xs text-white font-medium flex items-center gap-1.5">
+                <?= lucide_icon('heart-pulse', 'w-3 h-3 text-emerald-400') ?>
+                <span><?= e($health_labels[$idx]) ?></span>
+              </span>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
     <!-- Final CTA Banner -->
     <div class="rkdf-admission-banner section-block">
       <div class="rkdf-admission-content space-y-2">

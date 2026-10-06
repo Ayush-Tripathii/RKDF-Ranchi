@@ -11,7 +11,7 @@ $page_meta_desc = 'Download official RKDF University Ranchi Examination Forms: E
 
 $exam_forms = [
     [
-        'title'       => 'Exam Rules & Regulations Handbook',
+        'title'       => 'Examination Rules & Regulations Handbook',
         'badge'       => 'Official Policy • PDF',
         'icon'        => 'file-text',
         'desc'        => 'Detailed evaluation norms, 10-point CGPA grading scales, minimum attendance criteria, internal assessment framework, and disciplinary examination conduct.',
@@ -19,6 +19,56 @@ $exam_forms = [
         'action_type' => 'pdf',
         'url'         => 'documents/Exam-Rules-Regulations.pdf',
         'btn_text'    => 'Download PDF'
+    ],
+    [
+        'title'       => 'Re-Evaluation & Answer Script Verification Form',
+        'badge'       => 'COE Redressal • PDF',
+        'icon'        => 'refresh-cw',
+        'desc'        => 'Formal application for re-totaling, re-evaluation, and certified photocopy inspection of end-semester theory answer scripts.',
+        'format'      => 'PDF Form',
+        'action_type' => 'pdf',
+        'url'         => 'documents/Re-evaluation-Form.pdf',
+        'btn_text'    => 'Download Form'
+    ],
+    [
+        'title'       => 'Reappearing / Backlog (ATKT) Exam Form',
+        'badge'       => 'Backlog Registration • PDF',
+        'icon'        => 'clipboard',
+        'desc'        => 'Application form for registering backlog papers, ex-student exam appearances, and ATKT supplementary examination slots.',
+        'format'      => 'PDF Form',
+        'action_type' => 'pdf',
+        'url'         => 'documents/Examination-Form-reappearing-form.pdf',
+        'btn_text'    => 'Download Form'
+    ],
+    [
+        'title'       => 'Semester Registration Form',
+        'badge'       => 'Academic Enrollment • PDF',
+        'icon'        => 'check-circle-2',
+        'desc'        => 'Mandatory semester registration form for branch elective selection, laboratory assignment allotment, and tuition clearance verification.',
+        'format'      => 'PDF Document',
+        'action_type' => 'pdf',
+        'url'         => 'documents/Semester-Registration-Form.pdf',
+        'btn_text'    => 'Download Form'
+    ],
+    [
+        'title'       => 'University Clearance / No-Dues Certificate',
+        'badge'       => 'Institutional Clearance • PDF',
+        'icon'        => 'shield-check',
+        'desc'        => 'Official No-Dues proforma covering department library, laboratory equipment, hostel inventory, and account clearance for passing out scholars.',
+        'format'      => 'PDF Document',
+        'action_type' => 'pdf',
+        'url'         => 'documents/NO-DUES-FORM.pdf',
+        'btn_text'    => 'Download Proforma'
+    ],
+    [
+        'title'       => 'Requirements for Issuing Degree / Certificates',
+        'badge'       => 'Statutory Guidelines • PDF',
+        'icon'        => 'file-check',
+        'desc'        => 'Document verification checklist and protocols for obtaining provisional certificates, migration certificates, and duplicate grade sheets.',
+        'format'      => 'PDF Checklist',
+        'action_type' => 'pdf',
+        'url'         => 'documents/Requirememnts-for-Issuing-Certificates.pdf',
+        'btn_text'    => 'Download Checklist'
     ],
     [
         'title'       => 'Convocation & Degree Registration Form',
@@ -39,37 +89,7 @@ $exam_forms = [
         'action_type' => 'pdf',
         'url'         => 'documents/Academic-Calendar-2026-27.pdf',
         'btn_text'    => 'Download Calendar'
-    ],
-    [
-        'title'       => 'End-Semester Examination Form',
-        'badge'       => 'Digital ERP Portal',
-        'icon'        => 'clipboard',
-        'desc'        => 'Regular semester examination enrollment, subject code validation, exam fee clearance verification, and hall ticket (admit card) generation.',
-        'format'      => 'Online Portal',
-        'action_type' => 'external',
-        'url'         => 'https://erp.rkdfuniversity.org/',
-        'btn_text'    => 'Open ERP Portal'
-    ],
-    [
-        'title'       => 'Official Academic Transcript Application',
-        'badge'       => 'Student Services • PDF',
-        'icon'        => 'file-check',
-        'desc'        => 'Requisition form for procuring verified official sealed transcripts and grade cards for higher studies abroad, WES verification, or employment.',
-        'format'      => 'PDF Application',
-        'action_type' => 'pdf',
-        'url'         => 'documents/Transcript-Application-Form.pdf',
-        'btn_text'    => 'Download Application'
-    ],
-    [
-        'title'       => 'Re-Evaluation & Answer Script Verification',
-        'badge'       => 'COE Redressal • PDF',
-        'icon'        => 'refresh-cw',
-        'desc'        => 'Formal application for re-totaling, re-evaluation, and certified photocopy inspection of end-semester theory answer scripts.',
-        'format'      => 'PDF Form',
-        'action_type' => 'pdf',
-        'url'         => 'documents/Re-Evaluation-Form.pdf',
-        'btn_text'    => 'Download Form'
-    ],
+    ]
 ];
 
 require_once dirname(__DIR__) . '/includes/header.php';

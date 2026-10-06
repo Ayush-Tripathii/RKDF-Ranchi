@@ -289,6 +289,38 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
+    <!-- ==================== REAL SPORTS PHOTO GALLERY ==================== -->
+    <div class="section-block" id="sports-gallery">
+      <div class="rkdf-section-header">
+        <div>
+          <span class="rkdf-section-tag">
+            <?= lucide_icon('camera', 'w-3.5 h-3.5') ?> Campus Sports Action
+          </span>
+          <h3 class="rkdf-section-title">Athletic Life &amp; Tournament Gallery</h3>
+          <p class="rkdf-section-desc">Snapshots of annual athletic meets, inter-departmental cricket leagues, volleyball tournaments, and active campus sports life.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <?php for ($i = 1; $i <= 12; $i++): ?>
+          <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs aspect-4/3 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <img 
+              src="<?= url('images/Sports-rkdf-' . $i . '.jpg') ?>" 
+              alt="RKDF Sports Meet & Athletics <?= $i ?>" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-xs text-white font-medium flex items-center gap-1.5">
+                <?= lucide_icon('award', 'w-3.5 h-3.5 text-gold') ?>
+                <span>Sports Meet &amp; Tournament #<?= $i ?></span>
+              </span>
+            </div>
+          </div>
+        <?php endfor; ?>
+      </div>
+    </div>
+
     <!-- Final CTA Banner -->
     <div class="rkdf-admission-banner section-block">
       <div class="rkdf-admission-content space-y-2">
