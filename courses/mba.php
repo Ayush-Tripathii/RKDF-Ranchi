@@ -1,149 +1,231 @@
 <?php
-$page_title = "MBA Programs | Master of Business Administration 2026-27 | RKDF University Ranchi";
-$page_description = "Elevate your career with the 2-Year MBA program at RKDF University Ranchi. Dual specializations in Marketing, Finance, HR, IT, Agribusiness & Operations with corporate CXO lectures.";
-require_once __DIR__ . '/../includes/header.php';
+/**
+ * RKDF University — Master of Business Administration (MBA)
+ * Content Source: https://rkdfuniversity.org/courses/master-of-business-administration-mba/
+ */
+require_once dirname(__DIR__) . '/config/config.php';
+require_once dirname(__DIR__) . '/includes/functions.php';
+
+$page_title     = 'Master of Business Administration (MBA) | ' . SITE_NAME;
+$page_meta_desc = 'Apply for 2-Year Full-Time MBA at RKDF University Ranchi. Dual Specializations in Marketing, Finance, HR, IT, Logistics, Banking, Construction & Hotel Management with corporate CXO masterclasses.';
+
+$mba_specializations = [
+    [
+        'title'    => 'MBA in Financial Management & FinTech',
+        'badge'    => 'BFSI & Corporate Finance',
+        'icon'     => 'trending-up',
+        'desc'     => 'Corporate valuation, derivatives trading, wealth management, mergers & acquisitions, international taxation, and algorithmic FinTech models.',
+        'features' => ['Investment Banking & Portfolio Theory', 'Financial Risk Modeling & Derivatives', 'GST, Corporate Tax & Auditing', 'FinTech, Blockchain & Digital Banking'],
+        'syllabus' => 'documents/MBA-FINANCE.pdf'
+    ],
+    [
+        'title'    => 'MBA in Marketing & Digital Strategy',
+        'badge'    => 'Brand & Growth Strategy',
+        'icon'     => 'target',
+        'desc'     => 'Brand management, neuromarketing, omnichannel retail strategy, consumer behavior analytics, digital growth hacking, and B2B industrial marketing.',
+        'features' => ['Digital Marketing & Social Analytics', 'Strategic Brand Management & Positioning', 'Consumer Insights & Market Research', 'Supply Chain Distribution & Retail Strategy'],
+        'syllabus' => 'documents/MBA.pdf'
+    ],
+    [
+        'title'    => 'MBA in Human Resource Management (HRM)',
+        'badge'    => 'Talent & Organizational Leadership',
+        'icon'     => 'users',
+        'desc'     => 'Strategic human resource management, executive talent acquisition, labor law jurisprudence, HR analytics, and organizational behavior change.',
+        'features' => ['HR Analytics & Workforce Metrics', 'Strategic Talent Acquisition & Retention', 'Industrial Dispute Resolution & Labor Laws', 'Executive Coaching & Leadership Development'],
+        'syllabus' => 'documents/MBA.pdf'
+    ],
+    [
+        'title'    => 'MBA in Logistics & Supply Chain Management',
+        'badge'    => 'Global Operations',
+        'icon'     => 'truck',
+        'desc'     => 'International freight transit, maritime logistics, warehouse automation, procurement optimization, and supply chain risk engineering.',
+        'features' => ['Global Freight Forwarding & Customs', 'Warehouse Automation & Inventory Tech', 'Lean Six Sigma & Total Quality Mgmt', 'ERP Supply Chain Architecture'],
+        'syllabus' => 'documents/MBA-Logistics-Management.pdf'
+    ],
+    [
+        'title'    => 'MBA in Construction & Project Management',
+        'badge'    => 'Infrastructure & Real Estate',
+        'icon'     => 'building',
+        'desc'     => 'Large-scale infrastructure project execution, contract law (FIDIC), Primavera & MS Project scheduling, and real estate finance.',
+        'features' => ['Project Cost Estimation & BOQ Management', 'Primavera & BIM Project Scheduling', 'FIDIC Contracts & Real Estate Law', 'Safety Audits & Environmental Compliance'],
+        'syllabus' => 'documents/MBA-Construction-Management.pdf'
+    ],
+    [
+        'title'    => 'MBA in Hotel Management & Tourism',
+        'badge'    => 'Hospitality & Resort Management',
+        'icon'     => 'utensils',
+        'desc'     => 'Luxury hospitality administration, international resort operations, revenue management, MICE event planning, and culinary enterprise leadership.',
+        'features' => ['Luxury Resort & Hospitality Operations', 'Hospitality Revenue Optimization', 'MICE Event Management & Tourism Law', 'F&B Enterprise & Banquet Administration'],
+        'syllabus' => 'documents/MBA-Hotel-Management.pdf'
+    ]
+];
+
+require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
-<!-- Hero Section -->
+<!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-3xl">
-            <!-- Breadcrumbs -->
-            <nav class="flex items-center gap-2 text-xs md:text-sm text-gray-300 mb-4" aria-label="Breadcrumb">
-                <a href="<?php echo $base_url; ?>index.php" class="hover:text-white transition-colors flex items-center gap-1">
-                    <?php echo lucide_icon('home', ['class' => 'w-3.5 h-3.5']); ?>
-                    <span>Home</span>
-                </a>
-                <span class="text-gray-400">/</span>
-                <a href="<?php echo $base_url; ?>courses/index.php" class="hover:text-white transition-colors">Courses</a>
-                <span class="text-gray-400">/</span>
-                <a href="<?php echo $base_url; ?>courses/post-graduate-programs.php" class="hover:text-white transition-colors">Post Graduate</a>
-                <span class="text-gray-400">/</span>
-                <span class="text-amber-400 font-medium">MBA</span>
-            </nav>
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30 backdrop-blur-md mb-4">
-                <?php echo lucide_icon('briefcase', ['class' => 'w-3.5 h-3.5']); ?>
-                Faculty of Management • 2 Years (4 Semesters)
-            </span>
-
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-white tracking-tight leading-tight mb-4">
-                Master of Business Administration (MBA)
-            </h1>
-            <p class="text-base sm:text-lg text-gray-200 font-light leading-relaxed mb-6">
-                A flagship postgraduate management program offering dual specializations, Harvard business case pedagogy, C-Suite corporate lectures, and top-tier placement support.
-            </p>
-
-            <div class="flex flex-wrap gap-4 pt-2">
-                <a href="<?php echo $base_url; ?>admissions/index.php" class="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all">
-                    <?php echo lucide_icon('graduation-cap', ['class' => 'w-4 h-4']); ?>
-                    <span>Apply for MBA 2026-27</span>
-                </a>
-                <a href="<?php echo $base_url; ?>departments/school-management.php" class="btn-outline-white inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all">
-                    <?php echo lucide_icon('building', ['class' => 'w-4 h-4']); ?>
-                    <span>Explore Management Faculty</span>
-                </a>
-            </div>
-        </div>
+  <div class="relative mx-auto max-w-5xl px-6 text-center">
+    <!-- Breadcrumb Badge -->
+    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+      <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
+      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
+      <a href="<?= url('courses/') ?>" class="hover:text-white transition">Courses</a>
+      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
+      <a href="<?= url('courses/post-graduate-programs.php') ?>" class="hover:text-white transition">Postgraduate</a>
+      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
+      <span class="text-white/90">MBA Programs</span>
     </div>
+
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
+      Master of Business <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Administration (MBA)</em>
+    </h1>
+
+    <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
+      A flagship 2-year postgraduate management curriculum offering dual majors, Harvard case-study pedagogy, 8-week corporate summer internships, and C-Suite mentorship.
+    </p>
+
+    <!-- Key Badges -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
+      <span class="hero-pill">
+        <?= lucide_icon('award') ?> AICTE Approved Model Curriculum
+      </span>
+      <span class="hero-pill">
+        <?= lucide_icon('briefcase') ?> Dual Specialization Flexibility
+      </span>
+      <span class="hero-pill">
+        <?= lucide_icon('building-2') ?> 150+ Corporate Recruiters
+      </span>
+      <span class="hero-pill">
+        <?= lucide_icon('file-text') ?> Official Syllabus PDF Downloads
+      </span>
+    </div>
+  </div>
 </section>
 
-<!-- Sub Navigation -->
-<?php require_once __DIR__ . '/../includes/courses_nav_tabs.php'; ?>
+<!-- Sub-Navigation Tabs for Courses -->
+<?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
 
-<!-- Main Content Area -->
-<main class="py-14 sm:py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Key Program Specs -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12">
-            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-xs">
-                <span class="text-xs text-gray-500 font-medium block">Duration</span>
-                <span class="text-lg sm:text-xl font-serif text-slate-900 font-normal mt-1 block">2 Years (4 Sems)</span>
-                <span class="text-[11px] text-primary-700 mt-1 block font-medium">Full-Time Master</span>
-            </div>
-            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-xs">
-                <span class="text-xs text-gray-500 font-medium block">Eligibility</span>
-                <span class="text-lg sm:text-xl font-serif text-slate-900 font-normal mt-1 block">Graduation (50%+)</span>
-                <span class="text-[11px] text-gray-500 mt-1 block">45% for SC/ST/OBC</span>
-            </div>
-            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-xs">
-                <span class="text-xs text-gray-500 font-medium block">Specialization Model</span>
-                <span class="text-lg sm:text-xl font-serif text-slate-900 font-normal mt-1 block">Dual Major</span>
-                <span class="text-[11px] text-emerald-700 mt-1 block font-medium">Finance + Mktg / HR / IT</span>
-            </div>
-            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-xs">
-                <span class="text-xs text-gray-500 font-medium block">Internship (SIP)</span>
-                <span class="text-lg sm:text-xl font-serif text-slate-900 font-normal mt-1 block">8-Week Corporate SIP</span>
-                <span class="text-[11px] text-amber-700 mt-1 block font-medium">Live Industry Mentors</span>
-            </div>
-        </div>
+<!-- ==================== MAIN MBA CONTENT ==================== -->
+<section class="py-20 bg-surface">
+  <div class="mx-auto max-w-7xl px-6 space-y-16">
 
-        <!-- Specializations Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
-                <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-3">
-                    <?php echo lucide_icon('trending-up', ['class' => 'w-5 h-5']); ?>
-                </div>
-                <h4 class="text-lg font-serif text-slate-900 font-normal mb-1">MBA in Financial Management</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">Derivatives, corporate valuation, mergers & acquisitions, wealth management, and algorithmic trading.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
-                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center mb-3">
-                    <?php echo lucide_icon('target', ['class' => 'w-5 h-5']); ?>
-                </div>
-                <h4 class="text-lg font-serif text-slate-900 font-normal mb-1">MBA in Marketing Management</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">Brand management, digital marketing matrices, retail chain strategy, B2B marketing & neuromarketing.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
-                <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center mb-3">
-                    <?php echo lucide_icon('users', ['class' => 'w-5 h-5']); ?>
-                </div>
-                <h4 class="text-lg font-serif text-slate-900 font-normal mb-1">MBA in Human Resource Management</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">Strategic HRM, compensation management, industrial dispute settlement, HR analytics & leadership coaching.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
-                <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-3">
-                    <?php echo lucide_icon('binary', ['class' => 'w-5 h-5']); ?>
-                </div>
-                <h4 class="text-lg font-serif text-slate-900 font-normal mb-1">MBA in Information Technology & Analytics</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">Enterprise Resource Planning (ERP), business intelligence, big data analytics & digital transformation.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
-                <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center mb-3">
-                    <?php echo lucide_icon('compass', ['class' => 'w-5 h-5']); ?>
-                </div>
-                <h4 class="text-lg font-serif text-slate-900 font-normal mb-1">MBA in Operations & Supply Chain</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">Logistics optimization, Total Quality Management (TQM), Lean Six Sigma, procurement & warehouse tech.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
-                <div class="w-10 h-10 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center mb-3">
-                    <?php echo lucide_icon('globe', ['class' => 'w-5 h-5']); ?>
-                </div>
-                <h4 class="text-lg font-serif text-slate-900 font-normal mb-1">MBA in Agribusiness & Rural Management</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">Agri-commodity trading, farm-to-fork supply chains, micro-finance and rural distribution channels.</p>
-            </div>
-        </div>
-
-        <!-- Admission CTA -->
-        <div class="rkdf-admission-banner">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-                <div class="text-center md:text-left">
-                    <span class="inline-block px-3 py-1 bg-amber-400/20 text-amber-300 text-xs font-semibold rounded-full mb-2">MBA Admissions 2026-27</span>
-                    <h3 class="text-2xl sm:text-3xl font-serif text-white font-normal">Fast-Track Your Corporate Career</h3>
-                    <p class="text-gray-300 text-sm mt-1 max-w-xl">
-                        Apply online for MBA with dual specializations at RKDF University Ranchi.
-                    </p>
-                </div>
-                <div class="flex flex-wrap items-center gap-3">
-                    <a href="<?php echo $base_url; ?>admissions/index.php" class="btn-gold px-6 py-3 rounded-lg text-sm font-semibold transition-all">
-                        Apply Online Now
-                    </a>
-                </div>
-            </div>
-        </div>
-
+    <!-- Key Metrics Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
+        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">2 Years</span>
+        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">4 Semester Full-Time</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
+        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">Dual Major</span>
+        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Flexible Specializations</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
+        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">8-Week SIP</span>
+        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Corporate Internship</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
+        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">8+ LPA</span>
+        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Top Placement CTC</span>
+      </div>
     </div>
-</main>
 
-<?php require_once __DIR__ . '/../includes/footer.php'; ?>
+    <!-- Specializations Grid -->
+    <div class="section-block">
+      <div class="rkdf-section-header">
+        <div>
+          <span class="rkdf-section-tag">
+            <?= lucide_icon('layers', 'w-3.5 h-3.5') ?> Management Specializations
+          </span>
+          <h3 class="rkdf-section-title">MBA Concentrations &amp; Specializations</h3>
+          <p class="rkdf-section-desc">Choose dual majors across high-demand functional domains and sectoral management tracks.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <?php foreach ($mba_specializations as $spec): ?>
+          <div class="prog-spec-card">
+            <!-- Header -->
+            <div class="prog-spec-header">
+              <div>
+                <span class="prog-spec-badge">
+                  <?= lucide_icon('briefcase', 'w-3 h-3') ?>
+                  <span><?= e($spec['badge']) ?></span>
+                </span>
+                <h4 class="prog-spec-title"><?= e($spec['title']) ?></h4>
+              </div>
+              <div class="prog-spec-iconbox">
+                <?= lucide_icon($spec['icon'], 'w-6 h-6') ?>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div class="prog-spec-body">
+              <div class="space-y-4">
+                <p class="prog-spec-desc"><?= e($spec['desc']) ?></p>
+
+                <!-- Features -->
+                <ul class="prog-spec-feature-list">
+                  <?php foreach ($spec['features'] as $feat): ?>
+                    <li class="prog-spec-feature-item">
+                      <?= lucide_icon('check', 'w-3.5 h-3.5') ?>
+                      <span><?= e($feat) ?></span>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+
+              <!-- Action & Download -->
+              <div class="space-y-3 pt-4 border-t border-slate-100">
+                <?php if (!empty($spec['syllabus']) && file_exists(dirname(__DIR__) . '/' . $spec['syllabus'])): ?>
+                  <a href="<?= url($spec['syllabus']) ?>" target="_blank" class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200 hover:bg-emerald-100 transition">
+                    <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-emerald-700') ?>
+                    <span>Download Syllabus (PDF)</span>
+                    <?= lucide_icon('download', 'w-3 h-3') ?>
+                  </a>
+                <?php endif; ?>
+
+                <a href="<?= url('admissions/') ?>" class="prog-spec-btn">
+                  <span>Apply for MBA 2026–27</span>
+                  <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
+                </a>
+              </div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
+    <!-- Final CTA Banner -->
+    <div class="rkdf-admission-banner section-block">
+      <div class="rkdf-admission-content space-y-2">
+        <div class="rkdf-admission-tag">
+          <?= lucide_icon('sparkles', 'w-4 h-4 text-gold') ?>
+          <span>MBA Admissions 2026–27 Open</span>
+        </div>
+        <h3 class="rkdf-admission-title">
+          Accelerate into Global Business Leadership
+        </h3>
+        <p class="rkdf-admission-desc">
+          Enroll in RKDF University MBA program. Corporate scholarships, installment plans, and placement mentorship available.
+        </p>
+      </div>
+      <div class="rkdf-admission-actions">
+        <a href="<?= url('admissions/') ?>" class="rkdf-admission-primary-btn">
+          <span>Apply for MBA</span>
+          <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
+        </a>
+        <a href="<?= url('departments/school-management.php') ?>" class="rkdf-admission-secondary-btn">
+          <span>Faculty of Management</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>
+<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>

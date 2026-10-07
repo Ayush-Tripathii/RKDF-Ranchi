@@ -43,5 +43,12 @@ $alumni_voices = [
         </figure>
       <?php endforeach; ?>
     </div>
+
+    <div class="mt-12 text-center">
+      <a href="<?= url('about/alumni-committee.php') ?>" class="inline-flex items-center gap-2 rounded-full bg-brand text-brand-foreground px-7 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-brand transition shadow-lg">
+        <span>Join Alumni Network &amp; Committee</span>
+        <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
+      </a>
+    </div>
   </div>
 </section>

@@ -40,7 +40,7 @@ $upcoming_events_list = [
           <div class="text-xs tracking-[0.2em] uppercase text-gold font-medium">Upcoming Events</div>
           <h3 class="font-serif text-2xl mt-2 text-foreground font-normal">Convocations, symposia &amp; campus moments.</h3>
         </div>
-        <a href="<?= url('media/news.php') ?>" class="text-sm text-brand hidden md:inline-flex items-center gap-1 hover:gap-2 transition-all font-medium">
+        <a href="<?= url('media/events.php') ?>" class="text-sm text-brand hidden md:inline-flex items-center gap-1 hover:gap-2 transition-all font-medium">
           All events
           <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
         </a>
@@ -48,7 +48,7 @@ $upcoming_events_list = [
 
       <div class="space-y-3">
         <?php foreach ($upcoming_events_list as $event): ?>
-          <a href="<?= url('media/news.php') ?>" class="flex items-center gap-5 rounded-xl bg-card border border-border p-5 hover:border-brand transition">
+          <a href="<?= url('media/events.php') ?>" class="flex items-center gap-5 rounded-xl bg-card border border-border p-5 hover:border-brand transition">
             <div class="text-center shrink-0 w-14">
               <div class="font-serif text-3xl leading-none text-foreground"><?= $event['day'] ?></div>
               <div class="text-[10px] tracking-[0.18em] uppercase text-muted-foreground mt-1"><?= $event['month'] ?></div>

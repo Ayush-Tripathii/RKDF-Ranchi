@@ -33,6 +33,29 @@ $body_class     = $body_class     ?? '';
 
   <!-- Custom Design Enhancements & Dropdown Support -->
   <style>
+    /* ==================== DESKTOP / LAPTOP / BIG SCREENS (1024px and above) ==================== */
+    @media (min-width: 1024px) {
+      #rkdf-mobile-menu-btn,
+      .mobile-menu-toggle,
+      #rkdf-mobile-drawer {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+      header nav {
+        display: flex !important;
+        visibility: visible !important;
+      }
+    }
+    @media (max-width: 1023px) {
+      #rkdf-mobile-menu-btn {
+        display: inline-flex !important;
+      }
+      header nav {
+        display: none !important;
+      }
+    }
+
     /* ==================== BULLETPROOF DROPDOWN MENU ==================== */
     .nav-dropdown-wrapper {
       position: relative;
@@ -198,6 +221,21 @@ $body_class     = $body_class     ?? '';
       display: inline-block !important;
       flex-shrink: 0 !important;
       margin: 0 !important;
+    }
+
+    /* Inner Page Hero CTA Buttons High-Contrast Fix */
+    .inner-page-hero a.bg-gold,
+    .inner-page-hero a.bg-gold span,
+    .inner-page-hero a.bg-gold svg {
+      color: #071322 !important;
+    }
+    .inner-page-hero a.bg-gold:hover {
+      background-color: #ffffff !important;
+      color: #071322 !important;
+    }
+    .inner-page-hero a.bg-gold:hover span,
+    .inner-page-hero a.bg-gold:hover svg {
+      color: #071322 !important;
     }
 
 
@@ -3057,18 +3095,18 @@ $body_class     = $body_class     ?? '';
 <body class="min-h-screen bg-background text-foreground font-sans antialiased <?= e($body_class) ?>">
 
 <!-- ==================== TOP UTILITY BAR ==================== -->
-<div class="bg-brand text-brand-foreground text-xs">
-  <div class="mx-auto max-w-7xl px-6 py-2.5 flex items-center justify-between gap-4">
+<div class="bg-brand text-brand-foreground text-xs border-b border-white/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
     <div class="flex items-center gap-5">
-      <span class="inline-flex items-center gap-1.5">
-        <?= lucide_icon('phone', 'w-3.5 h-3.5') ?>
-        <?= SITE_PHONE ?>
-      </span>
-      <span class="inline-flex items-center gap-1.5">
-        <?= lucide_icon('mail', 'w-3.5 h-3.5') ?>
-        <?= SITE_EMAIL ?>
-      </span>
-      <span class="hidden md:inline opacity-80">NAAC Accredited · UGC Recognized</span>
+      <a href="tel:<?= preg_replace('/[^0-9+]/', '', SITE_PHONE) ?>" class="inline-flex items-center gap-1.5 hover:text-gold transition">
+        <?= lucide_icon('phone', 'w-3.5 h-3.5 text-gold shrink-0') ?>
+        <span><?= SITE_PHONE ?></span>
+      </a>
+      <a href="mailto:<?= SITE_EMAIL ?>" class="inline-flex items-center gap-1.5 hover:text-gold transition">
+        <?= lucide_icon('mail', 'w-3.5 h-3.5 text-gold shrink-0') ?>
+        <span><?= SITE_EMAIL ?></span>
+      </a>
+      <span class="hidden md:inline text-white/70">NAAC Accredited · UGC Recognized</span>
     </div>
     <div class="hidden md:flex items-center gap-5 opacity-90">
       <a href="<?= url('admissions/scholarship.php') ?>" class="hover:text-gold transition">Scholarships</a>

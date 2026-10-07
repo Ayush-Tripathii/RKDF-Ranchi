@@ -209,6 +209,22 @@ $programs = [
         ],
         'eligibility' => 'Passed 10+2 from a recognized board in any stream with minimum 45% aggregate marks (40% for SC/ST).'
     ],
+
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Humanities & Social Sciences)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / RET Track',
+        'icon'        => 'microscope',
+        'description' => 'Original doctoral research across English, Hindi, Sanskrit, History, Political Science, Economics, Sociology, Geography, and Social Work.',
+        'branches'    => [
+            ['name' => 'Ph.D. in English & Comparative Literature', 'tag' => 'Postcolonial Studies'],
+            ['name' => 'Ph.D. in Political Science & Governance',   'tag' => 'Public Policy & Electoral'],
+            ['name' => 'Ph.D. in Economics & Development Policy',   'tag' => 'Econometric Modeling'],
+            ['name' => 'Ph.D. in History, Sociology & Social Work', 'tag' => 'Cultural & Tribal Studies'],
+        ],
+        'eligibility' => 'Master of Arts (M.A. / MSW) in relevant discipline with minimum 55% marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET.'
+    ],
 ];
 
 $labs = [

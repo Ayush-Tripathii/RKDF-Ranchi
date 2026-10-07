@@ -4,9 +4,12 @@
  */
 $about_tabs = [
     ['label' => 'Overview',                'href' => 'about/',                             'icon' => 'landmark'],
+    ['label' => 'Academic Council',         'href' => 'about/academic-council-members.php',  'icon' => 'users'],
+    ['label' => 'Board of Governors',       'href' => 'about/board-of-governors.php',        'icon' => 'shield'],
     ['label' => 'Vision & Mission',         'href' => 'about/vision-and-mission.php',        'icon' => 'globe'],
     ['label' => 'Government Recognitions', 'href' => 'about/government-recognition.php',    'icon' => 'scale'],
     ['label' => 'Accreditations',           'href' => 'about/accreditations.php',            'icon' => 'trophy'],
+    ['label' => 'Mandatory Disclosure',     'href' => 'about/mandatory-disclosure.php',      'icon' => 'file-text'],
     ['label' => 'Annual Reports',           'href' => 'about/annual-reports.php',            'icon' => 'book-open'],
     ['label' => 'RTI Corner',               'href' => 'about/rti-corner.php',                'icon' => 'scale'],
 ];

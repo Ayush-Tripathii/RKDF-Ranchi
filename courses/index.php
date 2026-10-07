@@ -1,103 +1,1000 @@
 <?php
 /**
- * RKDF University — Academic Courses & Programs Directory
- * Content Source: https://rkdfuniversity.org/courses/
+ * RKDF University — Master Course & Academic Programs Directory
+ * Lists all industry-aligned undergraduate, postgraduate, diploma, and doctoral degree tracks.
  */
 require_once dirname(__DIR__) . '/config/config.php';
 require_once dirname(__DIR__) . '/includes/functions.php';
 
-$page_title     = 'Courses & Academic Programs — ' . SITE_NAME;
-$page_meta_desc = 'Explore 90+ industry-aligned degree and diploma programs at RKDF University Ranchi. Undergraduate (B.Tech, BBA, BCA, B.Pharm, LLB), Postgraduate (MBA, MCA, M.Tech, M.Sc), Diploma & Ph.D. degrees.';
+$page_title     = 'All Courses & Academic Programs Directory (UG, PG, Diploma) — ' . SITE_NAME;
+$page_meta_desc = 'Explore all degree and diploma programs at RKDF University Ranchi. Detailed course fees, eligibility, syllabus breakdown, scholarships, and admission guidelines.';
 
-$course_categories = [
-    [
-        'title'       => 'Undergraduate Degrees (UG)',
-        'href'        => 'courses/under-graduate-programs.php',
-        'icon'        => 'graduation-cap',
-        'badge'       => 'B.Tech · BBA · BCA · B.Pharm · LLB',
-        'desc'        => 'Foundational 3, 4, and 5-year bachelor degree programs designed to develop core professional competencies, analytical thinking, and industry-ready skills.',
-        'programs'    => ['B.Tech (CSE, Mining, Civil, ME, EEE)', 'BCA & BCA Corporate', 'BBA & BBA Logistics', 'B.Pharm (PCI Approved)', 'BA LL.B & BBA LL.B (5-Yr Integrated)', 'B.Sc (Hons) in Pure & Applied Sciences', 'B.Com & B.Com Corporate', 'B.A. (Hons) in Humanities'],
-        'duration'    => '3 to 5 Years',
-        'color'       => 'from-blue-900 to-indigo-950',
-    ],
-    [
-        'title'       => 'Postgraduate Degrees (PG)',
-        'href'        => 'courses/post-graduate-programs.php',
-        'icon'        => 'award',
-        'badge'       => 'MBA · MCA · M.Tech · M.Sc · LLM',
-        'desc'        => 'Advanced 2-year master’s degree curricula emphasizing leadership, specialized technical domains, corporate strategy, and advanced research methodologies.',
-        'programs'    => ['MBA (Dual Specialization)', 'MCA (2-Yr Advanced Cloud & AI)', 'M.Tech (Advanced Engineering)', 'M.Sc (Physics, Chem, Math, Biotech, Micro)', 'LL.M (Constitutional & Corporate Law)', 'M.Com (Accounting & Taxation)', 'M.A. (Literature & Social Sciences)', 'MA-JMC (Media & Broadcast)'],
-        'duration'    => '2 Years · 4 Semesters',
-        'color'       => 'from-emerald-900 to-slate-950',
-    ],
-    [
-        'title'       => 'Diploma & Polytechnic Programs',
-        'href'        => 'courses/diploma-programs.php',
-        'icon'        => 'wrench',
-        'badge'       => 'Polytechnic · D.Pharm · PGDCA',
-        'icon_color'  => 'text-amber-500',
-        'desc'        => 'Skill-focused diploma and post-graduate diploma tracks engineered for immediate technical employment, industrial operations, and clinical certifications.',
-        'programs'    => ['Diploma in Mining Engineering', 'Diploma in Civil Engineering', 'Diploma in Mechanical Engineering', 'Diploma in Electrical Engineering', 'D.Pharm (Diploma in Pharmacy - 2 Yrs)', 'PGDCA (Computer Applications - 1 Yr)', 'PG Diploma in Fashion & Interior Design'],
-        'duration'    => '1 to 3 Years',
-        'color'       => 'from-amber-900 to-slate-950',
-    ],
-    [
-        'title'       => 'Doctoral Programs (Ph.D.)',
-        'href'        => 'courses/doctoral-programs.php',
-        'icon'        => 'microscope',
-        'badge'       => 'UGC-NET / RET Entrance Track',
-        'desc'        => 'Rigorous doctoral research degrees designed for university faculty, scientific researchers, industrial innovators, and policy experts across all major academic faculties.',
-        'programs'    => ['Ph.D. in Engineering & Technology', 'Ph.D. in Management & Business Studies', 'Ph.D. in Pure & Applied Sciences', 'Ph.D. in Life Sciences & Biotechnology', 'Ph.D. in Law & Legal Studies', 'Ph.D. in Arts & Humanities', 'Ph.D. in Commerce'],
-        'duration'    => 'Min. 3 Years',
-        'color'       => 'from-purple-900 to-slate-950',
-    ],
-];
+$courses_json = <<<'JSON'
+[
+  {
+    "name": "B.A. (Hons) in Bengali",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-bengali.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in Economics",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-economics.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in Education",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-education.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in English",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-english.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in Geography",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-geography.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in Hindi",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-hindi.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in History",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-history.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in Political Science",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-political-science.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "B.A. (Hons) in Sanskrit",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-sanskrit.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. (Hons) in Sociology",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-hons-in-sociology.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "B.A. / B.Sc. in Fashion Design",
+    "stream": "design",
+    "level": "ug",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-fashion-design.php",
+    "icon": "palette"
+  },
+  {
+    "name": "B.A. LL.B (5-Year Integrated Honors)",
+    "stream": "law",
+    "level": "ug",
+    "school": "School of Law & Legal Studies",
+    "duration": "5 Years (10 Semesters)",
+    "href": "courses/llb-ba.php",
+    "icon": "scale"
+  },
+  {
+    "name": "B.Com (Corporate Specialization)",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-com/b-com-corporate.php",
+    "icon": "coins"
+  },
+  {
+    "name": "B.Sc. (Hons) in Biochemistry",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Life Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-biochemistry-in-ranchi-admission-2026-rkdf-university.php",
+    "icon": "dna"
+  },
+  {
+    "name": "B.Sc. (Hons) in Biotechnology",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "School of Life Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-hons-in-biotechnology.php",
+    "icon": "cpu"
+  },
+  {
+    "name": "B.Sc. (Hons) in Botany",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Life Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-in-ranchi-fees-admission-2026-rkdf-university-3.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "B.Sc. (Hons) in Chemistry",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-in-ranchi-fees-admission-2026-rkdf-university.php",
+    "icon": "flask-round"
+  },
+  {
+    "name": "B.Sc. (Hons) in Computer Science",
+    "stream": "it",
+    "level": "ug",
+    "school": "Faculty of Information Technology",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-hons-in-computer-science.php",
+    "icon": "laptop"
+  },
+  {
+    "name": "B.Sc. (Hons) in Mathematics",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-in-ranchi-fees-admission-2026-rkdf-university-2.php",
+    "icon": "calculator"
+  },
+  {
+    "name": "B.Sc. (Hons) in Microbiology",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Life Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-hons-in-microbiology.php",
+    "icon": "dna"
+  },
+  {
+    "name": "B.Sc. (Hons) in Physics",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-hons.php",
+    "icon": "atom"
+  },
+  {
+    "name": "B.Sc. (Hons) in Zoology & Animal Science",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Life Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-hons-in-zoology.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "B.Sc. in Information Technology (B.Sc. IT)",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "Faculty of Information Technology",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/bsc-information-technology-rkdf-university-ranchi.php",
+    "icon": "cpu"
+  },
+  {
+    "name": "B.Sc. in Interior Design",
+    "stream": "design",
+    "level": "ug",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/b-sc-interior-design-in-ranchi-admission-2026-rkdf-university.php",
+    "icon": "layout"
+  },
+  {
+    "name": "B.Sc. in Life Sciences (General)",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Life Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc-in-ranchi-fees-admission-2026-rkdf-university-4.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "B.Sc. in Multimedia & Animation",
+    "stream": "it",
+    "level": "ug",
+    "school": "Faculty of Information Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/b-sc-multimedia.php",
+    "icon": "video"
+  },
+  {
+    "name": "B.Sc. Program Overview",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-sc/b-sc.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "B.Tech in Civil Engineering",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "4 Years (8 Semesters)",
+    "href": "courses/b-tech-civil-engineering.php",
+    "icon": "building-2"
+  },
+  {
+    "name": "B.Tech in Computer Science & Engineering (CSE)",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "4 Years (8 Semesters)",
+    "href": "courses/b-tech-computer-science-engineering.php",
+    "icon": "cpu"
+  },
+  {
+    "name": "B.Tech in Electrical & Electronics Engineering (EEE)",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "4 Years (8 Semesters)",
+    "href": "courses/b-tech-electrical-electronics-engineering.php",
+    "icon": "zap"
+  },
+  {
+    "name": "B.Tech in Mechanical Engineering",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "4 Years (8 Semesters)",
+    "href": "courses/b-tech-mechanical-engineering.php",
+    "icon": "cog"
+  },
+  {
+    "name": "B.Tech in Mining Engineering",
+    "stream": "engineering",
+    "level": "ug",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "4 Years (8 Semesters)",
+    "href": "courses/b-tech-mining-engineering.php",
+    "icon": "pickaxe"
+  },
+  {
+    "name": "BA in Journalism & Mass Communication (BJMC)",
+    "stream": "media",
+    "level": "ug",
+    "school": "School of Journalism & Mass Communication",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/ba-in-journalism-mass-communication.php",
+    "icon": "radio"
+  },
+  {
+    "name": "Bachelor of Arts (B.A. General)",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/ba-bachelor-of-arts.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "Bachelor of Business Administration (BBA)",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bba.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Bachelor of Commerce (B.Com General)",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "3 / 4 Years (NEP)",
+    "href": "courses/under-graduate-programs/b-com/b-com.php",
+    "icon": "coins"
+  },
+  {
+    "name": "Bachelor of Computer Application (BCA)",
+    "stream": "it",
+    "level": "ug",
+    "school": "Department of Information Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bachelor-of-computer-application.php",
+    "icon": "laptop"
+  },
+  {
+    "name": "Bachelor of Laws (LL.B 3-Year)",
+    "stream": "law",
+    "level": "ug",
+    "school": "School of Law & Legal Studies",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bachelor-of-laws-llb.php",
+    "icon": "scale"
+  },
+  {
+    "name": "Bachelor of Library & Information Science (B.Lib.I.Sc.)",
+    "stream": "science",
+    "level": "ug",
+    "school": "School of Library & Information Science",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/bachelor-of-library-science-b-lib.php",
+    "icon": "library"
+  },
+  {
+    "name": "Bachelor of Management Studies (BMS)",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bachelor-of-management-studies-bms.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Bachelor of Mass Communication & Video Production",
+    "stream": "media",
+    "level": "ug",
+    "school": "School of Journalism & Mass Communication",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bachelor-of-mass-communication-and-video-production.php",
+    "icon": "radio"
+  },
+  {
+    "name": "Bachelor of Pharmacy (B.Pharm)",
+    "stream": "pharmacy",
+    "level": "ug",
+    "school": "School of Pharmaceutical Sciences",
+    "duration": "4 Years (8 Semesters)",
+    "href": "courses/bachelor-of-pharmacy-b-pharma.php",
+    "icon": "pill"
+  },
+  {
+    "name": "Bachelor of Social Work (BSW)",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bachelor-of-social-work-b-s-w.php",
+    "icon": "heart"
+  },
+  {
+    "name": "BBA (Corporate Specialization)",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bba-in-corporate.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "BBA in Hotel Management",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bba-hotel-management.php",
+    "icon": "hotel"
+  },
+  {
+    "name": "BBA LL.B (5-Year Integrated Honors)",
+    "stream": "management",
+    "level": "ug",
+    "school": "School of Law & Legal Studies",
+    "duration": "5 Years (10 Semesters)",
+    "href": "courses/bba-llb.php",
+    "icon": "scale"
+  },
+  {
+    "name": "BCA (Corporate Specialization)",
+    "stream": "it",
+    "level": "ug",
+    "school": "Department of Information Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/bca-corporate.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Diploma in Civil Engineering",
+    "stream": "engineering",
+    "level": "diploma",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/diploma-in-ce-civil-engineering.php",
+    "icon": "building"
+  },
+  {
+    "name": "Diploma in Computer Application (DCA)",
+    "stream": "it",
+    "level": "diploma",
+    "school": "Faculty of Information Technology",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/diploma-programs/diploma-in-computer-application.php",
+    "icon": "file-code"
+  },
+  {
+    "name": "Diploma in Computer Science & Engineering (Polytechnic)",
+    "stream": "engineering",
+    "level": "diploma",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/diploma-in-cse-computer-science-engineering.php",
+    "icon": "laptop"
+  },
+  {
+    "name": "Diploma in Electrical & Electronics Engineering",
+    "stream": "engineering",
+    "level": "diploma",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/diploma-in-eee-electrical-electronics-engineering.php",
+    "icon": "zap"
+  },
+  {
+    "name": "Diploma in Mechanical Engineering",
+    "stream": "engineering",
+    "level": "diploma",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/diploma-in-me-mechanical-engineering.php",
+    "icon": "cog"
+  },
+  {
+    "name": "Diploma in Mining Engineering (Polytechnic)",
+    "stream": "engineering",
+    "level": "diploma",
+    "school": "Faculty of Engineering & Technology",
+    "duration": "3 Years (6 Semesters)",
+    "href": "courses/diploma-in-mining.php",
+    "icon": "pickaxe"
+  },
+  {
+    "name": "Diploma in Pharmacy (D.Pharm)",
+    "stream": "pharmacy",
+    "level": "diploma",
+    "school": "School of Pharmaceutical Sciences",
+    "duration": "2 Years (Yearly System)",
+    "href": "courses/diploma-in-pharmacy-d-pharma.php",
+    "icon": "pill"
+  },
+  {
+    "name": "M.A. / M.Sc. in Fashion Design",
+    "stream": "design",
+    "level": "pg",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/ma-fashion-design.php",
+    "icon": "palette"
+  },
+  {
+    "name": "M.A. in Bengali",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-bengali.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in Economics",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-economics.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in Education",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-education.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in English Literature",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-english.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in Geography",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-geography.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in Hindi Literature",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-hindi.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in History",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-history.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in Political Science",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-political-science.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "M.A. in Sanskrit",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-in-sanskrit.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.A. in Sociology",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-hons-in-sociology.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "M.Sc. in Applied Mathematics",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-applied-mathematics.php",
+    "icon": "calculator"
+  },
+  {
+    "name": "M.Sc. in Applied Physics",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-applied-physics.php",
+    "icon": "atom"
+  },
+  {
+    "name": "M.Sc. in Biochemistry",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Life Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-in-biochemistry.php",
+    "icon": "dna"
+  },
+  {
+    "name": "M.Sc. in Biotechnology",
+    "stream": "engineering",
+    "level": "pg",
+    "school": "School of Life Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-biotechnology.php",
+    "icon": "dna"
+  },
+  {
+    "name": "M.Sc. in Botany",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Life Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-botany.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "M.Sc. in Chemistry",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-in-chemistry.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "M.Sc. in Computer Science",
+    "stream": "it",
+    "level": "pg",
+    "school": "Faculty of Information Technology",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-in-computer-science.php",
+    "icon": "laptop"
+  },
+  {
+    "name": "M.Sc. in Environmental Science",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-in-environmental-science.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "M.Sc. in Fashion Design",
+    "stream": "design",
+    "level": "pg",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-fashion-design.php",
+    "icon": "palette"
+  },
+  {
+    "name": "M.Sc. in Interior Design",
+    "stream": "design",
+    "level": "pg",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-interior-design.php",
+    "icon": "layout"
+  },
+  {
+    "name": "M.Sc. in Microbiology",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Life Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-microbiology.php",
+    "icon": "microscope"
+  },
+  {
+    "name": "M.Sc. in Zoology",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Life Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-sc-in-zoology.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "MA in Journalism & Mass Communication (MJMC)",
+    "stream": "media",
+    "level": "pg",
+    "school": "School of Journalism & Mass Communication",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/m-a-in-journalism-mass-communication.php",
+    "icon": "radio"
+  },
+  {
+    "name": "Master in Management Studies (MMS)",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-in-management-studies-mms.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Master of Arts (M.A. in English / Hindi / History / Pol Sci / Economics / Sociology)",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-arts.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "Master of Business Administration (MBA)",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-business-administration-mba.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Master of Commerce (M.Com)",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-commerce-m-com.php",
+    "icon": "coins"
+  },
+  {
+    "name": "Master of Computer Application (MCA)",
+    "stream": "it",
+    "level": "pg",
+    "school": "Department of Information Technology",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-computer-application.php",
+    "icon": "laptop"
+  },
+  {
+    "name": "Master of Hospital Administration (MHA)",
+    "stream": "pharmacy",
+    "level": "pg",
+    "school": "School of Pharmaceutical & Health Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mha-in-ranchi-fees-admission-2026-rkdf-university.php",
+    "icon": "heart-pulse"
+  },
+  {
+    "name": "Master of Laws (LL.M)",
+    "stream": "law",
+    "level": "pg",
+    "school": "School of Law & Legal Studies",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-laws.php",
+    "icon": "scale"
+  },
+  {
+    "name": "Master of Library & Information Science (M.Lib.I.Sc.)",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Library & Information Science",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/master-of-library-science.php",
+    "icon": "library"
+  },
+  {
+    "name": "Master of Science (M.Sc. Overview)",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-science-msc.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "Master of Social Work (MSW)",
+    "stream": "arts",
+    "level": "pg",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/master-of-social-workmsw.php",
+    "icon": "users"
+  },
+  {
+    "name": "MBA in Banking and Finance",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mba-banking-and-finance.php",
+    "icon": "landmark"
+  },
+  {
+    "name": "MBA in Construction & Project Management",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mba-construction-management.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "MBA in Fashion & Luxury Brand Management",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mba-in-fashion-design.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "MBA in Hotel Management & Hospitality",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mba-hotel-management.php",
+    "icon": "hotel"
+  },
+  {
+    "name": "MBA in Interior & Spatial Design Management",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mba-in-interior-design.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "MBA in Logistics & Supply Chain Management",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/mba-logistics-and-supply-chain-management.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "P.G. Diploma in Fashion Design",
+    "stream": "design",
+    "level": "pg",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/p-g-diploma-in-fashion-design.php",
+    "icon": "palette"
+  },
+  {
+    "name": "P.G. Diploma in Interior Design",
+    "stream": "design",
+    "level": "pg",
+    "school": "Department of Fashion & Interior Design",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/p-g-diploma-in-interior-design.php",
+    "icon": "layout"
+  },
+  {
+    "name": "Post Graduate Diploma in Computer Applications (PGDCA)",
+    "stream": "it",
+    "level": "pg",
+    "school": "Department of Information Technology",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/pgdca.php",
+    "icon": "file-code"
+  },
+  {
+    "name": "Postgraduate Commerce Hub",
+    "stream": "management",
+    "level": "ug",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/post-graduate-programs/m-com.php",
+    "icon": "coins"
+  },
+  {
+    "name": "Postgraduate Diploma Programs Hub",
+    "stream": "arts",
+    "level": "diploma",
+    "school": "School of Arts & Humanities",
+    "duration": "1 Year (2 Semesters)",
+    "href": "courses/post-graduate-programs/pg-diploma.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "Postgraduate IT Programs Hub",
+    "stream": "other",
+    "level": "ug",
+    "school": "Faculty of Information Technology",
+    "duration": "1 / 2 Years",
+    "href": "courses/post-graduate-programs/information-technology.php",
+    "icon": "graduation-cap"
+  },
+  {
+    "name": "Postgraduate M.A. Humanities Hub",
+    "stream": "arts",
+    "level": "ug",
+    "school": "School of Arts & Humanities",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/post-graduate-programs/ma.php",
+    "icon": "book-open"
+  },
+  {
+    "name": "Postgraduate M.Sc. Science Hub",
+    "stream": "science",
+    "level": "pg",
+    "school": "School of Basic & Applied Sciences",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/post-graduate-programs/m-sc.php",
+    "icon": "flask-conical"
+  },
+  {
+    "name": "Postgraduate MBA Management Hub",
+    "stream": "management",
+    "level": "pg",
+    "school": "Faculty of Management & Commerce",
+    "duration": "2 Years (4 Semesters)",
+    "href": "courses/post-graduate-programs/mba.php",
+    "icon": "briefcase"
+  },
+  {
+    "name": "Professional Postgraduate Programs Hub",
+    "stream": "other",
+    "level": "ug",
+    "school": "RKDF University Ranchi",
+    "duration": "1 / 2 Years",
+    "href": "courses/post-graduate-programs/professional-post-graduate-programs.php",
+    "icon": "graduation-cap"
+  },
+  {
+    "name": "Professional Undergraduate Programs Hub",
+    "stream": "other",
+    "level": "ug",
+    "school": "RKDF University Ranchi",
+    "duration": "3 / 4 / 5 Years",
+    "href": "courses/under-graduate-programs/professional.php",
+    "icon": "graduation-cap"
+  },
+  {
+    "name": "Undergraduate IT Programs Hub",
+    "stream": "other",
+    "level": "ug",
+    "school": "Faculty of Information Technology",
+    "duration": "3 / 4 Years",
+    "href": "courses/under-graduate-programs/information-technology-under-graduate-programs.php",
+    "icon": "graduation-cap"
+  }
+]
+JSON;
 
-$academic_highlights = [
-    ['num' => '90+',   'label' => 'Degree Programs', 'desc' => 'Diploma, UG, PG & Ph.D.'],
-    ['num' => '12',    'label' => 'Academic Schools', 'desc' => 'Multi-Disciplinary University'],
-    ['num' => '100%',  'label' => 'NEP / CBCS Aligned', 'desc' => 'Choice-Based Credit Structure'],
-    ['num' => 'AICTE', 'label' => 'Statutory Approvals', 'desc' => 'BCI, PCI & UGC Recognized'],
-];
+$courses = json_decode($courses_json, true);
 
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
-  <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
   <div class="relative mx-auto max-w-5xl px-6 text-center">
-    <!-- Breadcrumb Badge -->
     <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
-      <span class="text-white/90">Courses &amp; Academic Programs</span>
+      <span class="text-white/90">Course Directory</span>
     </div>
 
     <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
-      Academic Courses &amp; <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Programs</em>
+      All Academic Courses &amp; <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Programs</em>
     </h1>
 
-    <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
-      Explore 90+ career-defining undergraduate, postgraduate, diploma, and doctoral degree tracks engineered to prepare future leaders across engineering, healthcare, management, law, and sciences.
+    <p class="mt-6 text-white/85 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
+      Explore all <?= count($courses) ?> industry-aligned undergraduate, postgraduate, polytechnic diploma, and doctoral degree programs with detailed fee structures, syllabi, eligibility, and scholarship benefits.
     </p>
 
-    <!-- Key Badges -->
-    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
-      <span class="hero-pill">
-        <?= lucide_icon('layers') ?> 90+ Degree Tracks
-      </span>
-      <span class="hero-pill">
-        <?= lucide_icon('award') ?> NEP 2020 Model Curriculum
-      </span>
-      <span class="hero-pill">
-        <?= lucide_icon('landmark') ?> UGC 2(f) Recognized
-      </span>
-      <span class="hero-pill">
-        <?= lucide_icon('shield-check') ?> Industry-Aligned Syllabi
-      </span>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs">
+      <span class="hero-pill"><?= lucide_icon('layers', 'w-4 h-4 text-gold') ?> <?= count($courses) ?> Detailed Courses</span>
+      <span class="hero-pill"><?= lucide_icon('award', 'w-4 h-4 text-gold') ?> NEP 2020 Model Curriculum</span>
+      <span class="hero-pill"><?= lucide_icon('landmark', 'w-4 h-4 text-gold') ?> UGC 2(f) Recognized</span>
+      <span class="hero-pill"><?= lucide_icon('shield-check', 'w-4 h-4 text-gold') ?> 100% Placement Support</span>
     </div>
   </div>
 </section>
@@ -105,196 +1002,171 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <!-- Sub-Navigation Tabs for Courses -->
 <?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
 
-<!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
-  <div class="mx-auto max-w-7xl px-6 space-y-16">
+<!-- ==================== INTERACTIVE FILTER & SEARCH BAR ==================== -->
+<section class="py-12 md:py-16 bg-background">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
 
-    <!-- Overview Spotlight Card -->
-    <div class="gov-spotlight-card section-block">
-      <div class="absolute -right-20 -top-20 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="gov-spotlight-grid">
-        <div class="space-y-5">
-          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
-            <?= lucide_icon('layers', 'w-4 h-4 text-gold') ?> Comprehensive Academic Structure
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
-            Interdisciplinary Learning Designed for Tomorrow's Industry
-          </h2>
-          <p class="text-white/85 text-sm sm:text-base leading-relaxed font-normal">
-            At RKDF University Ranchi, our academic programs are thoughtfully structured to bridge the divide between theoretical excellence and industry demands. Following the National Education Policy (NEP 2020) and Choice Based Credit System (CBCS), students enjoy multidisciplinary elective options, hands-on laboratory immersion, and mandatory corporate internships.
-          </p>
-          <p class="text-white/75 text-xs sm:text-sm leading-relaxed font-normal">
-            Whether pursuing a technical diploma, a flagship professional bachelor’s degree, a specialized master’s, or pioneering doctoral research, our scholars benefit from state-of-the-art laboratory infrastructure, industry-certified faculty, and dedicated career placement support.
-          </p>
-
-          <div class="spotlight-pill-list pt-2">
-            <span class="spotlight-pill">
-              <?= lucide_icon('graduation-cap') ?>
-              <span>Undergraduate (UG)</span>
-            </span>
-            <span class="spotlight-pill">
-              <?= lucide_icon('award') ?>
-              <span>Postgraduate (PG)</span>
-            </span>
-            <span class="spotlight-pill">
-              <?= lucide_icon('wrench') ?>
-              <span>Polytechnic &amp; Diploma</span>
-            </span>
-            <span class="spotlight-pill">
-              <?= lucide_icon('microscope') ?>
-              <span>Doctoral (Ph.D.)</span>
-            </span>
+    <!-- Search & Filter Controls -->
+    <div class="bg-card border border-border rounded-2xl p-6 shadow-sm mb-10 space-y-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="relative w-full md:w-96">
+          <input type="text" id="courseSearch" placeholder="Search by course name or keyword (e.g. MCA, B.Tech, Mining, MBA, Fashion)..." 
+                 class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-border text-sm focus:outline-none focus:border-gold transition" />
+          <div class="absolute left-3.5 top-3 text-muted-foreground pointer-events-none">
+            <?= lucide_icon('search', 'w-4 h-4') ?>
           </div>
         </div>
 
-        <!-- Metric Seal Box -->
-        <div class="gazette-seal-inner space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] uppercase tracking-widest text-gold font-bold flex items-center gap-1.5">
-              <?= lucide_icon('landmark', 'w-3.5 h-3.5 text-gold') ?> Academic Registry
-            </span>
-            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-gold/20 text-gold border border-gold/30">
-              <?= lucide_icon('award', 'w-3.5 h-3.5') ?>
-            </span>
-          </div>
+        <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
+          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-brand text-gold font-bold transition" data-level="all">All Levels (<?= count($courses) ?>)</button>
+          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-muted text-muted-foreground hover:text-foreground transition" data-level="ug">Undergraduate (UG)</button>
+          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-muted text-muted-foreground hover:text-foreground transition" data-level="pg">Postgraduate (PG)</button>
+          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-muted text-muted-foreground hover:text-foreground transition" data-level="diploma">Diploma &amp; Polytechnic</button>
+        </div>
+      </div>
+
+      <!-- Stream Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-2 border-t border-border text-xs">
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg bg-brand/10 text-brand font-bold whitespace-nowrap" data-stream="all">All Streams</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="engineering">Engineering &amp; Polytechnic</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="it">Computer Science &amp; IT</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="management">Management &amp; Commerce</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="pharmacy">Pharmacy &amp; Health</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="law">Law &amp; Legal Studies</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="science">Sciences &amp; Biotech</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="arts">Arts &amp; Humanities</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="design">Design &amp; Fashion</button>
+        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="media">Media &amp; Library</button>
+      </div>
+    </div>
+
+    <!-- Active Results Counter -->
+    <div class="flex items-center justify-between mb-6">
+      <div class="text-sm font-semibold text-foreground">
+        Showing <span id="courseCount" class="text-brand font-bold"><?= count($courses) ?></span> programs
+      </div>
+      <div class="text-xs text-muted-foreground">
+        Click any program card to view exact fee structure, syllabus, eligibility, and scholarship details.
+      </div>
+    </div>
+
+    <!-- Courses Grid -->
+    <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <?php foreach ($courses as $c): ?>
+        <div class="course-item-card bg-card border border-border rounded-2xl p-6 shadow-sm hover:border-gold hover:shadow-md transition flex flex-col justify-between"
+             data-name="<?= strtolower(e($c['name'] . ' ' . $c['school'])) ?>"
+             data-level="<?= e($c['level']) ?>"
+             data-stream="<?= e($c['stream']) ?>">
+          
           <div>
-            <div class="font-serif text-2xl text-white font-normal">Quality in Higher Education</div>
-            <p class="text-xs text-white/80 mt-1.5 leading-relaxed">
-              Offering rigorous degree certifications backed by statutory national regulatory councils and government recognition.
-            </p>
-          </div>
-          <div class="pt-3 border-t border-white/15 grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <div class="font-serif text-xl text-gold">90+</div>
-              <div class="text-[10px] uppercase tracking-wider text-white/70">Degree Options</div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand/10 text-brand">
+                <?= strtoupper(e($c['level'])) ?> Degree
+              </span>
+              <span class="text-xs font-semibold text-muted-foreground flex items-center gap-1">
+                <?= lucide_icon('clock', 'w-3.5 h-3.5 text-gold') ?>
+                <?= e($c['duration']) ?>
+              </span>
             </div>
-            <div>
-              <div class="font-serif text-xl text-gold">100%</div>
-              <div class="text-[10px] uppercase tracking-wider text-white/70">CBCS &amp; NEP Aligned</div>
-            </div>
+
+            <h3 class="font-bold text-foreground text-lg mb-1 leading-snug hover:text-brand transition">
+              <a href="<?= url($c['href']) ?>"><?= e($c['name']) ?></a>
+            </h3>
+            <p class="text-xs text-muted-foreground mb-4"><?= e($c['school']) ?></p>
           </div>
+
+          <div class="pt-4 border-t border-border flex items-center justify-between">
+            <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Admissions Open 2026–27</span>
+            <a href="<?= url($c['href']) ?>" class="inline-flex items-center gap-1 text-xs font-bold text-brand hover:text-gold transition">
+              <span>View Details</span>
+              <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
+            </a>
+          </div>
+
         </div>
-      </div>
+      <?php endforeach; ?>
     </div>
 
-    <!-- ==================== COURSE CATEGORIES GRID ==================== -->
-    <div class="section-block" id="categories">
-      <div class="rkdf-section-header">
-        <div>
-          <span class="rkdf-section-tag">Programs by Level</span>
-          <h3 class="rkdf-section-title">Academic Degree Levels</h3>
-          <p class="rkdf-section-desc">Select your desired level of higher education to explore detailed courses, eligibility, and syllabi.</p>
-        </div>
-        <a href="<?= url('admissions/') ?>" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm shrink-0">
-          <span>Apply for 2026–27</span>
-          <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-        <?php foreach ($course_categories as $cat): ?>
-          <div class="course-category-card">
-            <!-- Card Header: Midnight Navy with Gold Accents -->
-            <div class="course-cat-header">
-              <div>
-                <span class="course-cat-badge">
-                  <?= e($cat['badge']) ?>
-                </span>
-                <h3 class="course-cat-title">
-                  <?= e($cat['title']) ?>
-                </h3>
-                <div class="course-cat-duration">
-                  <?= lucide_icon('clock', 'w-3.5 h-3.5') ?>
-                  <span><strong>Duration:</strong> <?= e($cat['duration']) ?></span>
-                </div>
-              </div>
-              <div class="course-cat-iconbox">
-                <?= lucide_icon($cat['icon'], 'w-6 h-6') ?>
-              </div>
-            </div>
-
-            <!-- Card Body: Clean Modern Spacing & Interactive Degree Chips -->
-            <div class="course-cat-body">
-              <p class="course-cat-desc">
-                <?= e($cat['desc']) ?>
-              </p>
-
-              <!-- Featured Degree Tracks Chips -->
-              <div>
-                <div class="course-cat-tracks-label">
-                  <span class="flex items-center gap-1.5">
-                    <?= lucide_icon('layers', 'w-3.5 h-3.5 text-gold') ?>
-                    <span>Featured Degree Tracks</span>
-                  </span>
-                  <span class="text-[11px] font-semibold text-slate-400">
-                    <?= count($cat['programs']) ?> Specializations
-                  </span>
-                </div>
-
-                <div class="course-cat-tracks-grid">
-                  <?php foreach ($cat['programs'] as $prg): ?>
-                    <div class="course-cat-chip">
-                      <span class="course-cat-chip-dot"></span>
-                      <span class="truncate"><?= e($prg) ?></span>
-                    </div>
-                  <?php endforeach; ?>
-                </div>
-              </div>
-
-              <!-- Action Button -->
-              <div class="pt-2">
-                <a href="<?= url($cat['href']) ?>" class="course-cat-action-btn">
-                  <span>Explore All <?= e($cat['title']) ?></span>
-                  <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
-                </a>
-              </div>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-
-    <!-- ==================== ADMISSION CALLOUT BANNER ==================== -->
-    <div class="rkdf-admission-banner section-block">
-      <div class="rkdf-admission-content space-y-2">
-        <div class="rkdf-admission-tag">
-          <?= lucide_icon('sparkles', 'w-4 h-4 text-gold') ?>
-          <span>Admissions Open for 2026–27 Session</span>
-        </div>
-        <h3 class="rkdf-admission-title">
-          Begin Your Academic Journey at RKDF University
-        </h3>
-        <p class="rkdf-admission-desc">
-          Apply online across 90+ undergraduate, postgraduate, diploma, and doctoral programs. Direct application, counseling support, and merit scholarship assistance available.
-        </p>
-        <div class="rkdf-admission-pills">
-          <span class="rkdf-admission-pill-item">
-            <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-600') ?> Direct Online Application
-          </span>
-          <span class="rkdf-admission-pill-item">
-            <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-600') ?> Academic Counseling
-          </span>
-          <span class="rkdf-admission-pill-item">
-            <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-600') ?> State Merit Scholarships
-          </span>
-        </div>
-      </div>
-
-      <div class="rkdf-admission-actions">
-        <a href="<?= url('admissions/') ?>" class="rkdf-admission-primary-btn">
-          <span>Apply Online Now</span>
-          <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
-        </a>
-        <a href="<?= url('contact.php') ?>" class="rkdf-admission-secondary-btn">
-          <span>Campus Visit</span>
-        </a>
-      </div>
+    <div id="noResults" class="hidden text-center py-16 text-muted-foreground">
+      <?= lucide_icon('search-x', 'w-12 h-12 mx-auto mb-3 text-muted-foreground/50') ?>
+      <p class="text-base font-semibold">No matching courses found.</p>
+      <p class="text-xs mt-1">Try searching with a different term or clear your filters.</p>
     </div>
 
   </div>
 </section>
+
+<!-- Search and Filter Client-Side Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('courseSearch');
+  const levelBtns = document.querySelectorAll('.filter-level-btn');
+  const streamBtns = document.querySelectorAll('.filter-stream-btn');
+  const cards = document.querySelectorAll('.course-item-card');
+  const countSpan = document.getElementById('courseCount');
+  const noResults = document.getElementById('noResults');
+
+  let activeLevel = 'all';
+  let activeStream = 'all';
+
+  function filterCourses() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name');
+      const level = card.getAttribute('data-level');
+      const stream = card.getAttribute('data-stream');
+
+      const matchesSearch = !query || name.includes(query);
+      const matchesLevel = activeLevel === 'all' || level === activeLevel;
+      const matchesStream = activeStream === 'all' || stream === activeStream;
+
+      if (matchesSearch && matchesLevel && matchesStream) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    countSpan.textContent = visibleCount;
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+
+  searchInput.addEventListener('input', filterCourses);
+
+  levelBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      levelBtns.forEach(b => {
+        b.classList.remove('bg-brand', 'text-gold', 'font-bold');
+        b.classList.add('bg-muted', 'text-muted-foreground');
+      });
+      this.classList.remove('bg-muted', 'text-muted-foreground');
+      this.classList.add('bg-brand', 'text-gold', 'font-bold');
+      activeLevel = this.getAttribute('data-level');
+      filterCourses();
+    });
+  });
+
+  streamBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      streamBtns.forEach(b => {
+        b.classList.remove('bg-brand/10', 'text-brand', 'font-bold');
+        b.classList.add('text-muted-foreground');
+      });
+      this.classList.remove('text-muted-foreground');
+      this.classList.add('bg-brand/10', 'text-brand', 'font-bold');
+      activeStream = this.getAttribute('data-stream');
+      filterCourses();
+    });
+  });
+});
+</script>
 
 <?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>
 <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>

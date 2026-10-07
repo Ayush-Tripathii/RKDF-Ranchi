@@ -1,351 +1,313 @@
 <?php
-/**
- * RKDF University — Bachelor of Business Administration (BBA) Programs
- * Content Source: https://rkdfuniversity.org/courses/bba/
- */
-require_once dirname(__DIR__) . '/config/config.php';
-require_once dirname(__DIR__) . '/includes/functions.php';
-
-$page_title     = 'BBA Programs | Faculty of Management Studies — ' . SITE_NAME;
-$page_meta_desc = 'Join the 3-Year BBA program at RKDF University Ranchi. Specializations in Marketing, Finance, HR, Digital Business & Analytics with corporate internships and 100% placement assistance.';
-
-$bba_specializations = [
-    [
-        'title'       => 'Marketing & Digital Strategy',
-        'badge'       => '3 Years • Dual Specialization',
-        'icon'        => 'target',
-        'desc'        => 'Consumer behavior analysis, brand positioning, search engine marketing, omnichannel retail distribution, and viral social media campaign strategies.',
-        'features'    => [
-            'Digital Marketing & Google Analytics Live Projects',
-            'Retail Merchandising & Product Launch Simulations',
-            'Summer Internship Programs with FMCG & E-Commerce Brands'
-        ],
-        'duration'    => '3 Years',
-        'eligibility' => '10+2 Any Stream (45%+)'
-    ],
-    [
-        'title'       => 'Financial & Investment Analysis',
-        'badge'       => '3 Years • Dual Specialization',
-        'icon'        => 'trending-up',
-        'desc'        => 'Corporate financial planning, security analysis, portfolio management, stock market dynamics, commercial banking operations, and FinTech tools.',
-        'features'    => [
-            'Financial Modeling in Excel & Advanced Spreadsheets',
-            'Stock Trading Sandbox & Mutual Fund Analysis',
-            'Taxation Planning & Ind AS Regulatory Compliances'
-        ],
-        'duration'    => '3 Years',
-        'eligibility' => '10+2 Any Stream (45%+)'
-    ],
-    [
-        'title'       => 'Human Resources & Analytics',
-        'badge'       => '3 Years • Dual Specialization',
-        'icon'        => 'users',
-        'desc'        => 'Talent acquisition, corporate labor laws, organizational psychology, HR metrics, compensation structuring, and workplace diversity leadership.',
-        'features'    => [
-            'HR Analytics & People Operations Simulation Tools',
-            'Industrial Relations & Labor Dispute Case Studies',
-            'Corporate Recruitment Drives & Mock HR Interviews'
-        ],
-        'duration'    => '3 Years',
-        'eligibility' => '10+2 Any Stream (45%+)'
-    ],
-    [
-        'title'       => 'IT & Digital Business Management',
-        'badge'       => '3 Years • Dual Specialization',
-        'icon'        => 'laptop',
-        'desc'        => 'Enterprise resource planning (ERP), business analytics, e-commerce architectures, database administration, and digital product lifecycle management.',
-        'features'    => [
-            'Business Intelligence Tools: Tableau & PowerBI Sandbox',
-            'Cloud-Based CRM & Enterprise Resource Workflows',
-            'Digital Transformation Capstone Projects'
-        ],
-        'duration'    => '3 Years',
-        'eligibility' => '10+2 Any Stream (45%+)'
-    ],
-    [
-        'title'       => 'Supply Chain & Logistics Management',
-        'badge'       => '3 Years • Dual Specialization',
-        'icon'        => 'truck',
-        'desc'        => 'Global procurement, warehouse operations, inventory optimization, multimodal freight management, and export-import documentation.',
-        'features'    => [
-            'Logistics Hub Field Visits & Port Clearance Training',
-            'Supply Chain Risk Modeling & ERP Supply Modules',
-            'Industrial Internships with 3PL & Courier Conglomerates'
-        ],
-        'duration'    => '3 Years',
-        'eligibility' => '10+2 Any Stream (45%+)'
-    ],
-    [
-        'title'       => 'BBA in Entrepreneurship & Family Business',
-        'badge'       => '3 Years • Incubation Track',
-        'icon'        => 'briefcase',
-        'desc'        => 'Business Model Canvas formulation, venture capital pitching, prototype validation, MSME startup incentives, and family business scaling.',
-        'features'    => [
-            'Seed Capital Pitching with Angel Investor Panels',
-            'Mentorship from Successful Industrial Entrepreneurs',
-            'University Incubation Centre Space & Legal Filing Aid'
-        ],
-        'duration'    => '3 Years',
-        'eligibility' => '10+2 Any Stream (45%+)'
-    ],
-];
-
-require_once dirname(__DIR__) . '/includes/header.php';
+$page_title = "Bachelor of Business Administration (BBA) (BBA) Admission, Fees, Eligibility — RKDF University Ranchi";
+$page_meta_desc = "Bachelor of Business Administration (BBA) at RKDF University Ranchi. Duration: 3 Years (6 Semesters), Eligibility: 10+2 passed in Arts, Science, or Commerce with minimum 45% marks.. UGC Recognized, AICTE/PCI/BCI approved with scholarships, hostel, and 100% placement support.";
+require_once __DIR__ . '/../includes/header.php';
 ?>
 
-<!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
-<section class="inner-page-hero">
-  <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-  <div class="relative mx-auto max-w-5xl px-6 text-center">
-    <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
-      <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
-      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
-      <a href="<?= url('courses/') ?>" class="hover:text-white transition">Courses</a>
-      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
-      <a href="<?= url('courses/under-graduate-programs.php') ?>" class="hover:text-white transition">Undergraduate</a>
-      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
-      <span class="text-white/90">BBA</span>
+<!-- ==================== COURSE HERO ==================== -->
+<div class="inner-page-hero">
+  <div class="mx-auto max-w-5xl">
+    <div class="hero-pill mb-4">
+      <?= lucide_icon('briefcase', 'w-4 h-4 text-gold') ?>
+      <span>Faculty of Management & Commerce</span>
     </div>
-
-    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
-      Bachelor of Business <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Administration (BBA)</em>
-    </h1>
-
-    <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
-      Develop strategic leadership, analytical acumen, marketing mastery, and financial intelligence through corporate internships, case study pedagogy, and global dual specializations.
+    <h1 class="text-3xl md:text-5xl font-serif font-bold mb-3 tracking-tight">Bachelor of Business Administration (BBA)</h1>
+    <div class="text-sm md:text-base text-gold font-semibold uppercase tracking-wider mb-4">Faculty of Management & Commerce | RKDF University Ranchi</div>
+    <p class="text-sm md:text-base text-white/80 max-w-2xl mx-auto">
+      Industry-aligned curriculum with cutting-edge laboratories, distinguished faculty, and comprehensive career placement support.
     </p>
+  </div>
+</div>
 
-    <!-- Key Badges -->
-    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
-      <span class="hero-pill">
-        <?= lucide_icon('briefcase') ?> Dual Specialization Options
-      </span>
-      <span class="hero-pill">
-        <?= lucide_icon('trending-up') ?> 150+ Corporate Hiring Partners
-      </span>
-      <span class="hero-pill">
-        <?= lucide_icon('award') ?> Summer Internship Program (SIP)
-      </span>
+<!-- ==================== KEY METRICS STRIP ==================== -->
+<div class="bg-card border-b border-border py-4">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center sm:text-left divide-y sm:divide-y-0 sm:divide-x divide-border">
+      <div class="px-3 py-1">
+        <span class="text-xs text-muted-foreground uppercase font-semibold block">Duration</span>
+        <span class="text-sm font-bold text-foreground">3 Years (6 Semesters)</span>
+      </div>
+      <div class="px-3 py-1">
+        <span class="text-xs text-muted-foreground uppercase font-semibold block">Prerequisites</span>
+        <span class="text-sm font-bold text-foreground">10+2 in any stream (Min 45% Gen, 40% SC/ST/OBC)</span>
+      </div>
+      <div class="px-3 py-1">
+        <span class="text-xs text-muted-foreground uppercase font-semibold block">Lateral Entry (NEP)</span>
+        <span class="text-sm font-bold text-foreground">Available as per UGC/AICTE norms</span>
+      </div>
+      <div class="px-3 py-1">
+        <span class="text-xs text-muted-foreground uppercase font-semibold block">Recognitions</span>
+        <span class="text-sm font-bold text-emerald-600 dark:text-emerald-400">UGC · AICTE · State Govt</span>
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- Sub-Navigation Tabs for Courses -->
-<?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
+<!-- ==================== STICKY SECTION NAV ==================== -->
+<div class="sticky top-20 z-40 bg-brand text-brand-foreground shadow-md">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar py-2 text-xs font-bold uppercase tracking-wider">
+    <a href="#about" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">About Course</a>
+    <a href="#eligibility" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">Eligibility</a>
+    <a href="#scholarships" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">Scholarships</a>
+    <a href="#advantages" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">Advantage</a>
+    <a href="#fees" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">Fee Structure</a>
+    <a href="#syllabus" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">Syllabus</a>
+    <a href="#faq" class="px-3 py-1.5 rounded-lg hover:bg-white/10 hover:text-gold transition whitespace-nowrap">FAQs</a>
+  </div>
+</div>
 
-<!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
-  <div class="mx-auto max-w-7xl px-6 space-y-16">
-
-    <!-- Framework Spotlight Card -->
-    <div class="gov-spotlight-card section-block">
-      <div class="absolute -right-20 -top-20 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="gov-spotlight-grid">
-        <div class="space-y-5">
-          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
-            <?= lucide_icon('briefcase', 'w-4 h-4 text-gold') ?> Faculty of Management Studies
-          </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
-            Cultivating Executive Leaders &amp; Dynamic Entrepreneurs
+<!-- ==================== MAIN CONTENT AREA ==================== -->
+<section class="py-12 md:py-16 bg-background">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Left Column (Content) -->
+      <div class="lg:col-span-2 space-y-10">
+        
+        <!-- About Section -->
+        <div id="about" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('book-open-check', 'w-6 h-6 text-gold') ?>
+            About the Programme
           </h2>
-          <p class="text-white/85 text-sm sm:text-base leading-relaxed font-normal">
-            The BBA degree at RKDF University Ranchi delivers a robust blend of management theory and real-world corporate execution. Students gain practical acumen through business simulations, live case studies, and corporate masterclasses.
-          </p>
-          <p class="text-white/75 text-xs sm:text-sm leading-relaxed font-normal">
-            With mandatory summer internships across banking, FMCG, retail, and tech enterprises, students build the industry network and operational skills demanded by global conglomerates.
-          </p>
-
-          <div class="spotlight-pill-list pt-2">
-            <span class="spotlight-pill">
-              <?= lucide_icon('check-circle') ?>
-              <span>Case Study Methodology</span>
-            </span>
-            <span class="spotlight-pill">
-              <?= lucide_icon('award') ?>
-              <span>Dual Specialization Choice</span>
-            </span>
-            <span class="spotlight-pill">
-              <?= lucide_icon('briefcase') ?>
-              <span>Summer Corporate Internships</span>
-            </span>
+          <div class="prose prose-slate max-w-none text-sm leading-relaxed text-muted-foreground space-y-3">
+            <p>Undergraduate business management program building core capabilities in marketing, human resources, finance, and entrepreneurial ventures.</p>
+            <p>The programme is structured to integrate rigorous theoretical foundations with intensive practical laboratory exposure, industry internships, corporate mentorship, and capstone projects.</p>
           </div>
         </div>
 
-        <!-- Metric Seal Box -->
-        <div class="gazette-seal-inner space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-[11px] uppercase tracking-widest text-gold font-bold flex items-center gap-1.5">
-              <?= lucide_icon('landmark', 'w-3.5 h-3.5 text-gold') ?> Quick Specs
-            </span>
-            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-gold/20 text-gold border border-gold/30">
-              <?= lucide_icon('briefcase', 'w-3.5 h-3.5') ?>
-            </span>
+        <!-- Eligibility Section -->
+        <div id="eligibility" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('check-circle', 'w-6 h-6 text-emerald-500') ?>
+            Eligibility Criteria
+          </h2>
+          <div class="space-y-3 text-sm text-muted-foreground">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <strong class="text-foreground block mb-1">Academic Qualification:</strong>
+              <span>10+2 passed in Arts, Science, or Commerce with minimum 45% marks.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <strong class="text-foreground block mb-1">Entrance Examination &amp; Merit:</strong>
+              <span>Admissions are conducted on the basis of merit in qualifying examinations or entrance scores (CUET / JEE / State Entrance / University Entrance). Students with valid CUET score will be given preference in merit.</span>
+            </div>
           </div>
-          <div>
-            <div class="font-serif text-2xl text-white font-normal">BBA Management</div>
-            <p class="text-xs text-white/80 mt-1.5 leading-relaxed">
-              Curriculum formulated under UGC NEP 2020 guidelines with DigiLocker Academic Bank of Credits (ABC) integration.
-            </p>
+        </div>
+
+        <!-- Scholarships Section -->
+        <div id="scholarships" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('award', 'w-6 h-6 text-gold') ?>
+            Scholarship Schemes Available
+          </h2>
+          <ul class="space-y-3 text-sm text-muted-foreground">
+            <li class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <?= lucide_icon('sparkles', 'w-5 h-5 text-gold shrink-0 mt-0.5') ?>
+              <span><strong>100% Fee Relaxation:</strong> For State Toppers of any Board / University examination under Chancellor Scholarship.</span>
+            </li>
+            <li class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <?= lucide_icon('sparkles', 'w-5 h-5 text-gold shrink-0 mt-0.5') ?>
+              <span><strong>50% Tuition Fee Waiver:</strong> For 2nd and 3rd Rank Toppers of State Board exams.</span>
+            </li>
+            <li class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <?= lucide_icon('sparkles', 'w-5 h-5 text-gold shrink-0 mt-0.5') ?>
+              <span><strong>E-Kalyan Jharkhand Scholarship:</strong> 100% tuition reimbursement support for SC / ST / OBC students of Jharkhand.</span>
+            </li>
+            <li class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <?= lucide_icon('sparkles', 'w-5 h-5 text-gold shrink-0 mt-0.5') ?>
+              <span><strong>Special Girl Child &amp; Sports Scholarship:</strong> Concessions for outstanding sports achievers and women in higher education.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Advantages Section -->
+        <div id="advantages" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('trophy', 'w-6 h-6 text-gold') ?>
+            Why Choose RKDF University Ranchi?
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-muted/40 border border-border">
+              <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-500 shrink-0') ?>
+              <span>100% Placement Assistance</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-muted/40 border border-border">
+              <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-500 shrink-0') ?>
+              <span>Every Student gets 1 Free Uniform Set</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-muted/40 border border-border">
+              <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-500 shrink-0') ?>
+              <span>1 Free Skill Certificate Course</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-muted/40 border border-border">
+              <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-500 shrink-0') ?>
+              <span>Free Transport Facility for Students</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-muted/40 border border-border">
+              <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-500 shrink-0') ?>
+              <span>Bank Education Loan Assistance</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-muted/40 border border-border">
+              <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-500 shrink-0') ?>
+              <span>Affordable Semester-wise Fee Structure</span>
+            </div>
           </div>
-          <div class="pt-3 border-t border-white/15 grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <div class="font-serif text-xl text-gold">3 Years</div>
-              <div class="text-[10px] uppercase tracking-wider text-white/70">6 Semesters</div>
+        </div>
+
+        <!-- Fee Structure Section -->
+        <div id="fees" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('receipt', 'w-6 h-6 text-gold') ?>
+            Fee Structure
+          </h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr class="bg-slate-50 dark:bg-slate-900/50 border-b border-border text-xs uppercase font-semibold text-muted-foreground">
+                  <th class="py-3 px-4">Fee Component</th>
+                  <th class="py-3 px-4">Amount / Frequency</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border">
+                <tr class="hover:bg-muted/40 transition">
+                  <td class="py-3.5 px-4 font-semibold text-foreground">Tuition Fee (Per Semester / Yearly)</td>
+                  <td class="py-3.5 px-4 text-brand font-bold">Rs. 20,000/- Per Semester</td>
+                </tr>
+                <tr class="hover:bg-muted/40 transition">
+                  <td class="py-3.5 px-4 font-semibold text-foreground">Hostel Fee (Optional)</td>
+                  <td class="py-3.5 px-4 text-muted-foreground">Rs. 18,000/- Per Semester (Lodging Only)</td>
+                </tr>
+                <tr class="hover:bg-muted/40 transition">
+                  <td class="py-3.5 px-4 font-semibold text-foreground">Admission Fee (One-time, Non-refundable)</td>
+                  <td class="py-3.5 px-4 text-muted-foreground">Rs. 10,000/-</td>
+                </tr>
+                <tr class="hover:bg-muted/40 transition">
+                  <td class="py-3.5 px-4 font-semibold text-foreground">Caution Money (One-time, Refundable)</td>
+                  <td class="py-3.5 px-4 text-muted-foreground">Rs. 5,000/-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs text-muted-foreground mt-4 italic">
+            *Note: Fees are subject to commemorative changes. Merit scholarships and E-Kalyan state reimbursements will be adjusted accordingly.
+          </p>
+        </div>
+
+        <!-- Syllabus Section -->
+        <div id="syllabus" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('file-text', 'w-6 h-6 text-gold') ?>
+            Program Structure &amp; Syllabus Overview
+          </h2>
+          <p class="text-sm text-muted-foreground mb-6">
+            The curriculum follows the Choice Based Credit System (CBCS) aligned with National Education Policy (NEP 2020) and statutory regulatory councils (AICTE / PCI / BCI / UGC).
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border text-xs">
+              <span class="font-bold text-foreground block mb-1">Module / Semester 1:</span>
+              <span class="text-muted-foreground">Principles of Management, Business Communication</span>
+            </div>
+            
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border text-xs">
+              <span class="font-bold text-foreground block mb-1">Module / Semester 2:</span>
+              <span class="text-muted-foreground">Marketing Management, Financial Accounting</span>
+            </div>
+            
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border text-xs">
+              <span class="font-bold text-foreground block mb-1">Module / Semester 3:</span>
+              <span class="text-muted-foreground">Human Resource Management, Business Law</span>
+            </div>
+            
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border text-xs">
+              <span class="font-bold text-foreground block mb-1">Module / Semester 4:</span>
+              <span class="text-muted-foreground">Entrepreneurship & Live Project</span>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div id="faq" class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm scroll-mt-36">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <?= lucide_icon('help-circle', 'w-6 h-6 text-gold') ?>
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-3 text-sm">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <strong class="text-foreground block mb-1">Is this degree valid for Government jobs and Higher Education?</strong>
+              <p class="text-xs text-muted-foreground">Yes, RKDF University Ranchi is established under Jharkhand State Legislature Act and recognized under Section 2(f) of the UGC Act 1956. Degrees are valid for UPSC, JPSC, SSC, PSU recruitments, and higher education worldwide.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-border">
+              <strong class="text-foreground block mb-1">Can I pay tuition fees in installments?</strong>
+              <p class="text-xs text-muted-foreground">Yes, university fees can be paid in semester-wise installments. Education loan facility assistance is also provided through nationalized banks.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column (Sidebar) -->
+      <div class="space-y-6">
+        
+        <!-- Enquire Form Card -->
+        <div class="bg-gradient-to-br from-brand to-slate-900 text-white rounded-2xl p-6 shadow-md">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-gold/20 text-gold flex items-center justify-center font-bold">
+              <?= lucide_icon('send', 'w-5 h-5') ?>
             </div>
             <div>
-              <div class="font-serif text-xl text-gold">45% 10+2</div>
-              <div class="text-[10px] uppercase tracking-wider text-white/70">Any Stream (40% Res.)</div>
+              <h3 class="font-bold text-base">Admission Enquiry</h3>
+              <p class="text-xs text-white/70">Session 2026–27 Open</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- ==================== SPECIALIZATIONS GRID ==================== -->
-    <div class="section-block" id="specializations">
-      <div class="rkdf-section-header">
-        <div>
-          <span class="rkdf-section-tag">Management Verticals</span>
-          <h3 class="rkdf-section-title">BBA Elective Specializations</h3>
-          <p class="rkdf-section-desc">Choose from high-growth corporate streams designed for high managerial employability.</p>
-        </div>
-        <a href="<?= url('admissions/') ?>" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm shrink-0">
-          <span>Apply for BBA 2026–27</span>
-          <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <?php foreach ($bba_specializations as $prog): ?>
-          <div class="prog-spec-card">
-            <!-- Dark Navy Header Banner -->
-            <div class="prog-spec-header">
-              <div>
-                <span class="prog-spec-badge">
-                  <?= lucide_icon('layers', 'w-3 h-3') ?>
-                  <span><?= e($prog['badge']) ?></span>
-                </span>
-                <h4 class="prog-spec-title"><?= e($prog['title']) ?></h4>
-              </div>
-              <div class="prog-spec-iconbox">
-                <?= lucide_icon($prog['icon'], 'w-6 h-6') ?>
-              </div>
+          <form action="<?= url('admissions/apply.php') ?>" method="GET" class="space-y-3 text-xs">
+            <div>
+              <label class="block text-white/80 font-medium mb-1">Your Full Name</label>
+              <input type="text" name="name" required placeholder="Enter full name" class="w-full px-3 py-2 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold" />
             </div>
-
-            <!-- Body Content -->
-            <div class="prog-spec-body">
-              <div class="space-y-4">
-                <p class="prog-spec-desc"><?= e($prog['desc']) ?></p>
-                
-                <ul class="prog-spec-feature-list">
-                  <?php foreach ($prog['features'] as $ft): ?>
-                    <li class="prog-spec-feature-item">
-                      <?= lucide_icon('check-circle', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                      <span><?= e($ft) ?></span>
-                    </li>
-                  <?php endforeach; ?>
-                </ul>
-              </div>
-
-              <!-- Stats & CTA -->
-              <div class="space-y-4">
-                <div class="prog-spec-stats-grid">
-                  <div class="prog-spec-stat-box">
-                    <span class="prog-spec-stat-lbl">Duration</span>
-                    <span class="prog-spec-stat-val"><?= e($prog['duration']) ?></span>
-                  </div>
-                  <div class="prog-spec-stat-box">
-                    <span class="prog-spec-stat-lbl">Eligibility</span>
-                    <span class="prog-spec-stat-val"><?= e($prog['eligibility']) ?></span>
-                  </div>
-                </div>
-
-                <a href="<?= url('admissions/') ?>" class="prog-spec-btn">
-                  <span>Apply for <?= e($prog['title']) ?></span>
-                  <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
-                </a>
-              </div>
+            <div>
+              <label class="block text-white/80 font-medium mb-1">Mobile Number</label>
+              <input type="tel" name="phone" required placeholder="+91 9876543210" class="w-full px-3 py-2 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold" />
             </div>
+            <div>
+              <label class="block text-white/80 font-medium mb-1">Email Address</label>
+              <input type="email" name="email" required placeholder="name@example.com" class="w-full px-3 py-2 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold" />
+            </div>
+            <input type="hidden" name="course" value="Bachelor of Business Administration (BBA)" />
+            <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-gold/90 transition shadow-md mt-2">
+              Submit Enquiry
+            </button>
+          </form>
+
+          <div class="mt-4 pt-4 border-t border-white/10 text-center">
+            <span class="text-[11px] text-white/70 block mb-1">Helpline Desk:</span>
+            <a href="tel:+917091168777" class="inline-flex items-center gap-1 text-gold font-bold text-sm hover:underline">
+              <?= lucide_icon('phone', 'w-4 h-4') ?>
+              <span>+91 7091168777</span>
+            </a>
           </div>
-        <?php endforeach; ?>
+        </div>
+
+        <!-- Quick Links Card -->
+        <div class="bg-card border border-border rounded-2xl p-6 shadow-sm">
+          <h3 class="font-bold text-foreground text-sm uppercase tracking-wider mb-4 pb-2 border-b border-border">
+            Important Information
+          </h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="<?= url('admissions/apply.php') ?>" class="flex items-center justify-between p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition"><span>Apply Admission Online</span><?= lucide_icon('chevron-right', 'w-3.5 h-3.5') ?></a></li>
+            <li><a href="<?= url('admissions/scholarship.php') ?>" class="flex items-center justify-between p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition"><span>Scholarships &amp; Fee Waiver</span><?= lucide_icon('chevron-right', 'w-3.5 h-3.5') ?></a></li>
+            <li><a href="<?= url('academics/hostel.php') ?>" class="flex items-center justify-between p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition"><span>Hostel &amp; Mess Facilities</span><?= lucide_icon('chevron-right', 'w-3.5 h-3.5') ?></a></li>
+            <li><a href="<?= url('academics/transport.php') ?>" class="flex items-center justify-between p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition"><span>Transport &amp; Bus Routes</span><?= lucide_icon('chevron-right', 'w-3.5 h-3.5') ?></a></li>
+            <li><a href="<?= url('placements/') ?>" class="flex items-center justify-between p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition"><span>Placement Records &amp; Recruiters</span><?= lucide_icon('chevron-right', 'w-3.5 h-3.5') ?></a></li>
+          </ul>
+        </div>
+
       </div>
+
     </div>
-
-    <!-- ==================== CORPORATE ADVANTAGE PILLARS ==================== -->
-    <div class="section-block">
-      <div class="rkdf-section-header">
-        <div>
-          <span class="rkdf-section-tag">Management Excellence</span>
-          <h3 class="rkdf-section-title">The RKDF Management Advantage</h3>
-          <p class="rkdf-section-desc">Why aspiring business leaders choose RKDF University Ranchi for executive education.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('target') ?>
-          </div>
-          <h4 class="pillar-title">100% Internship Placement</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Guaranteed 8-week corporate summer internship program (SIP) with stipends across leading financial institutions and consumer brands.
-          </p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('briefcase') ?>
-          </div>
-          <h4 class="pillar-title">Corporate Leadership Mentorship</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Weekly executive masterclasses and CXO guest lectures delivered by senior leaders from Fortune 500 corporations and start-up founders.
-          </p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('award') ?>
-          </div>
-          <h4 class="pillar-title">Pre-Placement Training &amp; Soft Skills</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Specialized Language Lab training, group discussion prep, psychometric testing, and resume optimization by professional HR consultants.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Final CTA Banner -->
-    <div class="rkdf-admission-banner section-block">
-      <div class="rkdf-admission-content space-y-2">
-        <div class="rkdf-admission-tag">
-          <?= lucide_icon('sparkles', 'w-4 h-4 text-gold') ?>
-          <span>BBA Admissions Open for 2026–27 Cycle</span>
-        </div>
-        <h3 class="rkdf-admission-title">
-          Step into Corporate Leadership with BBA
-        </h3>
-        <p class="rkdf-admission-desc">
-          Apply online for BBA programs at RKDF University Ranchi. State scholarship facilities and installment fee options available.
-        </p>
-      </div>
-      <div class="rkdf-admission-actions">
-        <a href="<?= url('admissions/') ?>" class="rkdf-admission-primary-btn">
-          <span>Apply for BBA</span>
-          <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
-        </a>
-        <a href="<?= url('contact.php') ?>" class="rkdf-admission-secondary-btn">
-          <span>Management Advisory</span>
-        </a>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>
-<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

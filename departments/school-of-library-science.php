@@ -41,6 +41,20 @@ $programs = [
         ],
         'eligibility' => 'Bachelor’s Degree (B.A., B.Sc., B.Com., BBA, BCA, B.Tech) in any discipline from a recognized University with minimum 45% aggregate marks (40% for reserved categories).'
     ],
+
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Library & Information Science)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / RET Track',
+        'icon'        => 'microscope',
+        'description' => 'Advanced doctoral research in digital information systems, scientometrics, ontology modeling, automated library networks, and digital preservation.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Digital Repositories & Knowledge Mgmt', 'tag' => 'Metadata & Linked Data'],
+            ['name' => 'Ph.D. in Scientometrics & Bibliometrics',        'tag' => 'Citation & Impact Analysis'],
+        ],
+        'eligibility' => 'Master of Library & Information Science (M.Lib / M.Lib.I.Sc) with minimum 55% marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET.'
+    ],
 ];
 
 $labs = [

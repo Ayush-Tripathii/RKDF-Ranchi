@@ -10,51 +10,65 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'Faculty of Commerce — ' . SITE_NAME;
 $page_meta_desc = 'Faculty of Commerce at RKDF University Ranchi. Industry-aligned B.Com, B.Com Corporate & M.Com programs with dedicated Tally Prime, GST, Corporate Finance, and FinTech simulation laboratories.';
 
+
 $programs = [
     [
         'category'    => 'Postgraduate Degrees (PG)',
         'title'       => 'Master of Commerce (M.Com)',
         'duration'    => '2 Years · 4 Semesters',
-        'badge'       => 'Advanced Commerce & Taxation',
-        'icon'        => 'coins',
-        'description' => 'Advanced master’s program designed for leadership roles in corporate accounting, financial management, international taxation, auditing standards, security analysis, and banking operations.',
+        'badge'       => 'Advanced Accounting & Taxation',
+        'icon'        => 'receipt',
+        'description' => 'Advanced postgraduate commerce curriculum focusing on corporate financial accounting, direct & indirect tax laws, corporate restructuring, forensic auditing, and capital market operations.',
         'branches'    => [
-            ['name' => 'Corporate Financial Accounting & Reporting', 'tag' => 'Ind AS & IFRS'],
-            ['name' => 'Direct & Indirect Tax Laws (GST)', 'tag' => 'Corporate Tax Planning'],
-            ['name' => 'Security Analysis & Portfolio Management', 'tag' => 'Equity & Valuation'],
-            ['name' => 'International Business & Trade Finance', 'tag' => 'Forex & EXIM'],
+            ['name' => 'Corporate Financial Accounting',  'tag' => 'Ind AS & IFRS Standards'],
+            ['name' => 'Direct & Indirect Taxation',       'tag' => 'GST & Corporate Tax'],
+            ['name' => 'Banking & Financial Institutions', 'tag' => 'Risk & Credit Management'],
+            ['name' => 'Corporate Governance & Auditing',  'tag' => 'Statutory Compliance'],
         ],
-        'eligibility' => 'Passed B.Com. / B.Com. (Hons.) / BBA or equivalent degree from a recognized University with at least 50% aggregate marks (45% for SC/ST/OBC category).'
-    ],
-    [
-        'category'    => 'Industry-Integrated UG',
-        'title'       => 'B.Com Corporate (Industry Integrated)',
-        'duration'    => '3 Years · 6 Semesters',
-        'badge'       => 'Corporate Track',
-        'icon'        => 'briefcase',
-        'description' => 'Specialized industry-integrated undergraduate degree designed in consultation with corporate auditors and accountants, providing practical training in Tally Prime, GST filing, secretarial practice, and financial modeling.',
-        'branches'    => [
-            ['name' => 'Tally Prime & Computerized Accounting', 'tag' => 'ERP & Ledger Mgmt'],
-            ['name' => 'GST & Income Tax E-Filing Sandbox', 'tag' => 'ITR & GST Portals'],
-            ['name' => 'Corporate Law & Company Secretarial Practice', 'tag' => 'MCA & Compliance'],
-            ['name' => 'Financial Modeling & Valuation in Excel', 'tag' => 'Advanced Analytics'],
-        ],
-        'eligibility' => 'Passed 10+2 examination in Commerce / Science / Arts with Mathematics / Economics or equivalent from a recognized board with minimum 45% aggregate marks (40% for reserved categories).'
+        'eligibility' => 'Bachelor of Commerce (B.Com / B.Com Hons) or BBA degree from a recognized University with at least 45% aggregate marks (40% for SC/ST/OBC).'
     ],
     [
         'category'    => 'Undergraduate Degrees (UG)',
         'title'       => 'Bachelor of Commerce (B.Com)',
-        'duration'    => '3 Years · 6 Semesters',
-        'badge'       => 'Flagship Commerce Degree',
-        'icon'        => 'landmark',
-        'description' => 'Comprehensive foundational program in business mathematics, financial accounting, company law, cost accounting, banking operations, and micro & macro economics.',
+        'duration'    => '3 / 4 Years (NEP)',
+        'badge'       => 'Accounting & Finance Core',
+        'icon'        => 'coins',
+        'description' => 'Comprehensive undergraduate commerce education developing strong expertise in financial accounting, business economics, corporate mercantile law, and auditing.',
         'branches'    => [
-            ['name' => 'Financial & Cost Accounting Frameworks', 'tag' => 'Balance Sheet & Auditing'],
-            ['name' => 'Banking & Insurance Regulations', 'tag' => 'RBI & IRDA Norms'],
-            ['name' => 'Corporate Governance & Business Ethics', 'tag' => 'Statutory Compliance'],
-            ['name' => 'Auditing Standards & Forensic Basics', 'tag' => 'Internal Audit Controls'],
+            ['name' => 'Financial & Cost Accounting', 'tag' => 'Corporate Balance Sheets'],
+            ['name' => 'Business Economics & Stats',   'tag' => 'Quantitative Decision Tools'],
+            ['name' => 'Banking & Insurance Laws',     'tag' => 'Commercial Regulations'],
+            ['name' => 'Company Law & Secretarial',    'tag' => 'Corporate Filing'],
         ],
-        'eligibility' => 'Passed 10+2 examination from a recognized board with at least 45% aggregate marks (40% for SC/ST/OBC candidates) with Commerce or allied subjects.'
+        'eligibility' => 'Passed 10+2 / Intermediate examination with Commerce or Science/Arts with at least 45% aggregate marks (40% for reserved category).'
+    ],
+    [
+        'category'    => 'Industry-Integrated UG',
+        'title'       => 'B.Com Corporate (Industry Integrated)',
+        'duration'    => '3 / 4 Years (NEP)',
+        'badge'       => 'Corporate Track',
+        'icon'        => 'briefcase',
+        'description' => 'Co-engineered with accounting corporate firms, featuring computerized accounting on Tally Prime ERP, live GST return filing, corporate payroll simulations, and fast-track placement bootcamps.',
+        'branches'    => [
+            ['name' => 'Tally Prime ERP & Computerized Accounts', 'tag' => 'ERP Certification'],
+            ['name' => 'GST & E-TDS Return Filing',                'tag' => 'Live Portal Simulations'],
+            ['name' => 'Corporate Financial Management',           'tag' => 'Capital Budgeting & Valuation'],
+            ['name' => 'Corporate Payroll & Compliance',          'tag' => 'PF, ESI & Labour Laws'],
+        ],
+        'eligibility' => 'Passed 10+2 with Commerce or allied subjects with minimum 50% marks (45% for SC/ST/OBC).'
+    ],
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Commerce)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / RET Track',
+        'icon'        => 'microscope',
+        'description' => 'Rigorous doctoral research in financial market integration, corporate taxation frameworks, banking efficiency, microfinance, and ESG corporate disclosures.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Corporate Accounting & Finance', 'tag' => 'IFRS & Valuation'],
+            ['name' => 'Ph.D. in Banking & Microfinance',         'tag' => 'Financial Inclusion'],
+        ],
+        'eligibility' => 'Master of Commerce (M.Com) or allied master degree with at least 55% marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET.'
     ],
 ];
 

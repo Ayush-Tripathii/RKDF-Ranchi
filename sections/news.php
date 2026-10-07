@@ -40,7 +40,7 @@ $news_items = [
 
   <div class="mt-10 grid md:grid-cols-3 gap-6">
     <?php foreach ($news_items as $item): ?>
-      <a href="<?= e($item['href']) ?>" class="group">
+      <a href="<?= url('media/news.php') ?>" class="group">
         <div class="overflow-hidden rounded-xl">
           <img src="<?= img($item['image']) ?>" alt="<?= e($item['title']) ?>" width="1280" height="960" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
         </div>

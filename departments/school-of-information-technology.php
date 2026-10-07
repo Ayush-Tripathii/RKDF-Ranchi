@@ -10,6 +10,7 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'Faculty of Information & Technology — ' . SITE_NAME;
 $page_meta_desc = 'Faculty of Information & Technology at RKDF University Ranchi. Industry-aligned MCA, BCA, BCA Corporate & PGDCA programs with advanced cloud, AI, and software engineering labs.';
 
+
 $programs = [
     [
         'category'    => 'Postgraduate Degrees (PG)',
@@ -24,7 +25,22 @@ $programs = [
             ['name' => 'Cyber Security & Forensics', 'tag' => 'Ethical Hacking'],
             ['name' => 'Mobile & Distributed Systems', 'tag' => 'Flutter & React Native'],
         ],
-        'eligibility' => 'Passed BCA / Bachelor Degree in Computer Science Engineering or equivalent degree, OR passed B.Sc. / B.Com. / B.A. with Mathematics at 10+2 level or at Graduation Level (with additional bridge courses as per university norms) with at least 50% marks (45% for reserved categories).'
+        'eligibility' => 'Passed BCA / Bachelor Degree in Computer Science Engineering or equivalent degree, OR passed B.Sc. / B.Com. / B.A. with Mathematics at 10+2 level or Graduation Level with at least 50% marks (45% for reserved categories).'
+    ],
+    [
+        'category'    => 'Postgraduate Degrees (PG)',
+        'title'       => 'M.Sc. in Computer Science',
+        'duration'    => '2 Years · 4 Semesters',
+        'badge'       => 'Algorithmic & AI Research',
+        'icon'        => 'code',
+        'description' => 'High-performance computing, advanced data structures, algorithmic graph theory, big data analytics, image processing, and neural network research.',
+        'branches'    => [
+            ['name' => 'Advanced Algorithm Design', 'tag' => 'Graph Theory & Complexity'],
+            ['name' => 'Data Science & Big Data Analytics', 'tag' => 'Hadoop & Spark'],
+            ['name' => 'Natural Language Processing', 'tag' => 'LLMs & Transformers'],
+            ['name' => 'Network Security & Cryptography', 'tag' => 'Zero Trust & Blockchain'],
+        ],
+        'eligibility' => 'B.Sc. in Computer Science / IT / BCA / B.Sc. with Mathematics with at least 50% aggregate marks (45% for SC/ST/OBC).'
     ],
     [
         'category'    => 'Undergraduate Degrees (UG)',
@@ -39,7 +55,7 @@ $programs = [
             ['name' => 'Web Application Development', 'tag' => 'HTML5, CSS3 & JavaScript'],
             ['name' => 'Computer Networks & Security', 'tag' => 'TCP/IP & Firewalls'],
         ],
-        'eligibility' => 'Passed 10+2 or equivalent examination from a recognized Board with Mathematics / Computer Science / IT / Information Practices as one of the subjects with at least 45% marks (40% for reserved categories).'
+        'eligibility' => 'Passed 10+2 or equivalent examination from a recognized Board with Mathematics / Computer Science / IT as one of the subjects with at least 45% marks (40% for reserved categories).'
     ],
     [
         'category'    => 'Industry-Integrated UG',
@@ -57,6 +73,36 @@ $programs = [
         'eligibility' => 'Passed 10+2 from a recognized board with minimum 50% marks (45% for SC/ST/OBC) with Mathematics/Computer Science/IT.'
     ],
     [
+        'category'    => 'Undergraduate Degrees (UG)',
+        'title'       => 'B.Sc. in Information Technology (B.Sc. IT)',
+        'duration'    => '3 Years · 6 Semesters',
+        'badge'       => 'Applied Systems & Networking',
+        'icon'        => 'database',
+        'description' => 'Applied IT systems, object-oriented programming, network administration, database management, cloud architecture, and cybersecurity fundamentals.',
+        'branches'    => [
+            ['name' => 'Network Protocols & Administration', 'tag' => 'Cisco & Linux'],
+            ['name' => 'Database Engineering', 'tag' => 'RDBMS & Data Warehousing'],
+            ['name' => 'Cloud Infrastructure Systems', 'tag' => 'Virtualization & AWS'],
+            ['name' => 'Web & API Scripting', 'tag' => 'RESTful Services & JSON'],
+        ],
+        'eligibility' => 'Passed 10+2 with Science stream (Math/Physics/CS) with minimum 45% aggregate marks (40% for reserved categories).'
+    ],
+    [
+        'category'    => 'Undergraduate Degrees (UG)',
+        'title'       => 'B.Sc. in Multimedia & Animation',
+        'duration'    => '3 Years · 6 Semesters',
+        'badge'       => 'Creative Technology',
+        'icon'        => 'video',
+        'description' => '2D/3D animation, VFX compositing, digital audio-video editing, interactive game design, visual storytelling, and motion graphic illustrations.',
+        'branches'    => [
+            ['name' => '3D Modeling & Rigging', 'tag' => 'Maya & Blender'],
+            ['name' => 'VFX & Post-Production', 'tag' => 'After Effects & Nuke'],
+            ['name' => 'Game Art & Unreal Engine', 'tag' => 'Interactive Media'],
+            ['name' => 'Digital Audio & Sound FX', 'tag' => 'Pro Tools & Audition'],
+        ],
+        'eligibility' => 'Passed 10+2 in any stream (Science, Commerce, Arts) from a recognized board with minimum 45% aggregate marks.'
+    ],
+    [
         'category'    => 'Postgraduate Diplomas',
         'title'       => 'Post Graduate Diploma in Computer Applications (PGDCA)',
         'duration'    => '1 Year · 2 Semesters',
@@ -70,6 +116,34 @@ $programs = [
             ['name' => 'IT Systems & Hardware Basics', 'tag' => 'OS & Networking'],
         ],
         'eligibility' => 'Graduation in any discipline from a recognized University with minimum 45% aggregate marks (40% for reserved category).'
+    ],
+    [
+        'category'    => 'Polytechnic Diploma Programs',
+        'title'       => 'Diploma in Computer Application (DCA)',
+        'duration'    => '1 Year · 2 Semesters',
+        'badge'       => 'Fast-Track Technical',
+        'icon'        => 'file-code',
+        'description' => 'Foundational computing certification covering PC operating systems, MS Office Suite, Internet tools, database fundamentals, and basic programming logic.',
+        'branches'    => [
+            ['name' => 'Operating Systems & File Mgmt', 'tag' => 'Windows & Linux'],
+            ['name' => 'Office Suite & Spreadsheets', 'tag' => 'Word, Excel & PPT'],
+            ['name' => 'Internet & Cyber Awareness', 'tag' => 'Digital Literacy'],
+        ],
+        'eligibility' => 'Passed 10+2 examination from any recognized board.'
+    ],
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Computer Science & IT)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / RET Track',
+        'icon'        => 'microscope',
+        'description' => 'Advanced theoretical and applied computing research in artificial intelligence, neural networks, natural language processing, cloud infrastructure, and cryptography.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Artificial Intelligence & Deep Learning', 'tag' => 'Computer Vision & NLP'],
+            ['name' => 'Ph.D. in Cyber Security & Cryptography',        'tag' => 'Zero-Trust Architectures'],
+            ['name' => 'Ph.D. in Cloud & Distributed Computing',        'tag' => 'Edge & Quantum Computing'],
+        ],
+        'eligibility' => 'Master’s Degree (MCA / M.Sc. CS / M.Tech CSE) with minimum 55% aggregate marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET / GATE.'
     ],
 ];
 

@@ -5,13 +5,21 @@
  */
 
 // Site Info
-define('SITE_NAME',    'RKDF University');
-define('SITE_TAGLINE', 'Education Glorifies Nation');
-define('SITE_URL',     'http://localhost/RKDF Ranchi');
-define('SITE_YEAR',    '2026');
-define('SITE_EMAIL',   'info@rkdf.ac.in');
-define('SITE_PHONE',   '+91 000 000 0000');
-define('SITE_ADDRESS', 'RKDF Campus, Ranchi, Jharkhand, India');
+define('SITE_NAME',            'RKDF University');
+define('SITE_TAGLINE',         'Education Glorifies Nation');
+define('SITE_URL',             'http://localhost/RKDF Ranchi');
+define('SITE_YEAR',            '2026');
+define('SITE_EMAIL',           'info@rkdfuniversity.org');
+define('SITE_ADMISSION_EMAIL', 'admission@rkdfuniversity.org');
+define('SITE_PHONE',           '+91 7091168777');
+define('SITE_WHATSAPP',        '+91 7091168777');
+define('SITE_TOLLFREE',        '1800-180-5522');
+define('SITE_ADDRESS',         'RKDF University, Argora Bypass Road, Near Kathal More, Ranchi, Jharkhand - 834004');
+define('SOCIAL_FACEBOOK',      'https://www.facebook.com/rkdfuniversityranchi/');
+define('SOCIAL_INSTAGRAM',     'https://www.instagram.com/rkdfuniversityranchi/');
+define('SOCIAL_YOUTUBE',       'https://www.youtube.com/@rkdfuniversityranchi');
+define('SOCIAL_LINKEDIN',      'https://www.linkedin.com/school/rkdfuniversityranchi/');
+define('SOCIAL_WHATSAPP',      'https://wa.me/917091168777');
 
 // Meta defaults (can be overridden per page)
 define('DEFAULT_META_DESC',

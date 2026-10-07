@@ -8,40 +8,72 @@ require_once dirname(__DIR__) . '/config/config.php';
 require_once dirname(__DIR__) . '/includes/functions.php';
 
 $page_title     = 'Faculty of Engineering & Technology — ' . SITE_NAME;
-$page_meta_desc = 'Faculty of Engineering & Technology at RKDF University Ranchi. Industry 4.0 aligned B.Tech, Polytechnic Diploma, and M.Tech programs with advanced high-tech laboratories.';
+$page_meta_desc = 'Faculty of Engineering & Technology at RKDF University Ranchi. Industry 4.0 aligned B.Tech, M.Tech, Polytechnic Diploma, and Ph.D. programs with advanced high-tech laboratories.';
 
 $programs = [
     [
-        'category'    => 'Undergraduate Programs',
+        'category'    => 'Undergraduate Programs (UG)',
         'title'       => 'Bachelor of Technology (B.Tech)',
         'duration'    => '4 Years · 8 Semesters',
         'badge'       => 'AICTE Model Curriculum',
         'icon'        => 'cpu',
-        'description' => 'Comprehensive 4-year engineering degrees combining strong mathematical foundations, laboratory experimentation, and industry internships.',
+        'description' => 'Comprehensive 4-year engineering degrees combining strong mathematical foundations, modern laboratory experimentation, AI/CAD tools, and mandatory corporate internships.',
         'branches'    => [
-            ['name' => 'Computer Science & Engineering (CSE)', 'tag' => 'AI & Cloud Ready'],
-            ['name' => 'Civil Engineering (CE)',               'tag' => 'Smart Infrastructure'],
+            ['name' => 'Computer Science & Engineering (CSE)', 'tag' => 'AI, ML & Cloud Ready'],
+            ['name' => 'Mining Engineering',                   'tag' => 'Mineral Exploration & Blasting'],
+            ['name' => 'Civil Engineering (CE)',               'tag' => 'Smart Structural Systems'],
             ['name' => 'Mechanical Engineering (ME)',          'tag' => 'Robotics & Automation'],
-            ['name' => 'Electrical Engineering (EE)',          'tag' => 'Power & EV Systems'],
-            ['name' => 'Mining Engineering',                   'tag' => 'Mineral Technology'],
+            ['name' => 'Electrical & Electronics (EEE)',        'tag' => 'Power Grids & EV Systems'],
         ],
-        'eligibility' => '10+2 with Physics, Mathematics & Chemistry/CS with min 45% marks (40% for reserved categories) or valid JEE / University Entrance score.'
+        'eligibility' => '10+2 with Physics, Mathematics & Chemistry/CS with min 45% marks (40% for reserved categories) or valid JEE Main / University Entrance score.'
     ],
     [
-        'category'    => 'Polytechnic Diploma',
+        'category'    => 'Postgraduate Programs (PG)',
+        'title'       => 'Master of Technology (M.Tech)',
+        'duration'    => '2 Years · 4 Semesters',
+        'badge'       => 'Advanced R&D & Industry Specialization',
+        'icon'        => 'award',
+        'description' => 'Specialized 2-year master of technology curricula emphasizing advanced engineering design, simulation modeling, applied research publications, and industrial R&D.',
+        'branches'    => [
+            ['name' => 'M.Tech in Computer Science & Engineering', 'tag' => 'AI, Cloud & Big Data'],
+            ['name' => 'M.Tech in Mining Engineering',             'tag' => 'Geomechanics & Mine Planning'],
+            ['name' => 'M.Tech in Structural Engineering (Civil)', 'tag' => 'Earthquake & FEM Analysis'],
+            ['name' => 'M.Tech in Thermal & Fluid Engineering',    'tag' => 'CFD & Energy Systems'],
+            ['name' => 'M.Tech in Power Systems (EEE)',            'tag' => 'Smart Grids & Renewable Integration'],
+        ],
+        'eligibility' => 'B.E. / B.Tech or equivalent degree in relevant engineering branch with at least 50% aggregate marks (45% for SC/ST/OBC category candidates).'
+    ],
+    [
+        'category'    => 'Polytechnic Diploma Programs',
         'title'       => 'Diploma in Engineering (Polytechnic)',
         'duration'    => '3 Years · 6 Semesters',
         'badge'       => 'Hands-on Technical Rigor',
         'icon'        => 'wrench',
-        'description' => 'Industry-oriented practical technical education designed for fast-track employment in core manufacturing, infrastructure, and technical services.',
+        'description' => 'Industry-oriented practical technical education designed for immediate employment in core manufacturing, infrastructure development, mining sites, and maintenance services.',
         'branches'    => [
-            ['name' => 'Diploma in Civil Engineering',        'tag' => 'Surveying & CAD'],
-            ['name' => 'Diploma in Mechanical Engineering',   'tag' => 'Machining & CNC'],
-            ['name' => 'Diploma in Electrical Engineering',   'tag' => 'Grid & Industrial Wiring'],
-            ['name' => 'Diploma in Computer Science',         'tag' => 'Software & Hardware'],
-            ['name' => 'Diploma in Mining Engineering',       'tag' => 'Field Operations'],
+            ['name' => 'Diploma in Mining Engineering',       'tag' => 'Surface & Underground Mines'],
+            ['name' => 'Diploma in Computer Science & Engg.', 'tag' => 'Software & Network Admin'],
+            ['name' => 'Diploma in Civil Engineering',        'tag' => 'Total Station Survey & CAD'],
+            ['name' => 'Diploma in Mechanical Engineering',   'tag' => 'CNC Machining & Tooling'],
+            ['name' => 'Diploma in Electrical & Electronics',  'tag' => 'Switchgear & Industrial Wiring'],
         ],
-        'eligibility' => 'Class 10th pass from recognized board with Science & Mathematics, or Lateral Entry (2nd year) for 10+2 / ITI certificate holders.'
+        'eligibility' => 'Class 10th pass from recognized board with Science & Mathematics, or Lateral Entry (2nd year) for 10+2 Science / ITI certificate holders.'
+    ],
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Engineering)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / University RET Track',
+        'icon'        => 'microscope',
+        'description' => 'Original doctoral research under doctoral advisors in computing algorithms, sustainable materials, geotechnical systems, renewable energy, and mineral exploitation.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Computer Science & Engineering', 'tag' => 'Deep Learning & Cyber Security'],
+            ['name' => 'Ph.D. in Mining Engineering',             'tag' => 'Sustainable Mineral Extraction'],
+            ['name' => 'Ph.D. in Civil & Structural Engineering', 'tag' => 'Green Concrete & GIS'],
+            ['name' => 'Ph.D. in Mechanical Engineering',         'tag' => 'Robotics & Advanced Materials'],
+            ['name' => 'Ph.D. in Electrical Engineering',         'tag' => 'EV Power & Microgrids'],
+        ],
+        'eligibility' => 'Master’s Degree (M.E. / M.Tech / M.Sc. Engg) in relevant discipline with at least 55% marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET / GATE.'
     ],
 ];
 
@@ -99,23 +131,23 @@ require_once dirname(__DIR__) . '/includes/header.php';
       Faculty of Engineering &amp; <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Technology</em>
     </h1>
 
-    <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
-      Shaping forward-thinking engineers through outcome-based pedagogy, advanced research laboratories, and seamless industry integration.
+    <p class="mt-6 text-white/85 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
+      Shaping forward-thinking engineers through outcome-based pedagogy, advanced research laboratories, M.Tech specializations, and seamless industry integration.
     </p>
 
     <!-- Key Badges -->
     <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
       <span class="hero-pill">
-        <?= lucide_icon('cpu') ?> AICTE Model Curriculum
+        <?= lucide_icon('cpu', 'w-4 h-4 text-gold') ?> AICTE Model Curriculum
       </span>
       <span class="hero-pill">
-        <?= lucide_icon('laptop') ?> B.Tech &amp; Polytechnic
+        <?= lucide_icon('award', 'w-4 h-4 text-gold') ?> B.Tech, M.Tech &amp; Polytechnic
       </span>
       <span class="hero-pill">
-        <?= lucide_icon('microscope') ?> Advanced Research Labs
+        <?= lucide_icon('microscope', 'w-4 h-4 text-gold') ?> Ph.D. &amp; Advanced Research Labs
       </span>
       <span class="hero-pill">
-        <?= lucide_icon('briefcase') ?> 100% Placement Support
+        <?= lucide_icon('briefcase', 'w-4 h-4 text-gold') ?> 100% Placement Support
       </span>
     </div>
   </div>

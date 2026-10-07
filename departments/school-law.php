@@ -10,32 +10,49 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'Faculty of Law & Legal Studies — ' . SITE_NAME;
 $page_meta_desc = 'Faculty of Law at RKDF University Ranchi. BCI-approved BA LL.B (5-Year), BBA LL.B (5-Year), LL.B (3-Year), and LL.M programs with Moot Court and Legal Aid clinic.';
 
+
 $programs = [
     [
-        'category'    => 'Integrated 5-Year Law Degrees',
-        'title'       => 'Integrated BA LL.B / BBA LL.B (Hons)',
+        'category'    => 'Integrated 5-Year Law Degrees (UG)',
+        'title'       => 'Integrated BA LL.B / BBA LL.B (Honours)',
         'duration'    => '5 Years · 10 Semesters',
-        'badge'       => 'BCI Approved & Recognized',
+        'badge'       => 'BCI Approved · 5-Yr Dual Track',
         'icon'        => 'scale',
-        'description' => 'Comprehensive dual-degree programs fusing humanities/business management with deep constitutional, criminal, corporate, and civil jurisprudence.',
+        'description' => 'Dual undergraduate professional degrees blending liberal arts or corporate business administration with comprehensive legal jurisprudence, moot court trials, and judicial internships.',
         'branches'    => [
-            ['name' => 'BA LL.B (5-Year Integrated Degree)',   'tag' => 'Constitutional & Criminal'],
-            ['name' => 'BBA LL.B (5-Year Integrated Degree)',  'tag' => 'Corporate & Commercial'],
+            ['name' => 'B.A. LL.B (Honours)',           'tag' => 'Constitutional & Criminal Jurisprudence'],
+            ['name' => 'BBA LL.B (Honours)',           'tag' => 'Corporate, IPR & Commercial Arbitration'],
+            ['name' => 'Moot Court Advocacy & Drafting', 'tag' => 'Trial Court Simulation'],
+            ['name' => 'Human Rights & Cyber Law',     'tag' => 'Emerging Legal Domains'],
         ],
-        'eligibility' => '10+2 in any stream from a recognized board with minimum 45% marks (40% for SC/ST categories) or valid CLAT / LSAT / University test score.'
+        'eligibility' => '10+2 in any stream from recognized Board with min 45% aggregate marks (42% for OBC, 40% for SC/ST).'
     ],
     [
-        'category'    => 'Graduate & Postgraduate Law',
-        'title'       => 'LL.B (3-Year) & Master of Laws (LL.M)',
-        'duration'    => '3 Years / 2 Years',
-        'badge'       => 'Professional Advocacy',
+        'category'    => 'Graduate & Postgraduate Law Degrees',
+        'title'       => 'Bachelor of Laws (LL.B.) & Master of Laws (LL.M.)',
+        'duration'    => '3 Years (LL.B) / 2 Years (LL.M)',
+        'badge'       => 'BCI Approved · Judicial & Corporate Track',
         'icon'        => 'landmark',
-        'description' => 'Rigorous legal studies for graduates aiming for courtroom advocacy, corporate counsel roles, judicial services examinations, and legal research.',
+        'description' => 'Professional 3-year LL.B for university graduates seeking legal practice, and 2-year specialized Master of Laws (LL.M) for judicial aspirants, corporate counsels, and legal academicians.',
         'branches'    => [
-            ['name' => 'Bachelor of Laws (LL.B 3-Year Degree)', 'tag' => 'Courtroom Practice'],
-            ['name' => 'Master of Laws (LL.M Postgraduate)',    'tag' => 'Advanced Specialization'],
+            ['name' => 'LL.B. (3-Year Professional)',           'tag' => 'Civil, Criminal & Procedural Codes'],
+            ['name' => 'LL.M. in Constitutional & Admin Law',   'tag' => 'Judicial Research & Governance'],
+            ['name' => 'LL.M. in Corporate & Commercial Law',   'tag' => 'M&A, Banking & IPR Law'],
         ],
-        'eligibility' => 'For LL.B: Graduation in any discipline with min 45% marks. For LL.M: Valid LL.B degree from a BCI-recognized university.'
+        'eligibility' => 'Graduation in any discipline with min 45% marks for LL.B (42% OBC, 40% SC/ST); LL.B / Integrated Law degree with min 50% for LL.M.'
+    ],
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Law)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'BCI / UGC Recognized',
+        'icon'        => 'microscope',
+        'description' => 'Advanced legal jurisprudence research in constitutional doctrines, environmental legislation, corporate ethics, alternative dispute resolution, and international human rights.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Constitutional & Human Rights Law', 'tag' => 'Fundamental Rights & Justice'],
+            ['name' => 'Ph.D. in Corporate, Cyber & IPR Laws',       'tag' => 'Digital Evidence & Commercial'],
+        ],
+        'eligibility' => 'Master of Laws (LL.M) with minimum 55% aggregate marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET in Law.'
     ],
 ];
 

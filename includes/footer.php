@@ -35,22 +35,23 @@ $footer_sections = [
     ],
     'Governance & Links' => [
         ['label' => 'Career @ RKDF',            'href' => 'about/career.php'],
+        ['label' => 'Statutory Committees',     'href' => 'committees/'],
+        ['label' => 'Mandatory Disclosure',     'href' => 'about/mandatory-disclosure.php'],
         ['label' => 'Alumni Association',       'href' => 'about/alumni-committee.php'],
         ['label' => 'ABC / DigiLocker',         'href' => 'about/digilocker.php'],
         ['label' => 'RTI Proactive Cell',       'href' => 'about/rti.php'],
         ['label' => 'Annual Audit Reports',     'href' => 'about/annual-reports.php'],
-        ['label' => 'Sushrut Medical Magazine', 'href' => 'media/sushrut-magazine.php'],
         ['label' => 'University Leadership',    'href' => 'governance/chancellor.php'],
         ['label' => 'Contact & Helpdesk',       'href' => 'contact.php'],
     ],
 ];
 
 $social_icons = [
-    ['icon' => 'facebook',  'href' => 'https://facebook.com'],
-    ['icon' => 'twitter',   'href' => 'https://twitter.com'],
-    ['icon' => 'instagram', 'href' => 'https://instagram.com'],
-    ['icon' => 'linkedin',  'href' => 'https://linkedin.com'],
-    ['icon' => 'youtube',   'href' => 'https://youtube.com'],
+    ['icon' => 'facebook',       'href' => defined('SOCIAL_FACEBOOK') ? SOCIAL_FACEBOOK : 'https://www.facebook.com/rkdfuniversityranchi/'],
+    ['icon' => 'instagram',      'href' => defined('SOCIAL_INSTAGRAM') ? SOCIAL_INSTAGRAM : 'https://www.instagram.com/rkdfuniversityranchi/'],
+    ['icon' => 'youtube',        'href' => defined('SOCIAL_YOUTUBE') ? SOCIAL_YOUTUBE : 'https://www.youtube.com/@rkdfuniversityranchi'],
+    ['icon' => 'linkedin',       'href' => defined('SOCIAL_LINKEDIN') ? SOCIAL_LINKEDIN : 'https://www.linkedin.com/school/rkdfuniversityranchi/'],
+    ['icon' => 'message-circle', 'href' => defined('SOCIAL_WHATSAPP') ? SOCIAL_WHATSAPP : 'https://wa.me/917091168777'],
 ];
 ?>
 <footer class="bg-brand text-brand-foreground">

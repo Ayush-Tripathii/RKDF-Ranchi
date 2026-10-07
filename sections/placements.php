@@ -46,6 +46,13 @@ $top_companies = [
             </div>
           <?php endforeach; ?>
         </div>
+
+        <div class="mt-8 flex justify-start">
+          <a href="<?= url('placements/') ?>" class="inline-flex items-center gap-2 rounded-full bg-gold text-brand px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-white transition shadow-lg">
+            <span>View Full Placement Report &amp; Recruiters</span>
+            <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
+          </a>
+        </div>
       </div>
     </div>
   </div>

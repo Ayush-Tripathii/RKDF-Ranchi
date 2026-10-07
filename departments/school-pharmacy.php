@@ -10,50 +10,64 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'Institute of Pharmaceutical Sciences — ' . SITE_NAME;
 $page_meta_desc = 'Institute of Pharmaceutical Sciences at RKDF University Ranchi. PCI approved D.Pharm, B.Pharm, and M.Pharm programs with advanced pharmacology labs and clinical rotations.';
 
+
 $programs = [
     [
-        'category'    => 'Undergraduate Pharmacy',
+        'category'    => 'Undergraduate Pharmacy (UG)',
         'title'       => 'Bachelor of Pharmacy (B.Pharm)',
         'duration'    => '4 Years · 8 Semesters',
         'badge'       => 'PCI Approved',
-        'icon'        => 'flask-conical',
-        'description' => 'Comprehensive degree encompassing pharmaceutical chemistry, pharmacology, pharmaceutics, pharmacognosy, quality assurance, and clinical trials.',
+        'icon'        => 'pill',
+        'description' => 'Comprehensive pharmaceutical education covering medicinal chemistry, pharmacology, formulation development, pharmacognosy, and pharmaceutical industrial quality assurance.',
         'branches'    => [
-            ['name' => 'Pharmaceutics & Formulation',        'tag' => 'Drug Delivery'],
-            ['name' => 'Pharmaceutical Chemistry',           'tag' => 'Drug Synthesis & QA'],
-            ['name' => 'Pharmacology & Toxicology',           'tag' => 'Pre-Clinical Testing'],
-            ['name' => 'Pharmacognosy & Phytochemistry',     'tag' => 'Herbal Therapeutics'],
+            ['name' => 'Pharmaceutics & Formulation Development', 'tag' => 'Solid & Liquid Dosage'],
+            ['name' => 'Pharmacology & Toxicology',              'tag' => 'Drug Action & Animal Models'],
+            ['name' => 'Pharmaceutical Chemistry',               'tag' => 'Drug Synthesis & Analysis'],
+            ['name' => 'Pharmacognosy & Phytochemistry',          'tag' => 'Herbal Therapeutics'],
         ],
-        'eligibility' => '10+2 with Physics, Chemistry, and Mathematics/Biology with min 50% marks (45% for reserved categories) or lateral entry for D.Pharm holders.'
+        'eligibility' => '10+2 with Physics and Chemistry as compulsory subjects along with Mathematics or Biology, securing minimum 45% marks (40% for SC/ST/OBC).'
     ],
     [
         'category'    => 'Diploma in Pharmacy',
         'title'       => 'Diploma in Pharmacy (D.Pharm)',
         'duration'    => '2 Years · Annual Pattern',
-        'badge'       => 'Registered Pharmacist Path',
-        'icon'        => 'pill',
-        'description' => 'Foundational program preparing licensed pharmacists for hospital dispensaries, retail pharmacy networks, pharmaceutical production, and drug administration.',
+        'badge'       => 'PCI Approved · Registered Pharmacist Track',
+        'icon'        => 'heart-pulse',
+        'description' => 'Clinical and community pharmacy program qualifying graduates for immediate state pharmacy council registration, hospital dispensing, and community drug store operations.',
         'branches'    => [
-            ['name' => 'Hospital & Clinical Pharmacy',       'tag' => 'Dispensary Practice'],
-            ['name' => 'Pharmaceutics & Drug Dispensing',    'tag' => 'Formulation Basics'],
-            ['name' => 'Pharmacology & Toxicology',          'tag' => 'Drug Action & Safety'],
-            ['name' => 'Biochemistry & Clinical Pathology',  'tag' => 'Diagnostic Analysis'],
+            ['name' => 'Hospital & Clinical Pharmacy',    'tag' => 'Prescription & Dispensing'],
+            ['name' => 'Pharmaceutics & Drug Chemistry',  'tag' => 'Formulations'],
+            ['name' => 'Pharmacology & Community Care',   'tag' => 'Patient Counseling'],
         ],
-        'eligibility' => '10+2 pass with Science stream (Physics, Chemistry, and Biology/Mathematics) from a recognized state or central board.'
+        'eligibility' => '10+2 pass with Physics, Chemistry, and Biology/Mathematics from a recognized Board.'
     ],
     [
-        'category'    => 'Postgraduate & Doctoral',
-        'title'       => 'Master of Pharmacy (M.Pharm)',
+        'category'    => 'Postgraduate Healthcare (PG)',
+        'title'       => 'Master of Hospital Administration (MHA)',
         'duration'    => '2 Years · 4 Semesters',
-        'badge'       => 'Advanced Research Track',
-        'icon'        => 'microscope',
-        'description' => 'Specialized postgraduate research program focused on novel drug delivery systems, nanomedicine, industrial quality assurance, and pharmacological screening.',
+        'badge'       => 'Healthcare Leadership',
+        'icon'        => 'stethoscope',
+        'description' => 'Advanced hospital administration, NABH healthcare quality standards, clinical risk management, health insurance protocols, and telemedicine operations.',
         'branches'    => [
-            ['name' => 'M.Pharm in Pharmaceutics',            'tag' => 'Novel Drug Systems'],
-            ['name' => 'M.Pharm in Pharmacology',             'tag' => 'Clinical Screening'],
-            ['name' => 'Ph.D. in Pharmaceutical Sciences',    'tag' => 'Doctoral Research'],
+            ['name' => 'Hospital Operations & Administration', 'tag' => 'Clinical Ward & ICU Mgmt'],
+            ['name' => 'Healthcare Quality & NABH Compliance',  'tag' => 'Accreditation Standards'],
+            ['name' => 'Health Informatics & Telemedicine',     'tag' => 'Electronic Health Records'],
         ],
-        'eligibility' => 'B.Pharm degree from a PCI-recognized institution with min 55% marks (50% for reserved categories) or valid GPAT score.'
+        'eligibility' => 'Bachelor’s Degree in MBBS, BDS, B.Pharm, B.Sc Nursing, B.Sc Life Sciences, or any graduate degree with minimum 50% marks (45% for reserved category).'
+    ],
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Pharmaceutical Sciences)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'PCI / UGC Recognized',
+        'icon'        => 'microscope',
+        'description' => 'Advanced pharmaceutical research in novel drug delivery systems (NDDS), natural product chemistry, synthetic medicinal molecules, and translational clinical pharmacology.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Pharmaceutics & Drug Delivery', 'tag' => 'Nanomedicine & Liposomes'],
+            ['name' => 'Ph.D. in Pharmacology & Therapeutics',  'tag' => 'Preclinical Drug Screening'],
+            ['name' => 'Ph.D. in Pharmaceutical Chemistry',      'tag' => 'Molecular Modeling & QSAR'],
+        ],
+        'eligibility' => 'Master of Pharmacy (M.Pharm) or Master of Science in relevant field with minimum 55% marks (50% for SC/ST/OBC) and qualifying in University RET / GPAT / UGC-NET.'
     ],
 ];
 

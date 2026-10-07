@@ -10,12 +10,12 @@ $hero_stats = [
 ];
 
 $quick_links = [
-    ['icon' => 'graduation-cap', 'label' => 'Admissions', 'href' => 'admissions.php'],
-    ['icon' => 'book-open',      'label' => 'Programs',   'href' => 'schools.php'],
-    ['icon' => 'trophy',         'label' => 'Results',    'href' => 'news.php'],
-    ['icon' => 'bell',           'label' => 'Notices',    'href' => 'news.php#notices'],
-    ['icon' => 'briefcase',      'label' => 'Placements', 'href' => 'admissions.php#placements'],
-    ['icon' => 'users',          'label' => 'Faculty',    'href' => 'about.php#faculty'],
+    ['icon' => 'graduation-cap', 'label' => 'Admissions', 'href' => 'admissions/'],
+    ['icon' => 'book-open',      'label' => 'Programs',   'href' => 'courses/'],
+    ['icon' => 'trophy',         'label' => 'Results',    'href' => 'admissions/examination-forms.php'],
+    ['icon' => 'bell',           'label' => 'Notices',    'href' => 'media/news.php'],
+    ['icon' => 'briefcase',      'label' => 'Placements', 'href' => 'placements/'],
+    ['icon' => 'users',          'label' => 'Faculty',    'href' => 'departments/'],
 ];
 ?>
 <section class="relative overflow-hidden">
@@ -74,7 +74,7 @@ $quick_links = [
 
         <div class="grid grid-cols-2 gap-3 mt-5">
           <?php foreach ($quick_links as $ql): ?>
-            <a href="<?= e($ql['href']) ?>" class="group relative flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 overflow-hidden transition-all duration-300 hover:border-brand hover:shadow-lg hover:-translate-y-0.5">
+            <a href="<?= url($ql['href']) ?>" class="group relative flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 overflow-hidden transition-all duration-300 hover:border-brand hover:shadow-lg hover:-translate-y-0.5">
               <span class="absolute inset-0 bg-gradient-to-br from-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:to-brand/10 transition-all duration-300"></span>
               <span class="relative flex items-center gap-3">
                 <span class="w-9 h-9 rounded-full bg-muted flex items-center justify-center transition-all duration-300 group-hover:bg-brand group-hover:scale-110 shrink-0">
@@ -91,7 +91,7 @@ $quick_links = [
         <div class="mt-5 rounded-xl bg-brand text-brand-foreground p-4">
           <div class="text-[10px] tracking-[0.18em] uppercase text-gold font-medium">Latest Result</div>
           <div class="mt-1 font-medium text-sm">B.Tech Semester VI results published</div>
-          <a href="<?= url('media/news.php') ?>" class="mt-2 inline-flex items-center gap-1 text-sm text-white/90 hover:text-white transition">
+          <a href="<?= url('admissions/examination-forms.php') ?>" class="mt-2 inline-flex items-center gap-1 text-sm text-white/90 hover:text-white transition">
             View results
             <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
           </a>

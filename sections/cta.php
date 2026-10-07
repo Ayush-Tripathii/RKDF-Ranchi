@@ -16,12 +16,13 @@
       Applications close on July 31, 2026. Scholarships available for merit and means-based candidates.
     </p>
     <div class="mt-8 flex flex-wrap gap-3 justify-center">
-      <a href="<?= url('admissions/') ?>" class="inline-flex items-center gap-2 rounded-full bg-gold text-primary-foreground px-6 py-3 text-sm font-medium hover:opacity-90 transition shadow-md">
+      <a href="<?= url('admissions/') ?>" class="inline-flex items-center gap-2 rounded-full bg-gold text-brand px-6 py-3 text-sm font-bold uppercase tracking-wider hover:bg-white transition shadow-md">
         Apply Now
         <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
       </a>
-      <a href="<?= url('admissions/') ?>" class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3 text-sm font-medium hover:bg-white/10 transition">
-        Download Brochure
+      <a href="<?= url('documents/RKDF-PROSPECTUS.pdf') ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/20 transition text-white">
+        <?= lucide_icon('download', 'w-4 h-4') ?>
+        Download Prospectus
       </a>
     </div>
   </div>

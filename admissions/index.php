@@ -47,11 +47,11 @@ require_once dirname(__DIR__) . '/includes/header.php';
     </p>
 
     <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-      <a href="#apply-form" class="inline-flex items-center justify-center gap-2 rounded-full bg-gold text-slate-900 font-semibold text-sm px-6 py-3 h-12 shadow-lg shadow-gold/25 hover:bg-white transition-all transform hover:-translate-y-0.5">
-        <span>Apply Online</span>
-        <?= lucide_icon('arrow-right', 'w-4 h-4 text-slate-900') ?>
+      <a href="#apply-form" class="inline-flex items-center justify-center gap-2 rounded-full bg-gold text-[#071322] font-bold text-sm px-6 py-3 h-12 shadow-lg shadow-gold/25 hover:bg-white hover:!text-[#071322] transition-all transform hover:-translate-y-0.5 group">
+        <span class="text-[#071322] group-hover:!text-[#071322]">Apply Online</span>
+        <?= lucide_icon('arrow-right', 'w-4 h-4 text-[#071322] group-hover:!text-[#071322]') ?>
       </a>
-      <a href="#process" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 backdrop-blur text-white font-semibold text-sm px-6 py-3 h-12 hover:bg-white/20 hover:border-white/40 transition-all transform hover:-translate-y-0.5">
+      <a href="#process" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 backdrop-blur text-white font-semibold text-sm px-6 py-3 h-12 hover:bg-white/20 hover:border-white/40 hover:text-white transition-all transform hover:-translate-y-0.5">
         <span>Admission Process</span>
       </a>
     </div>

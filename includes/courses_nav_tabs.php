@@ -3,12 +3,12 @@
  * RKDF University — Courses Sub-Navigation Tabs Bar
  */
 $courses_tabs = [
-    ['label' => 'All Programs Directory', 'href' => 'courses/',                            'icon' => 'layers'],
-    ['label' => 'Undergraduate (UG)',     'href' => 'courses/under-graduate-programs.php',  'icon' => 'graduation-cap'],
-    ['label' => 'Postgraduate (PG)',      'href' => 'courses/post-graduate-programs.php',   'icon' => 'award'],
-    ['label' => 'Diploma & Polytechnic',  'href' => 'courses/diploma-programs.php',         'icon' => 'wrench'],
-    ['label' => 'Doctoral (Ph.D.)',       'href' => 'courses/doctoral-programs.php',        'icon' => 'microscope'],
-    ['label' => 'Common NEP Courses',     'href' => 'courses/common-courses-for-all.php',   'icon' => 'book-open'],
+    ['label' => 'All Programs Directory',       'href' => 'courses/',                            'icon' => 'layers'],
+    ['label' => 'Undergraduate (UG)',           'href' => 'courses/under-graduate-programs.php',  'icon' => 'graduation-cap'],
+    ['label' => 'Postgraduate & Master\'s (PG)', 'href' => 'courses/post-graduate-programs.php',   'icon' => 'award'],
+    ['label' => 'Diploma & Polytechnic',        'href' => 'courses/diploma-programs.php',         'icon' => 'wrench'],
+    ['label' => 'Doctoral (Ph.D.)',             'href' => 'courses/doctoral-programs.php',        'icon' => 'microscope'],
+    ['label' => 'Common NEP Courses',           'href' => 'courses/common-courses-for-all.php',   'icon' => 'book-open'],
 ];
 
 $tabs_id = 'subnav-track-courses';

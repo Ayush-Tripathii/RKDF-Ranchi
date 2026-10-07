@@ -56,6 +56,20 @@ $programs = [
         ],
         'eligibility' => 'Passed 10+2 examination from a recognized board with at least 45% aggregate marks (40% for SC/ST/OBC candidates) in any stream.'
     ],
+
+    [
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Journalism & Mass Media)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / RET Track',
+        'icon'        => 'microscope',
+        'description' => 'Pioneering media research in digital communication ethics, AI in newsrooms, broadcast journalism impact, public opinion formation, and developmental journalism.',
+        'branches'    => [
+            ['name' => 'Ph.D. in Digital Journalism & New Media', 'tag' => 'Social Media & Fact-Checking'],
+            ['name' => 'Ph.D. in Broadcast & Visual Communication', 'tag' => 'Television & Documentary'],
+        ],
+        'eligibility' => 'Master’s Degree (M.A. JMC / MJMC / M.Sc. Mass Comm) with minimum 55% aggregate marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET.'
+    ],
 ];
 
 $labs = [

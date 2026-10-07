@@ -10,51 +10,68 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'Faculty of Management Studies & Commerce — ' . SITE_NAME;
 $page_meta_desc = 'Faculty of Management Studies & Commerce at RKDF University Ranchi. UGC recognized MBA (Dual Specialization), BBA, B.Com, and Executive Leadership Programs.';
 
+
 $programs = [
     [
-        'category'    => 'Postgraduate Management',
-        'title'       => 'Master of Business Administration (MBA)',
+        'category'    => 'Postgraduate Management (PG)',
+        'title'       => 'Master of Business Administration (MBA Dual Specialization)',
         'duration'    => '2 Years · 4 Semesters',
-        'badge'       => 'Dual Specialization',
+        'badge'       => 'Dual Major · AICTE Approved',
         'icon'        => 'briefcase',
-        'description' => 'Flagship postgraduate program designed for future C-suite executives, combining strategic consulting, financial modelling, and case-study pedagogy.',
+        'description' => 'Flagship management postgraduate program designed for future corporate leaders, combining strategic consulting, financial modeling, case-study pedagogy, and dual majors.',
         'branches'    => [
-            ['name' => 'Marketing Management',                'tag' => 'Brand & Digital Growth'],
-            ['name' => 'Financial Management',                'tag' => 'FinTech & Corporate Finance'],
-            ['name' => 'Human Resource Management (HRM)',     'tag' => 'Talent Analytics & OD'],
-            ['name' => 'Information Technology (IT)',         'tag' => 'Data-Driven Management'],
-            ['name' => 'Operations & Supply Chain Management', 'tag' => 'Logistics & Lean Systems'],
+            ['name' => 'Financial Management',                'tag' => 'Corporate Finance & FinTech'],
+            ['name' => 'Marketing Management',                'tag' => 'Brand Strategy & Digital Growth'],
+            ['name' => 'Human Resource Management (HRM)',     'tag' => 'Talent Analytics & HR Tech'],
+            ['name' => 'Operations & Supply Chain Management', 'tag' => 'Lean Six Sigma & Logistics'],
+            ['name' => 'Information Technology (IT)',         'tag' => 'Business Analytics & ERP'],
         ],
         'eligibility' => 'Bachelor’s degree in any discipline from a recognized University with min 50% marks (45% for reserved categories) or valid CAT/MAT/CMAT/University Entrance score.'
     ],
     [
-        'category'    => 'Undergraduate Management',
+        'category'    => 'Postgraduate Sectoral Tracks (PG)',
+        'title'       => 'MBA in Sectoral Specializations',
+        'duration'    => '2 Years · 4 Semesters',
+        'badge'       => 'High-Growth Sectoral Tracks',
+        'icon'        => 'landmark',
+        'description' => 'Industry-integrated sectoral MBA programs tailored for accelerated leadership in banking, international supply chains, construction infrastructure, and luxury hotel chains.',
+        'branches'    => [
+            ['name' => 'MBA in Banking & Financial Services',         'tag' => 'Commercial Banking & Wealth'],
+            ['name' => 'MBA in Logistics & Supply Chain Management',  'tag' => 'Global Freight & Warehousing'],
+            ['name' => 'MBA in Construction & Project Management',    'tag' => 'Infrastructure Contracts'],
+            ['name' => 'MBA in Hotel Management & Hospitality',       'tag' => 'Luxury Resorts & Tourism'],
+            ['name' => 'Master in Management Studies (MMS)',          'tag' => 'Strategic Management & Consulting'],
+        ],
+        'eligibility' => 'Graduation in any discipline with at least 50% aggregate marks (45% for SC/ST/OBC).'
+    ],
+    [
+        'category'    => 'Undergraduate Management (UG)',
         'title'       => 'Bachelor of Business Administration (BBA)',
-        'duration'    => '3 Years · 6 Semesters',
+        'duration'    => '3 / 4 Years (NEP)',
         'badge'       => 'Industry Immersion',
         'icon'        => 'trending-up',
-        'description' => 'Foundational business degree imparting entrepreneurial acumen, digital marketing, corporate finance, and business communication.',
+        'description' => 'Foundational business degree imparting entrepreneurial acumen, marketing, corporate finance, business analytics, and executive communication.',
         'branches'    => [
-            ['name' => 'General Business Management',        'tag' => 'Core Leadership'],
-            ['name' => 'BBA in Banking & Insurance',         'tag' => 'Financial Services'],
-            ['name' => 'BBA in Digital Marketing & Analytics', 'tag' => 'Growth Hacking'],
-            ['name' => 'BBA in Retail & E-Commerce',         'tag' => 'Supply & Merchandising'],
+            ['name' => 'BBA Core Management',                 'tag' => 'Executive Leadership'],
+            ['name' => 'BBA in Corporate Management',         'tag' => 'Enterprise Operations'],
+            ['name' => 'BBA in Hotel Management',             'tag' => 'Hospitality & F&B Service'],
+            ['name' => 'Bachelor of Management Studies (BMS)', 'tag' => 'Business Analytics & ERP'],
         ],
         'eligibility' => '10+2 / Intermediate in any stream (Science, Commerce, Arts) with min 45% aggregate marks (40% for reserved categories).'
     ],
     [
-        'category'    => 'Commerce & Accounting',
-        'title'       => 'Bachelor & Master of Commerce (B.Com / M.Com)',
-        'duration'    => '3 Years (UG) / 2 Years (PG)',
-        'badge'       => 'CA / CS / CFA Aligned',
-        'icon'        => 'file-spreadsheet',
-        'description' => 'Advanced financial accounting, taxation, corporate laws, auditing, and corporate governance for high-growth financial sectors.',
+        'category'    => 'Doctoral Programs (Ph.D.)',
+        'title'       => 'Doctor of Philosophy (Ph.D. in Management Studies)',
+        'duration'    => 'Min. 3 Years',
+        'badge'       => 'UGC-NET / RET Track',
+        'icon'        => 'microscope',
+        'description' => 'High-impact doctoral research in corporate governance, financial econometrics, organizational behavior, consumer psychology, and supply chain dynamics.',
         'branches'    => [
-            ['name' => 'B.Com (Honours) in Accounting & Finance', 'tag' => 'Corporate Taxation'],
-            ['name' => 'B.Com (Honours) in Banking & Insurance',  'tag' => 'FinTech & Compliance'],
-            ['name' => 'Master of Commerce (M.Com)',              'tag' => 'Advanced Accounting & Research'],
+            ['name' => 'Ph.D. in Financial Management & FinTech', 'tag' => 'Capital Markets & Risk'],
+            ['name' => 'Ph.D. in Marketing & Consumer Behaviour',  'tag' => 'Digital Media Strategy'],
+            ['name' => 'Ph.D. in Human Resource & Org Behaviour', 'tag' => 'Leadership & Culture'],
         ],
-        'eligibility' => '10+2 with Commerce/Mathematics for B.Com; B.Com / BBA from recognized University for M.Com.'
+        'eligibility' => 'Master’s Degree (MBA / MMS / M.Com / PGDM AICTE approved) with minimum 55% marks (50% for SC/ST/OBC) and qualifying in University RET / UGC-NET.'
     ],
 ];
 
