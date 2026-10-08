@@ -1,0 +1,426 @@
+{
+    "courses\/ba-hons-in-bengali.php": {
+        "name": "B.A. (Hons) in Bengali",
+        "pdf": "BA-BENGALI.pdf"
+    },
+    "courses\/ba-hons-in-economics.php": {
+        "name": "B.A. (Hons) in Economics",
+        "pdf": "BA-ECONOMICS.pdf"
+    },
+    "courses\/ba-hons-in-education.php": {
+        "name": "B.A. (Hons) in Education",
+        "pdf": "BA-Education.pdf"
+    },
+    "courses\/ba-hons-in-english.php": {
+        "name": "B.A. (Hons) in English",
+        "pdf": "BA-English-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/ba-hons-in-geography.php": {
+        "name": "B.A. (Hons) in Geography",
+        "pdf": "BA-Geography-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/ba-hons-in-hindi.php": {
+        "name": "B.A. (Hons) in Hindi",
+        "pdf": "BA-Hindi-RKDF-UNIVERSITY-RANCHI-1.pdf"
+    },
+    "courses\/ba-hons-in-history.php": {
+        "name": "B.A. (Hons) in History",
+        "pdf": "BA-HISTORY.pdf"
+    },
+    "courses\/ba-hons-in-political-science.php": {
+        "name": "B.A. (Hons) in Political Science",
+        "pdf": "BA-POLITICAL-SCIENCE-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/ba-hons-sanskrit.php": {
+        "name": "B.A. (Hons) in Sanskrit",
+        "pdf": "BA-Hindi-RKDF-UNIVERSITY-RANCHI-1.pdf"
+    },
+    "courses\/ba-hons-in-sociology.php": {
+        "name": "B.A. (Hons) in Sociology",
+        "pdf": "BA-Sociology.pdf"
+    },
+    "courses\/ba-fashion-design.php": {
+        "name": "B.A. \/ B.Sc. in Fashion Design",
+        "pdf": "fashion_design.pdf"
+    },
+    "courses\/llb-ba.php": {
+        "name": "B.A. LL.B (5-Year Integrated Honors)",
+        "pdf": "BA.LLB-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/under-graduate-programs\/b-com\/b-com-corporate.php": {
+        "name": "B.Com (Corporate Specialization)",
+        "pdf": "BCOM-Corp.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-biochemistry-in-ranchi-admission-2026-rkdf-university.php": {
+        "name": "B.Sc. (Hons) in Biochemistry",
+        "pdf": "BSC-Chemistry.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-hons-in-biotechnology.php": {
+        "name": "B.Sc. (Hons) in Biotechnology",
+        "pdf": "BSC-Biotechnology.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-in-ranchi-fees-admission-2026-rkdf-university-3.php": {
+        "name": "B.Sc. (Hons) in Botany",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-in-ranchi-fees-admission-2026-rkdf-university.php": {
+        "name": "B.Sc. (Hons) in Chemistry",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-hons-in-computer-science.php": {
+        "name": "B.Sc. (Hons) in Computer Science",
+        "pdf": "BSC-COMPUTER-SCIENCE.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-in-ranchi-fees-admission-2026-rkdf-university-2.php": {
+        "name": "B.Sc. (Hons) in Mathematics",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-hons-in-microbiology.php": {
+        "name": "B.Sc. (Hons) in Microbiology",
+        "pdf": "BSC-Microbiology.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-hons.php": {
+        "name": "B.Sc. (Hons) in Physics",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-hons-in-zoology.php": {
+        "name": "B.Sc. (Hons) in Zoology & Animal Science",
+        "pdf": "BSC-Zoology.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/bsc-information-technology-rkdf-university-ranchi.php": {
+        "name": "B.Sc. in Information Technology (B.Sc. IT)",
+        "pdf": "BSC-COMPUTER-SCIENCE.pdf"
+    },
+    "courses\/b-sc-interior-design-in-ranchi-admission-2026-rkdf-university.php": {
+        "name": "B.Sc. in Interior Design",
+        "pdf": "Diploma-Interior-Designing.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc-in-ranchi-fees-admission-2026-rkdf-university-4.php": {
+        "name": "B.Sc. in Life Sciences (General)",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/b-sc-multimedia.php": {
+        "name": "B.Sc. in Multimedia & Animation",
+        "pdf": "BSc-Multimedia-Syllabus.pdf"
+    },
+    "courses\/under-graduate-programs\/b-sc\/b-sc.php": {
+        "name": "B.Sc. Program Overview",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/b-tech-civil-engineering.php": {
+        "name": "B.Tech in Civil Engineering",
+        "pdf": "BTECH-CIVIL-ENGG-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/b-tech-computer-science-engineering.php": {
+        "name": "B.Tech in Computer Science & Engineering (CSE)",
+        "pdf": "BTECH-CSE-new-RKDFRANCHI-final.pdf"
+    },
+    "courses\/b-tech-electrical-electronics-engineering.php": {
+        "name": "B.Tech in Electrical & Electronics Engineering (EEE)",
+        "pdf": "BTECH-EEE-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/b-tech-mechanical-engineering.php": {
+        "name": "B.Tech in Mechanical Engineering",
+        "pdf": "BTECH-MECHANICAL-ENGG-RKDF-UNIVERSITY-RANCHI-1.pdf"
+    },
+    "courses\/b-tech-mining-engineering.php": {
+        "name": "B.Tech in Mining Engineering",
+        "pdf": "btech_mining.pdf"
+    },
+    "courses\/ba-in-journalism-mass-communication.php": {
+        "name": "BA in Journalism & Mass Communication (BJMC)",
+        "pdf": "BA-JMC.pdf"
+    },
+    "courses\/ba-bachelor-of-arts.php": {
+        "name": "Bachelor of Arts (B.A. General)",
+        "pdf": "BA-HISTORY.pdf"
+    },
+    "courses\/bba.php": {
+        "name": "Bachelor of Business Administration (BBA)",
+        "pdf": "BBA.pdf"
+    },
+    "courses\/under-graduate-programs\/b-com\/b-com.php": {
+        "name": "Bachelor of Commerce (B.Com General)",
+        "pdf": "B-Com.pdf"
+    },
+    "courses\/bachelor-of-computer-application.php": {
+        "name": "Bachelor of Computer Application (BCA)",
+        "pdf": "BCA-NEP.pdf"
+    },
+    "courses\/bachelor-of-laws-llb.php": {
+        "name": "Bachelor of Laws (LL.B 3-Year)",
+        "pdf": "LLB-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/bachelor-of-library-science-b-lib.php": {
+        "name": "Bachelor of Library & Information Science (B.Lib.I.Sc.)",
+        "pdf": "BLib.pdf"
+    },
+    "courses\/bachelor-of-management-studies-bms.php": {
+        "name": "Bachelor of Management Studies (BMS)",
+        "pdf": "BMS-Syllabus.pdf"
+    },
+    "courses\/bachelor-of-mass-communication-and-video-production.php": {
+        "name": "Bachelor of Mass Communication & Video Production",
+        "pdf": "BA-Mass-Com-_-Video-Production.pdf"
+    },
+    "courses\/bachelor-of-pharmacy-b-pharma.php": {
+        "name": "Bachelor of Pharmacy (B.Pharm)",
+        "pdf": "B-Pharma-Syllabus-1.pdf"
+    },
+    "courses\/bachelor-of-social-work-b-s-w.php": {
+        "name": "Bachelor of Social Work (BSW)",
+        "pdf": "MSW-SYLLABUS.pdf"
+    },
+    "courses\/bba-in-corporate.php": {
+        "name": "BBA (Corporate Specialization)",
+        "pdf": "BBA-Corp.pdf"
+    },
+    "courses\/bba-hotel-management.php": {
+        "name": "BBA in Hotel Management",
+        "pdf": "BBA-HM.pdf"
+    },
+    "courses\/bba-llb.php": {
+        "name": "BBA LL.B (5-Year Integrated Honors)",
+        "pdf": "BBA-LLB-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/bca-corporate.php": {
+        "name": "BCA (Corporate Specialization)",
+        "pdf": "BCA-CORP.pdf"
+    },
+    "courses\/diploma-in-ce-civil-engineering.php": {
+        "name": "Diploma in Civil Engineering",
+        "pdf": "DIPLOMA-CIVIL-ENGG-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/diploma-programs\/diploma-in-computer-application.php": {
+        "name": "Diploma in Computer Application (DCA)",
+        "pdf": "BCA-NEP.pdf"
+    },
+    "courses\/diploma-in-cse-computer-science-engineering.php": {
+        "name": "Diploma in Computer Science & Engineering (Polytechnic)",
+        "pdf": "Diploma-CSE-Syllabus.pdf"
+    },
+    "courses\/diploma-in-eee-electrical-electronics-engineering.php": {
+        "name": "Diploma in Electrical & Electronics Engineering",
+        "pdf": "Diploma-EEE.pdf"
+    },
+    "courses\/diploma-in-me-mechanical-engineering.php": {
+        "name": "Diploma in Mechanical Engineering",
+        "pdf": "DIPLOMA-MECHANICAL-ENGG-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/diploma-in-mining.php": {
+        "name": "Diploma in Mining Engineering (Polytechnic)",
+        "pdf": "DIPLOMA-MINING.pdf"
+    },
+    "courses\/diploma-in-pharmacy-d-pharma.php": {
+        "name": "Diploma in Pharmacy (D.Pharm)",
+        "pdf": "D-Pharma-syllabus.pdf"
+    },
+    "courses\/ma-fashion-design.php": {
+        "name": "M.A. \/ M.Sc. in Fashion Design",
+        "pdf": "fashion_design.pdf"
+    },
+    "courses\/m-a-hons-in-bengali.php": {
+        "name": "M.A. in Bengali",
+        "pdf": "BA-BENGALI.pdf"
+    },
+    "courses\/m-a-hons-in-economics.php": {
+        "name": "M.A. in Economics",
+        "pdf": "MA-ECONOMICS.pdf"
+    },
+    "courses\/m-a-hons-in-education.php": {
+        "name": "M.A. in Education",
+        "pdf": "BA-Education.pdf"
+    },
+    "courses\/m-a-hons-in-english.php": {
+        "name": "M.A. in English Literature",
+        "pdf": "BA-English-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/m-a-hons-in-geography.php": {
+        "name": "M.A. in Geography",
+        "pdf": "MA-Geography.pdf"
+    },
+    "courses\/m-a-hons-in-hindi.php": {
+        "name": "M.A. in Hindi Literature",
+        "pdf": "MA-Hindi.pdf"
+    },
+    "courses\/m-a-hons-in-history.php": {
+        "name": "M.A. in History",
+        "pdf": "MA-HISTORY.pdf"
+    },
+    "courses\/m-a-hons-in-political-science.php": {
+        "name": "M.A. in Political Science",
+        "pdf": "MA-Political-Science.pdf"
+    },
+    "courses\/m-a-in-sanskrit.php": {
+        "name": "M.A. in Sanskrit",
+        "pdf": "BA-Hindi-RKDF-UNIVERSITY-RANCHI-1.pdf"
+    },
+    "courses\/m-a-hons-in-sociology.php": {
+        "name": "M.A. in Sociology",
+        "pdf": "MA-Sociology.pdf"
+    },
+    "courses\/m-sc-applied-mathematics.php": {
+        "name": "M.Sc. in Applied Mathematics",
+        "pdf": "M.Sc_.-Maths.pdf"
+    },
+    "courses\/m-sc-applied-physics.php": {
+        "name": "M.Sc. in Applied Physics",
+        "pdf": "M.Sc_.-Physics.pdf"
+    },
+    "courses\/m-sc-in-biochemistry.php": {
+        "name": "M.Sc. in Biochemistry",
+        "pdf": "M.Sc_.-Chemistry.pdf"
+    },
+    "courses\/m-sc-biotechnology.php": {
+        "name": "M.Sc. in Biotechnology",
+        "pdf": "MSc_Biotech_Syllabus_new.pdf"
+    },
+    "courses\/m-sc-botany.php": {
+        "name": "M.Sc. in Botany",
+        "pdf": "MSc_Botany_Syllabus.pdf"
+    },
+    "courses\/m-sc-in-chemistry.php": {
+        "name": "M.Sc. in Chemistry",
+        "pdf": "M.Sc_.-Chemistry.pdf"
+    },
+    "courses\/m-sc-in-computer-science.php": {
+        "name": "M.Sc. in Computer Science",
+        "pdf": "MSc-Computer-Science.pdf"
+    },
+    "courses\/m-sc-in-environmental-science.php": {
+        "name": "M.Sc. in Environmental Science",
+        "pdf": "M.Sc_.-EVS-Syllabus.pdf"
+    },
+    "courses\/m-sc-fashion-design.php": {
+        "name": "M.Sc. in Fashion Design",
+        "pdf": "fashion_design.pdf"
+    },
+    "courses\/m-sc-interior-design.php": {
+        "name": "M.Sc. in Interior Design",
+        "pdf": "fashion_msc_interior.pdf"
+    },
+    "courses\/m-sc-microbiology.php": {
+        "name": "M.Sc. in Microbiology",
+        "pdf": "M.Sc-Microbiology-syllabus-2025.pdf"
+    },
+    "courses\/m-sc-in-zoology.php": {
+        "name": "M.Sc. in Zoology",
+        "pdf": "M.Sc_.-Zoology-syllabus.pdf"
+    },
+    "courses\/m-a-in-journalism-mass-communication.php": {
+        "name": "MA in Journalism & Mass Communication (MJMC)",
+        "pdf": "BA-JMC.pdf"
+    },
+    "courses\/master-in-management-studies-mms.php": {
+        "name": "Master in Management Studies (MMS)",
+        "pdf": "BMS-Syllabus.pdf"
+    },
+    "courses\/master-of-arts.php": {
+        "name": "Master of Arts (M.A. in English \/ Hindi \/ History \/ Pol Sci \/ Economics \/ Sociology)",
+        "pdf": "BA-HISTORY.pdf"
+    },
+    "courses\/master-of-business-administration-mba.php": {
+        "name": "Master of Business Administration (MBA)",
+        "pdf": "MBA.pdf"
+    },
+    "courses\/master-of-commerce-m-com.php": {
+        "name": "Master of Commerce (M.Com)",
+        "pdf": "M.Com_.pdf"
+    },
+    "courses\/master-of-computer-application.php": {
+        "name": "Master of Computer Application (MCA)",
+        "pdf": "BCA-NEP.pdf"
+    },
+    "courses\/mha-in-ranchi-fees-admission-2026-rkdf-university.php": {
+        "name": "Master of Hospital Administration (MHA)",
+        "pdf": "MHA-Syllabus.pdf"
+    },
+    "courses\/master-of-laws.php": {
+        "name": "Master of Laws (LL.M)",
+        "pdf": "Masters-of-Law-RKDF-UNIVERSITY-RANCHI.pdf"
+    },
+    "courses\/master-of-library-science.php": {
+        "name": "Master of Library & Information Science (M.Lib.I.Sc.)",
+        "pdf": "MLib.pdf"
+    },
+    "courses\/master-of-science-msc.php": {
+        "name": "Master of Science (M.Sc. Overview)",
+        "pdf": "BA-HISTORY.pdf"
+    },
+    "courses\/master-of-social-workmsw.php": {
+        "name": "Master of Social Work (MSW)",
+        "pdf": "MSW-SYLLABUS.pdf"
+    },
+    "courses\/mba-banking-and-finance.php": {
+        "name": "MBA in Banking and Finance",
+        "pdf": "MBA-FINANCE.pdf"
+    },
+    "courses\/mba-construction-management.php": {
+        "name": "MBA in Construction & Project Management",
+        "pdf": "MBA-Construction-Management.pdf"
+    },
+    "courses\/mba-in-fashion-design.php": {
+        "name": "MBA in Fashion & Luxury Brand Management",
+        "pdf": "MBA.pdf"
+    },
+    "courses\/mba-hotel-management.php": {
+        "name": "MBA in Hotel Management & Hospitality",
+        "pdf": "MBA-Hotel-Management.pdf"
+    },
+    "courses\/mba-in-interior-design.php": {
+        "name": "MBA in Interior & Spatial Design Management",
+        "pdf": "MBA.pdf"
+    },
+    "courses\/mba-logistics-and-supply-chain-management.php": {
+        "name": "MBA in Logistics & Supply Chain Management",
+        "pdf": "MBA-Logistics-Management.pdf"
+    },
+    "courses\/p-g-diploma-in-fashion-design.php": {
+        "name": "P.G. Diploma in Fashion Design",
+        "pdf": "fashion_diploma.pdf"
+    },
+    "courses\/p-g-diploma-in-interior-design.php": {
+        "name": "P.G. Diploma in Interior Design",
+        "pdf": "Diploma-Interior-Designing.pdf"
+    },
+    "courses\/pgdca.php": {
+        "name": "Post Graduate Diploma in Computer Applications (PGDCA)",
+        "pdf": "BCA-NEP.pdf"
+    },
+    "courses\/post-graduate-programs\/m-com.php": {
+        "name": "Postgraduate Commerce Hub",
+        "pdf": "M.Com_.pdf"
+    },
+    "courses\/post-graduate-programs\/pg-diploma.php": {
+        "name": "Postgraduate Diploma Programs Hub",
+        "pdf": "PGDCA.pdf"
+    },
+    "courses\/post-graduate-programs\/information-technology.php": {
+        "name": "Postgraduate IT Programs Hub",
+        "pdf": "BA-HISTORY.pdf"
+    },
+    "courses\/post-graduate-programs\/ma.php": {
+        "name": "Postgraduate M.A. Humanities Hub",
+        "pdf": "BA-HISTORY.pdf"
+    },
+    "courses\/post-graduate-programs\/m-sc.php": {
+        "name": "Postgraduate M.Sc. Science Hub",
+        "pdf": "BSC-PHYSICS.pdf"
+    },
+    "courses\/post-graduate-programs\/mba.php": {
+        "name": "Postgraduate MBA Management Hub",
+        "pdf": "MBA.pdf"
+    },
+    "courses\/post-graduate-programs\/professional-post-graduate-programs.php": {
+        "name": "Professional Postgraduate Programs Hub",
+        "pdf": "BBA.pdf"
+    },
+    "courses\/under-graduate-programs\/professional.php": {
+        "name": "Professional Undergraduate Programs Hub",
+        "pdf": "BBA.pdf"
+    },
+    "courses\/under-graduate-programs\/information-technology-under-graduate-programs.php": {
+        "name": "Undergraduate IT Programs Hub",
+        "pdf": "BSC-COMPUTER-SCIENCE.pdf"
+    }
+}

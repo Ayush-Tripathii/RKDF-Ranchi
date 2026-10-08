@@ -85,35 +85,36 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <?php foreach ($cat['courses'] as $c): ?>
-            <div class="bg-card border border-border rounded-2xl p-6 shadow-sm hover:border-gold hover:shadow-md transition flex flex-col justify-between group">
+            <a href="<?= url($c['href']) ?>" class="group bg-white border border-slate-200/85 rounded-[22px] p-6 shadow-sm hover:shadow-xl hover:border-amber-400/80 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
               <div>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand/10 text-brand">
+                <div class="flex items-center justify-between gap-2 mb-3.5">
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase bg-[#eef2f8] text-[#1e3a8a] border border-[#dbe4f0]/80">
                     <?= e($c['badge']) ?>
                   </span>
-                  <span class="text-xs font-semibold text-muted-foreground flex items-center gap-1 shrink-0">
-                    <?= lucide_icon('clock', 'w-3.5 h-3.5 text-gold') ?>
-                    <?= e($c['duration']) ?>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700">
+                    <?= lucide_icon('clock', 'w-4 h-4 text-[#e58525]') ?>
+                    <span><?= e($c['duration']) ?></span>
                   </span>
                 </div>
 
-                <h3 class="font-bold text-foreground text-lg mb-2 leading-snug group-hover:text-brand transition">
-                  <a href="<?= url($c['href']) ?>"><?= e($c['name']) ?></a>
-                </h3>
-
-                <p class="text-xs text-muted-foreground leading-relaxed mb-4">
-                  <?= e($c['desc']) ?>
-                </p>
+                <div class="my-3">
+                  <h3 class="font-serif font-bold text-slate-900 text-lg leading-snug group-hover:text-[#e58525] transition-colors line-clamp-2">
+                    <?= e($c['name']) ?>
+                  </h3>
+                  <p class="text-xs text-slate-500 font-normal mt-1.5 line-clamp-2">
+                    <?= e($c['desc']) ?>
+                  </p>
+                </div>
               </div>
 
-              <div class="pt-4 border-t border-border flex items-center justify-between mt-auto">
-                <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Admissions Open 2026–27</span>
-                <a href="<?= url($c['href']) ?>" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand group-hover:text-gold transition">
+              <div class="pt-4 mt-4 border-t border-slate-200/80 flex items-center justify-between gap-2">
+                <span class="text-xs font-bold text-[#0f1b2d] tracking-tight">Admissions Open 2026–27</span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-[#0f1b2d] group-hover:text-[#e58525] transition-colors">
                   <span>View Details</span>
-                  <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
-                </a>
+                  <?= lucide_icon('arrow-right', 'w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform') ?>
+                </span>
               </div>
-            </div>
+            </a>
           <?php endforeach; ?>
         </div>
       </div>

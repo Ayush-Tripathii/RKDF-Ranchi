@@ -1006,91 +1006,129 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <section class="py-12 md:py-16 bg-background">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
 
-    <!-- Search & Filter Controls -->
-    <div class="bg-card border border-border rounded-2xl p-6 shadow-sm mb-10 space-y-6">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="relative w-full md:w-96">
-          <input type="text" id="courseSearch" placeholder="Search by course name or keyword (e.g. MCA, B.Tech, Mining, MBA, Fashion)..." 
-                 class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-border text-sm focus:outline-none focus:border-gold transition" />
-          <div class="absolute left-3.5 top-3 text-muted-foreground pointer-events-none">
-            <?= lucide_icon('search', 'w-4 h-4') ?>
+    <!-- Search & Filter Controls (Single Clean Line Panel) -->
+    <div class="course-filter-panel">
+      <!-- 1. Full-Width Premium Search Input -->
+      <div class="course-search-wrapper mb-3.5">
+        <span class="course-search-icon-box">
+          <?= lucide_icon('search', 'w-4 h-4') ?>
+        </span>
+        <input type="text" id="courseSearch" placeholder="Search 106+ programs by course name or keyword (e.g. B.Tech, Mining, MBA, MCA, Pharmacy)..." 
+               class="course-search-input" />
+        <button type="button" id="clearSearchBtn" class="course-search-clear hidden" title="Clear search">
+          <?= lucide_icon('x', 'w-3.5 h-3.5') ?>
+        </button>
+      </div>
+
+      <!-- 2. Single-Line Consolidated Filter Pills with Scroll Arrows -->
+      <div class="course-filter-single-row">
+        <div class="course-filter-label-inline">
+          <span class="course-filter-icon-box">
+            <?= lucide_icon('filter', 'w-3.5 h-3.5') ?>
+          </span>
+          <span>Filter:</span>
+        </div>
+        
+        <div class="course-filter-scroll-wrapper">
+          <button type="button" id="scrollFilterLeft" class="filter-scroll-btn" aria-label="Scroll left" title="Scroll left">
+            <?= lucide_icon('chevron-left', 'w-4 h-4') ?>
+          </button>
+
+          <div id="courseFilterTrack" class="course-filter-pills-track">
+            <button type="button" class="filter-btn-pill active" data-filter="all">
+              <span>All Programs</span>
+              <span class="badge-count"><?= count($courses) ?></span>
+            </button>
+            <button type="button" class="filter-btn-pill" data-filter="ug">Undergraduate (UG)</button>
+            <button type="button" class="filter-btn-pill" data-filter="pg">Postgraduate (PG)</button>
+            <button type="button" class="filter-btn-pill" data-filter="diploma">Diploma &amp; Poly</button>
+            <button type="button" class="filter-btn-pill" data-filter="engineering_it">Engineering &amp; IT</button>
+            <button type="button" class="filter-btn-pill" data-filter="management">Management</button>
+            <button type="button" class="filter-btn-pill" data-filter="pharmacy_science">Pharmacy &amp; Science</button>
+            <button type="button" class="filter-btn-pill" data-filter="arts_law">Arts, Law &amp; Design</button>
           </div>
-        </div>
 
-        <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
-          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-brand text-gold font-bold transition" data-level="all">All Levels (<?= count($courses) ?>)</button>
-          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-muted text-muted-foreground hover:text-foreground transition" data-level="ug">Undergraduate (UG)</button>
-          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-muted text-muted-foreground hover:text-foreground transition" data-level="pg">Postgraduate (PG)</button>
-          <button type="button" class="filter-level-btn px-4 py-2 rounded-xl bg-muted text-muted-foreground hover:text-foreground transition" data-level="diploma">Diploma &amp; Polytechnic</button>
+          <button type="button" id="scrollFilterRight" class="filter-scroll-btn" aria-label="Scroll right" title="Scroll right">
+            <?= lucide_icon('chevron-right', 'w-4 h-4') ?>
+          </button>
         </div>
-      </div>
-
-      <!-- Stream Filter Pills -->
-      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-2 border-t border-border text-xs">
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg bg-brand/10 text-brand font-bold whitespace-nowrap" data-stream="all">All Streams</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="engineering">Engineering &amp; Polytechnic</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="it">Computer Science &amp; IT</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="management">Management &amp; Commerce</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="pharmacy">Pharmacy &amp; Health</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="law">Law &amp; Legal Studies</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="science">Sciences &amp; Biotech</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="arts">Arts &amp; Humanities</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="design">Design &amp; Fashion</button>
-        <button type="button" class="filter-stream-btn px-3 py-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground whitespace-nowrap transition" data-stream="media">Media &amp; Library</button>
       </div>
     </div>
 
-    <!-- Active Results Counter -->
-    <div class="flex items-center justify-between mb-6">
-      <div class="text-sm font-semibold text-foreground">
-        Showing <span id="courseCount" class="text-brand font-bold"><?= count($courses) ?></span> programs
-      </div>
-      <div class="text-xs text-muted-foreground">
-        Click any program card to view exact fee structure, syllabus, eligibility, and scholarship details.
-      </div>
-    </div>
+
 
     <!-- Courses Grid -->
     <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <?php foreach ($courses as $c): ?>
-        <div class="course-item-card bg-card border border-border rounded-2xl p-6 shadow-sm hover:border-gold hover:shadow-md transition flex flex-col justify-between"
-             data-name="<?= strtolower(e($c['name'] . ' ' . $c['school'])) ?>"
-             data-level="<?= e($c['level']) ?>"
-             data-stream="<?= e($c['stream']) ?>">
+        <?php
+          $level_code = strtolower($c['level'] ?? 'ug');
+          $level_label = 'UG DEGREE';
+          if ($level_code === 'pg') {
+            $level_label = 'PG DEGREE';
+          } elseif ($level_code === 'diploma') {
+            $level_label = 'DIPLOMA';
+          } elseif ($level_code === 'doctoral' || $level_code === 'phd') {
+            $level_label = 'DOCTORAL';
+          } elseif ($level_code === 'common') {
+            $level_label = 'CERTIFICATE';
+          }
+        ?>
+        <a href="<?= url($c['href']) ?>" 
+           class="course-item-card group"
+           data-name="<?= strtolower(e($c['name'] . ' ' . $c['school'])) ?>"
+           data-level="<?= e($c['level']) ?>"
+           data-stream="<?= e($c['stream']) ?>">
           
           <div>
-            <div class="flex items-start justify-between gap-3 mb-3">
-              <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand/10 text-brand">
-                <?= strtoupper(e($c['level'])) ?> Degree
+            <!-- Top Meta Row: Level Badge & Duration -->
+            <div class="flex items-center justify-between gap-2">
+              <span class="course-card-badge">
+                <?= $level_label ?>
               </span>
-              <span class="text-xs font-semibold text-muted-foreground flex items-center gap-1">
-                <?= lucide_icon('clock', 'w-3.5 h-3.5 text-gold') ?>
-                <?= e($c['duration']) ?>
+              <span class="course-card-duration">
+                <?= lucide_icon('clock', 'w-3.5 h-3.5 text-[#e58525]') ?>
+                <span><?= e($c['duration']) ?></span>
               </span>
             </div>
 
-            <h3 class="font-bold text-foreground text-lg mb-1 leading-snug hover:text-brand transition">
-              <a href="<?= url($c['href']) ?>"><?= e($c['name']) ?></a>
+            <!-- Course Title & School Subtitle -->
+            <h3 class="course-card-title">
+              <?= e($c['name']) ?>
             </h3>
-            <p class="text-xs text-muted-foreground mb-4"><?= e($c['school']) ?></p>
+            <p class="course-card-school flex items-center gap-1.5">
+              <?= lucide_icon('building-2', 'w-3.5 h-3.5 text-slate-400 shrink-0') ?>
+              <span><?= e($c['school']) ?></span>
+            </p>
           </div>
 
-          <div class="pt-4 border-t border-border flex items-center justify-between">
-            <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Admissions Open 2026–27</span>
-            <a href="<?= url($c['href']) ?>" class="inline-flex items-center gap-1 text-xs font-bold text-brand hover:text-gold transition">
+          <!-- Bottom Action Footer -->
+          <div class="course-card-footer">
+            <span class="course-card-status">
+              <span class="course-card-status-dot"></span>
+              <span>Admissions Open 2026–27</span>
+            </span>
+
+            <span class="course-card-cta">
               <span>View Details</span>
-              <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
-            </a>
+              <?= lucide_icon('arrow-right', 'w-3.5 h-3.5 transition-transform') ?>
+            </span>
           </div>
 
-        </div>
+        </a>
       <?php endforeach; ?>
     </div>
 
-    <div id="noResults" class="hidden text-center py-16 text-muted-foreground">
-      <?= lucide_icon('search-x', 'w-12 h-12 mx-auto mb-3 text-muted-foreground/50') ?>
-      <p class="text-base font-semibold">No matching courses found.</p>
-      <p class="text-xs mt-1">Try searching with a different term or clear your filters.</p>
+    <!-- No Results Fallback -->
+    <div id="noResults" class="hidden text-center py-16 px-4">
+      <div class="w-14 h-14 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3.5">
+        <?= lucide_icon('search-x', 'w-7 h-7') ?>
+      </div>
+      <h3 class="text-base font-bold text-slate-800">No matching programs found</h3>
+      <p class="text-xs text-slate-500 mt-1 max-w-sm mx-auto">We couldn't find any courses matching your search keyword or selected category.</p>
+      <button type="button" id="resetCourseFilters" class="mt-4 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0b1e3b] text-white text-xs font-bold hover:bg-[#0f284e] transition">
+        <?= lucide_icon('rotate-ccw', 'w-3.5 h-3.5') ?>
+        <span>Reset Search &amp; Filters</span>
+      </button>
     </div>
 
   </div>
@@ -1098,74 +1136,187 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 <!-- Search and Filter Client-Side Script -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('courseSearch');
-  const levelBtns = document.querySelectorAll('.filter-level-btn');
-  const streamBtns = document.querySelectorAll('.filter-stream-btn');
-  const cards = document.querySelectorAll('.course-item-card');
-  const countSpan = document.getElementById('courseCount');
-  const noResults = document.getElementById('noResults');
+(function() {
+  function initCourseFilters() {
+    const searchInput = document.getElementById('courseSearch');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const filterBtns = document.querySelectorAll('.filter-btn-pill');
+    const cards = document.querySelectorAll('.course-item-card');
+    const countSpan = document.getElementById('courseCount');
+    const noResults = document.getElementById('noResults');
+    const resetBtn = document.getElementById('resetCourseFilters');
+    const filterTrack = document.getElementById('courseFilterTrack');
+    const scrollLeftBtn = document.getElementById('scrollFilterLeft');
+    const scrollRightBtn = document.getElementById('scrollFilterRight');
 
-  let activeLevel = 'all';
-  let activeStream = 'all';
+    let activeFilter = 'all';
 
-  function filterCourses() {
-    const query = searchInput.value.toLowerCase().trim();
-    let visibleCount = 0;
-
-    cards.forEach(card => {
-      const name = card.getAttribute('data-name');
-      const level = card.getAttribute('data-level');
-      const stream = card.getAttribute('data-stream');
-
-      const matchesSearch = !query || name.includes(query);
-      const matchesLevel = activeLevel === 'all' || level === activeLevel;
-      const matchesStream = activeStream === 'all' || stream === activeStream;
-
-      if (matchesSearch && matchesLevel && matchesStream) {
-        card.style.display = '';
-        visibleCount++;
-      } else {
-        card.style.display = 'none';
+    function updateFilterScrollArrows() {
+      if (!filterTrack) return;
+      const maxScroll = filterTrack.scrollWidth - filterTrack.clientWidth;
+      if (scrollLeftBtn) {
+        const atStart = filterTrack.scrollLeft <= 5;
+        scrollLeftBtn.style.opacity = atStart ? '0.35' : '1';
+        scrollLeftBtn.disabled = atStart;
       }
+      if (scrollRightBtn) {
+        const atEnd = filterTrack.scrollLeft >= maxScroll - 5;
+        scrollRightBtn.style.opacity = atEnd ? '0.35' : '1';
+        scrollRightBtn.disabled = atEnd;
+      }
+    }
+
+    if (scrollLeftBtn && filterTrack) {
+      scrollLeftBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        filterTrack.scrollBy({ left: -220, behavior: 'smooth' });
+      });
+    }
+
+    if (scrollRightBtn && filterTrack) {
+      scrollRightBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        filterTrack.scrollBy({ left: 220, behavior: 'smooth' });
+      });
+    }
+
+    if (filterTrack) {
+      filterTrack.addEventListener('scroll', updateFilterScrollArrows, { passive: true });
+      window.addEventListener('resize', updateFilterScrollArrows);
+      setTimeout(updateFilterScrollArrows, 150);
+    }
+
+    function filterCourses() {
+      const rawQuery = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      const query = rawQuery.replace(/[.\-\s()]/g, ''); // sanitized for flexible query e.g. btech / b.tech
+      
+      // Toggle clear search button visibility
+      if (clearSearchBtn) {
+        if (rawQuery.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+      }
+
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const rawName = (card.getAttribute('data-name') || '').toLowerCase();
+        const cleanName = rawName.replace(/[.\-\s()]/g, '');
+        const level = (card.getAttribute('data-level') || '').toLowerCase().trim();
+        const stream = (card.getAttribute('data-stream') || '').toLowerCase().trim();
+
+        // Flexible Search Matching
+        let matchesSearch = true;
+        if (rawQuery) {
+          matchesSearch = rawName.includes(rawQuery) || 
+                          cleanName.includes(query) || 
+                          level.includes(rawQuery) || 
+                          stream.includes(rawQuery);
+        }
+
+        // Filter Matching
+        let matchesFilter = false;
+        if (activeFilter === 'all') {
+          matchesFilter = true;
+        } else if (activeFilter === 'ug') {
+          matchesFilter = (level === 'ug');
+        } else if (activeFilter === 'pg') {
+          matchesFilter = (level === 'pg' || level === 'doctoral' || level === 'phd');
+        } else if (activeFilter === 'diploma') {
+          matchesFilter = (level === 'diploma');
+        } else if (activeFilter === 'engineering_it') {
+          matchesFilter = (stream === 'engineering' || stream === 'it');
+        } else if (activeFilter === 'management') {
+          matchesFilter = (stream === 'management');
+        } else if (activeFilter === 'pharmacy_science') {
+          matchesFilter = (stream === 'pharmacy' || stream === 'science');
+        } else if (activeFilter === 'arts_law') {
+          matchesFilter = (stream === 'arts' || stream === 'law' || stream === 'design' || stream === 'media' || stream === 'other');
+        } else {
+          matchesFilter = (level === activeFilter || stream === activeFilter);
+        }
+
+        if (matchesSearch && matchesFilter) {
+          card.classList.remove('hidden', 'is-hidden');
+          card.style.removeProperty('display');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden', 'is-hidden');
+          card.style.setProperty('display', 'none', 'important');
+        }
+      });
+
+      if (countSpan) countSpan.textContent = visibleCount;
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+          noResults.style.removeProperty('display');
+        } else {
+          noResults.classList.add('hidden');
+          noResults.style.setProperty('display', 'none', 'important');
+        }
+      }
+    }
+
+    // Real-time search typing
+    if (searchInput) {
+      searchInput.addEventListener('input', filterCourses);
+      searchInput.addEventListener('keyup', filterCourses);
+      searchInput.addEventListener('change', filterCourses);
+    }
+
+    // Clear search button
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+        }
+        filterCourses();
+      });
+    }
+
+    // Filter Pill buttons
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        activeFilter = this.getAttribute('data-filter') || 'all';
+        filterCourses();
+
+        // Auto-scroll clicked button into view
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
     });
 
-    countSpan.textContent = visibleCount;
-    if (visibleCount === 0) {
-      noResults.classList.remove('hidden');
-    } else {
-      noResults.classList.add('hidden');
+    // Reset button in No-Results box
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (searchInput) searchInput.value = '';
+        activeFilter = 'all';
+        filterBtns.forEach(b => {
+          if (b.getAttribute('data-filter') === 'all') b.classList.add('active');
+          else b.classList.remove('active');
+        });
+        filterCourses();
+      });
     }
+
+    // Run initial filtering
+    filterCourses();
   }
 
-  searchInput.addEventListener('input', filterCourses);
-
-  levelBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      levelBtns.forEach(b => {
-        b.classList.remove('bg-brand', 'text-gold', 'font-bold');
-        b.classList.add('bg-muted', 'text-muted-foreground');
-      });
-      this.classList.remove('bg-muted', 'text-muted-foreground');
-      this.classList.add('bg-brand', 'text-gold', 'font-bold');
-      activeLevel = this.getAttribute('data-level');
-      filterCourses();
-    });
-  });
-
-  streamBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      streamBtns.forEach(b => {
-        b.classList.remove('bg-brand/10', 'text-brand', 'font-bold');
-        b.classList.add('text-muted-foreground');
-      });
-      this.classList.remove('text-muted-foreground');
-      this.classList.add('bg-brand/10', 'text-brand', 'font-bold');
-      activeStream = this.getAttribute('data-stream');
-      filterCourses();
-    });
-  });
-});
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCourseFilters);
+  } else {
+    initCourseFilters();
+  }
+})();
 </script>
 
 <?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>

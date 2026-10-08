@@ -15,14 +15,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* ---- Mobile Hamburger Menu ---- */
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+  /* ---- Mobile Drawer Open & Close ---- */
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+  const mobileDrawerBackdrop = document.getElementById('mobile-drawer-backdrop');
 
-  hamburger.addEventListener('click', function () {
-    const isOpen = navLinks.classList.toggle('mobile-open');
-    hamburger.setAttribute('aria-expanded', isOpen);
-  });
+  if (mobileMenuBtn && mobileDrawer) {
+    mobileMenuBtn.addEventListener('click', function () {
+      mobileDrawer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  function closeMobileDrawer() {
+    if (mobileDrawer) {
+      mobileDrawer.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (mobileDrawerClose) {
+    mobileDrawerClose.addEventListener('click', closeMobileDrawer);
+  }
+
+  if (mobileDrawerBackdrop) {
+    mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+  }
 
   /* ---- Dropdown Click Toggle & Outside Click ---- */
   const dropdownParents = document.querySelectorAll('.nav-dropdown-wrapper');
