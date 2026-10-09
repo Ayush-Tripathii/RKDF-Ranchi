@@ -155,14 +155,14 @@ require_once dirname(__DIR__) . '/includes/header.php';
                       </div>
                     </td>
                     <td>
-                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold <?= $isChair ? 'bg-brand text-white' : ($isExternal ? 'bg-sky-100 text-sky-900 border border-sky-200' : ($isIndustry ? 'bg-emerald-100 text-emerald-900 border border-emerald-200' : 'bg-slate-100 text-slate-800 border border-slate-200')) ?>">
+                      <div class="font-semibold text-brand text-sm sm:text-[15px] leading-snug">
                         <?= e($member['designation']) ?>
-                      </span>
+                      </div>
                     </td>
                     <td style="text-align: right;">
-                      <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-medium <?= $isExternal ? 'bg-sky-50 text-sky-800 border border-sky-200' : ($isIndustry ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-700 border border-slate-200/80') ?>">
+                      <div class="text-xs sm:text-sm font-medium whitespace-nowrap <?= $isExternal ? 'text-indigo-700' : ($isIndustry ? 'text-emerald-700' : 'text-slate-600') ?>">
                         <?= e($member['category']) ?>
-                      </span>
+                      </div>
                     </td>
                   </tr>
                 <?php endforeach; ?>

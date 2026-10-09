@@ -47,17 +47,28 @@
               </div>
             </td>
             <td>
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand text-white">
+              <div class="font-semibold text-brand text-sm sm:text-[15px] leading-snug">
                 <?= e($item['role']) ?>
-              </span>
+              </div>
             </td>
             <td style="color: #475569; font-size: 0.875rem;">
               <?= e($item['organization']) ?>
             </td>
             <td style="text-align: right;">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200/80">
-                <?= e($item['capacity'] ?? $item['category'] ?? 'Member') ?>
-              </span>
+              <?php
+              $cap = $item['capacity'] ?? $item['category'] ?? 'Member';
+              $textClass = 'text-slate-600 font-medium';
+              if (stripos($cap, 'Chair') !== false || stripos($cap, 'President') !== false) {
+                  $textClass = 'text-amber-700 font-semibold';
+              } elseif (stripos($cap, 'Secretary') !== false) {
+                  $textClass = 'text-brand font-semibold';
+              } elseif (stripos($cap, 'Expert') !== false || stripos($cap, 'External') !== false) {
+                  $textClass = 'text-indigo-700 font-medium';
+              }
+              ?>
+              <div class="text-xs sm:text-sm whitespace-nowrap <?= $textClass ?>">
+                <?= e($cap) ?>
+              </div>
             </td>
           </tr>
         <?php endforeach; ?>

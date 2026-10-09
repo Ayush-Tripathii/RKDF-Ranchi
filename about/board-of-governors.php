@@ -1,180 +1,116 @@
 <?php
-$page_title = "Board of Governors | Apex Governance — RKDF University Ranchi";
-$page_meta_desc = "Board of Governors of RKDF University Ranchi — the highest governing body guiding strategic vision, administrative leadership, and institutional development.";
-require_once __DIR__ . '/../includes/header.php';
+/**
+ * RKDF University — Board of Governors
+ * Pattern: Modular MVC (Controller / View / Data Separation)
+ * Live Source: https://rkdfuniversity.org/about/board-of-governors/
+ */
+require_once dirname(__DIR__) . '/config/config.php';
+require_once dirname(__DIR__) . '/includes/functions.php';
+
+$page_title     = "Board of Governors | " . SITE_NAME;
+$page_meta_desc = "The Board of Governors of RKDF University Ranchi — the apex statutory body responsible for strategic vision, policy formulation, and institutional oversight.";
+
+// Load Data
+$governors = require dirname(__DIR__) . '/data/boards/board_of_governors.php';
+
+require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
-<div class="inner-page-hero">
-  <div class="mx-auto max-w-5xl">
-    <div class="hero-pill mb-4">
-      <?= lucide_icon('shield', 'w-4 h-4 text-gold') ?>
-      <span>Apex Governing Authority</span>
+<!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
+<section class="inner-page-hero">
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative mx-auto max-w-5xl px-6 text-center">
+    <!-- Breadcrumb Badge -->
+    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+      <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
+      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
+      <a href="<?= url('about/') ?>" class="hover:text-white transition">About</a>
+      <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
+      <span class="text-white/90">Board of Governors</span>
     </div>
-    <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4 tracking-tight">Board of Governors</h1>
-    <p class="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-      The supreme authority responsible for formulating high-level policies, governance oversight, financial stewardship, and institutional vision.
+
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
+      Board of <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Governors</em>
+    </h1>
+
+    <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
+      The apex statutory governing body steering strategic direction, institutional policy, financial governance, and educational distinction at RKDF University Ranchi.
     </p>
-  </div>
-</div>
 
-<section class="py-12 md:py-16 bg-background">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-      
-      <!-- Main Table -->
-      <div class="lg:col-span-3 space-y-8">
-        <div class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm">
-          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-border">
-            <div class="w-10 h-10 rounded-xl bg-brand text-gold flex items-center justify-center shrink-0">
-              <?= lucide_icon('award', 'w-5 h-5') ?>
-            </div>
-            <div>
-              <h2 class="text-xl font-bold text-foreground">Members of the Board of Governors</h2>
-              <p class="text-xs text-muted-foreground">Constituted in accordance with Section 21 of the State University Act</p>
-            </div>
-          </div>
-
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-sm border-collapse">
-              <thead>
-                <tr class="bg-slate-50 dark:bg-slate-900/50 border-b border-border text-xs uppercase tracking-wider text-muted-foreground font-semibold">
-                  <th class="py-3.5 px-4">Name</th>
-                  <th class="py-3.5 px-4">Designation</th>
-                  <th class="py-3.5 px-4">Organization / University</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-border">
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-gold"></span>
-                    Dr. Sadhna Kapoor
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Chancellor (Chairperson)</td>
-                  <td class="py-4 px-4 text-muted-foreground">RKDF University, Ranchi</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-gold"></span>
-                    Prof. (Dr.) S. Chatterjee
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Vice Chancellor</td>
-                  <td class="py-4 px-4 text-muted-foreground">RKDF University, Ranchi</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Shri Rahul Kumar Purwar, IAS
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Secretary to Government</td>
-                  <td class="py-4 px-4 text-muted-foreground">Dept. of Higher &amp; Technical Education, Govt. of Jharkhand</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Dr. Shruti Kapoor
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Chancellor</td>
-                  <td class="py-4 px-4 text-muted-foreground">Dr. A. P. J. Abdul Kalam University, Indore</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Mr. Siddharth Kapoor
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Chancellor</td>
-                  <td class="py-4 px-4 text-muted-foreground">Sri Satya Sai University of Technology &amp; Medical Sciences, Sehore</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Dr. Manoj Chopra
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Dean, Faculty of Engineering &amp; Technology</td>
-                  <td class="py-4 px-4 text-muted-foreground">SRK University, Bhopal</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Dr. Mukesh Tiwari
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Vice Chancellor</td>
-                  <td class="py-4 px-4 text-muted-foreground">Sri Satya Sai University of Technology &amp; Medical Sciences, Sehore</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    Dr. Sunil Patil
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Examination Controller</td>
-                  <td class="py-4 px-4 text-muted-foreground">RKDF University, Bhopal</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    Dr. B.N. Singh
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Director Management</td>
-                  <td class="py-4 px-4 text-muted-foreground">RKDF University, Bhopal</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    Mr. Manish Dawani
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Finance Expert</td>
-                  <td class="py-4 px-4 text-muted-foreground">RKDF University, Ranchi</td>
-                </tr>
-                <tr class="hover:bg-muted/40 transition">
-                  <td class="py-4 px-4 font-semibold text-foreground flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    Dr. Amit Kumar Pandey
-                  </td>
-                  <td class="py-4 px-4 text-brand font-medium">Registrar (Member Secretary)</td>
-                  <td class="py-4 px-4 text-muted-foreground">RKDF University, Ranchi</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Sidebar -->
-      <div class="space-y-6">
-        <div class="bg-card border border-border rounded-2xl p-6 shadow-sm">
-          <h3 class="font-bold text-foreground text-sm uppercase tracking-wider mb-4 pb-2 border-b border-border">
-            Governance Bodies
-          </h3>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="<?= url('about/academic-council-members.php') ?>" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-muted text-muted-foreground hover:text-foreground transition">
-                <span>Academic Council</span>
-                <?= lucide_icon('chevron-right', 'w-4 h-4') ?>
-              </a>
-            </li>
-            <li>
-              <a href="<?= url('about/board-of-governors.php') ?>" class="flex items-center justify-between p-2.5 rounded-xl bg-brand/10 text-brand font-semibold">
-                <span>Board of Governors</span>
-                <?= lucide_icon('chevron-right', 'w-4 h-4 text-gold') ?>
-              </a>
-            </li>
-            <li>
-              <a href="<?= url('about/board-members.php') ?>" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-muted text-muted-foreground hover:text-foreground transition">
-                <span>Board of Management</span>
-                <?= lucide_icon('chevron-right', 'w-4 h-4') ?>
-              </a>
-            </li>
-            <li>
-              <a href="<?= url('about/board-of-studies.php') ?>" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-muted text-muted-foreground hover:text-foreground transition">
-                <span>Board of Studies</span>
-                <?= lucide_icon('chevron-right', 'w-4 h-4') ?>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+    <!-- Badges -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
+      <span class="hero-pill">
+        <?= lucide_icon('landmark') ?> Apex Governing Authority
+      </span>
+      <span class="hero-pill">
+        <?= lucide_icon('scale') ?> Jharkhand Act No. 1077
+      </span>
+      <span class="hero-pill">
+        <?= lucide_icon('users') ?> Statutory Council
+      </span>
     </div>
   </div>
 </section>
 
-<?php require_once __DIR__ . '/../includes/footer.php'; ?>
+<!-- Sub-Navigation Bar -->
+<?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
+
+<!-- ==================== MAIN CONTENT SECTION ==================== -->
+<section class="py-20 bg-surface">
+  <div class="mx-auto max-w-7xl px-6 space-y-16">
+
+    <!-- Statutory Authority Spotlight Banner Component -->
+    <?php
+    $spotlight_badge = 'Apex Statutory Mandate';
+    $spotlight_title = 'Institutional Board of Governors';
+    $spotlight_desc  = 'Constituted under the provisions of the Jharkhand State Legislature Act, the Board of Governors is the supreme statutory authority responsible for the university’s governance, expansion, academic policies, and state statutory compliance.';
+    $spotlight_pills = [
+        ['icon' => 'scale',    'text' => 'Jharkhand Act No. 1077'],
+        ['icon' => 'landmark', 'text' => 'State Govt. Representation'],
+        ['icon' => 'award',    'text' => 'Statutory Policy Head'],
+    ];
+    $seal_header     = 'Apex Secretariat';
+    $seal_title      = 'Governance Council';
+    $seal_desc       = 'Presided by the Hon’ble Chancellor with Government of Jharkhand and academic leadership representation.';
+    $seal_footer_tag = 'Statutory Body';
+    $seal_count      = count($governors) . ' Governors';
+    require dirname(__DIR__) . '/sections/boards/spotlight_card.php';
+    ?>
+
+    <!-- Board of Governors Directory Table Component -->
+    <?php
+    $registry_badge = 'Official Statutory Registry';
+    $registry_title = 'Distinguished Members of the Board';
+    $registry_tag   = 'Act No. 1077 Mandate';
+    $registry_items = $governors;
+    require dirname(__DIR__) . '/sections/boards/table_registry.php';
+    ?>
+
+    <!-- Governance Callout Notice -->
+    <div class="rounded-3xl bg-brand text-brand-foreground p-8 sm:p-10 shadow-xl border border-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 text-left">
+      <div class="space-y-2 text-left flex-1">
+        <div class="text-xs uppercase font-bold tracking-widest text-gold flex items-center justify-start gap-2 text-left">
+          <?= lucide_icon('shield-check', 'w-4 h-4 text-gold shrink-0') ?>
+          <span>Statutory Governance</span>
+        </div>
+        <h3 class="font-serif text-2xl sm:text-3xl font-normal text-white text-left">
+          Academic Governance &amp; Administration
+        </h3>
+        <p class="text-white/80 text-sm max-w-2xl text-left">
+          Explore the apex Academic Council responsible for educational standards, curriculum formulation, and examinations.
+        </p>
+      </div>
+      <div class="shrink-0 flex items-center gap-3">
+        <a href="<?= url('about/academic-council-members.php') ?>" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-gold/90 transition shadow-lg">
+          <span>View Academic Council</span>
+          <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>

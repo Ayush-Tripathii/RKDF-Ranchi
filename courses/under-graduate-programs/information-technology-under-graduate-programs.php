@@ -194,8 +194,9 @@ require_once __DIR__ . '/../../includes/header.php';
         </tr>
       </tbody>            </table>
           </div>
-          <p class="text-xs text-muted-foreground mt-3.5 italic flex items-center gap-1.5">
-            <?= lucide_icon('info', 'w-3.5 h-3.5 text-gold shrink-0') ?>            <span>*Note: SC/ST/OBC students eligible for E-Kalyan Government Scholarship will receive fee adjustments as per State Government welfare guidelines.</span>
+          <p class="text-xs text-muted-foreground mt-5 italic flex items-start gap-2.5">
+            <?= lucide_icon('info', 'w-3.5 h-3.5 text-gold shrink-0 mt-0.5') ?>
+            <span>*Note: SC/ST/OBC students eligible for E-Kalyan Government Scholarship will receive fee adjustments as per State Government welfare guidelines.</span>
           </p>
         </div>
 
