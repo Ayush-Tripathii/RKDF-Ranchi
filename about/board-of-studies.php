@@ -128,7 +128,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                   <th style="width: 70px;">#</th>
                   <th>Member Name</th>
                   <th>Designation / Role</th>
-                  <th style="text-align: right;">Capacity</th>
+                  <th>Capacity</th>
                 </tr>
               </thead>
               <tbody>
@@ -159,7 +159,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                         <?= e($member['designation']) ?>
                       </div>
                     </td>
-                    <td style="text-align: right;">
+                    <td>
                       <div class="text-xs sm:text-sm font-medium whitespace-nowrap <?= $isExternal ? 'text-indigo-700' : ($isIndustry ? 'text-emerald-700' : 'text-slate-600') ?>">
                         <?= e($member['category']) ?>
                       </div>
@@ -189,7 +189,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
 
       <div class="flex items-center justify-center shrink-0 self-center my-auto gap-3">
-        <a href="<?= url('about/academic-council-members.php') ?>" class="inline-flex items-center gap-2 rounded-full bg-gold text-brand px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-white transition shadow-lg">
+        <a href="<?= url('about/academic-council-members.php') ?>" class="gov-callout-btn">
           <span>Academic Council</span>
           <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
         </a>

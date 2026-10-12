@@ -121,66 +121,109 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <section class="py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
-    <!-- Spotlight Banner -->
-    <div class="rounded-3xl bg-card border border-border p-8 md:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
-      <div class="space-y-3 flex-1 text-left">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gold/15 text-gold border border-gold/30">
-          <?= lucide_icon('scale', 'w-3.5 h-3.5') ?> Statutory Public Repository
-        </span>
-        <h2 class="font-serif text-2xl sm:text-3xl text-foreground">
-          Commitment to Regulatory Transparency &amp; Compliance
-        </h2>
-        <p class="text-muted-foreground text-sm leading-relaxed max-w-3xl">
-          In adherence to the directives of the University Grants Commission (UGC), the Ministry of Education (Govt. of India), and the Government of Jharkhand, RKDF University maintains an open repository of institutional accreditations, gazetted statutes, and audited reports.
-        </p>
-      </div>
+    <!-- Statutory Authority Spotlight Banner -->
+    <div class="gov-spotlight-card mb-16 section-block">
+      <!-- Ambient Golden Glow -->
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="shrink-0 flex flex-wrap gap-3">
-        <a href="<?= url('about/government-recognition.php') ?>" class="inline-flex items-center gap-2 rounded-full bg-brand text-brand-foreground px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-brand-dark transition shadow">
-          <?= lucide_icon('award', 'w-4 h-4') ?> Recognitions
-        </a>
+      <div class="gov-spotlight-grid">
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
+            <?= lucide_icon('scale', 'w-4 h-4 text-gold') ?> Statutory Public Repository
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
+            Commitment to Regulatory Transparency &amp; Compliance
+          </h2>
+          <p class="text-white/85 text-sm sm:text-base leading-relaxed max-w-2xl font-normal">
+            In adherence to the directives of the University Grants Commission (UGC), the Ministry of Education (Govt. of India), and the Government of Jharkhand, RKDF University maintains an open repository of institutional accreditations, gazetted statutes, and audited reports.
+          </p>
+
+          <!-- Authority Highlights -->
+          <div class="spotlight-pill-list">
+            <span class="spotlight-pill">
+              <?= lucide_icon('shield-check') ?>
+              <span>UGC 2(f) Verified</span>
+            </span>
+            <span class="spotlight-pill">
+              <?= lucide_icon('landmark') ?>
+              <span>Jharkhand Act No. 1077</span>
+            </span>
+            <span class="spotlight-pill">
+              <?= lucide_icon('file-text') ?>
+              <span>Audited IDP &amp; Statutes</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="gazette-seal-inner space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] uppercase tracking-widest text-gold font-bold flex items-center gap-1.5">
+              <?= lucide_icon('shield-check', 'w-3.5 h-3.5 text-gold') ?> Statutory Public Seal
+            </span>
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-gold/20 text-gold border border-gold/30">
+              <?= lucide_icon('award', 'w-3.5 h-3.5') ?>
+            </span>
+          </div>
+          <div>
+            <div class="font-serif text-2xl text-white font-normal">Public Disclosures</div>
+            <p class="text-xs text-white/80 mt-1.5 leading-relaxed">
+              Official repository of UGC submissions, statutory proformas, state acts, and institutional audited reports.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-white/15 flex items-center justify-between text-xs">
+            <span class="text-gold font-semibold flex items-center gap-1.5">
+              <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-400') ?> Verified Public Domain
+            </span>
+            <a href="<?= url('about/government-recognition.php') ?>" class="inline-flex items-center gap-1 text-white hover:text-gold transition font-semibold text-[11px] uppercase tracking-wider">
+              <span>Recognitions</span>
+              <?= lucide_icon('arrow-right', 'w-3 h-3') ?>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Documents Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <?php foreach ($disclosures as $d): ?>
-        <div class="group relative rounded-2xl bg-card border border-border p-6 shadow-sm hover:shadow-md hover:border-gold/50 transition duration-300 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center group-hover:bg-brand group-hover:text-gold transition">
-                <?= lucide_icon($d['icon'], 'w-6 h-6') ?>
+    <div class="mb-16 section-block space-y-8">
+      <div>
+        <div class="text-xs tracking-[0.2em] uppercase text-gold font-bold">Public Regulatory Compliance</div>
+        <h3 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900 mt-1">Official Mandatory Disclosures</h3>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <?php foreach ($disclosures as $d): ?>
+          <div class="recognition-card">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between gap-4">
+                <div class="recognition-icon-box">
+                  <?= lucide_icon($d['icon'], 'w-6 h-6') ?>
+                </div>
+                <span class="recognition-tag">
+                  <?= e($d['badge']) ?>
+                </span>
               </div>
-              <span class="text-xs px-2.5 py-1 rounded-full bg-gold/15 text-gold border border-gold/30 font-semibold">
-                <?= htmlspecialchars($d['badge']) ?>
-              </span>
+
+              <div>
+                <h3 class="recognition-title">
+                  <?= e($d['title']) ?>
+                </h3>
+                <p class="recognition-desc">
+                  <?= e($d['desc']) ?>
+                </p>
+              </div>
             </div>
 
-            <div>
-              <span class="text-xs uppercase font-semibold text-muted-foreground tracking-wider block mb-1">
-                <?= htmlspecialchars($d['category']) ?>
-              </span>
-              <h3 class="font-serif text-xl text-foreground font-semibold group-hover:text-brand transition">
-                <?= htmlspecialchars($d['title']) ?>
-              </h3>
+            <div class="recognition-footer">
+              <span class="text-xs text-slate-400 font-medium">Statutory PDF</span>
+              <a href="<?= url($d['file']) ?>" target="_blank" rel="noopener noreferrer" class="recognition-btn group">
+                <span>View Document</span>
+                <span class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"><?= lucide_icon('arrow-up-right', 'w-4 h-4 text-gold') ?></span>
+              </a>
             </div>
-
-            <p class="text-xs text-muted-foreground leading-relaxed">
-              <?= htmlspecialchars($d['desc']) ?>
-            </p>
           </div>
-
-          <div class="mt-6 pt-4 border-t border-border flex items-center justify-between">
-            <a href="<?= url($d['file']) ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-brand hover:text-gold transition">
-              <?= lucide_icon('file-text', 'w-4 h-4') ?>
-              <span>Download Official PDF</span>
-            </a>
-            <a href="<?= url($d['file']) ?>" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-foreground group-hover:bg-gold group-hover:text-brand transition" aria-label="Open PDF">
-              <?= lucide_icon('download', 'w-4 h-4') ?>
-            </a>
-          </div>
-        </div>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
+      </div>
     </div>
 
   </div>

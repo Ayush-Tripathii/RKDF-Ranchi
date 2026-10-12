@@ -158,46 +158,108 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
           <!-- Official Contact Cards -->
           <div class="grid sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
-                <?= lucide_icon('phone-call', 'w-4 h-4 text-gold') ?> Direct Phone
+            <div class="p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-gold/50 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('phone-call', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="font-serif text-2xl text-foreground font-normal">
-                <a href="tel:7260801432" class="hover:text-gold transition">7260801432</a>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Direct Phone</div>
+                <div class="font-sans font-bold text-lg sm:text-xl text-slate-900 tracking-tight">
+                  <a href="tel:7260801432" class="hover:text-gold transition">7260801432</a>
+                </div>
+                <p class="text-xs text-slate-500">Mon to Sat (9:30 AM – 5:00 PM)</p>
               </div>
-              <p class="text-xs text-muted-foreground">Office hours: Monday to Saturday (9:30 AM – 5:00 PM)</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
-                <?= lucide_icon('mail', 'w-4 h-4 text-gold') ?> Official Email
+            <div class="p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-gold/50 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('mail', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="font-serif text-xl sm:text-2xl text-foreground font-normal truncate">
-                <a href="mailto:accounts@rkdfuniversity.org" class="hover:text-gold transition">accounts@rkdfuniversity.org</a>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Official Email</div>
+                <div class="font-sans font-bold text-base sm:text-lg text-slate-900 truncate tracking-tight">
+                  <a href="mailto:accounts@rkdfuniversity.org" class="hover:text-gold transition" title="accounts@rkdfuniversity.org">accounts@rkdfuniversity.org</a>
+                </div>
+                <p class="text-xs text-slate-500">Accounts, fee receipts &amp; queries</p>
               </div>
-              <p class="text-xs text-muted-foreground">Accounts, fee receipts &amp; financial queries</p>
             </div>
           </div>
 
           <!-- Scope of Finance Office -->
-          <div class="pt-6 border-t border-border space-y-4">
-            <h4 class="font-serif text-2xl text-foreground font-normal">Core Office Functions</h4>
-            <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
-              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>Student Fee Management &amp; E-Receipts</span>
+          <div class="pt-8 border-t border-slate-200/80">
+            <div class="flex items-center justify-between flex-wrap gap-3 mb-6">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-gold">Department Mandate</span>
+                <h4 class="font-serif text-2xl sm:text-3xl text-slate-900 font-normal mt-1">Core Office Functions</h4>
               </div>
-              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>E-Kalyan &amp; NSP Scholarship Audits</span>
+              <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+                Statutory Scope
+              </span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
+              <!-- Function 1 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('coins', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">01</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Fee Management &amp; E-Receipts</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Student fee administration, digital portal reconciliation, and instantaneous e-receipt generation for academic fees.
+                  </p>
+                </div>
               </div>
-              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>Annual Budget Formulation &amp; Control</span>
+
+              <!-- Function 2 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('award', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">02</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Scholarship Audits &amp; Schemes</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Institutional verification and fund disbursement tracking for E-Kalyan (Jharkhand) and National Scholarship Portals.
+                  </p>
+                </div>
               </div>
-              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>Statutory Audit &amp; UGC Financial Returns</span>
+
+              <!-- Function 3 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('calculator', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">03</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Annual Budget &amp; Controls</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Institutional budget formulation, capital expenditure allocation, and continuous departmental fiscal control.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Function 4 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('shield-check', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">04</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Statutory Audit &amp; UGC Filings</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    External chartered accounting audits, balance sheet finalization, and statutory regulatory compliance filings.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

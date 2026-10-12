@@ -2709,16 +2709,28 @@ $body_class     = $body_class     ?? '';
       border-color: rgba(229, 133, 37, 0.5) !important;
     }
     .recognition-icon-box {
-      width: 48px !important;
-      height: 48px !important;
-      min-width: 48px !important;
-      border-radius: 14px !important;
-      background: #071322 !important;
-      color: #e58525 !important;
+      width: 40px !important;
+      height: 40px !important;
+      min-width: 40px !important;
+      border-radius: 12px !important;
+      background: rgba(7, 19, 34, 0.08) !important;
+      color: #071322 !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      box-shadow: 0 4px 12px rgba(7, 19, 34, 0.2) !important;
+      transition: all 0.3s ease !important;
+    }
+    .recognition-card:hover .recognition-icon-box {
+      background: #071322 !important;
+      color: #e58525 !important;
+    }
+    .recognition-icon-box svg {
+      width: 18px !important;
+      height: 18px !important;
+      stroke: currentColor !important;
+      stroke-width: 2px !important;
+      display: inline-block !important;
+      transition: color 0.3s ease !important;
     }
     .recognition-icon-box svg,
     .pillar-icon-box svg,
@@ -2779,6 +2791,83 @@ $body_class     = $body_class     ?? '';
     .recognition-btn:hover {
       color: #e58525 !important;
       transform: translateX(2px) !important;
+    }
+
+    /* ==================== GOVERNANCE CALLOUT CTA BUTTON ==================== */
+    .gov-callout-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      padding: 0.85rem 1.85rem !important;
+      border-radius: 9999px !important;
+      font-family: inherit !important;
+      font-size: 0.775rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      background: linear-gradient(135deg, #e58525 0%, #c86809 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 8px 22px -3px rgba(229, 133, 37, 0.45), 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+    }
+    .gov-callout-btn:hover {
+      background: #ffffff !important;
+      color: #071322 !important;
+      border-color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(229, 133, 37, 0.35) !important;
+    }
+    .gov-callout-btn svg {
+      width: 1rem !important;
+      height: 1rem !important;
+      transition: transform 0.25s ease !important;
+      color: inherit !important;
+    }
+    .gov-callout-btn:hover svg {
+      transform: translateX(4px) !important;
+    }
+
+    .gov-callout-btn-white {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      padding: 0.85rem 1.85rem !important;
+      border-radius: 9999px !important;
+      font-family: inherit !important;
+      font-size: 0.775rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      background: #ffffff !important;
+      color: #071322 !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+    }
+    .gov-callout-btn-white:hover {
+      background: linear-gradient(135deg, #e58525 0%, #c86809 100%) !important;
+      color: #ffffff !important;
+      border-color: #e58525 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 28px -4px rgba(229, 133, 37, 0.55) !important;
+    }
+    .gov-callout-btn-white svg {
+      width: 1rem !important;
+      height: 1rem !important;
+      transition: transform 0.25s ease !important;
+      color: inherit !important;
+    }
+    .gov-callout-btn-white:hover svg {
+      transform: translateX(4px) !important;
     }
 
     /* ==================== FACULTY / DEANS DIRECTORY CARDS ==================== */
@@ -3025,22 +3114,37 @@ $body_class     = $body_class     ?? '';
     .approval-action-btn {
       display: inline-flex !important;
       align-items: center !important;
+      justify-content: center !important;
       gap: 0.5rem !important;
-      padding: 0.6rem 1.25rem !important;
-      border-radius: 12px !important;
+      padding: 0.65rem 1.35rem !important;
+      border-radius: 9999px !important;
       background: #071322 !important;
       color: #ffffff !important;
-      font-size: 0.8125rem !important;
-      font-weight: 600 !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
       text-decoration: none !important;
+      white-space: nowrap !important;
       box-shadow: 0 4px 12px rgba(7, 19, 34, 0.2) !important;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+    }
+    .approval-action-btn svg {
+      width: 0.95rem !important;
+      height: 0.95rem !important;
+      color: #e58525 !important;
+      transition: color 0.2s ease, transform 0.25s ease !important;
     }
     .approval-action-btn:hover {
       background: #e58525 !important;
       color: #ffffff !important;
       transform: translateY(-2px) !important;
-      box-shadow: 0 6px 16px rgba(229, 133, 37, 0.35) !important;
+      box-shadow: 0 6px 18px rgba(229, 133, 37, 0.4) !important;
+    }
+    .approval-action-btn:hover svg {
+      color: #ffffff !important;
+      transform: translateX(4px) !important;
     }
     /* ==================== GLOBAL SPACING & VERTICAL RHYTHM ==================== */
     .space-y-20 > * + *,

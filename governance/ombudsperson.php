@@ -158,45 +158,98 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
           <!-- Contact Details Card -->
           <div class="grid sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
-                <?= lucide_icon('phone-call', 'w-4 h-4 text-gold') ?> Contact Number
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-gold/40 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('phone-call', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="font-serif text-2xl text-foreground font-normal">
-                <a href="tel:9431105185" class="hover:text-gold transition">9431105185</a>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Direct Phone</div>
+                <div class="font-sans font-bold text-lg sm:text-xl text-slate-900 tracking-tight">
+                  <a href="tel:9431105185" class="hover:text-gold transition">9431105185</a>
+                </div>
+                <p class="text-xs text-slate-500">Direct helpline for student redressal</p>
               </div>
-              <p class="text-xs text-muted-foreground">Direct helpline for student redressal</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
-                <?= lucide_icon('mail', 'w-4 h-4 text-gold') ?> Grievance Email
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-gold/40 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('mail', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="font-serif text-xl sm:text-2xl text-foreground font-normal truncate">
-                <a href="mailto:sgrc@rkdfuniversity.org" class="hover:text-gold transition">sgrc@rkdfuniversity.org</a>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Grievance Email</div>
+                <div class="font-sans font-bold text-base sm:text-lg text-slate-900 truncate tracking-tight">
+                  <a href="mailto:sgrc@rkdfuniversity.org" class="hover:text-gold transition" title="sgrc@rkdfuniversity.org">sgrc@rkdfuniversity.org</a>
+                </div>
+                <p class="text-xs text-slate-500">Submit appeals and documented grievances</p>
               </div>
-              <p class="text-xs text-muted-foreground">Submit appeals and documented grievances</p>
             </div>
           </div>
 
           <!-- Redressal Steps -->
-          <div class="pt-6 border-t border-border space-y-4">
-            <h4 class="font-serif text-2xl text-foreground font-normal">Grievance Submission Procedure</h4>
-            <div class="grid sm:grid-cols-3 gap-3 text-xs text-slate-700">
-              <div class="p-4 rounded-xl bg-surface border border-border space-y-1">
-                <span class="text-gold font-bold uppercase tracking-wider">Step 1</span>
-                <p class="font-semibold text-foreground">Department / SGRC</p>
-                <p class="text-muted-foreground">Submit your grievance first to the Departmental Grievance Redressal Cell.</p>
+          <div class="pt-8 border-t border-slate-200/80">
+            <div class="flex items-center justify-between flex-wrap gap-3 mb-6">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-gold">Student Redressal</span>
+                <h4 class="font-serif text-2xl sm:text-3xl text-slate-900 font-normal mt-1">Grievance Submission Procedure</h4>
               </div>
-              <div class="p-4 rounded-xl bg-surface border border-border space-y-1">
-                <span class="text-gold font-bold uppercase tracking-wider">Step 2</span>
-                <p class="font-semibold text-foreground">Appeal to Ombudsperson</p>
-                <p class="text-muted-foreground">If unaddressed within 15 days, appeal to the Ombudsperson via email.</p>
+              <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+                3-Step Process
+              </span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
+              <!-- Step 1 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-gold border border-gold/25">
+                      Step 01
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 group-hover:text-gold group-hover:bg-amber-500/10 transition flex items-center justify-center">
+                      <?= lucide_icon('users', 'w-4 h-4') ?>
+                    </div>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Department / SGRC</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Submit your written grievance first to the Departmental Students Grievance Redressal Cell (SGRC).
+                  </p>
+                </div>
               </div>
-              <div class="p-4 rounded-xl bg-surface border border-border space-y-1">
-                <span class="text-gold font-bold uppercase tracking-wider">Step 3</span>
-                <p class="font-semibold text-foreground">Impartial Hearing</p>
-                <p class="text-muted-foreground">The Ombudsperson shall hear both parties and issue a binding resolution.</p>
+
+              <!-- Step 2 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-gold border border-gold/25">
+                      Step 02
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 group-hover:text-gold group-hover:bg-amber-500/10 transition flex items-center justify-center">
+                      <?= lucide_icon('mail', 'w-4 h-4') ?>
+                    </div>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Appeal to Ombudsperson</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    If unaddressed within 15 days, escalate the appeal directly to the Ombudsperson via official email.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-gold border border-gold/25">
+                      Step 03
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 group-hover:text-gold group-hover:bg-amber-500/10 transition flex items-center justify-center">
+                      <?= lucide_icon('scale', 'w-4 h-4') ?>
+                    </div>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">Impartial Hearing</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    The Ombudsperson conducts an impartial hearing of all parties and issues a binding resolution.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

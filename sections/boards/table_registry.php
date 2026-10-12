@@ -29,7 +29,7 @@
           <th>Member Name</th>
           <th>Designation / Office</th>
           <th>Institution / Organization</th>
-          <th style="text-align: right;">Capacity</th>
+          <th>Capacity</th>
         </tr>
       </thead>
       <tbody>
@@ -54,7 +54,7 @@
             <td style="color: #475569; font-size: 0.875rem;">
               <?= e($item['organization']) ?>
             </td>
-            <td style="text-align: right;">
+            <td>
               <?php
               $cap = $item['capacity'] ?? $item['category'] ?? 'Member';
               $textClass = 'text-slate-600 font-medium';

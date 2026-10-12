@@ -16,7 +16,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Engineering Sciences',
         'desc'   => 'B.Tech in Computer Science, Civil, Mechanical, Electrical & Electronics, and Polytechnic Diploma programs.',
         'email'  => 'engineering@rkdfuniversity.org',
-        'link'   => 'school-engineering.php',
+        'link'   => url('departments/school-engineering.php'),
         'badge'  => 'AICTE Standard Labs'
     ],
     [
@@ -25,7 +25,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Information Technology',
         'desc'   => 'BCA, MCA, Cyber Security, Artificial Intelligence, Cloud Computing, and Data Science programs.',
         'email'  => 'it@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-information-technology.php'),
         'badge'  => 'Advanced AI & Coding Labs'
     ],
     [
@@ -34,7 +34,7 @@ $faculties = [
         'role'   => 'Principal & Dean of Pharmacy',
         'desc'   => 'PCI-approved D.Pharm, B.Pharm, and B.Pharm Lateral Entry programs with specialized pharmacology laboratories.',
         'email'  => 'Pharmacy@rkdfuniversity.org',
-        'link'   => 'school-pharmacy.php',
+        'link'   => url('departments/school-pharmacy.php'),
         'badge'  => 'PCI Approved'
     ],
     [
@@ -43,7 +43,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Management Studies',
         'desc'   => 'BBA, MBA (Marketing, Finance, HR, Operations), and Executive Management development programs.',
         'email'  => 'management@rkdfuniversity.org',
-        'link'   => 'school-management.php',
+        'link'   => url('departments/school-management.php'),
         'badge'  => 'Industry Corporate Tie-ups'
     ],
     [
@@ -52,7 +52,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Legal Studies',
         'desc'   => 'BCI-approved BA LL.B (5 Yrs), BBA LL.B (5 Yrs), LL.B (3 Yrs), and LL.M with Moot Court training.',
         'email'  => 'law@rkdfuniversity.org',
-        'link'   => 'school-law.php',
+        'link'   => url('departments/school-law.php'),
         'badge'  => 'Bar Council of India Approved'
     ],
     [
@@ -61,7 +61,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Life Sciences',
         'desc'   => 'B.Sc and M.Sc programs in Biotechnology, Microbiology, Biochemistry, Botany, and Zoology.',
         'email'  => 'lifesciences@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-life-sciences.php'),
         'badge'  => 'Bio-Diversity Research Wing'
     ],
     [
@@ -70,7 +70,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Applied Sciences',
         'desc'   => 'Undergraduate and postgraduate degrees in Physics, Chemistry, Mathematics, and Statistics.',
         'email'  => 'science@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-basic-and-applied-sciences.php'),
         'badge'  => 'Advanced Research Labs'
     ],
     [
@@ -79,7 +79,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Commerce',
         'desc'   => 'B.Com (Hons), M.Com, Taxation, Banking & Insurance, and Corporate Accounting studies.',
         'email'  => 'commerce@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-commerce.php'),
         'badge'  => 'Fintech & Tally Certification'
     ],
     [
@@ -88,7 +88,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Mass Communication',
         'desc'   => 'BA-JMC, MA-JMC, Electronic Media, Print Journalism, Digital Content Creation, and PR.',
         'email'  => 'journalism@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-journalism-and-mass-communication.php'),
         'badge'  => 'Media Studio & Audio Suite'
     ],
     [
@@ -97,7 +97,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Humanities',
         'desc'   => 'BA and MA in English Literature, History, Political Science, Sociology, and Economics.',
         'email'  => 'arts@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-arts-and-humanities.php'),
         'badge'  => 'Social Research Center'
     ],
     [
@@ -106,7 +106,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Library Sciences',
         'desc'   => 'Bachelor of Library and Information Science (B.Lib.I.Sc) and Master of Library Science (M.Lib.I.Sc).',
         'email'  => 'library@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-library-science.php'),
         'badge'  => 'Digital Cataloguing Hub'
     ],
     [
@@ -115,7 +115,7 @@ $faculties = [
         'role'   => 'Dean & HoD, Design Studies',
         'desc'   => 'B.Des in Fashion Design, Interior Architecture, Apparel Merchandising, and CAD Design Studios.',
         'email'  => 'design@rkdfuniversity.org',
-        'link'   => 'schools.php',
+        'link'   => url('departments/school-of-fashion-and-interior-designing.php'),
         'badge'  => 'Fashion Ramp & CAD Studio'
     ],
 ];
@@ -246,7 +246,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
 
       <div class="flex items-center justify-center shrink-0 self-center my-auto">
-        <a href="<?= url('departments/') ?>" class="inline-flex items-center gap-2 rounded-full bg-gold text-brand px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-white transition shadow-lg">
+        <a href="<?= url('departments/') ?>" class="gov-callout-btn">
           <span>All Schools &amp; Courses</span>
           <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
         </a>

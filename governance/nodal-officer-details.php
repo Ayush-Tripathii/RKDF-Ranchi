@@ -152,48 +152,112 @@ require_once dirname(__DIR__) . '/includes/header.php';
           </div>
 
           <div class="prose-rkdf space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-3">
-              <div class="flex items-center justify-between border-b border-border pb-3">
-                <span class="text-xs uppercase font-bold text-muted-foreground tracking-wider">Nodal Officer Name</span>
-                <span class="font-serif text-xl text-foreground font-semibold">Dr. Koomkoom Khawas</span>
+            <p>
+              The Institutional Nodal Officer serves as the primary authorized liaison between RKDF University Ranchi, central regulatory councils (UGC, AICTE, PCI), government departments, and statutory audit bodies. The office oversees higher education data certifications, scholarship verification, and mandatory compliance disclosures.
+            </p>
+          </div>
+
+          <!-- Official Credentials & Contact Cards -->
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-gold/50 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('user-check', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="flex items-center justify-between border-b border-border pb-3">
-                <span class="text-xs uppercase font-bold text-muted-foreground tracking-wider">Designation</span>
-                <span class="text-sm font-semibold text-gold">Controller of Examinations</span>
-              </div>
-              <div class="flex items-center justify-between border-b border-border pb-3">
-                <span class="text-xs uppercase font-bold text-muted-foreground tracking-wider">Institution</span>
-                <span class="text-sm font-medium text-foreground">RKDF University Ranchi, Jharkhand</span>
-              </div>
-              <div class="flex items-start justify-between pt-1">
-                <span class="text-xs uppercase font-bold text-muted-foreground tracking-wider">Official Email(s)</span>
-                <div class="text-right space-y-1">
-                  <div><a href="mailto:hod.che@rkdfuniversity.org" class="text-sm font-semibold text-brand hover:text-gold transition">hod.che@rkdfuniversity.org</a></div>
-                  <div><a href="mailto:exam@rkdfuniversity.org" class="text-sm font-semibold text-brand hover:text-gold transition">exam@rkdfuniversity.org</a></div>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Appointed Nodal Officer</div>
+                <div class="font-sans font-bold text-lg sm:text-xl text-slate-900 tracking-tight">
+                  Dr. Koomkoom Khawas
                 </div>
+                <p class="text-xs text-slate-500">Controller of Examinations &amp; Nodal Desk</p>
+              </div>
+            </div>
+
+            <div class="p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-gold/50 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('mail', 'w-5 h-5 text-gold') ?>
+              </div>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Official Liaison Email(s)</div>
+                <div class="font-sans font-bold text-sm sm:text-base text-slate-900 truncate tracking-tight space-y-0.5">
+                  <div><a href="mailto:exam@rkdfuniversity.org" class="hover:text-gold transition block truncate" title="exam@rkdfuniversity.org">exam@rkdfuniversity.org</a></div>
+                  <div><a href="mailto:hod.che@rkdfuniversity.org" class="hover:text-gold transition block truncate text-slate-600 font-semibold" title="hod.che@rkdfuniversity.org">hod.che@rkdfuniversity.org</a></div>
+                </div>
+                <p class="text-xs text-slate-500">Government portals &amp; compliance</p>
               </div>
             </div>
           </div>
 
           <!-- Nodal Responsibilities -->
-          <div class="pt-6 border-t border-border space-y-4">
-            <h4 class="font-serif text-2xl text-foreground font-normal">Scope &amp; Responsibilities</h4>
-            <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
-              <div class="flex items-center gap-2.5 p-3.5 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>AISHE Annual Data Uploads &amp; Certification</span>
+          <div class="pt-8 border-t border-slate-200/80">
+            <div class="flex items-center justify-between flex-wrap gap-3 mb-6">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-gold">Regulatory Compliance</span>
+                <h4 class="font-serif text-2xl sm:text-3xl text-slate-900 font-normal mt-1">Scope &amp; Responsibilities</h4>
               </div>
-              <div class="flex items-center gap-2.5 p-3.5 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>National Scholarship Portal (NSP) Verification</span>
+              <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+                Official Mandate
+              </span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('file-spreadsheet', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">01</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">AISHE Certification</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    All India Survey on Higher Education annual institutional data uploads and statutory certification compliance.
+                  </p>
+                </div>
               </div>
-              <div class="flex items-center gap-2.5 p-3.5 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>Jharkhand E-Kalyan State Portal Verification</span>
+
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('award', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">02</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">NSP Scholarship Verification</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Central scholarship portal student application verification, nodal authentication, and institutional vetting.
+                  </p>
+                </div>
               </div>
-              <div class="flex items-center gap-2.5 p-3.5 rounded-xl bg-surface border border-border">
-                <?= lucide_icon('check-circle-2', 'w-4 h-4 text-emerald-600 shrink-0') ?>
-                <span>UGC &amp; Regulatory Council Submissions</span>
+
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('landmark', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">03</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">E-Kalyan State Portal</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Jharkhand state welfare scholarship authentication, application tracking, and university-level approvals.
+                  </p>
+                </div>
+              </div>
+
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <?= lucide_icon('shield-check', 'w-5 h-5 text-gold') ?>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-gold transition">04</span>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">UGC &amp; Regulatory Filings</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Apex regulatory council documentation, mandatory institutional disclosures, and official compliance submissions.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

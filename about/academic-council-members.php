@@ -134,7 +134,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </p>
       </div>
       <div class="shrink-0 flex items-center gap-3">
-        <a href="<?= url('about/board-of-governors.php') ?>" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-gold/90 transition shadow-lg">
+        <a href="<?= url('about/board-of-governors.php') ?>" class="gov-callout-btn">
           <span>View Board of Governors</span>
           <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
         </a>

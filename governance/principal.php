@@ -158,45 +158,95 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
           <!-- Direct Contact Cards -->
           <div class="grid sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
-                <?= lucide_icon('phone-call', 'w-4 h-4 text-gold') ?> Direct Phone
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-gold/40 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('phone-call', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="font-serif text-2xl text-foreground font-normal">
-                <a href="tel:7828335844" class="hover:text-gold transition">7828335844</a>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Direct Phone</div>
+                <div class="font-sans font-bold text-lg sm:text-xl text-slate-900 tracking-tight">
+                  <a href="tel:7828335844" class="hover:text-gold transition">7828335844</a>
+                </div>
+                <p class="text-xs text-slate-500">Office of the Principal, Pharmacy Block</p>
               </div>
-              <p class="text-xs text-muted-foreground">Office of the Principal, Pharmacy Block</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-surface border border-border space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
-                <?= lucide_icon('mail', 'w-4 h-4 text-gold') ?> Departmental Email
+            <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-gold/40 transition duration-300 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
+                <?= lucide_icon('mail', 'w-5 h-5 text-gold') ?>
               </div>
-              <div class="font-serif text-xl sm:text-2xl text-foreground font-normal truncate">
-                <a href="mailto:Pharmacy@rkdfuniversity.org" class="hover:text-gold transition">Pharmacy@rkdfuniversity.org</a>
+              <div class="space-y-1 min-w-0">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-gold">Departmental Email</div>
+                <div class="font-sans font-bold text-base sm:text-lg text-slate-900 truncate tracking-tight">
+                  <a href="mailto:Pharmacy@rkdfuniversity.org" class="hover:text-gold transition" title="Pharmacy@rkdfuniversity.org">Pharmacy@rkdfuniversity.org</a>
+                </div>
+                <p class="text-xs text-slate-500">Admissions, syllabus &amp; academic queries</p>
               </div>
-              <p class="text-xs text-muted-foreground">Admissions, syllabus &amp; academic queries</p>
             </div>
           </div>
 
           <!-- Programs Offered Under the Principal -->
-          <div class="pt-6 border-t border-border space-y-4">
-            <h4 class="font-serif text-2xl text-foreground font-normal">Offered Pharmacy Programs</h4>
-            <div class="grid sm:grid-cols-3 gap-3 text-xs text-slate-700">
-              <div class="p-4 rounded-xl bg-surface border border-border space-y-1">
-                <span class="text-gold font-bold uppercase tracking-wider">2 Years</span>
-                <p class="font-serif text-lg text-foreground font-normal">D. Pharm</p>
-                <p class="text-muted-foreground">Diploma in Pharmacy approved by PCI for practicing pharmacists.</p>
+          <div class="pt-8 border-t border-slate-200/80">
+            <div class="flex items-center justify-between flex-wrap gap-3 mb-6">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-gold">Pharmacy Academics</span>
+                <h4 class="font-serif text-2xl sm:text-3xl text-slate-900 font-normal mt-1">Offered Pharmacy Programs</h4>
               </div>
-              <div class="p-4 rounded-xl bg-surface border border-border space-y-1">
-                <span class="text-gold font-bold uppercase tracking-wider">4 Years</span>
-                <p class="font-serif text-lg text-foreground font-normal">B. Pharm</p>
-                <p class="text-muted-foreground">Bachelor of Pharmacy covering clinical chemistry, pharmacology &amp; formulation.</p>
+              <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200">
+                PCI Approved
+              </span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-gold border border-gold/25">
+                      2 Years
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 group-hover:text-gold group-hover:bg-amber-500/10 transition flex items-center justify-center">
+                      <?= lucide_icon('pill', 'w-4 h-4') ?>
+                    </div>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">D. Pharm</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Diploma in Pharmacy approved by PCI for licensed practicing pharmacists and clinical dispensing.
+                  </p>
+                </div>
               </div>
-              <div class="p-4 rounded-xl bg-surface border border-border space-y-1">
-                <span class="text-gold font-bold uppercase tracking-wider">3 Years</span>
-                <p class="font-serif text-lg text-foreground font-normal">B. Pharm (Lateral)</p>
-                <p class="text-muted-foreground">Direct 2nd-year entry for D.Pharm qualified diploma graduates.</p>
+
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-gold border border-gold/25">
+                      4 Years
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 group-hover:text-gold group-hover:bg-amber-500/10 transition flex items-center justify-center">
+                      <?= lucide_icon('flask-round', 'w-4 h-4') ?>
+                    </div>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">B. Pharm</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Bachelor of Pharmacy covering clinical pharmacology, medicinal chemistry, and drug formulation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="group p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:border-gold/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-gold border border-gold/25">
+                      3 Years
+                    </span>
+                    <div class="w-8 h-8 rounded-lg bg-slate-50 text-slate-400 group-hover:text-gold group-hover:bg-amber-500/10 transition flex items-center justify-center">
+                      <?= lucide_icon('graduation-cap', 'w-4 h-4') ?>
+                    </div>
+                  </div>
+                  <h5 class="font-bold text-slate-900 text-base leading-snug mb-2">B. Pharm (Lateral)</h5>
+                  <p class="text-xs text-slate-500 leading-relaxed">
+                    Direct 2nd-year bachelor entry program for D.Pharm qualified diploma graduates.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -169,9 +169,9 @@ $annual_reports = [
                     <div class="text-sm text-slate-600 leading-relaxed"><?= e($ar['desc']) ?></div>
                   </td>
                   <td style="text-align: right;">
-                    <a href="<?= e($ar['url']) ?>" target="_blank" rel="noopener" class="approval-action-btn">
-                      <?= lucide_icon('download', 'w-4 h-4 text-gold') ?>
-                      <span>Click to view</span>
+                    <a href="<?= e($ar['url']) ?>" target="_blank" rel="noopener" class="approval-action-btn group">
+                      <span>Click to View</span>
+                      <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
                     </a>
                   </td>
                 </tr>
