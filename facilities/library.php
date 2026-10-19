@@ -136,22 +136,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">1,00,000+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Books &amp; Bound Volumes</span>
+    <div class="rkdf-stat-grid">
+      <!-- 1,00,000+ Books -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('book-open') ?>
+          </div>
+          <span class="rkdf-stat-badge">Print Holdings</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">1,00,000</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">Books &amp; Bound Volumes</div>
+        <p class="rkdf-stat-desc">Standardized print volumes, rare compendiums &amp; book bank</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">20,000+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Unique Specialized Titles</span>
+
+      <!-- 20,000+ Titles -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('library') ?>
+          </div>
+          <span class="rkdf-stat-badge">Active Titles</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">20,000</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">Unique Specialized Titles</div>
+        <p class="rkdf-stat-desc">Distinct subjects across engineering, law, pharmacy &amp; arts</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">100%</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Computerized OPAC System</span>
+
+      <!-- 100% OPAC -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('laptop') ?>
+          </div>
+          <span class="rkdf-stat-badge">Koha Software</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">100</span>
+          <span class="rkdf-stat-suffix">%</span>
+        </div>
+        <div class="rkdf-stat-label">Computerized OPAC System</div>
+        <p class="rkdf-stat-desc">Automated cataloging, instant search &amp; barcode circulation</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">365 Days</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Open Access Support</span>
+
+      <!-- 365 Days Access -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('clock') ?>
+          </div>
+          <span class="rkdf-stat-badge">Open Stacks</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">365</span>
+          <span class="rkdf-stat-suffix">Days</span>
+        </div>
+        <div class="rkdf-stat-label">Open Access Support</div>
+        <p class="rkdf-stat-desc">Open on Sundays &amp; academic holidays for exam prep</p>
       </div>
     </div>
 
@@ -230,15 +277,15 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </div>
         <div class="flex flex-wrap items-center gap-3 shrink-0">
           <?php if (file_exists(dirname(__DIR__) . '/documents/Library-Membership-Form.pdf')): ?>
-            <a href="<?= url('documents/Library-Membership-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm">
-              <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
+            <a href="<?= url('documents/Library-Membership-Form.pdf') ?>" target="_blank" class="rkdf-doc-dl-btn">
+              <?= lucide_icon('file-text') ?>
               <span>Library Membership Form (PDF)</span>
-              <?= lucide_icon('download', 'w-3.5 h-3.5') ?>
+              <?= lucide_icon('download') ?>
             </a>
           <?php endif; ?>
-          <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm">
+          <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer" class="rkdf-header-cta-btn">
             <span>Access NDLI Portal</span>
-            <?= lucide_icon('arrow-up-right', 'w-3.5 h-3.5') ?>
+            <?= lucide_icon('arrow-up-right') ?>
           </a>
         </div>
       </div>

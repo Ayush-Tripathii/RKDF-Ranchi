@@ -136,22 +136,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">24/7</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">First-Aid Medical Unit</span>
+    <div class="rkdf-stat-grid">
+      <!-- 24/7 First-Aid -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('heart-pulse') ?>
+          </div>
+          <span class="rkdf-stat-badge">Medical Post</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">24/7</span>
+          <span class="rkdf-stat-suffix">First-Aid</span>
+        </div>
+        <div class="rkdf-stat-label">Primary Medical Dispensary</div>
+        <p class="rkdf-stat-desc">Immediate medical care, diagnostic kits &amp; trained nursing staff</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">Visiting</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Physicians &amp; OPD</span>
+
+      <!-- OPD Consults -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('user-check') ?>
+          </div>
+          <span class="rkdf-stat-badge">Clinical Care</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">OPD</span>
+          <span class="rkdf-stat-suffix">Consults</span>
+        </div>
+        <div class="rkdf-stat-label">Visiting Medical Specialists</div>
+        <p class="rkdf-stat-desc">Scheduled doctor consultations and seasonal health check-ups</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">Ambulance</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">On-Campus Transit</span>
+
+      <!-- Ambulance Transit -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('truck') ?>
+          </div>
+          <span class="rkdf-stat-badge">Emergency Transit</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Rapid</span>
+          <span class="rkdf-stat-suffix">Transit</span>
+        </div>
+        <div class="rkdf-stat-label">On-Campus Ambulance Link</div>
+        <p class="rkdf-stat-desc">Swift transit linkage to nearby partner hospitals &amp; trauma centers</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">Counselor</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Confidential Wellness</span>
+
+      <!-- Confidential Counseling -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('heart-handshake') ?>
+          </div>
+          <span class="rkdf-stat-badge">Mental Wellness</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">1-on-1</span>
+          <span class="rkdf-stat-suffix">Care</span>
+        </div>
+        <div class="rkdf-stat-label">Confidential Counseling</div>
+        <p class="rkdf-stat-desc">Professional stress management, mental health &amp; life guidance</p>
       </div>
     </div>
 
@@ -290,41 +337,307 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="rkdf-section-header">
         <div>
           <span class="rkdf-section-tag">
-            <?= lucide_icon('camera', 'w-3.5 h-3.5') ?> Medical Infrastructure
+            <?= lucide_icon('camera', 'w-3.5 h-3.5') ?> Medical Infrastructure &amp; Clinical Care
           </span>
           <h3 class="rkdf-section-title">On-Campus Dispensary &amp; Care Facilities</h3>
           <p class="rkdf-section-desc">Visual overview of our on-site medical dispensary, first-aid examination units, nursing care staff, and environmental health initiatives.</p>
         </div>
         <?php if (file_exists(dirname(__DIR__) . '/documents/Tree-Ambulance.pdf')): ?>
-          <a href="<?= url('documents/Tree-Ambulance.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm shrink-0">
-            <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
-            <span>Tree Ambulance Initiative (PDF)</span>
-            <?= lucide_icon('download', 'w-3.5 h-3.5') ?>
+          <a href="<?= url('documents/Tree-Ambulance.pdf') ?>" target="_blank" class="rkdf-doc-dl-btn shrink-0">
+            <?= lucide_icon('file-text') ?>
+            <span>Tree Ambulance Dossier (PDF)</span>
+            <?= lucide_icon('download') ?>
           </a>
         <?php endif; ?>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-        <?php 
-        $health_photos = ['health-1.jpg', 'health-2.jpg', 'health-3.jpg', 'health-4.jpg', 'health-6.jpg'];
-        $health_labels = ['First-Aid Dispensary', 'Doctor Examination Room', 'Medical Checkup Camp', 'Emergency Care Equipment', 'Student Wellness Care'];
-        foreach ($health_photos as $idx => $hp): 
-        ?>
-          <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 shadow-xs aspect-4/3 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <img 
-              src="<?= url('images/' . $hp) ?>" 
-              alt="<?= e($health_labels[$idx]) ?>" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            >
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-              <span class="text-xs text-white font-medium flex items-center gap-1.5">
-                <?= lucide_icon('heart-pulse', 'w-3 h-3 text-emerald-400') ?>
-                <span><?= e($health_labels[$idx]) ?></span>
-              </span>
+      <?php
+      $medical_cards = [
+          [
+              'img'          => 'health-1.jpg',
+              'badge'        => 'Free Medical Camp',
+              'badge_icon'   => 'heart-pulse',
+              'title'        => 'Annual Free Health Check-Up Camp',
+              'desc'         => 'Organized under IQAC with medical specialists conducting general health examinations, vital diagnostics, and consultations.',
+              'footer_icon'  => 'user-check',
+              'footer_left'  => 'Dr. Subhashini Toppo &amp; Specialists',
+              'footer_right' => 'Annual IQAC Camp',
+          ],
+          [
+              'img'          => 'health-2.jpg',
+              'badge'        => 'Physical Wellness',
+              'badge_icon'   => 'sparkles',
+              'title'        => 'Yoga, Ergonomics &amp; Stress Relief',
+              'desc'         => 'Campus-wide guided posture ergonomics, yogic pranayama, and mental health rejuvenation sessions for scholars.',
+              'footer_icon'  => 'sparkles',
+              'footer_left'  => 'Holistic Student Rejuvenation',
+              'footer_right' => 'Weekly Activity',
+          ],
+          [
+              'img'          => 'health-3.jpg',
+              'badge'        => 'Clinical Examination',
+              'badge_icon'   => 'user-check',
+              'title'        => 'Doctor Examination &amp; Vital Diagnostics',
+              'desc'         => 'Dedicated clinical consulting room for preliminary patient screening, blood pressure evaluation, and prescriptions.',
+              'footer_icon'  => 'heart-pulse',
+              'footer_left'  => 'Physician Consulting Desk',
+              'footer_right' => 'Daily OPD Schedule',
+          ],
+          [
+              'img'          => 'health-4.jpg',
+              'badge'        => 'First-Aid Unit',
+              'badge_icon'   => 'shield-check',
+              'title'        => 'Dispensary &amp; Patient Recovery Ward',
+              'desc'         => 'Furnished patient recovery beds, essential pharmaceuticals, first-aid dressing kits, and trained attendant nursing care.',
+              'footer_icon'  => 'shield-check',
+              'footer_left'  => '24×7 Emergency First-Aid',
+              'footer_right' => 'On-Campus Dispensary',
+          ],
+          [
+              'img'          => 'health-6.jpg',
+              'badge'        => 'Preventive Advisory',
+              'badge_icon'   => 'award',
+              'title'        => 'Student Counseling &amp; Hygiene Care',
+              'desc'         => 'Seasonal immunization advisories, nutritional lifestyle counseling, and personal health hygiene support.',
+              'footer_icon'  => 'award',
+              'footer_left'  => 'Preventive Wellness Cell',
+              'footer_right' => 'Student Health Desk',
+          ],
+      ];
+      ?>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Card 1: Medical Camp -->
+        <article class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between">
+          <div>
+            <div class="relative h-52 sm:h-56 overflow-hidden bg-slate-900">
+              <img 
+                src="<?= url('images/' . $medical_cards[0]['img']) ?>" 
+                alt="<?= e($medical_cards[0]['title']) ?>" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-slate-800 shadow-xs backdrop-blur-xs">
+                  <?= lucide_icon($medical_cards[0]['badge_icon'], 'w-3 h-3 text-emerald-600') ?>
+                  <?= e($medical_cards[0]['badge']) ?>
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-serif text-xl font-normal text-slate-900 group-hover:text-brand transition-colors line-clamp-1">
+                <?= e($medical_cards[0]['title']) ?>
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2.5">
+                <?= e($medical_cards[0]['desc']) ?>
+              </p>
             </div>
           </div>
-        <?php endforeach; ?>
+          <div class="px-6 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5 text-slate-700">
+              <?= lucide_icon($medical_cards[0]['footer_icon'], 'w-3.5 h-3.5 text-emerald-600') ?>
+              <span><?= $medical_cards[0]['footer_left'] ?></span>
+            </span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold"><?= e($medical_cards[0]['footer_right']) ?></span>
+          </div>
+        </article>
+
+        <!-- Card 2: Yoga & Wellness -->
+        <article class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between">
+          <div>
+            <div class="relative h-52 sm:h-56 overflow-hidden bg-slate-900">
+              <img 
+                src="<?= url('images/' . $medical_cards[1]['img']) ?>" 
+                alt="<?= e($medical_cards[1]['title']) ?>" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-slate-800 shadow-xs backdrop-blur-xs">
+                  <?= lucide_icon($medical_cards[1]['badge_icon'], 'w-3 h-3 text-gold') ?>
+                  <?= e($medical_cards[1]['badge']) ?>
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-serif text-xl font-normal text-slate-900 group-hover:text-brand transition-colors line-clamp-1">
+                <?= e($medical_cards[1]['title']) ?>
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2.5">
+                <?= e($medical_cards[1]['desc']) ?>
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5 text-slate-700">
+              <?= lucide_icon($medical_cards[1]['footer_icon'], 'w-3.5 h-3.5 text-gold') ?>
+              <span><?= e($medical_cards[1]['footer_left']) ?></span>
+            </span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold"><?= e($medical_cards[1]['footer_right']) ?></span>
+          </div>
+        </article>
+
+        <!-- Card 3: Featured Tree Ambulance Initiative Spotlight -->
+        <article class="bg-gradient-to-br from-[#061a13] via-[#0d2a20] to-[#081812] text-white rounded-2xl p-6 sm:p-7 border border-emerald-500/30 shadow-md relative overflow-hidden flex flex-col justify-between group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300">
+          <div class="absolute -right-12 -top-12 w-44 h-44 bg-emerald-500/15 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="absolute -left-12 -bottom-12 w-44 h-44 bg-gold/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shadow-inner">
+                <?= lucide_icon('leaf', 'w-5 h-5') ?>
+              </div>
+              <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-400/30">
+                Eco-Health Breakthrough
+              </span>
+            </div>
+
+            <div>
+              <div class="text-[10px] font-bold text-gold uppercase tracking-widest">Pioneered 22 August 2020</div>
+              <h4 class="font-serif text-2xl font-normal text-white mt-1 leading-snug">
+                Tree Ambulance Initiative
+              </h4>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed mt-2.5">
+                Pioneered by RKDF University Ranchi for dedicated medical diagnosis, tree surgery, and revival of damaged urban flora across Ranchi.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-1 text-xs text-white/85">
+              <div class="flex items-center gap-2">
+                <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-400 shrink-0') ?>
+                <span>First Tree Ambulance in Eastern India</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-400 shrink-0') ?>
+                <span>On-Site Tree Surgery &amp; Botanical Care</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <?= lucide_icon('check-circle', 'w-3.5 h-3.5 text-emerald-400 shrink-0') ?>
+                <span>Free Civic Service by Botany Specialists</span>
+              </div>
+            </div>
+          </div>
+
+          <?php if (file_exists(dirname(__DIR__) . '/documents/Tree-Ambulance.pdf')): ?>
+            <div class="relative z-10 pt-5 mt-4 border-t border-white/10">
+              <a href="<?= url('documents/Tree-Ambulance.pdf') ?>" target="_blank" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs tracking-wider uppercase shadow-md hover:shadow-lg transition-all duration-200">
+                <?= lucide_icon('file-text', 'w-3.5 h-3.5') ?>
+                <span>Download Official Report (PDF)</span>
+                <?= lucide_icon('download', 'w-3.5 h-3.5') ?>
+              </a>
+            </div>
+          <?php endif; ?>
+        </article>
+
+        <!-- Card 4: Clinical Consultation -->
+        <article class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between">
+          <div>
+            <div class="relative h-52 sm:h-56 overflow-hidden bg-slate-900">
+              <img 
+                src="<?= url('images/' . $medical_cards[2]['img']) ?>" 
+                alt="<?= e($medical_cards[2]['title']) ?>" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-slate-800 shadow-xs backdrop-blur-xs">
+                  <?= lucide_icon($medical_cards[2]['badge_icon'], 'w-3 h-3 text-brand') ?>
+                  <?= e($medical_cards[2]['badge']) ?>
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-serif text-xl font-normal text-slate-900 group-hover:text-brand transition-colors line-clamp-1">
+                <?= e($medical_cards[2]['title']) ?>
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2.5">
+                <?= e($medical_cards[2]['desc']) ?>
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5 text-slate-700">
+              <?= lucide_icon($medical_cards[2]['footer_icon'], 'w-3.5 h-3.5 text-brand') ?>
+              <span><?= e($medical_cards[2]['footer_left']) ?></span>
+            </span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold"><?= e($medical_cards[2]['footer_right']) ?></span>
+          </div>
+        </article>
+
+        <!-- Card 5: Dispensary & Ward -->
+        <article class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between">
+          <div>
+            <div class="relative h-52 sm:h-56 overflow-hidden bg-slate-900">
+              <img 
+                src="<?= url('images/' . $medical_cards[3]['img']) ?>" 
+                alt="<?= e($medical_cards[3]['title']) ?>" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-slate-800 shadow-xs backdrop-blur-xs">
+                  <?= lucide_icon($medical_cards[3]['badge_icon'], 'w-3 h-3 text-emerald-600') ?>
+                  <?= e($medical_cards[3]['badge']) ?>
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-serif text-xl font-normal text-slate-900 group-hover:text-brand transition-colors line-clamp-1">
+                <?= e($medical_cards[3]['title']) ?>
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2.5">
+                <?= e($medical_cards[3]['desc']) ?>
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5 text-slate-700">
+              <?= lucide_icon($medical_cards[3]['footer_icon'], 'w-3.5 h-3.5 text-emerald-600') ?>
+              <span><?= e($medical_cards[3]['footer_left']) ?></span>
+            </span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold"><?= e($medical_cards[3]['footer_right']) ?></span>
+          </div>
+        </article>
+
+        <!-- Card 6: Counseling & Preventive Health -->
+        <article class="group relative rounded-2xl overflow-hidden bg-white border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between">
+          <div>
+            <div class="relative h-52 sm:h-56 overflow-hidden bg-slate-900">
+              <img 
+                src="<?= url('images/' . $medical_cards[4]['img']) ?>" 
+                alt="<?= e($medical_cards[4]['title']) ?>" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-slate-800 shadow-xs backdrop-blur-xs">
+                  <?= lucide_icon($medical_cards[4]['badge_icon'], 'w-3 h-3 text-gold') ?>
+                  <?= e($medical_cards[4]['badge']) ?>
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-serif text-xl font-normal text-slate-900 group-hover:text-brand transition-colors line-clamp-1">
+                <?= e($medical_cards[4]['title']) ?>
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2.5">
+                <?= e($medical_cards[4]['desc']) ?>
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5 text-slate-700">
+              <?= lucide_icon($medical_cards[4]['footer_icon'], 'w-3.5 h-3.5 text-gold') ?>
+              <span><?= e($medical_cards[4]['footer_left']) ?></span>
+            </span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-400 font-bold"><?= e($medical_cards[4]['footer_right']) ?></span>
+          </div>
+        </article>
       </div>
     </div>
 

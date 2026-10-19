@@ -28,45 +28,48 @@ require_once __DIR__ . '/../includes/header.php';
   </div>
 </section>
 
+<!-- Sub-Navigation Tabs for Admissions -->
+<?php require_once dirname(__DIR__) . '/includes/admissions_nav_tabs.php'; ?>
+
 <!-- ==================== APPLICATION FORM CONTAINER ==================== -->
-<section class="py-14 bg-slate-50 dark:bg-slate-950">
+<section class="rkdf-portal-section bg-surface">
   <div class="mx-auto max-w-4xl px-4 sm:px-6">
-    <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden">
+    <div class="rkdf-portal-card">
       
       <!-- Top Banner Strip -->
-      <div class="bg-gradient-to-r from-brand via-brand/90 to-brand text-white px-6 py-4 flex flex-wrap items-center justify-between gap-3 border-b border-white/10">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-lg bg-gold/20 text-gold flex items-center justify-center font-bold">
-            <?= lucide_icon('graduation-cap', 'w-4 h-4') ?>
+      <div class="rkdf-portal-topbar">
+        <div class="rkdf-portal-top-left">
+          <div class="rkdf-portal-top-icon">
+            <?= lucide_icon('graduation-cap') ?>
           </div>
           <div>
-            <span class="text-xs text-gold uppercase font-bold tracking-wider block">Official Application Portal</span>
-            <strong class="text-sm text-white">Session 2026–27 Direct Merit Quota</strong>
+            <span class="rkdf-portal-eyebrow">Official Admission Portal</span>
+            <strong class="rkdf-portal-top-title">Session 2026–27 Direct Merit Quota</strong>
           </div>
         </div>
-        <div class="flex items-center gap-2 text-xs text-white/80">
-          <?= lucide_icon('shield-check', 'w-4 h-4 text-emerald-400') ?>
+        <div class="rkdf-portal-accreditation">
+          <?= lucide_icon('shield-check') ?>
           <span>UGC · AICTE · BCI · PCI Approved</span>
         </div>
       </div>
 
-      <div class="p-6 md:p-10">
+      <div class="rkdf-portal-body">
         
         <?php if (isset($_GET['submitted'])): ?>
           <!-- Success State -->
           <div class="text-center py-10 space-y-4">
-            <div class="w-16 h-16 rounded-full bg-emerald-500/15 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/15 text-emerald-600 flex items-center justify-center mx-auto mb-4" style="width:64px;height:64px;border-radius:9999px;background:rgba(16,185,129,0.15);color:#059669;margin:0 auto 1rem auto;display:flex;align-items:center;justify-content:center;">
               <?= lucide_icon('check-circle', 'w-8 h-8') ?>
             </div>
-            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Application Successfully Submitted!</h2>
-            <p class="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto">
-              Thank you, <strong><?= e($cand_name ?: 'Candidate') ?></strong>. Our Admission Counseling Desk will review your application for <strong><?= e($selected_course ?: 'your chosen program') ?></strong> and contact you within 24 hours.
+            <h2 class="text-2xl font-bold text-slate-900 font-serif" style="font-size:1.75rem;font-weight:700;color:#0f1b2d;">Application Successfully Submitted!</h2>
+            <p class="text-sm text-slate-600 max-w-md mx-auto" style="font-size:0.875rem;color:#64748b;max-width:480px;margin:0 auto;line-height:1.6;">
+              Thank you, <strong style="color:#0f1b2d;"><?= e($cand_name ?: 'Candidate') ?></strong>. Our Admission Counseling Desk will review your application for <strong style="color:#e58525;"><?= e($selected_course ?: 'your chosen program') ?></strong> and contact you within 24 hours.
             </p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-              <a href="<?= url('courses/') ?>" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition">
+            <div class="pt-6 flex flex-wrap justify-center gap-4" style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.5rem;">
+              <a href="<?= url('courses/') ?>" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition" style="padding:0.75rem 1.4rem;border-radius:12px;background:#f1f5f9;color:#0f1b2d;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;">
                 Browse More Courses
               </a>
-              <a href="https://wa.me/917091168777?text=<?= urlencode('Hello, I have submitted an admission inquiry for ' . ($selected_course ?: 'RKDF University')) ?>" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition flex items-center gap-2">
+              <a href="https://wa.me/917091168777?text=<?= urlencode('Hello, I have submitted an admission inquiry for ' . ($selected_course ?: 'RKDF University')) ?>" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition flex items-center gap-2" style="padding:0.75rem 1.4rem;border-radius:12px;background:#059669;color:#ffffff;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;">
                 <?= lucide_icon('message-circle', 'w-4 h-4') ?>
                 <span>Chat on WhatsApp</span>
               </a>
@@ -76,36 +79,44 @@ require_once __DIR__ . '/../includes/header.php';
         <?php else: ?>
 
           <!-- Application Form -->
-          <form action="<?= url('admissions/apply.php') ?>" method="GET" class="space-y-6">
+          <form action="<?= url('admissions/apply.php') ?>" method="GET">
             <input type="hidden" name="submitted" value="1" />
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rkdf-form-grid">
               
               <!-- Program Selection -->
-              <div class="md:col-span-2">
-                <label for="course_field" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
-                  Target Program / Course *
+              <div class="rkdf-form-full">
+                <label for="course_field" class="rkdf-label">
+                  Target Program / Course <span class="req">*</span>
                 </label>
-                <div class="relative">
-                  <input
-                    id="course_field"
-                    type="text"
-                    name="course"
-                    required
-                    value="<?= e($selected_course) ?>"
-                    placeholder="e.g. B.A. (Hons) in Bengali, B.Tech CSE, MBA, LLB"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition font-medium"
-                  />
-                  <div class="absolute right-3.5 top-3.5 text-slate-400">
-                    <?= lucide_icon('book-open', 'w-4 h-4') ?>
-                  </div>
+                <input
+                  id="course_field"
+                  type="text"
+                  name="course"
+                  required
+                  value="<?= e($selected_course) ?>"
+                  placeholder="e.g. B.Tech CSE, MBA, MCA, B.Sc Nursing, B.Pharm, LLB"
+                  class="rkdf-input"
+                />
+
+                <!-- Popular course quick suggestions -->
+                <div class="rkdf-course-pills">
+                  <span class="rkdf-course-pill-label">Popular:</span>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('B.Tech CSE')">B.Tech CSE</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('MBA')">MBA</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('MCA')">MCA</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('BCA')">BCA</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('B.Sc Nursing')">B.Sc Nursing</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('B.Pharm')">B.Pharm</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('LLB')">LLB</button>
+                  <button type="button" class="rkdf-course-pill" onclick="selectCourse('B.Com (Hons)')">B.Com</button>
                 </div>
               </div>
 
               <!-- Candidate Name -->
               <div>
-                <label for="name_field" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
-                  Candidate Full Name *
+                <label for="name_field" class="rkdf-label">
+                  Candidate Full Name <span class="req">*</span>
                 </label>
                 <input
                   id="name_field"
@@ -114,14 +125,14 @@ require_once __DIR__ . '/../includes/header.php';
                   required
                   value="<?= e($cand_name) ?>"
                   placeholder="Enter full name"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition"
+                  class="rkdf-input"
                 />
               </div>
 
               <!-- Mobile Number -->
               <div>
-                <label for="phone_field" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
-                  Mobile / WhatsApp Number *
+                <label for="phone_field" class="rkdf-label">
+                  Mobile / WhatsApp Number <span class="req">*</span>
                 </label>
                 <input
                   id="phone_field"
@@ -130,13 +141,13 @@ require_once __DIR__ . '/../includes/header.php';
                   required
                   value="<?= e($cand_phone) ?>"
                   placeholder="+91 9876543210"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition"
+                  class="rkdf-input"
                 />
               </div>
 
               <!-- Email Address -->
               <div>
-                <label for="email_field" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                <label for="email_field" class="rkdf-label">
                   Email Address
                 </label>
                 <input
@@ -145,13 +156,13 @@ require_once __DIR__ . '/../includes/header.php';
                   name="email"
                   value="<?= e($cand_email) ?>"
                   placeholder="name@example.com"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition"
+                  class="rkdf-input"
                 />
               </div>
 
               <!-- City / District -->
               <div>
-                <label for="city_field" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
+                <label for="city_field" class="rkdf-label">
                   City / State
                 </label>
                 <input
@@ -160,46 +171,65 @@ require_once __DIR__ . '/../includes/header.php';
                   name="city"
                   value="<?= e($cand_city) ?>"
                   placeholder="e.g. Ranchi, Jamshedpur, Patna"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition"
+                  class="rkdf-input"
                 />
               </div>
 
             </div>
 
             <!-- Scholarship Checkbox Note -->
-            <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 flex items-start gap-2.5">
-              <?= lucide_icon('award', 'w-4 h-4 text-gold shrink-0 mt-0.5') ?>
-              <span>
+            <div class="rkdf-portal-note">
+              <div class="rkdf-portal-note-icon">
+                <?= lucide_icon('award') ?>
+              </div>
+              <p class="rkdf-portal-note-text">
                 <strong>Scholarship Eligibility:</strong> State / National board toppers receive up to <strong>100% Chancellor Tuition Fee Waiver</strong>. E-Kalyan state government welfare scholarship is applicable for SC/ST/OBC students of Jharkhand.
-              </span>
+              </p>
             </div>
 
             <!-- Submit Button -->
-            <button
-              type="submit"
-              class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-gold via-amber-500 to-gold text-brand font-bold text-sm uppercase tracking-wider hover:opacity-95 shadow-lg shadow-gold/20 transition flex items-center justify-center gap-2"
-            >
-              <?= lucide_icon('send', 'w-4 h-4') ?>
+            <button type="submit" class="rkdf-portal-submit-btn">
+              <?= lucide_icon('send') ?>
               <span>Submit Application / Request Counseling</span>
             </button>
 
+            <!-- Trust Highlights -->
+            <div class="rkdf-portal-trust-row">
+              <div class="rkdf-portal-trust-item">
+                <?= lucide_icon('clock') ?>
+                <span>Counseling Response Within 24h</span>
+              </div>
+              <div class="rkdf-portal-trust-item">
+                <?= lucide_icon('shield-check') ?>
+                <span>100% Verified University Portal</span>
+              </div>
+              <div class="rkdf-portal-trust-item">
+                <?= lucide_icon('badge-check') ?>
+                <span>Merit &amp; E-Kalyan Assistance</span>
+              </div>
+            </div>
+
           </form>
+
+          <script>
+            function selectCourse(name) {
+              const input = document.getElementById('course_field');
+              if (input) {
+                input.value = name;
+                input.focus();
+              }
+            }
+          </script>
 
         <?php endif; ?>
 
       </div>
 
       <!-- Footer Helpline Strip -->
-      <div class="bg-slate-100 dark:bg-slate-800/60 px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4 text-xs">
-        <div class="flex items-center gap-2 text-slate-600 dark:text-slate-300">
-          <?= lucide_icon('phone-call', 'w-4 h-4 text-gold') ?>
-          <span>Need Direct Help? Call Helpline: <strong class="text-slate-900 dark:text-white"><?= SITE_PHONE ?></strong></span>
-        </div>
-        <div class="flex items-center gap-4">
-          <a href="https://rkdfuniversity.org" target="_blank" rel="noopener" class="text-brand dark:text-gold font-semibold hover:underline inline-flex items-center gap-1">
-            <span>Official University Live Site</span>
-            <?= lucide_icon('external-link', 'w-3 h-3') ?>
-          </a>
+      <div class="rkdf-portal-footer">
+        <div class="rkdf-portal-footer-phone">
+          <?= lucide_icon('phone-call') ?>
+          <span>Need Direct Help? Call Helpline: <strong><a href="tel:<?= preg_replace('/[^0-9+]/', '', SITE_PHONE) ?>"><?= SITE_PHONE ?></a></strong></span>
         </div>
       </div>
 

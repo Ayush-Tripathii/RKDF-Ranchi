@@ -9,17 +9,93 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'About RKDF University Ranchi — Legacy, Vision & Excellence';
 $page_meta_desc = 'Discover the legacy of RKDF University Ranchi — established under Jharkhand Govt Act & UGC 2(f), part of the prestigious Ayushmati Education network with 162+ institutions & 6 universities.';
 
+// Ayushmati Group University Consortium Data
+$universities = [
+    [
+        'name'     => 'RKDF University',
+        'year'     => '2011',
+        'location' => 'Bhopal, MP',
+        'state'    => 'Madhya Pradesh',
+        'focus'    => 'Engineering, Management, Health Sciences',
+        'approval' => 'UGC 2(f)',
+        'status'   => 'Flagship Campus',
+        'featured' => false,
+    ],
+    [
+        'name'     => 'Sri Satya Sai University',
+        'year'     => '2014',
+        'location' => 'Sehore, MP',
+        'state'    => 'Madhya Pradesh',
+        'focus'    => 'Technology, Medical, Dental, Paramedical',
+        'approval' => 'UGC 2(f)',
+        'status'   => 'State Private University',
+        'featured' => false,
+    ],
+    [
+        'name'     => 'Sarvepalli Radhakrishna University',
+        'year'     => '2015',
+        'location' => 'Bhopal, MP',
+        'state'    => 'Madhya Pradesh',
+        'focus'    => 'Research, Pharmacy, Applied Sciences',
+        'approval' => 'UGC 2(f)',
+        'status'   => 'State Private University',
+        'featured' => false,
+    ],
+    [
+        'name'     => 'Dr. A.P.J. Abdul Kalam University',
+        'year'     => '2016',
+        'location' => 'Indore, MP',
+        'state'    => 'Madhya Pradesh',
+        'focus'    => 'Engineering, Business, Computer Applications',
+        'approval' => 'UGC 2(f)',
+        'status'   => 'State Private University',
+        'featured' => false,
+    ],
+    [
+        'name'     => 'Bhabha University',
+        'year'     => '2018',
+        'location' => 'Bhopal, MP',
+        'state'    => 'Madhya Pradesh',
+        'focus'    => 'Science, Dental, Technology, Applied Arts',
+        'approval' => 'UGC 2(f)',
+        'status'   => 'State Private University',
+        'featured' => false,
+    ],
+    [
+        'name'     => 'RKDF University, Ranchi',
+        'year'     => '2018',
+        'location' => 'Ranchi, JH',
+        'state'    => 'Jharkhand',
+        'focus'    => 'Engineering, Law, Pharmacy, Life Sciences, Management',
+        'approval' => 'UGC 2(f) | AIU',
+        'status'   => 'Current Campus',
+        'featured' => true,
+    ],
+];
+
+// University Key Facts
+$key_facts = [
+    ['label' => 'Establishment Year',       'value' => '2018',            'icon' => 'landmark'],
+    ['label' => 'Group Founded',             'value' => '1994',            'icon' => 'history'],
+    ['label' => 'Group Institutions',        'value' => '162+',            'icon' => 'building'],
+    ['label' => 'Universities in Network',   'value' => '6',               'icon' => 'graduation-cap'],
+    ['label' => 'Academic Programs',         'value' => '90+',             'icon' => 'book-open'],
+    ['label' => 'Alumni Base',               'value' => '50,000+',         'icon' => 'users'],
+    ['label' => 'UGC Recognition',           'value' => 'Section 2(f)',    'icon' => 'shield-check'],
+    ['label' => 'Statutory Act',             'value' => 'JH Act No. 15',  'icon' => 'scale'],
+];
+
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero relative overflow-hidden">
-  <!-- Subtle Ambient Glow Orbs -->
+  <!-- Ambient Glow Orbs -->
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
-    <!-- Breadcrumb & Badge -->
+    <!-- Breadcrumb Badge -->
     <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
@@ -119,7 +195,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
-    <!-- 2. Heritage & Foundation Story (Two Column Presentation) -->
+    <!-- 2. Heritage & Foundation Story -->
     <div class="about-foundation-grid section-block">
       <!-- Left Narrative -->
       <div class="space-y-6">
@@ -132,19 +208,16 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
         <div class="space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
           <p>
-            It was in the year <strong>2018</strong> that the visionary founder decided to fulfil his noble dream of establishing a benchmark seat of higher learning in Jharkhand. Through the <strong>“Ayushmati Education And Social Society”</strong> trust, RKDF University was founded at the sacred <em>karmabhoomi</em> of the legendary freedom fighter and tribal icon <strong>Bhagwan Birsa Munda</strong>, striving to make Ranchi a nationally acclaimed educational hub.
+            It was in the year <strong>2018</strong> that the visionary founder decided to fulfil his noble dream of establishing a benchmark seat of higher learning in Jharkhand. Through the <strong>"Ayushmati Education And Social Society"</strong> trust, RKDF University was founded at the sacred <em>karmabhoomi</em> of the legendary freedom fighter and tribal icon <strong>Bhagwan Birsa Munda</strong>, striving to make Ranchi a nationally acclaimed educational hub.
           </p>
-
           <p>
             The RKDF Group has been actively involved with societal welfare since its inception in <strong>1994</strong>, when it established the <strong>1st private engineering college in Bhopal, Madhya Pradesh</strong>. Over three decades of relentless dedication, the Group has expanded into an immense academic network comprising <strong>162+ institutions and 6 premier universities</strong> across Madhya Pradesh and Jharkhand.
           </p>
-
           <p>
-            RKDF University Ranchi is a prestigious, state-approved university established under the <strong>Jharkhand Government Act</strong> and registered under <strong>Section 2(f) of the UGC Act 1956</strong>. It is also an active institutional member of the <strong>Association of Indian Universities (AIU)</strong>, attracting learners from across India and neighbouring nations.
+            RKDF University Ranchi is established under the <strong>Jharkhand Government Act</strong> and registered under <strong>Section 2(f) of the UGC Act 1956</strong>. It is also an active institutional member of the <strong>Association of Indian Universities (AIU)</strong>, attracting learners from across India and neighbouring nations.
           </p>
-
           <p>
-            In a short span, the University has forged high-value <strong>MoUs with leading corporations and academic bodies</strong> for research, faculty enrichment, and student exchange programs. Committed to ecological preservation, RKDF University launched its historic <strong>“Tree Ambulance”</strong> initiative on <strong>22nd August 2020</strong> for the medical care and treatment of trees across Ranchi — a civic breakthrough widely acclaimed by environmentalists.
+            In a short span, the University has forged high-value <strong>MoUs with leading corporations and academic bodies</strong> for research, faculty enrichment, and student exchange programs. Committed to ecological preservation, RKDF University launched its historic <strong>"Tree Ambulance"</strong> initiative on <strong>22nd August 2020</strong> for the medical care and treatment of trees across Ranchi — a civic breakthrough widely acclaimed by environmentalists.
           </p>
         </div>
 
@@ -159,7 +232,6 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <p class="text-xs text-muted-foreground mt-0.5">Joint research, industrial internships &amp; global exchange.</p>
             </div>
           </div>
-
           <div class="p-4 rounded-xl bg-card border border-border shadow-sm flex items-start gap-3">
             <div class="w-8 h-8 rounded-lg bg-gold/15 text-gold flex items-center justify-center shrink-0 mt-0.5">
               <?= lucide_icon('leaf', 'w-4 h-4') ?>
@@ -177,7 +249,6 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-border group">
           <img src="<?= img('campus_building.jpg') ?>" alt="RKDF University Ranchi Campus" class="w-full h-[520px] object-cover group-hover:scale-105 transition duration-700" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent"></div>
-          
           <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
             <div class="inline-block px-3 py-1 rounded-full bg-gold/30 border border-gold/50 text-[10px] uppercase tracking-widest text-gold font-bold">
               Ayushmati Education &amp; Social Society
@@ -188,7 +259,6 @@ require_once dirname(__DIR__) . '/includes/header.php';
             </div>
           </div>
         </div>
-
         <!-- Floating Badge -->
         <div class="absolute -bottom-6 -left-6 bg-brand text-brand-foreground rounded-2xl p-5 shadow-2xl border border-white/20 hidden sm:block">
           <div class="font-serif text-3xl text-gold font-normal">2018</div>
@@ -197,7 +267,40 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
-    <!-- 3. Four Core Pillars of Institutional Excellence -->
+    <!-- 3. University Key Facts Table -->
+    <div class="section-block space-y-6">
+      <div class="flex items-center justify-between flex-wrap gap-4 border-b border-slate-200/80 pb-4">
+        <div>
+          <div class="text-xs tracking-[0.2em] uppercase text-gold font-bold">Institutional Profile</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-foreground mt-1">
+            University at a Glance
+          </h2>
+          <p class="text-sm text-muted-foreground mt-1">Key facts, statutory recognitions, and group-wide academic milestones.</p>
+        </div>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold uppercase tracking-wider shadow-sm shrink-0">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Active University</span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+          <?php foreach ($key_facts as $idx => $fact): ?>
+            <div class="flex items-center gap-4 p-6 <?= ($idx > 3) ? 'border-t border-slate-100' : '' ?>">
+              <div class="w-11 h-11 rounded-xl bg-slate-900 text-gold flex items-center justify-center shrink-0 shadow-sm">
+                <?= lucide_icon($fact['icon'], 'w-5 h-5') ?>
+              </div>
+              <div>
+                <div class="text-[11px] uppercase tracking-wider text-slate-500 font-bold"><?= e($fact['label']) ?></div>
+                <div class="font-serif text-xl font-semibold text-slate-900 mt-0.5"><?= e($fact['value']) ?></div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Four Core Pillars of Institutional Excellence -->
     <div class="section-block space-y-8">
       <div class="text-center max-w-3xl mx-auto space-y-3">
         <div class="text-xs tracking-[0.25em] uppercase text-gold font-bold">Our Foundation</div>
@@ -210,196 +313,133 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Pillar 1 -->
         <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('book-open', 'w-7 h-7') ?>
-          </div>
+          <div class="pillar-icon-box"><?= lucide_icon('book-open', 'w-7 h-7') ?></div>
           <h3 class="pillar-title">Academic Rigour</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Curricula structured according to NEP 2020 guidelines, Choice-Based Credit System (CBCS), and hands-on skill development.
-          </p>
-          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">
-            Outcome-Based Learning
-          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">Curricula structured according to NEP 2020 guidelines, CBCS, and hands-on skill development.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">Outcome-Based Learning</div>
         </div>
-
-        <!-- Pillar 2 -->
         <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('flask-conical', 'w-7 h-7') ?>
-          </div>
+          <div class="pillar-icon-box"><?= lucide_icon('flask-conical', 'w-7 h-7') ?></div>
           <h3 class="pillar-title">Research &amp; MoUs</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Collaborative industry MoUs, faculty research grants, international symposiums, and student innovation incubators.
-          </p>
-          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">
-            Industry Collaboration
-          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">Collaborative industry MoUs, faculty research grants, international symposiums, and innovation incubators.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">Industry Collaboration</div>
         </div>
-
-        <!-- Pillar 3 -->
         <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('leaf', 'w-7 h-7') ?>
-          </div>
+          <div class="pillar-icon-box"><?= lucide_icon('leaf', 'w-7 h-7') ?></div>
           <h3 class="pillar-title">Eco-Stewardship</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Pioneers of the Tree Ambulance initiative launched in 2020 for the preservation, healing, and enrichment of regional flora.
-          </p>
-          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">
-            Tree Ambulance 2020
-          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">Pioneers of the Tree Ambulance initiative launched in 2020 for preservation and enrichment of regional flora.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">Tree Ambulance 2020</div>
         </div>
-
-        <!-- Pillar 4 -->
         <div class="pillar-card">
-          <div class="pillar-icon-box">
-            <?= lucide_icon('users', 'w-7 h-7') ?>
-          </div>
+          <div class="pillar-icon-box"><?= lucide_icon('users', 'w-7 h-7') ?></div>
           <h3 class="pillar-title">Tribal &amp; Youth Focus</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Dedicated scholarship opportunities and professional mentoring empowering the diverse tribal and youth talent of Jharkhand.
-          </p>
-          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">
-            Inclusive Growth
-          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">Dedicated scholarships and professional mentoring empowering the diverse tribal and youth talent of Jharkhand.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200/80 text-[11px] font-bold text-gold uppercase tracking-wider">Inclusive Growth</div>
         </div>
       </div>
     </div>
 
-    <!-- 4. 6 Universities Consortium of Ayushmati Education Trust -->
-    <div class="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-sm space-y-8 section-block">
-      <div class="flex items-center justify-between flex-wrap gap-4">
+    <!-- 5. 6 Universities – Ayushmati Group Registry Table -->
+    <div class="section-block space-y-6">
+      <div class="flex items-center justify-between flex-wrap gap-4 border-b border-slate-200/80 pb-4">
         <div>
           <div class="text-xs tracking-[0.25em] uppercase text-gold font-bold">Ayushmati Group Network</div>
-          <h3 class="font-serif text-3xl sm:text-4xl font-normal text-foreground mt-1">
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-foreground mt-1">
             6 Universities Established by the Group
-          </h3>
-          <p class="text-xs sm:text-sm text-muted-foreground mt-1">
-            A pan-India university consortium transforming professional and technical education since 1994.
+          </h2>
+          <p class="text-xs sm:text-sm text-muted-foreground mt-1 max-w-2xl">
+            A pan-India university consortium transforming professional and technical education since 1994. All universities are recognized by UGC under Section 2(f) of the UGC Act.
           </p>
         </div>
-        <div class="text-xs text-slate-700 font-semibold uppercase tracking-wider bg-surface px-4 py-2 rounded-full border border-border flex items-center gap-2">
+        <div class="text-xs text-slate-700 font-semibold uppercase tracking-wider bg-surface px-4 py-2 rounded-full border border-border flex items-center gap-2 shrink-0">
           <?= lucide_icon('globe', 'w-3.5 h-3.5 text-gold') ?> Pan-India Educational Footprint
         </div>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Uni 1 -->
-        <div class="p-6 rounded-2xl border border-border bg-surface feature-box-lift flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="inline-block text-[11px] font-bold text-gold uppercase tracking-wider">Est. 2011 · Bhopal, MP</span>
-              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-bold">UGC</span>
-            </div>
-            <h4 class="font-serif text-xl font-normal text-foreground mt-2">RKDF University</h4>
-            <p class="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Flagship multidisciplinary campus imparting engineering, management, and health sciences.
-            </p>
-          </div>
-          <div class="text-[11px] text-muted-foreground/80 pt-3 border-t border-border flex items-center justify-between">
-            <span>Ayushmati Education Trust</span>
-            <span class="text-gold font-semibold">Madhya Pradesh</span>
-          </div>
-        </div>
-
-        <!-- Uni 2 -->
-        <div class="p-6 rounded-2xl border border-border bg-surface feature-box-lift flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="inline-block text-[11px] font-bold text-gold uppercase tracking-wider">Est. 2014 · Sehore, MP</span>
-              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-bold">UGC</span>
-            </div>
-            <h4 class="font-serif text-xl font-normal text-foreground mt-2">Sri Satya Sai University</h4>
-            <p class="text-xs text-muted-foreground mt-1 leading-relaxed">
-              State private university with technology, medical sciences, dental, and paramedical faculties.
-            </p>
-          </div>
-          <div class="text-[11px] text-muted-foreground/80 pt-3 border-t border-border flex items-center justify-between">
-            <span>Ayushmati Education Trust</span>
-            <span class="text-gold font-semibold">Madhya Pradesh</span>
-          </div>
-        </div>
-
-        <!-- Uni 3 -->
-        <div class="p-6 rounded-2xl border border-border bg-surface feature-box-lift flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="inline-block text-[11px] font-bold text-gold uppercase tracking-wider">Est. 2015 · Bhopal, MP</span>
-              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-bold">UGC</span>
-            </div>
-            <h4 class="font-serif text-xl font-normal text-foreground mt-2">Sarvepalli Radhakrishna University</h4>
-            <p class="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Comprehensive center for higher research, pharmacy, medicine, and applied sciences.
-            </p>
-          </div>
-          <div class="text-[11px] text-muted-foreground/80 pt-3 border-t border-border flex items-center justify-between">
-            <span>Ayushmati Education Trust</span>
-            <span class="text-gold font-semibold">Madhya Pradesh</span>
-          </div>
-        </div>
-
-        <!-- Uni 4 -->
-        <div class="p-6 rounded-2xl border border-border bg-surface feature-box-lift flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="inline-block text-[11px] font-bold text-gold uppercase tracking-wider">Est. 2016 · Indore, MP</span>
-              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-bold">UGC</span>
-            </div>
-            <h4 class="font-serif text-xl font-normal text-foreground mt-2">Dr. A.P.J. Abdul Kalam University</h4>
-            <p class="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Engineering, applied technologies, business administration, and computer applications hub.
-            </p>
-          </div>
-          <div class="text-[11px] text-muted-foreground/80 pt-3 border-t border-border flex items-center justify-between">
-            <span>Ayushmati Education Trust</span>
-            <span class="text-gold font-semibold">Madhya Pradesh</span>
-          </div>
-        </div>
-
-        <!-- Uni 5 -->
-        <div class="p-6 rounded-2xl border border-border bg-surface feature-box-lift flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="inline-block text-[11px] font-bold text-gold uppercase tracking-wider">Est. 2018 · Bhopal, MP</span>
-              <span class="text-[10px] px-2 py-0.5 rounded bg-slate-200 text-slate-700 font-bold">UGC</span>
-            </div>
-            <h4 class="font-serif text-xl font-normal text-foreground mt-2">Bhabha University</h4>
-            <p class="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Modern institution dedicated to science, dental college, technology, and applied arts.
-            </p>
-          </div>
-          <div class="text-[11px] text-muted-foreground/80 pt-3 border-t border-border flex items-center justify-between">
-            <span>Ayushmati Education Trust</span>
-            <span class="text-gold font-semibold">Madhya Pradesh</span>
-          </div>
-        </div>
-
-        <!-- Uni 6: Ranchi Campus Featured -->
-        <div class="p-6 rounded-2xl border-2 border-gold bg-brand text-brand-foreground shadow-xl flex flex-col justify-between space-y-4 relative overflow-hidden">
-          <div class="absolute -right-12 -top-12 w-32 h-32 bg-gold/20 rounded-full blur-2xl pointer-events-none"></div>
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="inline-block text-[11px] font-bold text-gold uppercase tracking-wider">Est. 2018 · Ranchi, JH</span>
-              <span class="text-[10px] px-2 py-0.5 rounded bg-gold text-brand font-bold">Current Campus</span>
-            </div>
-            <h4 class="font-serif text-xl font-normal text-white mt-2">RKDF University, Ranchi</h4>
-            <p class="text-xs text-white/80 mt-1 leading-relaxed">
-              Established under Jharkhand State Act No. 15 and UGC 2(f). Flagship Eastern India campus.
-            </p>
-          </div>
-          <div class="text-[11px] text-gold pt-3 border-t border-white/20 font-semibold flex items-center justify-between">
-            <span>Jharkhand Legislature</span>
-            <span>UGC &amp; AIU Member</span>
-          </div>
+      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50/80 border-b border-slate-200 text-[11px] uppercase tracking-wider text-slate-600 font-bold">
+                <th class="py-3.5 px-4 text-center w-12">#</th>
+                <th class="py-3.5 px-6">University Name</th>
+                <th class="py-3.5 px-6">Location</th>
+                <th class="py-3.5 px-6">Est. Year</th>
+                <th class="py-3.5 px-6">Academic Focus</th>
+                <th class="py-3.5 px-6">Approval</th>
+                <th class="py-3.5 px-6 text-right">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-sm">
+              <?php foreach ($universities as $idx => $uni): ?>
+                <tr class="<?= $uni['featured'] ? 'bg-brand/5 hover:bg-brand/10' : 'hover:bg-slate-50/60' ?> transition-colors">
+                  <td class="py-4 px-4 text-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg <?= $uni['featured'] ? 'bg-brand text-gold' : 'bg-slate-100 text-slate-500' ?> text-xs font-bold">
+                      <?= str_pad((string)($idx + 1), 2, '0', STR_PAD_LEFT) ?>
+                    </span>
+                  </td>
+                  <td class="py-4 px-6">
+                    <div class="flex items-center gap-3">
+                      <div class="w-2 h-2 rounded-full <?= $uni['featured'] ? 'bg-gold' : 'bg-slate-300' ?> shrink-0"></div>
+                      <div>
+                        <div class="font-bold text-slate-900 text-sm <?= $uni['featured'] ? 'text-brand' : '' ?>"><?= e($uni['name']) ?></div>
+                        <div class="text-[11px] text-slate-400 mt-0.5"><?= e($uni['state']) ?></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <div class="flex items-center gap-1.5 text-xs text-slate-600">
+                      <?= lucide_icon('map-pin', 'w-3.5 h-3.5 text-gold shrink-0') ?>
+                      <?= e($uni['location']) ?>
+                    </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <span class="font-serif text-base font-semibold <?= $uni['featured'] ? 'text-brand' : 'text-slate-700' ?>">
+                      <?= e($uni['year']) ?>
+                    </span>
+                  </td>
+                  <td class="py-4 px-6">
+                    <div class="text-xs text-slate-600 max-w-[220px] leading-relaxed"><?= e($uni['focus']) ?></div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <div class="flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+                      <?= lucide_icon('shield-check', 'w-3.5 h-3.5 text-emerald-600 shrink-0') ?>
+                      <?= e($uni['approval']) ?>
+                    </div>
+                  </td>
+                  <td class="py-4 px-6 text-right">
+                    <?php if ($uni['featured']): ?>
+                      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold text-brand text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                        <?= lucide_icon('star', 'w-3 h-3') ?> <?= e($uni['status']) ?>
+                      </span>
+                    <?php else: ?>
+                      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-[11px] font-semibold uppercase tracking-wider">
+                        <?= e($uni['status']) ?>
+                      </span>
+                    <?php endif; ?>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+            <tfoot>
+              <tr class="bg-slate-50/60 border-t-2 border-slate-200 text-[11px] text-slate-500">
+                <td colspan="7" class="py-3 px-6">
+                  <div class="flex items-center gap-6 flex-wrap">
+                    <span class="flex items-center gap-1.5"><?= lucide_icon('info', 'w-3.5 h-3.5 text-gold') ?> All 6 universities are approved under Section 2(f) of the UGC Act 1956.</span>
+                    <span class="flex items-center gap-1.5"><?= lucide_icon('map-pin', 'w-3.5 h-3.5 text-gold') ?> Campuses in Madhya Pradesh &amp; Jharkhand.</span>
+                    <span class="ml-auto font-bold text-slate-700">Total: 6 Universities · 162+ Institutions</span>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
         </div>
       </div>
     </div>
 
-    <!-- 5. Royal Emblem & Philosophical Anatomy (Our Logo) -->
+    <!-- 6. Royal Emblem & Philosophical Anatomy -->
     <div class="rounded-3xl insignia-box text-white p-8 md:p-14 shadow-2xl relative overflow-hidden section-block">
-      <!-- Ambient corner glow -->
       <div class="absolute -right-20 -top-20 w-80 h-80 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -429,23 +469,20 @@ require_once dirname(__DIR__) . '/includes/header.php';
           </div>
 
           <div class="grid sm:grid-cols-2 gap-5">
-            <!-- Part 1: Flames -->
             <div class="p-6 rounded-2xl bg-white/10 border border-white/15 backdrop-blur space-y-2">
               <div class="text-xs uppercase tracking-wider text-gold font-bold flex items-center gap-2">
-                <?= lucide_icon('flame', 'w-4.5 h-4.5 text-gold') ?> Three Flames on Top
+                <?= lucide_icon('flame', 'w-4 h-4 text-gold') ?> Three Flames on Top
               </div>
               <p class="text-sm text-white/95 leading-relaxed">
-                The three ascending flames on the crest symbolize <strong class="text-gold font-semibold">Enlightenment, Knowledge, and Transformation</strong> — igniting intellectual curiosity and ethical consciousness.
+                The three ascending flames symbolize <strong class="text-gold font-semibold">Enlightenment, Knowledge, and Transformation</strong> — igniting intellectual curiosity and ethical consciousness.
               </p>
             </div>
-
-            <!-- Part 2: Symbols -->
             <div class="p-6 rounded-2xl bg-white/10 border border-white/15 backdrop-blur space-y-2">
               <div class="text-xs uppercase tracking-wider text-gold font-bold flex items-center gap-2">
-                <?= lucide_icon('shield-check', 'w-4.5 h-4.5 text-gold') ?> Three Base Symbols
+                <?= lucide_icon('shield-check', 'w-4 h-4 text-gold') ?> Three Base Symbols
               </div>
               <p class="text-sm text-white/95 leading-relaxed">
-                The three foundational symbols anchored below represent <strong class="text-gold font-semibold">Education, Glorification, and Nation</strong> — dedicating academic scholarship to sovereign progress.
+                The three foundational symbols represent <strong class="text-gold font-semibold">Education, Glorification, and Nation</strong> — dedicating scholarship to sovereign progress.
               </p>
             </div>
           </div>
@@ -456,14 +493,14 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <?= lucide_icon('quote', 'w-5 h-5') ?>
             </div>
             <div class="text-xs sm:text-sm text-white/90">
-              <strong class="text-gold">“Education Glorifies Nation”</strong> — The guiding motto of RKDF University that steers every curriculum, laboratory inquiry, and community initiative.
+              <strong class="text-gold">"Education Glorifies Nation"</strong> — The guiding motto of RKDF University that steers every curriculum, laboratory inquiry, and community initiative.
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 6. Vision & Mission Preview Cards -->
+    <!-- 7. Vision & Mission Preview Cards -->
     <div class="about-vision-grid section-block">
       <!-- Vision Card -->
       <div class="vm-card">
@@ -477,29 +514,21 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <h3 class="font-serif text-3xl font-normal text-slate-900 mt-0.5">Our Vision</h3>
             </div>
           </div>
-
           <div class="space-y-3">
             <div class="vm-item">
               <span class="vm-badge">1</span>
-              <p class="vm-text">
-                To establish a University of excellence to impart Higher Education through Knowledge, Pioneering Scholarship, Research and Teaching.
-              </p>
+              <p class="vm-text">To establish a University of excellence to impart Higher Education through Knowledge, Pioneering Scholarship, Research and Teaching.</p>
             </div>
             <div class="vm-item">
               <span class="vm-badge">2</span>
-              <p class="vm-text">
-                To improve the lives of many students through growth, prosperity and sustainable physical environment through education in the country.
-              </p>
+              <p class="vm-text">To improve the lives of many students through growth, prosperity and sustainable physical environment through education in the country.</p>
             </div>
             <div class="vm-item">
               <span class="vm-badge">3</span>
-              <p class="vm-text">
-                To Fulfil Commitment of providing Quality Education and empowering Excellence for Better Jharkhand.
-              </p>
+              <p class="vm-text">To Fulfil Commitment of providing Quality Education and empowering Excellence for Better Jharkhand.</p>
             </div>
           </div>
         </div>
-
         <div class="mt-8 pt-5 border-t border-slate-200/80 flex items-center justify-between">
           <a href="<?= url('about/vision-and-mission.php') ?>" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand hover:text-gold transition group">
             Explore Full Philosophy <span class="group-hover:translate-x-1 transition-transform"><?= lucide_icon('arrow-right', 'w-4 h-4') ?></span>
@@ -520,29 +549,21 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <h3 class="font-serif text-3xl font-normal text-slate-900 mt-0.5">Our Mission</h3>
             </div>
           </div>
-
           <div class="space-y-3">
             <div class="vm-item">
               <span class="vm-badge">1</span>
-              <p class="vm-text">
-                Harmonize Higher Education with excellence in Science and Technological output and contribute to livelihood, security and sustainable societal development.
-              </p>
+              <p class="vm-text">Harmonize Higher Education with excellence in Science and Technological output and contribute to livelihood, security and sustainable societal development.</p>
             </div>
             <div class="vm-item">
               <span class="vm-badge">2</span>
-              <p class="vm-text">
-                To be recognized as a premium National University providing dedicated service for the Socio-Economic Development of the Nation.
-              </p>
+              <p class="vm-text">To be recognized as a premium National University providing dedicated service for the Socio-Economic Development of the Nation.</p>
             </div>
             <div class="vm-item">
               <span class="vm-badge">3</span>
-              <p class="vm-text">
-                To promote Entrepreneurship in Youth by imparting professional and life skills.
-              </p>
+              <p class="vm-text">To promote Entrepreneurship in Youth by imparting professional and life skills.</p>
             </div>
           </div>
         </div>
-
         <div class="mt-8 pt-5 border-t border-slate-200/80 flex items-center justify-between">
           <a href="<?= url('about/vision-and-mission.php') ?>" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand hover:text-gold transition group">
             View Vision &amp; Mission Page <span class="group-hover:translate-x-1 transition-transform"><?= lucide_icon('arrow-right', 'w-4 h-4') ?></span>
@@ -552,27 +573,28 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
-    <!-- 7. Statutory Approvals & Recognition Bar -->
-    <div class="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 section-block">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-2xl bg-brand text-gold flex items-center justify-center shrink-0 shadow-md">
-          <?= lucide_icon('shield-check', 'w-6 h-6') ?>
+    <!-- 8. Statutory Approvals & Recognition Bar -->
+    <div class="rounded-3xl bg-brand text-brand-foreground p-8 sm:p-10 shadow-xl border border-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 text-left section-block">
+      <div class="space-y-2 flex-1">
+        <div class="text-xs uppercase font-bold tracking-widest text-gold flex items-center gap-2">
+          <?= lucide_icon('shield-check', 'w-4 h-4 text-gold shrink-0') ?>
+          <span>Statutory Recognitions</span>
         </div>
-        <div>
-          <h4 class="font-serif text-xl font-normal text-foreground">Accredited &amp; Statutory Approvals</h4>
-          <p class="text-xs text-muted-foreground mt-0.5">Recognized under UGC 2(f), AIU Member, and approved by State Government of Jharkhand.</p>
-        </div>
+        <h3 class="font-serif text-2xl sm:text-3xl font-normal text-white">
+          Accredited &amp; Statutory Approvals
+        </h3>
+        <p class="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
+          Recognized under <strong class="text-gold">UGC 2(f)</strong>, active <strong class="text-gold">AIU</strong> member, approved by <strong class="text-gold">PCI</strong> &amp; <strong class="text-gold">BCI</strong>, and established by <strong class="text-gold">Jharkhand Legislature Act No. 15, 2018</strong>.
+        </p>
       </div>
-
-      <div class="flex items-center gap-3 flex-wrap justify-center">
-        <a href="<?= url('about/government-recognition.php') ?>" class="px-4 py-2 rounded-xl bg-surface border border-border text-xs font-semibold text-slate-700 hover:border-gold hover:text-gold transition">
-          Govt Recognitions
+      <div class="flex flex-wrap items-center justify-center gap-3 shrink-0 self-center">
+        <a href="<?= url('about/government-recognition.php') ?>" class="gov-callout-btn">
+          <span>Govt Recognitions</span>
+          <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
         </a>
-        <a href="<?= url('about/accreditations.php') ?>" class="px-4 py-2 rounded-xl bg-surface border border-border text-xs font-semibold text-slate-700 hover:border-gold hover:text-gold transition">
-          Accreditations
-        </a>
-        <a href="<?= url('about/rti-corner.php') ?>" class="px-4 py-2 rounded-xl bg-surface border border-border text-xs font-semibold text-slate-700 hover:border-gold hover:text-gold transition">
-          RTI Disclosures
+        <a href="<?= url('about/accreditations.php') ?>" class="gov-callout-btn-white">
+          <span>Accreditations</span>
+          <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
         </a>
       </div>
     </div>

@@ -16,7 +16,7 @@ $international_steps = [
         'badge'       => 'Initial Assessment',
         'icon'        => 'file-text',
         'desc'        => 'Submit attested copies of secondary/higher secondary school transcripts, degree certificates, valid passport biometric page, and Statement of Purpose (SOP) to admission@rkdfuniversity.org.',
-        'action_note' => 'Email to: admission@rkdfuniversity.org',
+        'action_note' => 'Email Application Dossier',
         'timeline'    => '1–2 Working Days'
     ],
     [
@@ -281,11 +281,17 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <div class="space-y-4">
                 <div class="prog-spec-stats-grid">
                   <div class="prog-spec-stat-box">
-                    <span class="prog-spec-stat-lbl">Key Action</span>
+                    <span class="prog-spec-stat-lbl">
+                      <?= lucide_icon('zap', 'w-3 h-3 text-gold') ?>
+                      <span>Key Action</span>
+                    </span>
                     <span class="prog-spec-stat-val text-brand text-xs"><?= e($step['action_note']) ?></span>
                   </div>
                   <div class="prog-spec-stat-box">
-                    <span class="prog-spec-stat-lbl">Timeline</span>
+                    <span class="prog-spec-stat-lbl">
+                      <?= lucide_icon('clock', 'w-3 h-3 text-emerald-600') ?>
+                      <span>Timeline</span>
+                    </span>
                     <span class="prog-spec-stat-val text-emerald-700"><?= e($step['timeline']) ?></span>
                   </div>
                 </div>

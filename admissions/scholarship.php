@@ -129,22 +129,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">20+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">100% Tuition Waivers</span>
+    <div class="rkdf-stat-grid">
+      <!-- 100% Waiver -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('trophy') ?>
+          </div>
+          <span class="rkdf-stat-badge">Chancellor Honor</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">20</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">100% Tuition Waivers</div>
+        <p class="rkdf-stat-desc">Awarded to 90%+ board &amp; degree toppers</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">39+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">50% Tuition Waivers</span>
+
+      <!-- 50% Waiver -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('award') ?>
+          </div>
+          <span class="rkdf-stat-badge">Distinction Tier</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">39</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">50% Tuition Waivers</div>
+        <p class="rkdf-stat-desc">Conferred for 80%–89.9% merit consistency</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">82+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">25% Tuition Waivers</span>
+
+      <!-- 25% Waiver -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('graduation-cap') ?>
+          </div>
+          <span class="rkdf-stat-badge">Achievement Tier</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">82</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">25% Tuition Waivers</div>
+        <p class="rkdf-stat-desc">Awarded for 70%–79.9% qualifying marks</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">+5%</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Semester Topper Bonus</span>
+
+      <!-- Semester Bonus -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('sparkles') ?>
+          </div>
+          <span class="rkdf-stat-badge">CGPA Incentive</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">+5</span>
+          <span class="rkdf-stat-suffix">%</span>
+        </div>
+        <div class="rkdf-stat-label">Semester Topper Bonus</div>
+        <p class="rkdf-stat-desc">Additional fee rebate for term rankers</p>
       </div>
     </div>
 

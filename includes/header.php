@@ -962,6 +962,95 @@ $body_class     = $body_class     ?? '';
       justify-content: center !important;
       gap: 0.5rem !important;
     }
+    .rkdf-section-tag svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      color: #e58525 !important;
+      flex-shrink: 0 !important;
+    }
+    /* Section Header Document Download & Action Buttons */
+    .rkdf-doc-dl-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      padding: 0.75rem 1.45rem !important;
+      border-radius: 9999px !important;
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      color: #0f1b2d !important;
+      font-weight: 700 !important;
+      font-size: 0.75rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px -2px rgba(15, 27, 45, 0.06) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+      line-height: 1 !important;
+    }
+    .rkdf-doc-dl-btn svg:first-child {
+      color: #e58525 !important;
+      width: 14px !important;
+      height: 14px !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-doc-dl-btn svg:last-child {
+      color: #64748b !important;
+      width: 14px !important;
+      height: 14px !important;
+      flex-shrink: 0 !important;
+      transition: transform 0.2s ease, color 0.2s ease !important;
+    }
+    .rkdf-doc-dl-btn:hover {
+      background: #f8fafc !important;
+      border-color: #e58525 !important;
+      color: #e58525 !important;
+      box-shadow: 0 6px 16px -4px rgba(229, 133, 37, 0.22) !important;
+      transform: translateY(-1.5px) !important;
+    }
+    .rkdf-doc-dl-btn:hover svg:last-child {
+      transform: translateY(2px) !important;
+      color: #e58525 !important;
+    }
+
+    .rkdf-header-cta-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      padding: 0.75rem 1.5rem !important;
+      border-radius: 9999px !important;
+      background: linear-gradient(135deg, #e58525 0%, #f59e0b 100%) !important;
+      border: 1px solid rgba(229, 133, 37, 0.4) !important;
+      color: #071322 !important;
+      font-weight: 800 !important;
+      font-size: 0.75rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 14px -3px rgba(229, 133, 37, 0.35) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+      line-height: 1 !important;
+    }
+    .rkdf-header-cta-btn svg {
+      color: #071322 !important;
+      width: 14px !important;
+      height: 14px !important;
+      flex-shrink: 0 !important;
+      transition: transform 0.2s ease, color 0.2s ease !important;
+    }
+    .rkdf-header-cta-btn:hover {
+      background: linear-gradient(135deg, #071322 0%, #132a4a 100%) !important;
+      border-color: #071322 !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 20px -4px rgba(7, 19, 34, 0.3) !important;
+      transform: translateY(-1.5px) !important;
+    }
+    .rkdf-header-cta-btn:hover svg {
+      color: #e58525 !important;
+      transform: translate(2px, -2px) !important;
+    }
     .faculty-card {
       background: #ffffff !important;
       border: 1px solid #e2e8f0 !important;
@@ -983,10 +1072,13 @@ $body_class     = $body_class     ?? '';
       position: relative !important;
       padding: 1.75rem 1.75rem 1.5rem 1.75rem !important;
       border-bottom: 1px solid rgba(229, 133, 37, 0.25) !important;
+      border-radius: 10px !important;
+      overflow: hidden !important;
     }
     .faculty-header-banner h3 {
       color: #ffffff !important;
       transition: color 0.3s ease !important;
+      margin-top: 0.35rem !important;
     }
     .faculty-card:hover .faculty-header-banner h3 {
       color: #e58525 !important;
@@ -1651,6 +1743,7 @@ $body_class     = $body_class     ?? '';
       justify-content: space-between !important;
       box-shadow: 0 4px 16px -4px rgba(15, 27, 45, 0.06) !important;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      height: 100% !important;
     }
     .prog-spec-card:hover {
       transform: translateY(-6px) !important;
@@ -1659,31 +1752,48 @@ $body_class     = $body_class     ?? '';
     }
     .prog-spec-header {
       background: linear-gradient(135deg, #071322 0%, #0c1e36 55%, #132a4a 100%) !important;
-      padding: 1.65rem 1.75rem !important;
+      padding: 1.5rem 1.75rem !important;
       border-bottom: 1px solid rgba(229, 133, 37, 0.25) !important;
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
       gap: 1rem !important;
+      min-height: 140px !important;
+    }
+    .prog-spec-header > div:first-child {
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
     }
     .prog-spec-badge {
       display: inline-flex !important;
       align-items: center !important;
       gap: 0.35rem !important;
-      padding: 0.25rem 0.75rem !important;
+      padding: 0.2rem 0.65rem !important;
       border-radius: 9999px !important;
       background: rgba(229, 133, 37, 0.18) !important;
       border: 1px solid rgba(229, 133, 37, 0.4) !important;
       color: #f59e0b !important;
-      font-size: 0.7rem !important;
+      font-size: 0.675rem !important;
       font-weight: 700 !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.08em !important;
+      letter-spacing: 0.04em !important;
       width: fit-content !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+    .prog-spec-badge span {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
     }
     .prog-spec-title {
       font-family: 'Instrument Serif', Georgia, serif !important;
-      font-size: 1.5rem !important;
+      font-size: 1.45rem !important;
       font-weight: 500 !important;
       color: #ffffff !important;
       line-height: 1.25 !important;
@@ -1697,6 +1807,7 @@ $body_class     = $body_class     ?? '';
       width: 48px !important;
       height: 48px !important;
       min-width: 48px !important;
+      flex-shrink: 0 !important;
       border-radius: 14px !important;
       background: rgba(255, 255, 255, 0.1) !important;
       border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -1764,29 +1875,50 @@ $body_class     = $body_class     ?? '';
       grid-template-columns: 1fr 1fr !important;
       gap: 0.75rem !important;
       padding-top: 1rem !important;
-      margin-top: 0.5rem !important;
+      margin-top: auto !important;
       border-top: 1px solid #f1f5f9 !important;
     }
     .prog-spec-stat-box {
       background: #f8fafc !important;
       border: 1px solid #e2e8f0 !important;
-      border-radius: 12px !important;
-      padding: 0.75rem 0.85rem !important;
+      border-radius: 14px !important;
+      padding: 0.8rem 0.85rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      min-height: 84px !important;
+      transition: all 0.25s ease !important;
+    }
+    .prog-spec-card:hover .prog-spec-stat-box {
+      background: #ffffff !important;
+      border-color: rgba(229, 133, 37, 0.35) !important;
+      box-shadow: 0 4px 12px -2px rgba(15, 27, 45, 0.04) !important;
     }
     .prog-spec-stat-lbl {
-      font-size: 0.675rem !important;
+      font-size: 0.65rem !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.06em !important;
+      letter-spacing: 0.08em !important;
       color: #64748b !important;
-      font-weight: 600 !important;
-      display: block !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.3rem !important;
+      margin-bottom: 0.35rem !important;
+    }
+    .prog-spec-stat-lbl svg {
+      width: 12px !important;
+      height: 12px !important;
+      flex-shrink: 0 !important;
     }
     .prog-spec-stat-val {
-      font-size: 0.8125rem !important;
+      font-size: 0.8rem !important;
       font-weight: 700 !important;
       color: #0f1b2d !important;
-      margin-top: 0.2rem !important;
+      line-height: 1.35 !important;
+      margin-top: 0 !important;
       display: block !important;
+      overflow-wrap: break-word !important;
+      word-break: break-word !important;
     }
     .prog-spec-btn {
       width: 100% !important;
@@ -1794,31 +1926,40 @@ $body_class     = $body_class     ?? '';
       align-items: center !important;
       justify-content: center !important;
       gap: 0.5rem !important;
-      padding: 0.9rem 1.25rem !important;
-      margin-top: 1rem !important;
-      border-radius: 12px !important;
-      background: #f1f5f9 !important;
-      border: 1px solid #e2e8f0 !important;
+      padding: 0.85rem 1.25rem !important;
+      margin-top: 0.85rem !important;
+      border-radius: 14px !important;
+      background: #f8fafc !important;
+      border: 1.5px solid #e2e8f0 !important;
       color: #0f1b2d !important;
       font-weight: 700 !important;
-      font-size: 0.8rem !important;
+      font-size: 0.785rem !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.06em !important;
+      letter-spacing: 0.08em !important;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
       text-decoration: none !important;
       cursor: pointer !important;
+      box-shadow: 0 2px 6px rgba(15, 27, 45, 0.04) !important;
+    }
+    .prog-spec-btn svg {
+      width: 14px !important;
+      height: 14px !important;
+      color: #e58525 !important;
+      stroke: #e58525 !important;
+      transition: transform 0.25s ease !important;
     }
     .prog-spec-card:hover .prog-spec-btn,
     .prog-spec-btn:hover {
-      background: linear-gradient(135deg, #071322 0%, #132a4a 100%) !important;
+      background: linear-gradient(135deg, #071322 0%, #0c1e36 50%, #132a4a 100%) !important;
       border-color: #071322 !important;
       color: #ffffff !important;
-      box-shadow: 0 8px 18px -4px rgba(7, 19, 34, 0.3) !important;
+      box-shadow: 0 10px 24px -4px rgba(7, 19, 34, 0.28) !important;
+      transform: translateY(-2px) !important;
     }
     .prog-spec-card:hover .prog-spec-btn svg,
     .prog-spec-btn:hover svg {
-      color: #e58525 !important;
-      stroke: #e58525 !important;
+      color: #f59e0b !important;
+      stroke: #f59e0b !important;
       transform: translateX(4px) !important;
     }
     .rkdf-academic-card {
@@ -3227,6 +3368,15 @@ $body_class     = $body_class     ?? '';
       color: #071322 !important;
       border-color: #cbd5e1 !important;
       box-shadow: none !important;
+    }
+    .about-subnav-pill svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      max-width: 14px !important;
+      flex-shrink: 0 !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
     }
     .subnav-wrapper,
     .subnav-outer-container {
@@ -5104,6 +5254,1605 @@ $body_class     = $body_class     ?? '';
     }
     .quick-link-item:hover svg {
       transform: translateX(2px) !important;
+    }
+
+    /* ==================== UNDERGRADUATE COURSE CATALOG CARDS ==================== */
+    .ug-course-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 18px !important;
+      padding: 1.5rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 14px -3px rgba(15, 27, 45, 0.05) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .ug-course-card:hover {
+      transform: translateY(-4px) !important;
+      border-color: rgba(229, 133, 37, 0.5) !important;
+      box-shadow: 0 16px 32px -10px rgba(15, 27, 45, 0.12) !important;
+    }
+    .ug-card-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.28rem 0.65rem !important;
+      border-radius: 9999px !important;
+      background: rgba(229, 133, 37, 0.1) !important;
+      border: 1px solid rgba(229, 133, 37, 0.25) !important;
+      color: #92400e !important;
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+    }
+    .ug-card-badge svg {
+      width: 13px !important;
+      height: 13px !important;
+      min-width: 13px !important;
+      max-width: 13px !important;
+      flex-shrink: 0 !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
+    .ug-card-duration {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.28rem 0.65rem !important;
+      border-radius: 9999px !important;
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      color: #475569 !important;
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+    }
+    .ug-card-duration svg {
+      width: 13px !important;
+      height: 13px !important;
+      min-width: 13px !important;
+      max-width: 13px !important;
+      flex-shrink: 0 !important;
+      color: #e58525 !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
+    .ug-card-title {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 1.35rem !important;
+      font-weight: 600 !important;
+      color: #0f1b2d !important;
+      line-height: 1.3 !important;
+      margin-top: 0.85rem !important;
+      margin-bottom: 0.5rem !important;
+      transition: color 0.2s ease !important;
+    }
+    .ug-course-card:hover .ug-card-title {
+      color: #e58525 !important;
+    }
+    .ug-card-desc {
+      font-size: 0.8125rem !important;
+      line-height: 1.6 !important;
+      color: #64748b !important;
+      margin-bottom: 1rem !important;
+    }
+    .ug-card-footer {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.5rem !important;
+      padding-top: 0.875rem !important;
+      margin-top: auto !important;
+      border-top: 1px solid #f1f5f9 !important;
+    }
+    .ug-card-status {
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: #059669 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      white-space: nowrap !important;
+    }
+    .ug-card-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      transition: color 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+    .ug-course-card:hover .ug-card-btn {
+      color: #e58525 !important;
+    }
+    .ug-card-btn svg {
+      width: 13px !important;
+      height: 13px !important;
+      min-width: 13px !important;
+      max-width: 13px !important;
+      flex-shrink: 0 !important;
+      transition: transform 0.2s ease !important;
+      color: inherit !important;
+    }
+    .ug-course-card:hover .ug-card-btn svg {
+      transform: translateX(3px) !important;
+    }
+    /* ==================== UG CATEGORY HEADER & CTA ==================== */
+    .ug-cat-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 1.25rem !important;
+      padding-bottom: 1.25rem !important;
+      margin-bottom: 2rem !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .ug-cat-header-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.15rem !important;
+      min-width: 0 !important;
+    }
+    .ug-cat-iconbox {
+      width: 46px !important;
+      height: 46px !important;
+      min-width: 46px !important;
+      max-width: 46px !important;
+      border-radius: 12px !important;
+      background: #071322 !important;
+      color: #e58525 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      box-shadow: 0 4px 12px rgba(7, 19, 34, 0.16) !important;
+      margin: 0 !important;
+    }
+    .ug-cat-iconbox svg {
+      width: 22px !important;
+      height: 22px !important;
+      min-width: 22px !important;
+      max-width: 22px !important;
+      flex-shrink: 0 !important;
+      color: #e58525 !important;
+    }
+    .ug-cat-content {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      min-width: 0 !important;
+    }
+    .ug-cat-meta {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .ug-cat-tag {
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: #b45309 !important;
+      line-height: 1.2 !important;
+    }
+    .ug-cat-count {
+      display: inline-flex !important;
+      align-items: center !important;
+      padding: 0.15rem 0.55rem !important;
+      border-radius: 9999px !important;
+      font-size: 0.65rem !important;
+      font-weight: 600 !important;
+      background: #f1f5f9 !important;
+      color: #475569 !important;
+      border: 1px solid #e2e8f0 !important;
+      line-height: 1 !important;
+    }
+    .ug-cat-title {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 1.75rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      line-height: 1.2 !important;
+      margin: 0 !important;
+    }
+    @media (min-width: 640px) {
+      .ug-cat-title {
+        font-size: 2rem !important;
+      }
+    }
+    .ug-cat-apply-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      padding: 0.65rem 1.25rem !important;
+      border-radius: 12px !important;
+      background: #e58525 !important;
+      color: #ffffff !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      text-decoration: none !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 4px 12px rgba(229, 133, 37, 0.3) !important;
+      flex-shrink: 0 !important;
+    }
+    .ug-cat-apply-btn:hover {
+      background: #071322 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(7, 19, 34, 0.25) !important;
+    }
+    .ug-cat-apply-btn svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      max-width: 14px !important;
+      flex-shrink: 0 !important;
+      color: #ffffff !important;
+      transition: transform 0.2s ease !important;
+    }
+    .ug-cat-apply-btn:hover svg {
+      transform: translateX(3px) !important;
+    }
+
+    /* ==================== ADMISSION STEP CARDS (HOW TO APPLY) ==================== */
+    .rkdf-step-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 20px !important;
+      padding: 1.75rem 1.5rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 18px -4px rgba(15, 27, 45, 0.05) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rkdf-step-card:hover {
+      transform: translateY(-6px) !important;
+      border-color: rgba(229, 133, 37, 0.45) !important;
+      box-shadow: 0 20px 35px -10px rgba(15, 27, 45, 0.12) !important;
+    }
+    .rkdf-step-accent {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, #e58525 0%, #f59e0b 50%, #071322 100%) !important;
+      opacity: 0.65 !important;
+      transition: opacity 0.3s ease !important;
+    }
+    .rkdf-step-card:hover .rkdf-step-accent {
+      opacity: 1 !important;
+      height: 4px !important;
+    }
+    .rkdf-step-top {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      margin-bottom: 1rem !important;
+    }
+    .rkdf-step-num {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 2.5rem !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      color: #e58525 !important;
+      letter-spacing: -0.02em !important;
+    }
+    .rkdf-step-icon {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      border-radius: 12px !important;
+      background: #071322 !important;
+      color: #e58525 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      box-shadow: 0 4px 10px rgba(7, 19, 34, 0.15) !important;
+      transition: all 0.25s ease !important;
+    }
+    .rkdf-step-card:hover .rkdf-step-icon {
+      background: #e58525 !important;
+      color: #ffffff !important;
+      transform: scale(1.06) rotate(2deg) !important;
+    }
+    .rkdf-step-icon svg {
+      width: 20px !important;
+      height: 20px !important;
+      min-width: 20px !important;
+      max-width: 20px !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-step-tag {
+      display: inline-flex !important;
+      align-items: center !important;
+      width: fit-content !important;
+      padding: 0.2rem 0.6rem !important;
+      border-radius: 9999px !important;
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      color: #64748b !important;
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin-bottom: 0.65rem !important;
+    }
+    .rkdf-step-title {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 1.4rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      line-height: 1.25 !important;
+      margin-bottom: 0.5rem !important;
+      transition: color 0.2s ease !important;
+    }
+    .rkdf-step-card:hover .rkdf-step-title {
+      color: #e58525 !important;
+    }
+    .rkdf-step-desc {
+      font-size: 0.8125rem !important;
+      line-height: 1.6 !important;
+      color: #64748b !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .rkdf-step-footer {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.5rem !important;
+      padding-top: 0.85rem !important;
+      margin-top: auto !important;
+      border-top: 1px solid #f1f5f9 !important;
+    }
+    .rkdf-step-hint {
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: #059669 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+    }
+    .rkdf-step-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.3rem !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+    }
+    .rkdf-step-card:hover .rkdf-step-link {
+      color: #e58525 !important;
+    }
+    .rkdf-step-link svg {
+      width: 12px !important;
+      height: 12px !important;
+      min-width: 12px !important;
+      transition: transform 0.2s ease !important;
+    }
+    .rkdf-step-card:hover .rkdf-step-link svg {
+      transform: translateX(3px) !important;
+    }
+
+    /* ==================== QUICK HELP / COUNSELING BANNER ==================== */
+    .rkdf-help-banner {
+      background: linear-gradient(135deg, #071322 0%, #0c1e36 60%, #112847 100%) !important;
+      border: 1px solid rgba(229, 133, 37, 0.25) !important;
+      border-radius: 20px !important;
+      padding: 1.75rem 2rem !important;
+      color: #ffffff !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 1.5rem !important;
+      box-shadow: 0 10px 30px -5px rgba(7, 19, 34, 0.25) !important;
+      position: relative !important;
+      overflow: hidden !important;
+      margin-top: 3rem !important;
+    }
+    @media (max-width: 860px) {
+      .rkdf-help-banner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 1.5rem !important;
+      }
+    }
+    .rkdf-help-banner-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1.25rem !important;
+    }
+    .rkdf-help-banner-icon {
+      width: 48px !important;
+      height: 48px !important;
+      min-width: 48px !important;
+      border-radius: 14px !important;
+      background: rgba(229, 133, 37, 0.15) !important;
+      border: 1px solid rgba(229, 133, 37, 0.3) !important;
+      color: #e58525 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-help-banner-icon svg {
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      color: #e58525 !important;
+    }
+    .rkdf-help-banner-title {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 1.5rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      margin: 0 0 0.25rem 0 !important;
+      line-height: 1.2 !important;
+    }
+    .rkdf-help-banner-desc {
+      font-size: 0.8125rem !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      margin: 0 !important;
+      line-height: 1.5 !important;
+    }
+    .rkdf-help-banner-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+      flex-wrap: wrap !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-help-banner-phone {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      padding: 0.65rem 1.15rem !important;
+      border-radius: 12px !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      border: 1px solid rgba(255, 255, 255, 0.18) !important;
+      color: #ffffff !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+    }
+    .rkdf-help-banner-phone:hover {
+      background: rgba(255, 255, 255, 0.16) !important;
+      border-color: rgba(229, 133, 37, 0.5) !important;
+      color: #e58525 !important;
+    }
+    .rkdf-help-banner-phone svg {
+      width: 14px !important;
+      height: 14px !important;
+      color: #e58525 !important;
+    }
+    .rkdf-help-banner-apply {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      padding: 0.65rem 1.35rem !important;
+      border-radius: 12px !important;
+      background: #e58525 !important;
+      color: #ffffff !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 14px rgba(229, 133, 37, 0.35) !important;
+      transition: all 0.25s ease !important;
+    }
+    .rkdf-help-banner-apply:hover {
+      background: #c86e17 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(229, 133, 37, 0.45) !important;
+    }
+    .rkdf-help-banner-apply svg {
+      width: 14px !important;
+      height: 14px !important;
+      color: #ffffff !important;
+      transition: transform 0.2s ease !important;
+    }
+    .rkdf-help-banner-apply:hover svg {
+      transform: translateX(3px) !important;
+    }
+
+    /* ==================== SCHOLARSHIP SECTION HEADER & LUXURY CARDS ==================== */
+    .rkdf-scholarship-header-bar {
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: space-between !important;
+      gap: 2rem !important;
+      padding-bottom: 1.75rem !important;
+      margin-bottom: 2.75rem !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    @media (max-width: 768px) {
+      .rkdf-scholarship-header-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.25rem !important;
+      }
+    }
+    .rkdf-scholarship-eyebrow {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      font-size: 0.8125rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.15em !important;
+      color: #e58525 !important;
+      margin-bottom: 0.65rem !important;
+    }
+    .rkdf-scholarship-eyebrow svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      color: #e58525 !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-scholarship-main-title {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: clamp(2.2rem, 4vw, 3.4rem) !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      line-height: 1.15 !important;
+      letter-spacing: -0.01em !important;
+      margin: 0 0 0.5rem 0 !important;
+    }
+    .rkdf-scholarship-main-title span {
+      color: #e58525 !important;
+    }
+    .rkdf-scholarship-subtitle {
+      font-size: 0.9375rem !important;
+      color: #64748b !important;
+      line-height: 1.6 !important;
+      max-width: 650px !important;
+      margin: 0 !important;
+    }
+    .rkdf-scholarship-header-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.5rem !important;
+      padding: 0 1.5rem !important;
+      height: 44px !important;
+      max-height: 44px !important;
+      min-height: 44px !important;
+      box-sizing: border-box !important;
+      border-radius: 12px !important;
+      background: #071322 !important;
+      color: #ffffff !important;
+      font-size: 0.8125rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      align-self: flex-end !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 12px rgba(7, 19, 34, 0.15) !important;
+      transition: all 0.25s ease !important;
+    }
+    @media (max-width: 768px) {
+      .rkdf-scholarship-header-cta {
+        align-self: flex-start !important;
+      }
+    }
+    .rkdf-scholarship-header-cta:hover {
+      background: #e58525 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 18px rgba(229, 133, 37, 0.35) !important;
+    }
+    .rkdf-scholarship-header-cta svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      color: #ffffff !important;
+      transition: transform 0.2s ease !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-scholarship-header-cta:hover svg {
+      transform: translateX(3px) !important;
+    }
+
+    .rkdf-scholarship-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 22px !important;
+      padding: 1.75rem 1.5rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 18px -4px rgba(15, 27, 45, 0.05) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .rkdf-scholarship-card:hover {
+      transform: translateY(-6px) !important;
+      border-color: rgba(229, 133, 37, 0.5) !important;
+      box-shadow: 0 20px 35px -10px rgba(15, 27, 45, 0.12) !important;
+    }
+    .rkdf-scholarship-accent {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, #e58525 0%, #f59e0b 50%, #071322 100%) !important;
+      opacity: 0.75 !important;
+      transition: opacity 0.3s ease !important;
+    }
+    .rkdf-scholarship-card:hover .rkdf-scholarship-accent {
+      opacity: 1 !important;
+      height: 4px !important;
+    }
+    .rkdf-scholarship-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.75rem !important;
+      margin-bottom: 1.15rem !important;
+    }
+    .rkdf-scholarship-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      padding: 0.3rem 0.65rem !important;
+      border-radius: 9999px !important;
+      background: rgba(229, 133, 37, 0.1) !important;
+      border: 1px solid rgba(229, 133, 37, 0.25) !important;
+      color: #92400e !important;
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+    }
+    .rkdf-scholarship-icon {
+      width: 42px !important;
+      height: 42px !important;
+      min-width: 42px !important;
+      border-radius: 12px !important;
+      background: #071322 !important;
+      color: #e58525 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      box-shadow: 0 4px 10px rgba(7, 19, 34, 0.15) !important;
+      transition: all 0.25s ease !important;
+    }
+    .rkdf-scholarship-card:hover .rkdf-scholarship-icon {
+      background: #e58525 !important;
+      color: #ffffff !important;
+      transform: scale(1.06) rotate(2deg) !important;
+    }
+    .rkdf-scholarship-icon svg {
+      width: 20px !important;
+      height: 20px !important;
+      min-width: 20px !important;
+      max-width: 20px !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-scholarship-amount {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: 1.95rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      line-height: 1.15 !important;
+      margin-bottom: 0.25rem !important;
+      letter-spacing: -0.01em !important;
+    }
+    .rkdf-scholarship-title {
+      font-size: 1.05rem !important;
+      font-weight: 700 !important;
+      color: #e58525 !important;
+      margin-bottom: 0.65rem !important;
+      line-height: 1.3 !important;
+      transition: color 0.2s ease !important;
+    }
+    .rkdf-scholarship-desc {
+      font-size: 0.8125rem !important;
+      line-height: 1.6 !important;
+      color: #64748b !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .rkdf-scholarship-criteria {
+      font-size: 0.76rem !important;
+      font-weight: 600 !important;
+      color: #0f1b2d !important;
+      background: #f8fafc !important;
+      border: 1px dashed #cbd5e1 !important;
+      border-radius: 8px !important;
+      padding: 0.45rem 0.65rem !important;
+      margin-bottom: 0.75rem !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      line-height: 1.3 !important;
+    }
+    .rkdf-scholarship-criteria svg {
+      width: 13px !important;
+      height: 13px !important;
+      min-width: 13px !important;
+      color: #e58525 !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-scholarship-perk {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      padding: 0.5rem 0.75rem !important;
+      border-radius: 10px !important;
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .rkdf-scholarship-perk svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      color: #059669 !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-scholarship-footer {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.5rem !important;
+      padding-top: 0.85rem !important;
+      margin-top: auto !important;
+      border-top: 1px solid #f1f5f9 !important;
+    }
+    .rkdf-scholarship-status {
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: #059669 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+    }
+    .rkdf-scholarship-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.3rem !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+    }
+    .rkdf-scholarship-card:hover .rkdf-scholarship-link {
+      color: #e58525 !important;
+    }
+    .rkdf-scholarship-link svg {
+      width: 12px !important;
+      height: 12px !important;
+      min-width: 12px !important;
+      transition: transform 0.2s ease !important;
+    }
+    .rkdf-scholarship-card:hover .rkdf-scholarship-link svg {
+      transform: translateX(3px) !important;
+    }
+
+    /* ==================== ADMISSION PROCEDURE & DOCUMENT CHECKLIST ==================== */
+    .rkdf-proc-container {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 3rem !important;
+    }
+    .rkdf-proc-box {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 24px !important;
+      padding: 2.25rem !important;
+      box-shadow: 0 4px 20px -4px rgba(15, 27, 45, 0.05) !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    @media (max-width: 640px) {
+      .rkdf-proc-box {
+        padding: 1.5rem !important;
+        border-radius: 18px !important;
+      }
+    }
+    .rkdf-proc-box-header {
+      margin-bottom: 2rem !important;
+      padding-bottom: 1.5rem !important;
+      border-bottom: 1px solid #f1f5f9 !important;
+    }
+    .rkdf-proc-box-title {
+      font-family: 'Instrument Serif', Georgia, serif !important;
+      font-size: clamp(1.85rem, 3.2vw, 2.6rem) !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      line-height: 1.2 !important;
+      margin: 0.25rem 0 0.5rem 0 !important;
+    }
+    .rkdf-proc-box-desc {
+      font-size: 0.9375rem !important;
+      color: #64748b !important;
+      line-height: 1.6 !important;
+      max-width: 720px !important;
+      margin: 0 !important;
+    }
+
+    /* Mode Selection Grid */
+    .rkdf-mode-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1.25rem !important;
+      margin-bottom: 1.75rem !important;
+    }
+    @media (max-width: 768px) {
+      .rkdf-mode-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    .rkdf-mode-card {
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 18px !important;
+      padding: 1.5rem !important;
+      transition: all 0.25s ease !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      position: relative !important;
+    }
+    .rkdf-mode-card:hover {
+      background: #ffffff !important;
+      border-color: rgba(229, 133, 37, 0.4) !important;
+      box-shadow: 0 10px 25px -5px rgba(15, 27, 45, 0.08) !important;
+      transform: translateY(-3px) !important;
+    }
+    .rkdf-mode-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      padding: 0.25rem 0.6rem !important;
+      border-radius: 9999px !important;
+      background: rgba(229, 133, 37, 0.1) !important;
+      color: #92400e !important;
+      border: 1px solid rgba(229, 133, 37, 0.25) !important;
+      width: fit-content !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .rkdf-mode-title {
+      font-size: 1.15rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      margin-bottom: 0.45rem !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+    }
+    .rkdf-mode-desc {
+      font-size: 0.8125rem !important;
+      color: #64748b !important;
+      line-height: 1.55 !important;
+      margin-bottom: 1rem !important;
+    }
+    .rkdf-mode-features {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 0 1.25rem 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.45rem !important;
+    }
+    .rkdf-mode-features li {
+      font-size: 0.775rem !important;
+      color: #334155 !important;
+      font-weight: 500 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+    }
+    .rkdf-mode-features li svg {
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      color: #059669 !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Important Note Callout */
+    .rkdf-notice-callout {
+      background: linear-gradient(135deg, rgba(229, 133, 37, 0.06) 0%, rgba(229, 133, 37, 0.02) 100%) !important;
+      border: 1px solid rgba(229, 133, 37, 0.35) !important;
+      border-left: 5px solid #e58525 !important;
+      border-radius: 16px !important;
+      padding: 1.25rem 1.5rem !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 1rem !important;
+    }
+    .rkdf-notice-icon {
+      width: 38px !important;
+      height: 38px !important;
+      min-width: 38px !important;
+      border-radius: 10px !important;
+      background: #e58525 !important;
+      color: #ffffff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-notice-icon svg {
+      width: 18px !important;
+      height: 18px !important;
+      color: #ffffff !important;
+    }
+    .rkdf-notice-title {
+      font-size: 0.9375rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      margin-bottom: 0.2rem !important;
+    }
+    .rkdf-notice-text {
+      font-size: 0.8125rem !important;
+      color: #475569 !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+    }
+
+    /* Document Checklist Cards (Elevated) */
+    .rkdf-doc-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1.15rem !important;
+      margin-bottom: 2rem !important;
+    }
+    @media (max-width: 768px) {
+      .rkdf-doc-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    .rkdf-doc-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 18px !important;
+      padding: 1.35rem 1.25rem !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 1rem !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 2px 10px -2px rgba(15, 27, 45, 0.03) !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    .rkdf-doc-card:hover {
+      border-color: rgba(229, 133, 37, 0.45) !important;
+      box-shadow: 0 12px 25px -8px rgba(15, 27, 45, 0.1) !important;
+      transform: translateY(-3px) !important;
+    }
+    .rkdf-doc-iconbox {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      border-radius: 12px !important;
+      background: #071322 !important;
+      color: #e58525 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      box-shadow: 0 4px 10px rgba(7, 19, 34, 0.15) !important;
+      transition: all 0.25s ease !important;
+    }
+    .rkdf-doc-card:hover .rkdf-doc-iconbox {
+      background: #e58525 !important;
+      color: #ffffff !important;
+      transform: scale(1.05) rotate(2deg) !important;
+    }
+    .rkdf-doc-iconbox svg {
+      width: 20px !important;
+      height: 20px !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-doc-content {
+      flex: 1 !important;
+      min-width: 0 !important;
+    }
+    .rkdf-doc-header-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.5rem !important;
+      margin-bottom: 0.35rem !important;
+    }
+    .rkdf-doc-scope {
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      color: #e58525 !important;
+    }
+    .rkdf-doc-set-badge {
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      color: #059669 !important;
+      background: rgba(5, 150, 105, 0.1) !important;
+      border: 1px solid rgba(5, 150, 105, 0.2) !important;
+      padding: 0.15rem 0.5rem !important;
+      border-radius: 9999px !important;
+      white-space: nowrap !important;
+    }
+    .rkdf-doc-title {
+      font-size: 0.9375rem !important;
+      font-weight: 700 !important;
+      color: #0f1b2d !important;
+      margin: 0 0 0.35rem 0 !important;
+      line-height: 1.35 !important;
+    }
+    .rkdf-doc-req {
+      font-size: 0.775rem !important;
+      color: #64748b !important;
+      line-height: 1.45 !important;
+      margin: 0 !important;
+    }
+
+    /* Document Section Assistance Footer */
+    .rkdf-doc-footer {
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 16px !important;
+      padding: 1.25rem 1.5rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 1.25rem !important;
+      flex-wrap: wrap !important;
+    }
+    .rkdf-doc-footer-info strong {
+      font-size: 0.875rem !important;
+      color: #0f1b2d !important;
+      display: block !important;
+    }
+    .rkdf-doc-footer-info span {
+      font-size: 0.775rem !important;
+      color: #64748b !important;
+    }
+    .rkdf-doc-footer-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      padding: 0.65rem 1.4rem !important;
+      border-radius: 12px !important;
+      background: #e58525 !important;
+      color: #ffffff !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 12px rgba(229, 133, 37, 0.35) !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+    .rkdf-doc-footer-cta:hover {
+      background: #c86e17 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 16px rgba(229, 133, 37, 0.45) !important;
+    }
+    .rkdf-doc-footer-cta svg {
+      width: 14px !important;
+      height: 14px !important;
+      transition: transform 0.2s ease !important;
+    }
+    .rkdf-doc-footer-cta:hover svg {
+      transform: translateX(3px) !important;
+    }
+
+    /* ==================== GLOBAL SECTION SPACING UTILITIES ==================== */
+    .bg-surface {
+      background-color: #f8fafc !important;
+    }
+    .py-14 {
+      padding-top: 3.5rem !important;
+      padding-bottom: 3.5rem !important;
+    }
+    .py-16 {
+      padding-top: 4rem !important;
+      padding-bottom: 4rem !important;
+    }
+    .py-20 {
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important;
+    }
+
+    /* ==================== OFFICIAL APPLICATION PORTAL FORM ==================== */
+    .rkdf-portal-section {
+      padding-top: 3.5rem !important;
+      padding-bottom: 5.5rem !important;
+      background: #f8fafc !important;
+      position: relative !important;
+    }
+    @media (max-width: 768px) {
+      .rkdf-portal-section {
+        padding-top: 2rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+    }
+    .rkdf-portal-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 24px !important;
+      box-shadow: 0 12px 40px -10px rgba(15, 27, 45, 0.12) !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+    .rkdf-portal-topbar {
+      background: linear-gradient(135deg, #071322 0%, #0d1e34 60%, #152b48 100%) !important;
+      padding: 1.25rem 1.75rem !important;
+      border-bottom: 1px solid rgba(229, 133, 37, 0.3) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 1rem !important;
+    }
+    .rkdf-portal-top-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.85rem !important;
+    }
+    .rkdf-portal-top-icon {
+      width: 40px !important;
+      height: 40px !important;
+      min-width: 40px !important;
+      border-radius: 10px !important;
+      background: rgba(229, 133, 37, 0.18) !important;
+      border: 1px solid rgba(229, 133, 37, 0.35) !important;
+      color: #e58525 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+    .rkdf-portal-top-icon svg {
+      width: 20px !important;
+      height: 20px !important;
+      color: #e58525 !important;
+    }
+    .rkdf-portal-eyebrow {
+      font-size: 0.6875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.12em !important;
+      color: #e58525 !important;
+      display: block !important;
+      line-height: 1 !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .rkdf-portal-top-title {
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      margin: 0 !important;
+      line-height: 1.2 !important;
+    }
+    .rkdf-portal-accreditation {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: #cbd5e1 !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      padding: 0.35rem 0.75rem !important;
+      border-radius: 9999px !important;
+    }
+    .rkdf-portal-accreditation svg {
+      width: 14px !important;
+      height: 14px !important;
+      color: #10b981 !important;
+      flex-shrink: 0 !important;
+    }
+
+    .rkdf-portal-body {
+      padding: 2.25rem !important;
+    }
+    @media (max-width: 640px) {
+      .rkdf-portal-body {
+        padding: 1.5rem !important;
+      }
+    }
+
+    /* Form Inputs */
+    .rkdf-form-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1.5rem 1.25rem !important;
+    }
+    @media (max-width: 640px) {
+      .rkdf-form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+    }
+    .rkdf-form-full {
+      grid-column: 1 / -1 !important;
+    }
+    .rkdf-label {
+      display: block !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: #1e293b !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .rkdf-label span.req {
+      color: #e58525 !important;
+      margin-left: 0.2rem !important;
+    }
+    .rkdf-input {
+      width: 100% !important;
+      height: 48px !important;
+      border-radius: 12px !important;
+      border: 1.5px solid #cbd5e1 !important;
+      background: #ffffff !important;
+      padding: 0 1.15rem !important;
+      font-size: 0.9rem !important;
+      font-weight: 500 !important;
+      color: #0f1b2d !important;
+      outline: none !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 1px 2px rgba(15, 27, 45, 0.04) !important;
+      box-sizing: border-box !important;
+    }
+    .rkdf-input:hover {
+      border-color: #94a3b8 !important;
+    }
+    .rkdf-input:focus {
+      border-color: #e58525 !important;
+      box-shadow: 0 0 0 3px rgba(229, 133, 37, 0.15) !important;
+    }
+    .rkdf-input::placeholder {
+      color: #94a3b8 !important;
+      font-weight: 400 !important;
+    }
+
+    /* Course Quick Suggestions */
+    .rkdf-course-pills {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.4rem !important;
+      margin-top: 0.5rem !important;
+    }
+    .rkdf-course-pill-label {
+      font-size: 0.6875rem !important;
+      font-weight: 600 !important;
+      color: #64748b !important;
+      margin-right: 0.25rem !important;
+    }
+    .rkdf-course-pill {
+      font-size: 0.6875rem !important;
+      font-weight: 600 !important;
+      padding: 0.2rem 0.55rem !important;
+      border-radius: 6px !important;
+      background: #f1f5f9 !important;
+      border: 1px solid #e2e8f0 !important;
+      color: #334155 !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      text-decoration: none !important;
+    }
+    .rkdf-course-pill:hover {
+      background: rgba(229, 133, 37, 0.12) !important;
+      border-color: rgba(229, 133, 37, 0.35) !important;
+      color: #b45309 !important;
+    }
+
+    /* Scholarship Assurance Note */
+    .rkdf-portal-note {
+      background: linear-gradient(135deg, rgba(229, 133, 37, 0.08) 0%, rgba(229, 133, 37, 0.03) 100%) !important;
+      border: 1px solid rgba(229, 133, 37, 0.25) !important;
+      border-radius: 14px !important;
+      padding: 1rem 1.25rem !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 0.75rem !important;
+      margin-top: 1.75rem !important;
+    }
+    .rkdf-portal-note-icon {
+      width: 28px !important;
+      height: 28px !important;
+      min-width: 28px !important;
+      border-radius: 8px !important;
+      background: #e58525 !important;
+      color: #ffffff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      margin-top: 0.1rem !important;
+    }
+    .rkdf-portal-note-icon svg {
+      width: 15px !important;
+      height: 15px !important;
+      color: #ffffff !important;
+    }
+    .rkdf-portal-note-text {
+      font-size: 0.775rem !important;
+      color: #475569 !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+    }
+    .rkdf-portal-note-text strong {
+      color: #0f1b2d !important;
+    }
+
+    /* Submit Button */
+    .rkdf-portal-submit-btn {
+      width: 100% !important;
+      height: 52px !important;
+      border: none !important;
+      border-radius: 14px !important;
+      background: linear-gradient(135deg, #e58525 0%, #f59e0b 50%, #d97706 100%) !important;
+      color: #ffffff !important;
+      font-size: 0.875rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      cursor: pointer !important;
+      box-shadow: 0 8px 22px -4px rgba(229, 133, 37, 0.45) !important;
+      transition: all 0.25s ease !important;
+      margin-top: 1.75rem !important;
+    }
+    .rkdf-portal-submit-btn:hover {
+      background: linear-gradient(135deg, #d97706 0%, #e58525 50%, #b45309 100%) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 28px -4px rgba(229, 133, 37, 0.55) !important;
+    }
+    .rkdf-portal-submit-btn svg {
+      width: 17px !important;
+      height: 17px !important;
+      transition: transform 0.2s ease !important;
+    }
+    .rkdf-portal-submit-btn:hover svg {
+      transform: translateX(4px) !important;
+    }
+
+    /* Bottom Trust Bar */
+    .rkdf-portal-trust-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-around !important;
+      gap: 1rem !important;
+      padding: 1.25rem 0.5rem 0 0.5rem !important;
+      margin-top: 1.5rem !important;
+      border-top: 1px dashed #e2e8f0 !important;
+      flex-wrap: wrap !important;
+    }
+    .rkdf-portal-trust-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: #475569 !important;
+    }
+    .rkdf-portal-trust-item svg {
+      width: 15px !important;
+      height: 15px !important;
+      color: #059669 !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Portal Footer */
+    .rkdf-portal-footer {
+      background: #f8fafc !important;
+      padding: 1.15rem 1.75rem !important;
+      border-top: 1px solid #e2e8f0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      gap: 1rem !important;
+      font-size: 0.775rem !important;
+    }
+    .rkdf-portal-footer-phone {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      color: #475569 !important;
+    }
+    .rkdf-portal-footer-phone svg {
+      width: 15px !important;
+      height: 15px !important;
+      color: #e58525 !important;
+    }
+    .rkdf-portal-footer-phone strong a {
+      color: #0f1b2d !important;
+      text-decoration: none !important;
+      font-weight: 700 !important;
+    }
+    .rkdf-portal-footer-phone strong a:hover {
+      color: #e58525 !important;
+      text-decoration: underline !important;
+    }
+    .rkdf-portal-footer-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      color: #071322 !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+    }
+    .rkdf-portal-footer-link:hover {
+      color: #e58525 !important;
+    }
+    /* ==================== SCHOLARSHIP STATS GRID ==================== */
+    .rkdf-stat-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.25rem !important;
+      margin-bottom: 2rem !important;
+    }
+    @media (max-width: 1024px) {
+      .rkdf-stat-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+      }
+    }
+    @media (max-width: 640px) {
+      .rkdf-stat-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .rkdf-stat-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 16px !important;
+      padding: 1.25rem 1.25rem !important;
+      box-shadow: 0 2px 10px -2px rgba(15, 27, 45, 0.04) !important;
+      position: relative !important;
+      overflow: hidden !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    .rkdf-stat-card::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 2.5px !important;
+      background: var(--stat-accent, #e58525) !important;
+      transition: height 0.2s ease !important;
+    }
+    .rkdf-stat-card:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 12px 28px -6px rgba(15, 27, 45, 0.09) !important;
+      border-color: rgba(229, 133, 37, 0.4) !important;
+    }
+    .rkdf-stat-card:hover::before {
+      height: 3.5px !important;
+    }
+
+    .rkdf-stat-top {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.5rem !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .rkdf-stat-iconbox {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 10px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      background: #071322 !important;
+      color: #e58525 !important;
+      border: 1px solid rgba(229, 133, 37, 0.25) !important;
+      transition: all 0.2s ease !important;
+    }
+    .rkdf-stat-card:hover .rkdf-stat-iconbox {
+      transform: scale(1.06) !important;
+      background: #0d1e34 !important;
+      box-shadow: 0 4px 12px rgba(7, 19, 34, 0.15) !important;
+    }
+    .rkdf-stat-iconbox svg {
+      width: 18px !important;
+      height: 18px !important;
+    }
+    .rkdf-stat-badge {
+      font-size: 0.6875rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      padding: 0.2rem 0.55rem !important;
+      border-radius: 9999px !important;
+      background: #f8fafc !important;
+      color: #475569 !important;
+      border: 1px solid #e2e8f0 !important;
+      white-space: nowrap !important;
+    }
+
+    .rkdf-stat-num-row {
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 0.25rem !important;
+      margin-bottom: 0.3rem !important;
+    }
+    .rkdf-stat-number {
+      font-size: 2.1rem !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      color: #071322 !important;
+      font-family: var(--font-serif, 'Playfair Display', Georgia, serif) !important;
+      letter-spacing: -0.01em !important;
+    }
+    .rkdf-stat-suffix {
+      font-size: 1.35rem !important;
+      font-weight: 700 !important;
+      color: #e58525 !important;
+      line-height: 1 !important;
+      font-family: var(--font-serif, 'Playfair Display', Georgia, serif) !important;
+    }
+    .rkdf-stat-label {
+      font-size: 0.875rem !important;
+      font-weight: 600 !important;
+      color: #0f1b2d !important;
+      line-height: 1.35 !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .rkdf-stat-desc {
+      font-size: 0.75rem !important;
+      color: #64748b !important;
+      line-height: 1.4 !important;
+      margin: 0 !important;
     }
 
   </style>

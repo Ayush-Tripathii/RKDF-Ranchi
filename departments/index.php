@@ -236,8 +236,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <?php foreach ($faculties as $fac): ?>
         <article class="faculty-card group">
           <!-- Card Header Banner -->
-          <div class="faculty-header-banner">
-            <div class="flex items-center justify-between gap-2 mb-3">
+          <div class="faculty-header-banner rounded-[10px]">
+            <div class="flex items-center justify-between gap-2 mb-5">
               <span class="inline-flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-gold/20 text-gold border border-gold/30">
                 <?= e($fac['badge']) ?>
               </span>
@@ -299,46 +299,70 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </main>
 
 <!-- 4. Academic Council & Statutory Endorsements -->
-<section class="py-20 bg-slate-50/80 border-t border-slate-200">
+<section class="py-14 sm:py-16 bg-slate-50/80 border-t border-slate-200/80">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Feature 1 -->
-      <div class="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 flex flex-col">
-        <div class="w-12 h-12 rounded-2xl bg-brand text-gold flex items-center justify-center mb-5 shadow-sm shrink-0">
-          <?= lucide_icon('scale', 'w-6 h-6') ?>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Card 1: Statutory Accreditations -->
+      <div class="group relative p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-brand via-gold to-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div>
+          <div class="flex items-center justify-between gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#071322] to-[#132a4a] text-gold border border-gold/30 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:rotate-2 transition-transform duration-300 shrink-0">
+              <?= lucide_icon('scale', 'w-5 h-5 text-gold') ?>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-500/10 border border-amber-500/25 px-2.5 py-1 rounded-full">
+              UGC • BCI • PCI • AIU
+            </span>
+          </div>
+          <h3 class="font-serif text-xl sm:text-[1.35rem] font-medium text-slate-900 leading-snug mt-4 group-hover:text-brand transition-colors">
+            Statutory Accreditations
+          </h3>
+          <p class="text-xs sm:text-[13px] text-slate-600 mt-2.5 leading-relaxed">
+            Approved by the UGC under Section 2(f), Bar Council of India (BCI), Pharmacy Council of India (PCI), and Association of Indian Universities (AIU).
+          </p>
         </div>
-        <h3 class="font-serif text-2xl font-normal text-slate-900 leading-snug">
-          Statutory Accreditations
-        </h3>
-        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
-          Approved by the UGC under Section 2(f), Bar Council of India (BCI), Pharmacy Council of India (PCI), and Association of Indian Universities (AIU).
-        </p>
       </div>
 
-      <!-- Feature 2 -->
-      <div class="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 flex flex-col">
-        <div class="w-12 h-12 rounded-2xl bg-brand text-gold flex items-center justify-center mb-5 shadow-sm shrink-0">
-          <?= lucide_icon('layers', 'w-6 h-6') ?>
+      <!-- Card 2: Model Curricula & CBCS System -->
+      <div class="group relative p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-brand via-gold to-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div>
+          <div class="flex items-center justify-between gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#071322] to-[#132a4a] text-gold border border-gold/30 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:rotate-2 transition-transform duration-300 shrink-0">
+              <?= lucide_icon('layers', 'w-5 h-5 text-gold') ?>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-brand bg-brand/10 border border-brand/20 px-2.5 py-1 rounded-full">
+              NEP 2020 &amp; CBCS
+            </span>
+          </div>
+          <h3 class="font-serif text-xl sm:text-[1.35rem] font-medium text-slate-900 leading-snug mt-4 group-hover:text-brand transition-colors">
+            Model Curricula &amp; CBCS System
+          </h3>
+          <p class="text-xs sm:text-[13px] text-slate-600 mt-2.5 leading-relaxed">
+            All programs follow the Choice-Based Credit System (CBCS) aligned with the National Education Policy (NEP 2020) guidelines and practical industry apprenticeships.
+          </p>
         </div>
-        <h3 class="font-serif text-2xl font-normal text-slate-900 leading-snug">
-          Model Curricula &amp; CBCS System
-        </h3>
-        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
-          All programs follow the Choice-Based Credit System (CBCS) aligned with the National Education Policy (NEP 2020) guidelines and practical industry apprenticeships.
-        </p>
       </div>
 
-      <!-- Feature 3 -->
-      <div class="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 flex flex-col">
-        <div class="w-12 h-12 rounded-2xl bg-brand text-gold flex items-center justify-center mb-5 shadow-sm shrink-0">
-          <?= lucide_icon('briefcase', 'w-6 h-6') ?>
+      <!-- Card 3: Pan-India Placement Consortium -->
+      <div class="group relative p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-gold/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-brand via-gold to-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div>
+          <div class="flex items-center justify-between gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#071322] to-[#132a4a] text-gold border border-gold/30 flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:rotate-2 transition-transform duration-300 shrink-0">
+              <?= lucide_icon('briefcase', 'w-5 h-5 text-gold') ?>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-1 rounded-full">
+              500+ Corporate Recruiters
+            </span>
+          </div>
+          <h3 class="font-serif text-xl sm:text-[1.35rem] font-medium text-slate-900 leading-snug mt-4 group-hover:text-brand transition-colors">
+            Pan-India Placement Consortium
+          </h3>
+          <p class="text-xs sm:text-[13px] text-slate-600 mt-2.5 leading-relaxed">
+            Over 500+ corporate recruiters, global MNCs, research laboratories, and law chambers actively hire graduates through central on-campus placement drives.
+          </p>
         </div>
-        <h3 class="font-serif text-2xl font-normal text-slate-900 leading-snug">
-          Pan-India Placement Consortium
-        </h3>
-        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
-          Over 500+ corporate recruiters, global MNCs, research laboratories, and law chambers actively hire graduates through central on-campus placement drives.
-        </p>
       </div>
     </div>
   </div>

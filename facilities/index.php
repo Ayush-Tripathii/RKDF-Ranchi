@@ -206,22 +206,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">20+ Acres</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Lush Green Campus</span>
+    <div class="rkdf-stat-grid">
+      <!-- 20+ Acres -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('tree-pine') ?>
+          </div>
+          <span class="rkdf-stat-badge">Eco Campus</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">20</span>
+          <span class="rkdf-stat-suffix">+ Acres</span>
+        </div>
+        <div class="rkdf-stat-label">Lush Green Campus</div>
+        <p class="rkdf-stat-desc">Serene, pollution-free academic acreage</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">1,00,000+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Library Volumes</span>
+
+      <!-- 1,00,000+ Volumes -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('book-open') ?>
+          </div>
+          <span class="rkdf-stat-badge">Central Library</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">1,00,000</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">Library Volumes</div>
+        <p class="rkdf-stat-desc">Standardized print titles, journals &amp; OPAC</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">08 Buses</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Transit Network Fleet</span>
+
+      <!-- 08 Buses -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('bus') ?>
+          </div>
+          <span class="rkdf-stat-badge">Transit Fleet</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">08</span>
+          <span class="rkdf-stat-suffix">Buses</span>
+        </div>
+        <div class="rkdf-stat-label">Transit Network Fleet</div>
+        <p class="rkdf-stat-desc">Connecting major city transit hubs &amp; hostels</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">100%</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Wi-Fi & CCTV Enabled</span>
+
+      <!-- 100% Connectivity -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('wifi') ?>
+          </div>
+          <span class="rkdf-stat-badge">Smart Campus</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">100</span>
+          <span class="rkdf-stat-suffix">%</span>
+        </div>
+        <div class="rkdf-stat-label">Wi-Fi &amp; CCTV Enabled</div>
+        <p class="rkdf-stat-desc">24×7 safety monitoring &amp; gigabit network</p>
       </div>
     </div>
 

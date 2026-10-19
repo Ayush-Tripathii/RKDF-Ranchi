@@ -161,7 +161,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
             <div class="recognition-footer">
               <span class="text-xs text-slate-400 font-medium">Statutory Cell</span>
-              <a href="<?= url('committees/' . $slug . '.php') ?>" class="recognition-btn group">
+              <a href="<?= url('committees/' . $slug . '.php') ?>" class="approval-action-btn group">
                 <span>View Committee</span>
                 <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
               </a>

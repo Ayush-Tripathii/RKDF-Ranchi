@@ -217,7 +217,7 @@ $academics_menu_categories = [
         'href'  => 'admissions/',
         'items' => [
             ['label' => 'RKDF Ranchi Prospectus (PDF)',     'href' => 'documents/RKDF-Prospectus.pdf', 'target' => '_blank'],
-            ['label' => 'Admission Procedure 2026–27',      'href' => 'admissions/'],
+            ['label' => 'Admission Procedure 2026–27',      'href' => 'admissions/admission-procedure.php'],
             ['label' => 'Download Admission Form (PDF)',    'href' => 'documents/ADMISSION-FORM.pdf', 'target' => '_blank'],
             ['label' => 'Fee Structure & Eligibility 2026–27 (PDF)','href' => 'documents/FEES-STRUCTURE-ELIGIBILITY-2026-27.pdf', 'target' => '_blank'],
             ['label' => 'Financial Aid & Loan Facility',    'href' => 'admissions/scholarship.php'],

@@ -136,22 +136,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">08 Buses</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Owned Transit Fleet</span>
+    <div class="rkdf-stat-grid">
+      <!-- 08 Buses -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('bus') ?>
+          </div>
+          <span class="rkdf-stat-badge">Transit Fleet</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">08</span>
+          <span class="rkdf-stat-suffix">Buses</span>
+        </div>
+        <div class="rkdf-stat-label">Heavy Passenger Fleet</div>
+        <p class="rkdf-stat-desc">University-owned transit coaches covering all major Ranchi routes</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">100%</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">GPS Telematics Tracked</span>
+
+      <!-- 100% GPS Tracked -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('compass') ?>
+          </div>
+          <span class="rkdf-stat-badge">Telematics</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">100</span>
+          <span class="rkdf-stat-suffix">%</span>
+        </div>
+        <div class="rkdf-stat-label">GPS Telematics Tracked</div>
+        <p class="rkdf-stat-desc">Live route tracking, speed governance &amp; verified driver staff</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">Nominal</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Subsidized Bus Pass</span>
+
+      <!-- Nominal Pass -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('receipt') ?>
+          </div>
+          <span class="rkdf-stat-badge">Student Fare</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Nominal</span>
+          <span class="rkdf-stat-suffix">Rates</span>
+        </div>
+        <div class="rkdf-stat-label">Subsidized Bus Passes</div>
+        <p class="rkdf-stat-desc">Highly subsidized term passes for scholars and day scholars</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">Excursions</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Study &amp; Industry Tours</span>
+
+      <!-- Excursions -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('map-pin') ?>
+          </div>
+          <span class="rkdf-stat-badge">Field Trips</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">All-Route</span>
+          <span class="rkdf-stat-suffix">Tours</span>
+        </div>
+        <div class="rkdf-stat-label">Study &amp; Industry Tours</div>
+        <p class="rkdf-stat-desc">Dedicated excursion coaches for plant visits, seminars &amp; camps</p>
       </div>
     </div>
 
@@ -230,15 +277,15 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </div>
         <div class="flex flex-wrap items-center gap-3 shrink-0">
           <?php if (file_exists(dirname(__DIR__) . '/documents/Bus-Registration-Form.pdf')): ?>
-            <a href="<?= url('documents/Bus-Registration-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm">
-              <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
+            <a href="<?= url('documents/Bus-Registration-Form.pdf') ?>" target="_blank" class="rkdf-doc-dl-btn">
+              <?= lucide_icon('file-text') ?>
               <span>Bus Registration Form (PDF)</span>
-              <?= lucide_icon('download', 'w-3.5 h-3.5') ?>
+              <?= lucide_icon('download') ?>
             </a>
           <?php endif; ?>
-          <a href="<?= url('contact.php') ?>" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm">
+          <a href="<?= url('contact.php') ?>" class="rkdf-header-cta-btn">
             <span>Route &amp; Stop Details</span>
-            <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
+            <?= lucide_icon('arrow-right') ?>
           </a>
         </div>
       </div>

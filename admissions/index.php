@@ -55,62 +55,319 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <span>Admission Process</span>
       </a>
     </div>
-  </div>
 </section>
 
-<!-- Admission Steps -->
-<section class="py-24 bg-surface border-b border-border" id="process">
-  <div class="mx-auto max-w-7xl px-6">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <div class="text-xs tracking-[0.2em] uppercase text-gold font-medium">How to Apply</div>
-      <h2 class="font-serif text-4xl md:text-5xl mt-3 font-normal text-foreground">Simple. Transparent. Online.</h2>
+<!-- Sub-Navigation Tabs for Admissions -->
+<?php require_once dirname(__DIR__) . '/includes/admissions_nav_tabs.php'; ?>
+
+<!-- ==================== ADMISSION STEPS (HOW TO APPLY) ==================== -->
+<section class="py-20 md:py-24 bg-surface border-b border-border relative overflow-hidden" id="process">
+  <!-- Subtle decorative ambient glows -->
+  <div class="absolute -top-32 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 left-1/4 w-96 h-96 bg-brand/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="rkdf-section-tag">
+        <?= lucide_icon('compass') ?>
+        <span>Admission Roadmap 2026–27</span>
+      </span>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        Simple. Transparent. <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-[#071322]">100% Online.</span>
+      </h2>
+      <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+        Follow our seamless 6-stage admissions pipeline to secure your seat at RKDF University Ranchi with verified merit assessment and scholarship evaluation.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <!-- 6-Stage Process Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
       <?php
       $steps = [
-        ['step'=>'01', 'title'=>'Register Online',     'desc'=>'Create your applicant account on our portal using a valid email ID and mobile number.'],
-        ['step'=>'02', 'title'=>'Fill Application',   'desc'=>'Complete the application form with your academic details, program choice, and personal info.'],
-        ['step'=>'03', 'title'=>'Upload Documents',   'desc'=>'Upload required documents: marksheets, ID proof, photograph, and category certificate.'],
-        ['step'=>'04', 'title'=>'Pay Application Fee', 'desc'=>'Pay the non-refundable application fee securely via UPI, Net Banking, or Credit/Debit Card.'],
-        ['step'=>'05', 'title'=>'Entrance / Merit',   'desc'=>'Attend the entrance test (if applicable) or get evaluated based on qualifying exams.'],
-        ['step'=>'06', 'title'=>'Admission Confirmed', 'desc'=>'Receive your official admission offer letter, complete fee submission, and enroll.'],
+        [
+          'step'        => '01',
+          'icon'        => 'user-check',
+          'tag'         => 'Stage 1 · Portal Signup',
+          'title'       => 'Register Online',
+          'desc'        => 'Create your verified applicant account on our official admissions portal using an active email ID and mobile number.',
+          'hint'        => 'Instant OTP Verification',
+          'action_text' => 'Start Registration',
+          'action_url'  => 'admissions/apply.php',
+        ],
+        [
+          'step'        => '02',
+          'icon'        => 'file-text',
+          'tag'         => 'Stage 2 · Course Choice',
+          'title'       => 'Fill Application',
+          'desc'        => 'Complete the digital application form with your academic records, program selection, personal info, and parent contacts.',
+          'hint'        => 'Auto-Save Enabled',
+          'action_text' => 'Apply Online',
+          'action_url'  => 'admissions/apply.php',
+        ],
+        [
+          'step'        => '03',
+          'icon'        => 'file-search',
+          'tag'         => 'Stage 3 · Verification',
+          'title'       => 'Upload Documents',
+          'desc'        => 'Upload clear digital scans of marksheets (10th/12th/Graduation), government ID, passport photograph, and category certificate.',
+          'hint'        => 'PDF & JPG Accepted',
+          'action_text' => 'Document Checklist',
+          'action_url'  => 'admissions/admission-procedure.php',
+        ],
+        [
+          'step'        => '04',
+          'icon'        => 'receipt',
+          'tag'         => 'Stage 4 · Registration',
+          'title'       => 'Pay Application Fee',
+          'desc'        => 'Pay the nominal one-time application fee securely via integrated UPI, Net Banking, Debit Card, or Credit Card.',
+          'hint'        => 'Instant Digital Receipt',
+          'action_text' => 'Fee Structure',
+          'action_url'  => 'documents/RKDF-FEE-STRUCTURE.pdf',
+        ],
+        [
+          'step'        => '05',
+          'icon'        => 'award',
+          'tag'         => 'Stage 5 · Merit Assessment',
+          'title'       => 'Entrance & Merit List',
+          'desc'        => 'Appear for the university entrance test (where applicable) or get evaluated on your qualifying exam scores and scholarship aid.',
+          'hint'        => 'Up to 100% Scholarships',
+          'action_text' => 'Scholarship Info',
+          'action_url'  => 'admissions/scholarship.php',
+        ],
+        [
+          'step'        => '06',
+          'icon'        => 'graduation-cap',
+          'tag'         => 'Stage 6 · Final Enrollment',
+          'title'       => 'Admission Confirmed',
+          'desc'        => 'Receive your provisional admission offer letter, submit the first semester tuition fee installment, and collect your student ID kit.',
+          'hint'        => 'Official Roll Issued',
+          'action_text' => 'Admission Desk',
+          'action_url'  => 'admissions/admission-procedure.php',
+        ],
       ];
       foreach ($steps as $s): ?>
-        <div class="rounded-2xl border border-border bg-card p-6 shadow-sm">
-          <div class="font-serif text-3xl text-gold"><?= $s['step'] ?></div>
-          <h3 class="font-serif text-xl mt-3 text-foreground font-normal"><?= e($s['title']) ?></h3>
-          <p class="text-sm text-muted-foreground mt-2 leading-relaxed"><?= e($s['desc']) ?></p>
+        <div class="rkdf-step-card group">
+          <!-- Top Subtle Accent Gradient -->
+          <div class="rkdf-step-accent"></div>
+
+          <div>
+            <!-- Top Row: Big Serif Number & Icon Box -->
+            <div class="rkdf-step-top">
+              <span class="rkdf-step-num"><?= $s['step'] ?></span>
+              <div class="rkdf-step-icon">
+                <?= lucide_icon($s['icon']) ?>
+              </div>
+            </div>
+
+            <!-- Stage Tag -->
+            <span class="rkdf-step-tag">
+              <?= e($s['tag']) ?>
+            </span>
+
+            <!-- Step Title -->
+            <h3 class="rkdf-step-title">
+              <?= e($s['title']) ?>
+            </h3>
+
+            <!-- Step Description -->
+            <p class="rkdf-step-desc">
+              <?= e($s['desc']) ?>
+            </p>
+          </div>
+
+          <!-- Step Footer -->
+          <div class="rkdf-step-footer">
+            <span class="rkdf-step-hint">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block shrink-0"></span>
+              <span><?= e($s['hint']) ?></span>
+            </span>
+            <a href="<?= url($s['action_url']) ?>" class="rkdf-step-link">
+              <span><?= e($s['action_text']) ?></span>
+              <?= lucide_icon('arrow-right') ?>
+            </a>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>
+
+    <!-- Bottom Quick Help Bar -->
+    <div class="rkdf-help-banner">
+      <div class="rkdf-help-banner-left">
+        <div class="rkdf-help-banner-icon">
+          <?= lucide_icon('phone-call') ?>
+        </div>
+        <div>
+          <h4 class="rkdf-help-banner-title">Need help with the application process?</h4>
+          <p class="rkdf-help-banner-desc">Our dedicated Admissions Counseling Desk is available Mon–Sat (9 AM – 6 PM) to assist you.</p>
+        </div>
+      </div>
+      <div class="rkdf-help-banner-actions">
+        <a href="tel:<?= preg_replace('/[^0-9+]/', '', SITE_PHONE) ?>" class="rkdf-help-banner-phone">
+          <?= lucide_icon('phone') ?>
+          <span><?= SITE_PHONE ?></span>
+        </a>
+        <a href="<?= url('admissions/apply.php') ?>" class="rkdf-help-banner-apply">
+          <span>Apply Online 2026–27</span>
+          <?= lucide_icon('arrow-right') ?>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Scholarships -->
-<section class="py-24 bg-background" id="scholarships">
-  <div class="mx-auto max-w-7xl px-6">
-    <div class="mb-12 max-w-2xl">
-      <div class="text-xs tracking-[0.2em] uppercase text-gold font-medium">Financial Aid</div>
-      <h2 class="font-serif text-4xl md:text-5xl mt-3 font-normal text-foreground">Scholarships &amp; Fee Waivers</h2>
+<!-- ==================== SCHOLARSHIPS & FINANCIAL AID ==================== -->
+<section class="py-20 md:py-24 bg-white border-b border-border relative overflow-hidden" id="scholarships">
+  <!-- Subtle ambient decorative glow -->
+  <div class="absolute -top-32 left-1/3 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+    <!-- Section Header with Direct Action -->
+    <div class="rkdf-scholarship-header-bar">
+      <div>
+        <div class="rkdf-scholarship-eyebrow">
+          <?= lucide_icon('award') ?>
+          <span>Financial Aid</span>
+        </div>
+        <h2 class="rkdf-scholarship-main-title">
+          Scholarships &amp; Fee Waivers <span>2026–27</span>
+        </h2>
+        <p class="rkdf-scholarship-subtitle">
+          Over ₹2.5 Crore awarded annually in institutional tuition waivers, state welfare stipends, and athletic achievement grants.
+        </p>
+      </div>
+      <a href="<?= url('admissions/scholarship.php') ?>" class="rkdf-scholarship-header-cta">
+        <span>Explore All Schemes</span>
+        <?= lucide_icon('arrow-right') ?>
+      </a>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- 4 Scholarship Schemes Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <?php
       $scholarships = [
-        ['name'=>'Merit Scholarship',      'amount'=>'Up to 100% Waiver', 'criteria'=>'Top 1% in qualifying exam / 95%+ in Class XII'],
-        ['name'=>'Means-Based Grant',      'amount'=>'Up to 60% Waiver',  'criteria'=>'Family annual income below ₹5 Lakh'],
-        ['name'=>'Sports Excellence',      'amount'=>'Up to 50% Waiver',  'criteria'=>'National / State level sports representation'],
-        ['name'=>'Special Category Grant', 'amount'=>'Govt Norms',        'criteria'=>'Valid SC/ST/OBC category certificate'],
+        [
+          'name'     => 'Merit Scholarship',
+          'amount'   => 'Up to 100% Waiver',
+          'badge'    => 'Merit Excellence',
+          'icon'     => 'trophy',
+          'criteria' => 'Top 1% in qualifying exam / 95%+ in Class XII',
+          'desc'     => 'Awarded to top performers securing top percentile in 10+2 board examinations or national/state entrance tests.',
+          'perk'     => '100% Tuition Fee Coverage',
+          'status'   => 'Direct Merit Quota',
+          'url'      => 'admissions/scholarship.php#merit',
+        ],
+        [
+          'name'     => 'Means-Based Grant',
+          'amount'   => 'Up to 60% Waiver',
+          'badge'    => 'Need-Based Aid',
+          'icon'     => 'heart-handshake',
+          'criteria' => 'Family annual income below ₹5 Lakh',
+          'desc'     => 'Dedicated financial concession for deserving candidates from economically weaker sections.',
+          'perk'     => 'Income Proof Certificate',
+          'status'   => 'Need-Based Concession',
+          'url'      => 'admissions/scholarship.php#means',
+        ],
+        [
+          'name'     => 'Sports Excellence',
+          'amount'   => 'Up to 50% Waiver',
+          'badge'    => 'Athletic Talent',
+          'icon'     => 'dumbbell',
+          'criteria' => 'National / State level sports representation',
+          'desc'     => 'State & National level medalists, Khelo India participants, and recognized sports achievers across disciplines.',
+          'perk'     => 'Attendance Flex & Training Aid',
+          'status'   => 'Trial Assessment',
+          'url'      => 'admissions/scholarship.php#sports',
+        ],
+        [
+          'name'     => 'Special Category Grant',
+          'amount'   => 'Govt Norms & DBT',
+          'badge'    => 'Govt Welfare',
+          'icon'     => 'landmark',
+          'criteria' => 'Valid SC/ST/OBC category certificate',
+          'desc'     => 'Comprehensive tuition reimbursement facilitated through Central DBT and Jharkhand E-Kalyan official portal.',
+          'perk'     => 'E-Kalyan Facilitation Desk',
+          'status'   => 'Post-Matric Subsidy',
+          'url'      => 'admissions/scholarship.php#special',
+        ],
       ];
       foreach ($scholarships as $sc): ?>
-        <div class="rounded-2xl border border-border bg-surface p-6">
-          <div class="text-xs tracking-wider uppercase text-gold font-semibold"><?= e($sc['amount']) ?></div>
-          <h3 class="font-serif text-xl mt-2 text-foreground font-normal"><?= e($sc['name']) ?></h3>
-          <p class="text-xs text-muted-foreground mt-3 leading-relaxed"><?= e($sc['criteria']) ?></p>
+        <div class="rkdf-scholarship-card group">
+          <!-- Top Accent Line -->
+          <div class="rkdf-scholarship-accent"></div>
+
+          <div>
+            <!-- Top Header: Badge & Icon Box -->
+            <div class="rkdf-scholarship-header">
+              <span class="rkdf-scholarship-badge">
+                <?= e($sc['badge']) ?>
+              </span>
+              <div class="rkdf-scholarship-icon">
+                <?= lucide_icon($sc['icon']) ?>
+              </div>
+            </div>
+
+            <!-- Amount & Title -->
+            <div class="rkdf-scholarship-amount">
+              <?= e($sc['amount']) ?>
+            </div>
+            <h3 class="rkdf-scholarship-title">
+              <?= e($sc['name']) ?>
+            </h3>
+
+            <!-- Eligibility Benchmark Criteria -->
+            <div class="rkdf-scholarship-criteria">
+              <?= lucide_icon('sparkles') ?>
+              <span><?= e($sc['criteria']) ?></span>
+            </div>
+
+            <!-- Description -->
+            <p class="rkdf-scholarship-desc">
+              <?= e($sc['desc']) ?>
+            </p>
+
+            <!-- Perk Pill -->
+            <div class="rkdf-scholarship-perk">
+              <?= lucide_icon('check-circle-2') ?>
+              <span><?= e($sc['perk']) ?></span>
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="rkdf-scholarship-footer">
+            <span class="rkdf-scholarship-status">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block shrink-0"></span>
+              <span><?= e($sc['status']) ?></span>
+            </span>
+            <a href="<?= url($sc['url']) ?>" class="rkdf-scholarship-link">
+              <span>Guidelines</span>
+              <?= lucide_icon('arrow-right') ?>
+            </a>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>
+
+    <!-- Statutory Quota Callout Strip -->
+    <div class="mt-10 p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 mt-0.5">
+          <?= lucide_icon('shield-check', 'w-5 h-5 text-white') ?>
+        </div>
+        <div>
+          <strong class="text-xs sm:text-sm text-slate-900 font-bold block">कल्याणकारी शुल्क छूट एवं ई-कल्याण छात्रवृत्ति सुविधा</strong>
+          <span class="text-xs text-slate-700 leading-relaxed block mt-0.5">
+            अनुसूचित जाति (SC), अनुसूचित जनजाति (ST), अन्य पिछड़ा वर्ग (OBC) एवं अल्पसंख्यक कोटे के अन्तर्गत छात्र-छात्राओं के प्रवेश में नियमानुसार विशेष शुल्क छूट प्रदान की जाती है।
+          </span>
+        </div>
+      </div>
+      <a href="<?= url('admissions/scholarship.php') ?>" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-amber-950 uppercase tracking-wider shrink-0 underline decoration-amber-500 decoration-1 underline-offset-4">
+        <span>Detailed Guidelines</span>
+        <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
+      </a>
+    </div>
+
   </div>
 </section>
 

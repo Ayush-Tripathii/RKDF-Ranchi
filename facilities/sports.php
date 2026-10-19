@@ -136,22 +136,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">Multi-Sport</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Lush Turf Grounds</span>
+    <div class="rkdf-stat-grid">
+      <!-- Multi-Sport Turf -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('trophy') ?>
+          </div>
+          <span class="rkdf-stat-badge">Outdoor Grounds</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Multi</span>
+          <span class="rkdf-stat-suffix">Sport Turf</span>
+        </div>
+        <div class="rkdf-stat-label">Outdoor Athletic Arenas</div>
+        <p class="rkdf-stat-desc">Dedicated turf grounds for cricket, football, volleyball &amp; kabaddi</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">Indoor</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Badminton &amp; TT Arena</span>
+
+      <!-- Indoor Complex -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('dumbbell') ?>
+          </div>
+          <span class="rkdf-stat-badge">Indoor Complex</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Indoor</span>
+          <span class="rkdf-stat-suffix">Arena</span>
+        </div>
+        <div class="rkdf-stat-label">Badminton &amp; Table Tennis</div>
+        <p class="rkdf-stat-desc">Well-lit indoor tournament courts for TT, badminton &amp; chess</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">1,500+</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Olympiad Participants</span>
+
+      <!-- 1,500+ Athletes -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('users') ?>
+          </div>
+          <span class="rkdf-stat-badge">Annual Events</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">1,500</span>
+          <span class="rkdf-stat-suffix">+</span>
+        </div>
+        <div class="rkdf-stat-label">Sports Olympiad Athletes</div>
+        <p class="rkdf-stat-desc">Scholars competing in annual inter-collegiate tournaments</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">NEP 2020</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Holistic Wellness</span>
+
+      <!-- NEP 2020 Holistic -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('award') ?>
+          </div>
+          <span class="rkdf-stat-badge">NEP 2020 Aligned</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">100</span>
+          <span class="rkdf-stat-suffix">% Holistic</span>
+        </div>
+        <div class="rkdf-stat-label">Physical Fitness &amp; Sports</div>
+        <p class="rkdf-stat-desc">Mandatory athletic activities promoting wellness &amp; teamwork</p>
       </div>
     </div>
 

@@ -136,22 +136,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">RPwD 2016</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Statutory Compliance</span>
+    <div class="rkdf-stat-grid">
+      <!-- RPwD 2016 -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('scale') ?>
+          </div>
+          <span class="rkdf-stat-badge">Statutory Mandate</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">RPwD</span>
+          <span class="rkdf-stat-suffix">2016</span>
+        </div>
+        <div class="rkdf-stat-label">Statutory Rights Compliance</div>
+        <p class="rkdf-stat-desc">Full adherence to the Rights of Persons with Disabilities Act</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">100%</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Barrier-Free Ramps</span>
+
+      <!-- 100% Barrier-Free -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('accessibility') ?>
+          </div>
+          <span class="rkdf-stat-badge">Campus Mobility</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">100</span>
+          <span class="rkdf-stat-suffix">%</span>
+        </div>
+        <div class="rkdf-stat-label">Barrier-Free Access Ramps</div>
+        <p class="rkdf-stat-desc">Tactile entrance ramps, wide corridors &amp; adapted washrooms</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">Scribe Desk</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Exam Accommodations</span>
+
+      <!-- Scribe Support -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('file-check') ?>
+          </div>
+          <span class="rkdf-stat-badge">Academic Support</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Scribe</span>
+          <span class="rkdf-stat-suffix">Support</span>
+        </div>
+        <div class="rkdf-stat-label">Examination Accommodations</div>
+        <p class="rkdf-stat-desc">Approved academic scribes and compensatory extra examination time</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">EOC Cell</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Equal Opportunity Support</span>
+
+      <!-- EOC Cell -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('heart-handshake') ?>
+          </div>
+          <span class="rkdf-stat-badge">Advisory Cell</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">EOC</span>
+          <span class="rkdf-stat-suffix">Cell</span>
+        </div>
+        <div class="rkdf-stat-label">Equal Opportunity Cell</div>
+        <p class="rkdf-stat-desc">Proactive scholar grievance redressal, assistive aids &amp; guidance</p>
       </div>
     </div>
 

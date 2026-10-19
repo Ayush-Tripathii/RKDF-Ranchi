@@ -6,6 +6,8 @@ $about_tabs = [
     ['label' => 'Overview',                'href' => 'about/',                             'icon' => 'landmark'],
     ['label' => 'Academic Council',         'href' => 'about/academic-council-members.php',  'icon' => 'users'],
     ['label' => 'Board of Governors',       'href' => 'about/board-of-governors.php',        'icon' => 'shield'],
+    ['label' => 'Board of Studies',          'href' => 'about/board-of-studies.php',         'icon' => 'book-open'],
+    ['label' => 'Board of Management',       'href' => 'about/board-members.php',            'icon' => 'users'],
     ['label' => 'Vision & Mission',         'href' => 'about/vision-and-mission.php',        'icon' => 'globe'],
     ['label' => 'Government Recognitions', 'href' => 'about/government-recognition.php',    'icon' => 'scale'],
     ['label' => 'Accreditations',           'href' => 'about/accreditations.php',            'icon' => 'trophy'],

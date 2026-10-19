@@ -195,19 +195,19 @@ return array (
       array (
         'name' => 'Ms. Amit Jha',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of Law',
+        'designation' => 'Assistant Professor, Dept. of Law',
       ),
       3 => 
       array (
         'name' => 'Ms. Sreejita Chakraborty',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Institute of Pharmaceutical Sciences',
+        'designation' => 'Assistant Professor, Institute of Pharmaceutical Sciences',
       ),
       4 => 
       array (
-        'name' => 'Mr. Harshit Prassad',
+        'name' => 'Mr. Harshit Prasad',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of Mining',
+        'designation' => 'Assistant Professor, Dept. of Mining',
       ),
     ),
     'content' => 
@@ -243,45 +243,45 @@ return array (
     array (
       0 => 
       array (
-        'name' => 'Prof.',
+        'name' => 'Prof. (Dr.) S. Chatterjee',
         'role' => 'Chairman',
-        'designation' => 'Dr.) S. Chatterjee(Vice Chancellor',
+        'designation' => 'Vice Chancellor',
       ),
       1 => 
       array (
         'name' => 'Dr. Sheetal Topno',
         'role' => 'ST/SC Representative',
-        'designation' => 'Member / Academician',
+        'designation' => 'Dean of Academics',
       ),
       2 => 
       array (
         'name' => 'Ms. Amit Jha',
         'role' => 'Women Representative',
-        'designation' => 'Member / Academician',
+        'designation' => 'Assistant Professor, Dept. of Law',
       ),
       3 => 
       array (
-        'name' => 'Ms.Ritu Yadav ',
+        'name' => 'Ms. Ritu Yadav',
         'role' => 'OBC Representative',
         'designation' => 'Member / Academician',
       ),
       4 => 
       array (
-        'name' => 'Mr. Shameek Chatterjee ',
-        'role' => 'General Repesentative',
+        'name' => 'Mr. Shameek Chatterjee',
+        'role' => 'General Representative',
         'designation' => 'Member / Academician',
       ),
       5 => 
       array (
-        'name' => 'Mr. Rishikant Kumar ',
+        'name' => 'Mr. Rishikant Kumar',
         'role' => 'Office Bearer',
-        'designation' => 'Member / Academician',
+        'designation' => 'Administrative Officer',
       ),
       6 => 
       array (
-        'name' => 'Dr. Pankaj Chatterjee ',
+        'name' => 'Dr. Pankaj Chatterjee',
         'role' => 'Member Secretary',
-        'designation' => 'DSW',
+        'designation' => 'Dean of Students Welfare (DSW)',
       ),
     ),
     'content' => 
@@ -300,33 +300,33 @@ return array (
     array (
       0 => 
       array (
-        'name' => 'S. Chatterjee',
-        'role' => 'Vice Chancellor',
-        'designation' => 'Member / Academician',
+        'name' => 'Prof. (Dr.) S. Chatterjee',
+        'role' => 'Chairman',
+        'designation' => 'Vice Chancellor',
       ),
       1 => 
       array (
         'name' => 'Ms. Pratiksha Dubey',
-        'role' => 'CFO In-Charge',
-        'designation' => 'Member / Academician',
+        'role' => 'Member Secretary',
+        'designation' => 'CFO In-Charge',
       ),
       2 => 
       array (
-        'name' => 'Rajat Raj',
-        'role' => 'Accounts Officer',
-        'designation' => 'Member / Academician',
+        'name' => 'Mr. Rajat Raj',
+        'role' => 'Member',
+        'designation' => 'Accounts Officer',
       ),
       3 => 
       array (
-        'name' => 'Abhishek Waibhaw',
-        'role' => 'Asst. Professor, Dept. of Economics',
-        'designation' => 'Member / Academician',
+        'name' => 'Mr. Abhishek Waibhaw',
+        'role' => 'Member',
+        'designation' => 'Assistant Professor, Dept. of Economics',
       ),
       4 => 
       array (
-        'name' => 'Archana Atish',
-        'role' => 'Asst. Professor, Dept. of Commerce',
-        'designation' => 'Member / Academician',
+        'name' => 'Dr. Archana Atish',
+        'role' => 'Member',
+        'designation' => 'Dean, Faculty of Management & Commerce',
       ),
     ),
     'content' => 
@@ -448,9 +448,9 @@ return array (
     array (
       0 => 
       array (
-        'name' => 'Prof.',
+        'name' => 'Prof. (Dr.) S. Chatterjee',
         'role' => 'Chairman',
-        'designation' => 'Dr.) S. Chatterjee (Vice Chancellor',
+        'designation' => 'Vice Chancellor',
       ),
       1 => 
       array (
@@ -511,7 +511,7 @@ return array (
       ),
       1 => 
       array (
-        'name' => 'Mr. Amit Kumar Das           ',
+        'name' => 'Mr. Amit Kumar Das',
         'role' => 'Member',
         'designation' => 'Librarian',
       ),
@@ -519,25 +519,25 @@ return array (
       array (
         'name' => 'Mr. Amartya Mitra',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Institute of Pharmaceutical Sciences',
+        'designation' => 'Assistant Professor, Institute of Pharmaceutical Sciences',
       ),
       3 => 
       array (
         'name' => 'Mr. Harshit Prasad',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of Mining',
+        'designation' => 'Assistant Professor, Dept. of Mining',
       ),
       4 => 
       array (
         'name' => 'Mr. Ritesh Kumar',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of CS',
+        'designation' => 'Assistant Professor, Dept. of Computer Science',
       ),
       5 => 
       array (
         'name' => 'Dr. Pankaj Chatterjee',
         'role' => 'Member',
-        'designation' => 'DSW',
+        'designation' => 'Dean of Students Welfare (DSW)',
       ),
     ),
     'content' => 
@@ -558,43 +558,43 @@ return array (
       array (
         'name' => 'Mr. Shameek Chatterjee',
         'role' => 'Chairperson',
-        'designation' => 'Asst. Prof., Dept. of Hotel Management',
+        'designation' => 'Assistant Professor, Dept. of Hotel Management',
       ),
       1 => 
       array (
         'name' => 'Mr. Alok Kumar',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of Hotel Management',
+        'designation' => 'Assistant Professor, Dept. of Hotel Management',
       ),
       2 => 
       array (
         'name' => 'Mr. Manab Dey',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Institute of Pharmaceutical Sciences',
+        'designation' => 'Assistant Professor, Institute of Pharmaceutical Sciences',
       ),
       3 => 
       array (
         'name' => 'Mr. Abhishek Singh',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept of CS',
+        'designation' => 'Assistant Professor, Dept. of Computer Science',
       ),
       4 => 
       array (
         'name' => 'Ms. Amit Jha',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of Law',
+        'designation' => 'Assistant Professor, Dept. of Law',
       ),
       5 => 
       array (
         'name' => 'Ms. Khushboo Kumari',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept of EEE',
+        'designation' => 'Assistant Professor, Dept. of EEE',
       ),
       6 => 
       array (
         'name' => 'Mr. Harshit Prasad',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Dept. of Mining',
+        'designation' => 'Assistant Professor, Dept. of Mining',
       ),
     ),
     'content' => 
@@ -635,33 +635,33 @@ return array (
     array (
       0 => 
       array (
-        'name' => 'Mr. Ankit Praksh',
+        'name' => 'Mr. Ankit Prakash',
         'role' => 'Chairman',
-        'designation' => 'Member / Academician',
+        'designation' => 'Head – Training & Placement',
       ),
       1 => 
       array (
         'name' => 'Ms. Smita Sinha',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'Assistant Professor / Placement Officer',
       ),
       2 => 
       array (
         'name' => 'Mr. Rounak Ritik',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'Assistant Professor / Corporate Relations',
       ),
       3 => 
       array (
         'name' => 'Ms. Kirti Verma',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'HOD, Dept. of CSE',
       ),
       4 => 
       array (
         'name' => 'Ms. Amit Jha',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'Assistant Professor, Dept. of Law',
       ),
     ),
     'content' => 
@@ -680,7 +680,7 @@ return array (
     array (
       0 => 
       array (
-        'name' => 'Mr. Vikash Rai ',
+        'name' => 'Mr. Vikash Rai',
         'role' => 'Chairman',
         'designation' => 'Head – Transportation Dept.',
       ),
@@ -688,19 +688,19 @@ return array (
       array (
         'name' => 'Mr. Manab Dey',
         'role' => 'Member',
-        'designation' => 'Asst. Prof., Institute of Pharmaceutical Sciences',
+        'designation' => 'Assistant Professor, Institute of Pharmaceutical Sciences',
       ),
       2 => 
       array (
-        'name' => 'Dr. Anil Oraon  ',
+        'name' => 'Dr. Anil Oraon',
         'role' => 'Member',
-        'designation' => 'Driver',
+        'designation' => 'Transport Coordinator',
       ),
       3 => 
       array (
         'name' => 'Mr. Shamsher Alam',
         'role' => 'Member',
-        'designation' => 'Driver',
+        'designation' => 'Fleet Supervisor',
       ),
     ),
     'content' => 
@@ -719,7 +719,7 @@ return array (
     array (
       0 => 
       array (
-        'name' => 'Dr. Anita Kumari ',
+        'name' => 'Dr. Anita Kumari',
         'role' => 'Chairperson',
         'designation' => 'Controller of Examinations',
       ),
@@ -727,7 +727,7 @@ return array (
       array (
         'name' => 'Dr. Rajeev Ranjan',
         'role' => 'Member',
-        'designation' => 'Dean-Faculty of Engineering',
+        'designation' => 'Dean – Faculty of Engineering',
       ),
       2 => 
       array (
@@ -737,15 +737,15 @@ return array (
       ),
       3 => 
       array (
-        'name' => 'Dr. Fedelic Ashish Toppo ',
+        'name' => 'Dr. Fedelic Ashish Toppo',
         'role' => 'Member',
-        'designation' => 'Principal-Institute of Pharmaceutical Sciences',
+        'designation' => 'Principal, Institute of Pharmaceutical Sciences',
       ),
       4 => 
       array (
-        'name' => 'Dr. Pankaj Chatterjee ',
+        'name' => 'Dr. Pankaj Chatterjee',
         'role' => 'Member',
-        'designation' => 'DSW',
+        'designation' => 'Dean of Students Welfare (DSW)',
       ),
     ),
     'content' => 
@@ -766,43 +766,43 @@ return array (
       array (
         'name' => 'Dr. Anita Kumari',
         'role' => 'Chairperson',
-        'designation' => ' Controller of Examination',
+        'designation' => 'Controller of Examination',
       ),
       1 => 
       array (
-        'name' => 'Dr. Koomkoom KhawasDirector of Research',
+        'name' => 'Dr. Koomkoom Khawas',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'Director of Research',
       ),
       2 => 
       array (
-        'name' => 'Dr. Nilu Kumari Assistant',
+        'name' => 'Dr. Nilu Kumari',
         'role' => 'Member',
-        'designation' => 'Controller of Examination',
+        'designation' => 'Assistant Controller of Examination',
       ),
       3 => 
       array (
-        'name' => 'Dr. Sheetal TopnoDean of Academics',
+        'name' => 'Dr. Sheetal Topno',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'Dean of Academics',
       ),
       4 => 
       array (
-        'name' => 'Ms. Kirti VermaHOD, Dept. of CSE',
+        'name' => 'Ms. Kirti Verma',
         'role' => 'Member',
-        'designation' => 'Member / Academician',
+        'designation' => 'HOD, Dept. of CSE',
       ),
       5 => 
       array (
-        'name' => 'Ms. Khoosboo Kumari',
+        'name' => 'Ms. Khushboo Kumari',
         'role' => 'Member',
-        'designation' => ' Asst. Prof., Dept. of EEE',
+        'designation' => 'Assistant Professor, Dept. of EEE',
       ),
       6 => 
       array (
-        'name' => 'Ms. Ishrat JahanAsst.',
+        'name' => 'Ms. Ishrat Jahan',
         'role' => 'Member',
-        'designation' => 'Prof., Institute of Pharmaceutical Sciences',
+        'designation' => 'Assistant Professor, Institute of Pharmaceutical Sciences',
       ),
     ),
     'content' => 

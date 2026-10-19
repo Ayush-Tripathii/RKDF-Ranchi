@@ -136,22 +136,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">Separate</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Boys &amp; Girls Wings</span>
+    <div class="rkdf-stat-grid">
+      <!-- Separate Blocks -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('home') ?>
+          </div>
+          <span class="rkdf-stat-badge">Gated Living</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Separate</span>
+          <span class="rkdf-stat-suffix">Wings</span>
+        </div>
+        <div class="rkdf-stat-label">Boys &amp; Girls Hostels</div>
+        <p class="rkdf-stat-desc">Secure residential blocks with furnished rooms &amp; study spaces</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">24/7</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">CCTV &amp; Warden Security</span>
+
+      <!-- 24/7 Security -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('shield-check') ?>
+          </div>
+          <span class="rkdf-stat-badge">Active Safety</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">24/7</span>
+          <span class="rkdf-stat-suffix">Security</span>
+        </div>
+        <div class="rkdf-stat-label">CCTV &amp; Warden Vigilance</div>
+        <p class="rkdf-stat-desc">Round-the-clock surveillance, security checkpoints &amp; wardens</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">RO Pure</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Multi-Stage Water Units</span>
+
+      <!-- RO Pure -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('sparkles') ?>
+          </div>
+          <span class="rkdf-stat-badge">Clean Drinking</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">100</span>
+          <span class="rkdf-stat-suffix">% RO Pure</span>
+        </div>
+        <div class="rkdf-stat-label">Multi-Stage Water Units</div>
+        <p class="rkdf-stat-desc">Industrial RO filtration plants ensuring safe drinking water</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">Visiting</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Doctor Consultations</span>
+
+      <!-- Visiting Doctor -->
+      <div class="rkdf-stat-card">
+        <div class="rkdf-stat-top">
+          <div class="rkdf-stat-iconbox">
+            <?= lucide_icon('heart-pulse') ?>
+          </div>
+          <span class="rkdf-stat-badge">Health Care</span>
+        </div>
+        <div class="rkdf-stat-num-row">
+          <span class="rkdf-stat-number">Doctor</span>
+          <span class="rkdf-stat-suffix">On-Call</span>
+        </div>
+        <div class="rkdf-stat-label">Visiting Medical Support</div>
+        <p class="rkdf-stat-desc">Regular doctor visits, first aid kits &amp; emergency transit</p>
       </div>
     </div>
 

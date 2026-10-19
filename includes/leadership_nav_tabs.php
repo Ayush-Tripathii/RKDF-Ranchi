@@ -31,6 +31,9 @@ $tabs_id = 'subnav-track-leadership';
       <div id="<?= $tabs_id ?>" class="subnav-scroll-track flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
         <?php foreach ($leadership_tabs as $tab): 
           $isActive = is_active($tab['href']);
+          if (!$isActive && ($tab['href'] === 'governance/deans.php' || $tab['href'] === 'deans/') && (str_contains($_SERVER['REQUEST_URI'] ?? '', 'deans') || str_contains($_SERVER['PHP_SELF'] ?? '', 'deans'))) {
+              $isActive = true;
+          }
         ?>
           <a href="<?= url($tab['href']) ?>" class="about-subnav-pill <?= $isActive ? 'active' : 'inactive' ?>" <?= $isActive ? 'data-active="true"' : '' ?>>
             <?= lucide_icon($tab['icon'], 'w-3.5 h-3.5 ' . ($isActive ? 'text-gold' : 'text-slate-500')) ?>

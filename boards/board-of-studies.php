@@ -42,23 +42,36 @@ require_once dirname(__DIR__) . '/includes/header.php';
     <!-- Badges -->
     <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
       <span class="hero-pill">
-        <?= lucide_icon('book-open') ?> 9 Academic Faculties
+        <?= lucide_icon('book-open', 'w-3.5 h-3.5 text-gold inline-block shrink-0') ?> 9 Academic Faculties
       </span>
       <span class="hero-pill">
-        <?= lucide_icon('users') ?> Internal &amp; External Academicians
+        <?= lucide_icon('users', 'w-3.5 h-3.5 text-gold inline-block shrink-0') ?> Internal &amp; External Academicians
       </span>
       <span class="hero-pill">
-        <?= lucide_icon('award') ?> Industry Advisory Integration
+        <?= lucide_icon('award', 'w-3.5 h-3.5 text-gold inline-block shrink-0') ?> Industry Advisory Integration
       </span>
     </div>
   </div>
 </section>
 
-<!-- Sub-Navigation Bar -->
-<?php require_once dirname(__DIR__) . '/includes/boards_nav_tabs.php'; ?>
+<!-- Faculty Sub-Navigation Tabs Bar (Exact Committees Hub Style) -->
+<div class="sticky top-16 z-30 bg-surface/95 backdrop-blur-md border-b border-border shadow-sm">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div id="bos-nav-track-boards" class="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar text-xs font-medium uppercase tracking-wider">
+      <a href="#overview" class="bos-nav-pill shrink-0 px-4 py-2 rounded-full transition bg-brand text-brand-foreground font-bold shadow">
+        All Faculties
+      </a>
+      <?php foreach ($faculties as $fac): ?>
+        <a href="#<?= $fac['id'] ?>" class="bos-nav-pill shrink-0 px-4 py-2 rounded-full transition text-muted-foreground hover:text-foreground hover:bg-muted">
+          <?= e($fac['short_title']) ?>
+        </a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</div>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section id="overview" class="py-20 bg-surface scroll-mt-28">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner Component -->
@@ -78,26 +91,6 @@ require_once dirname(__DIR__) . '/includes/header.php';
     $seal_count      = 'Comprehensive Syllabi';
     require dirname(__DIR__) . '/sections/boards/spotlight_card.php';
     ?>
-
-    <!-- Quick Jump Faculty Buttons -->
-    <div class="space-y-4">
-      <div class="flex items-center justify-between flex-wrap gap-4">
-        <div>
-          <div class="text-xs tracking-[0.2em] uppercase text-gold font-bold">Fast Navigation</div>
-          <h3 class="font-serif text-2xl sm:text-3xl font-normal text-slate-900 mt-1">Select Faculty Board</h3>
-        </div>
-        <span class="text-xs text-muted-foreground bg-white px-3.5 py-1.5 rounded-full border border-border">9 Departmental Councils</span>
-      </div>
-
-      <div class="flex flex-wrap gap-2.5 pt-2">
-        <?php foreach ($faculties as $idx => $fac): ?>
-          <a href="#<?= $fac['id'] ?>" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-white hover:bg-brand hover:text-white text-slate-700 border border-slate-200 shadow-sm transition">
-            <?= lucide_icon($fac['icon'], 'w-3.5 h-3.5 text-gold') ?>
-            <span><?= $idx + 1 ?>. <?= e($fac['short_title']) ?></span>
-          </a>
-        <?php endforeach; ?>
-      </div>
-    </div>
 
     <!-- 9 Faculty Boards Directory Tables -->
     <div class="space-y-16">
@@ -198,6 +191,22 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const pills = document.querySelectorAll('.bos-nav-pill');
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function(e) {
+      pills.forEach(function(p) {
+        p.classList.remove('bg-brand', 'text-brand-foreground', 'font-bold', 'shadow');
+        p.classList.add('text-muted-foreground');
+      });
+      this.classList.remove('text-muted-foreground');
+      this.classList.add('bg-brand', 'text-brand-foreground', 'font-bold', 'shadow');
+    });
+  });
+});
+</script>
 
 <?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>
 <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
