@@ -138,6 +138,112 @@ $design_partners = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .fashion-school-main { padding-bottom: 2rem !important; }
+    .fashion-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .fashion-school-main .rkdf-prog-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.65rem !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .fashion-school-main .rkdf-prog-badge {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0.4rem 0.65rem !important;
+      font-size: 0.65rem !important;
+      letter-spacing: 0.02em !important;
+      line-height: 1.5 !important;
+      border-radius: 12px !important;
+      text-wrap: balance;
+    }
+    .fashion-school-main .rkdf-prog-badge svg { flex-shrink: 0 !important; }
+    .fashion-school-main .rkdf-prog-title { font-size: 1.75rem !important; line-height: 1.3 !important; margin-bottom: 0.85rem !important; overflow-wrap: anywhere !important; }
+    .fashion-school-main .rkdf-prog-desc { line-height: 1.7 !important; margin-bottom: 1.25rem !important; }
+    .fashion-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .fashion-spotlight-intro > * { margin: 0 !important; }
+    .fashion-spotlight-intro > div:first-child {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .fashion-spotlight-intro > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .fashion-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .fashion-spotlight-intro p { line-height: 1.7 !important; }
+    .fashion-school-main .rkdf-corporate-banner { padding: 1.5rem 1.25rem !important; }
+    .fashion-school-main .rkdf-corporate-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 1.5rem !important; }
+    .fashion-school-main .rkdf-corporate-grid > div { min-width: 0 !important; }
+    .fashion-school-main .rkdf-corporate-grid > div:first-child > div:first-child {
+      align-items: flex-start !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .fashion-school-main .rkdf-corporate-grid > div:first-child > div:first-child svg {
+      flex-shrink: 0 !important;
+      margin-top: 0.15rem !important;
+    }
+    .fashion-school-main .rkdf-corporate-grid h3 { font-size: 1.75rem !important; line-height: 1.25 !important; }
+    .fashion-school-main .rkdf-corporate-grid p { line-height: 1.7 !important; margin-top: 1rem !important; }
+    .fashion-school-main .rkdf-corporate-stats { grid-template-columns: minmax(0, 1fr) !important; gap: 1rem !important; margin-top: 1.25rem !important; padding-top: 1.25rem !important; }
+    .fashion-school-main .rkdf-corporate-stat-item { display: flex !important; align-items: center !important; gap: 1rem !important; }
+    .fashion-school-main .rkdf-corporate-stat-num { flex: 0 0 5.5rem !important; }
+    .fashion-school-main .rkdf-corporate-stat-lbl { flex: 1 !important; min-width: 0 !important; }
+    .fashion-school-main .rkdf-prog-footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.85rem !important;
+    }
+    .fashion-school-main .rkdf-prog-footer .rkdf-apply-btn {
+      justify-content: center !important;
+      min-height: 44px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .fashion-school-main .rkdf-spec-item {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.6rem !important;
+    }
+    .fashion-school-main .rkdf-spec-name,
+    .fashion-school-main .rkdf-spec-tag {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+    .fashion-school-main .rkdf-spec-tag {
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: left !important;
+    }
+  }
+  @media (max-width: 1023px) {
+    .fashion-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .fashion-breadcrumb > a,
+    .fashion-breadcrumb > svg { flex-shrink: 0 !important; }
+    .fashion-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -145,7 +251,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="fashion-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('departments/') ?>" class="hover:text-white transition">Faculties</a>
@@ -183,7 +289,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface fashion-school-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Faculty Vision Spotlight -->
@@ -192,7 +298,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-5">
+        <div class="space-y-5 fashion-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('palette', 'w-4 h-4 text-gold') ?> Design Atelier &amp; Spatial Innovation
           </div>

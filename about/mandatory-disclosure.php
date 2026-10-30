@@ -78,6 +78,11 @@ $disclosures = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  .mandatory-disclosure-main { padding-bottom: 3rem !important; }
+  .mandatory-disclosure-documents { margin-bottom: 0 !important; }
+</style>
+
 <!-- ==================== INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -118,7 +123,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN DISCLOSURES SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="mandatory-disclosure-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner -->
@@ -185,7 +190,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
     </div>
 
     <!-- Documents Grid -->
-    <div class="mb-16 section-block space-y-8">
+    <div class="mandatory-disclosure-documents mb-16 section-block space-y-8">
       <div>
         <div class="text-xs tracking-[0.2em] uppercase text-gold font-bold">Public Regulatory Compliance</div>
         <h3 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900 mt-1">Official Mandatory Disclosures</h3>

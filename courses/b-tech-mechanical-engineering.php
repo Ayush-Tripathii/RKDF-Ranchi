@@ -4,8 +4,53 @@ $page_meta_desc = 'B.Tech in Mechanical Engineering at RKDF University Ranchi. D
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
+<style>
+  /* Page-level fallback keeps this course aligned with the standard course-detail layout. */
+  .mechanical-course-page.course-detail-hero {
+    background: linear-gradient(135deg, #071322 0%, #0d1f38 50%, #152e52 100%) !important;
+    color: #ffffff !important;
+    padding: 3.75rem 0 4.25rem !important;
+  }
+  .mechanical-course-page .course-breadcrumb,
+  .mechanical-course-page .course-hero-badge-strip,
+  .mechanical-course-page .course-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+  }
+  .mechanical-course-page .course-breadcrumb { color: rgba(255,255,255,.72) !important; margin-bottom: 1.75rem !important; }
+  .mechanical-course-page .course-breadcrumb a { color: rgba(255,255,255,.82) !important; }
+  .mechanical-course-page .course-hero-badge-strip { margin-bottom: 1.15rem !important; }
+  .mechanical-course-page .course-hero-badge {
+    display: inline-flex !important; align-items: center !important; gap: .4rem !important;
+    padding: .45rem .75rem !important; border: 1px solid rgba(255,255,255,.18) !important;
+    border-radius: 999px !important; background: rgba(255,255,255,.08) !important; color: #ffffff !important;
+  }
+  .mechanical-course-page .course-hero-title { color: #ffffff !important; font-size: clamp(2.25rem, 5vw, 4.25rem) !important; }
+  .mechanical-course-page .course-hero-lead { color: rgba(255,255,255,.82) !important; max-width: 44rem !important; }
+  .mechanical-course-page .course-hero-actions { margin-top: 1.75rem !important; gap: .85rem !important; }
+  .mechanical-course-page .course-btn-primary,
+  .mechanical-course-page .course-btn-secondary,
+  .mechanical-course-page .course-btn-call {
+    display: inline-flex !important; align-items: center !important; gap: .5rem !important;
+    padding: .75rem 1rem !important; border-radius: .75rem !important; font-weight: 700 !important;
+  }
+  .mechanical-course-page .course-btn-primary { background: #e58525 !important; color: #071322 !important; }
+  .mechanical-course-page .course-btn-secondary,
+  .mechanical-course-page .course-btn-call { border: 1px solid rgba(255,255,255,.25) !important; color: #ffffff !important; }
+  @media (max-width: 1023px) {
+    .mechanical-course-page.course-detail-hero { padding: 2.5rem 0 3rem !important; }
+    .mechanical-course-page .course-container { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+    .mechanical-course-page .course-hero-title { font-size: 2.25rem !important; line-height: 1.05 !important; }
+    .mechanical-course-page .course-hero-badge-strip { gap: .5rem !important; }
+    .mechanical-course-page .course-hero-badge { font-size: .75rem !important; }
+    .mechanical-course-page .course-hero-actions > a { width: 100% !important; justify-content: center !important; }
+  }
+</style>
+
 <!-- ==================== LUXURY COURSE DETAIL HERO ==================== -->
-<section class="course-detail-hero">
+<section class="course-detail-hero mechanical-course-page">
   <div class="course-container">
     
     <!-- Breadcrumb Navigation -->

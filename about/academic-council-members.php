@@ -58,7 +58,21 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+  @media (max-width: 640px) {
+    .council-functions { padding: 1.25rem !important; }
+    .council-functions > div:first-child { align-items: flex-start !important; gap: .75rem !important; padding-bottom: 1rem !important; }
+    .council-functions h3 { font-size: 1.5rem !important; line-height: 1.3 !important; }
+    .council-functions > div:first-child p { margin-top: .5rem; line-height: 1.6; }
+    .council-functions > .grid { gap: .75rem !important; }
+    .council-functions > .grid > div { padding: .85rem !important; gap: .65rem !important; line-height: 1.65; }
+    .council-functions > .grid span { min-width: 0; overflow-wrap: anywhere; }
+    .academic-council-main { padding-bottom: 2rem !important; }
+    .academic-council-main > div > :last-child { margin-bottom: 0 !important; }
+    .academic-council-main + footer > div:first-child { padding-top: 2rem !important; }
+  }
+</style>
+<section class="py-20 bg-surface academic-council-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner Component -->
@@ -89,7 +103,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
     ?>
 
     <!-- Key Functions Section -->
-    <div class="rounded-3xl bg-white border border-border p-8 sm:p-10 shadow-sm space-y-6">
+    <div class="council-functions rounded-3xl bg-white border border-border p-8 sm:p-10 shadow-sm space-y-6">
       <div class="flex items-center gap-3 pb-4 border-b border-border">
         <div class="w-10 h-10 rounded-xl bg-brand text-gold flex items-center justify-center shrink-0">
           <?= lucide_icon('shield-check', 'w-5 h-5') ?>

@@ -13,7 +13,17 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
-<section class="inner-page-hero">
+<style>
+  @media (max-width: 640px) {
+    .chancellor-hero { padding-bottom: 2rem !important; }
+    .chancellor-main { padding-top: 2rem !important; }
+    .chancellor-main { padding-bottom: 2rem !important; }
+    .chancellor-main + section { padding-top: 3rem !important; }
+    .chancellor-main + section { padding-bottom: 2rem !important; }
+    .chancellor-main + section + footer > div:first-child { padding-top: 2rem !important; }
+  }
+</style>
+<section class="inner-page-hero chancellor-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -54,7 +64,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface chancellor-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Profile & Message Grid -->

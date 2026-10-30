@@ -87,6 +87,61 @@ $library_sections = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .library-main { padding-bottom: 2rem !important; }
+    .library-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    #library-sections .prog-spec-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.85rem !important;
+    }
+    #library-sections .prog-spec-header > div:first-child { width: 100% !important; min-width: 0 !important; }
+    #library-sections .prog-spec-badge {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      font-size: 0.65rem !important;
+      letter-spacing: 0.02em !important;
+      line-height: 1.5 !important;
+      border-radius: 12px !important;
+    }
+    #library-sections .prog-spec-badge svg { flex-shrink: 0 !important; }
+    #library-sections .prog-spec-badge span { min-width: 0 !important; white-space: normal !important; }
+    .library-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .library-spotlight-intro > * { margin: 0 !important; }
+    .library-spotlight-intro > div:first-child {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .library-spotlight-intro > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .library-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .library-spotlight-intro p { line-height: 1.7 !important; }
+  }
+  @media (max-width: 1023px) {
+    .library-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .library-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -94,7 +149,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="library-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('facilities/') ?>" class="hover:text-white transition">Facilities</a>
@@ -132,7 +187,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/facilities_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface library-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
@@ -161,7 +216,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-5">
+        <div class="space-y-5 library-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('book-open', 'w-4 h-4 text-gold') ?> Knowledge Repository Directorate
           </div>
@@ -228,9 +283,9 @@ require_once dirname(__DIR__) . '/includes/header.php';
           <h3 class="rkdf-section-title">Central Library Infrastructure &amp; Services</h3>
           <p class="rkdf-section-desc">Comprehensive collections, digital catalogs, reading chambers, and research documentation facilities.</p>
         </div>
-        <div class="flex flex-wrap items-center gap-3 shrink-0">
+        <div class="flex flex-wrap items-center gap-3 w-full">
           <?php if (file_exists(dirname(__DIR__) . '/documents/Library-Membership-Form.pdf')): ?>
-            <a href="<?= url('documents/Library-Membership-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm">
+            <a href="<?= url('documents/Library-Membership-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm">
               <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
               <span>Library Membership Form (PDF)</span>
               <?= lucide_icon('download', 'w-3.5 h-3.5') ?>

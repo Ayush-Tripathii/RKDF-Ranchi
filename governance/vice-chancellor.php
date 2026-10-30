@@ -54,7 +54,14 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+  @media (max-width: 640px) {
+    .vice-chancellor-main { padding-top: 2rem !important; }
+    .vice-chancellor-main { padding-bottom: 2rem !important; }
+    .vice-chancellor-main + section { padding-top: 3rem !important; }
+  }
+</style>
+<section class="py-20 bg-surface vice-chancellor-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">

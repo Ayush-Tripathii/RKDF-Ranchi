@@ -12,6 +12,14 @@ $page_meta_desc = "Message from Dr. Amit Kumar Pandey (M.Sc Microbiology, Ph.D),
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+@media (max-width: 640px) {
+  .pro-vice-chancellor-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .pro-vice-chancellor-main + section { padding-top: 3rem !important; padding-bottom: 2rem !important; }
+  .pro-vice-chancellor-main + section + footer > div:first-child { padding-top: 2rem !important; }
+}
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -54,7 +62,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface pro-vice-chancellor-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">

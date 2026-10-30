@@ -34,7 +34,8 @@ $collaborations = [
             'Placement Pipelines with Lupin, Cipla & Alkem'
         ],
         'domain'      => 'Pharmaceutical Sciences',
-        'impact'      => 'Licensed Clinical Pharmacists'
+        'impact'      => 'Licensed Clinical Pharmacists',
+        'cta_label'   => 'Explore Pharmacy'
     ],
     [
         'title'       => 'Mining & Mineral Extraction MoUs',
@@ -264,7 +265,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                 </div>
 
                 <a href="<?= url('admissions/') ?>" class="prog-spec-btn">
-                  <span>Explore <?= e($collab['domain']) ?></span>
+                  <span><?= e($collab['cta_label'] ?? 'Explore ' . $collab['domain']) ?></span>
                   <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
                 </a>
               </div>

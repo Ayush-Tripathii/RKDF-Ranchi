@@ -87,14 +87,51 @@ $health_services = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 1023px) {
+    .health-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .health-breadcrumb > span:last-child { grid-column: 1 / -1 !important; text-align: center !important; line-height: 1.4 !important; }
+  }
+  @media (max-width: 640px) {
+    .health-main { padding-bottom: 2rem !important; }
+    .health-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .health-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .health-spotlight-intro > * { margin: 0 !important; }
+    .health-spotlight-intro > div:first-child {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .health-spotlight-intro > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .health-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .health-spotlight-intro p { line-height: 1.7 !important; }
+    .health-hero h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
+    .health-hero h1 em { display: block; margin-top: 0.15em; }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
-<section class="inner-page-hero">
+<section class="inner-page-hero health-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="health-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('facilities/') ?>" class="hover:text-white transition">Facilities</a>
@@ -132,7 +169,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/facilities_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface health-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
@@ -161,7 +198,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-5">
+        <div class="space-y-5 health-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('heart-pulse', 'w-4 h-4 text-gold') ?> Campus Wellness &amp; Medical Safety
           </div>
@@ -296,7 +333,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
           <p class="rkdf-section-desc">Visual overview of our on-site medical dispensary, first-aid examination units, nursing care staff, and environmental health initiatives.</p>
         </div>
         <?php if (file_exists(dirname(__DIR__) . '/documents/Tree-Ambulance.pdf')): ?>
-          <a href="<?= url('documents/Tree-Ambulance.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm shrink-0">
+          <a href="<?= url('documents/Tree-Ambulance.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm shrink-0">
             <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
             <span>Tree Ambulance Initiative (PDF)</span>
             <?= lucide_icon('download', 'w-3.5 h-3.5') ?>

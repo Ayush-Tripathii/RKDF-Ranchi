@@ -91,6 +91,128 @@ $law_partners = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 1023px) {
+    .law-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .law-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+  .law-school-main { padding-bottom: 1.5rem !important; }
+  @media (max-width: 640px) {
+    .law-school-main { padding-bottom: 2rem !important; }
+    .law-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .law-school-main .rkdf-admission-banner {
+      padding: 1.5rem 1.25rem !important;
+      gap: 1.25rem !important;
+    }
+    .law-school-main .rkdf-admission-content { min-width: 0 !important; width: 100% !important; }
+    .law-school-main .rkdf-admission-tag {
+      align-items: flex-start !important;
+      font-size: 0.68rem !important;
+      letter-spacing: 0.06em !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .law-school-main .rkdf-admission-tag svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .law-school-main .rkdf-admission-title {
+      font-size: 1.85rem !important;
+      line-height: 1.25 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .law-school-main .rkdf-admission-actions {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      width: 100% !important;
+      gap: 0.75rem !important;
+    }
+    .law-school-main .rkdf-admission-actions > a {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      justify-content: center !important;
+      min-height: 44px !important;
+    }
+    .law-school-main .rkdf-prog-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.65rem !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .law-school-main .rkdf-prog-badge {
+      width: fit-content !important;
+      align-self: flex-start !important;
+      align-items: flex-start !important;
+      padding: 0.5rem 0.75rem !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      font-size: 0.68rem !important;
+      letter-spacing: 0.04em !important;
+      line-height: 1.4 !important;
+    }
+    .law-school-main .rkdf-prog-badge svg { flex-shrink: 0 !important; margin-top: 0.15rem; }
+    .law-school-main .rkdf-prog-badge > span { min-width: 0; white-space: normal; text-wrap: pretty; }
+    .law-school-main .rkdf-prog-title {
+      font-size: 1.75rem !important;
+      line-height: 1.2 !important;
+      margin-bottom: 0.85rem !important;
+      overflow-wrap: anywhere !important;
+    }
+    .law-school-main .rkdf-prog-desc {
+      line-height: 1.7 !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .law-school-main .rkdf-prog-footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.85rem !important;
+    }
+    .law-school-main .rkdf-prog-footer .rkdf-apply-btn {
+      justify-content: center !important;
+      min-height: 44px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .law-school-main .rkdf-spec-item {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.6rem !important;
+      padding: 0.9rem !important;
+    }
+    .law-school-main .rkdf-spec-name {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+      line-height: 1.5 !important;
+    }
+    .law-school-main .rkdf-spec-tag {
+      flex: 0 1 auto !important;
+      width: fit-content !important;
+      align-self: flex-start !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: left !important;
+      overflow-wrap: break-word !important;
+      padding: 0.3rem 0.5rem !important;
+      text-wrap: balance;
+      line-height: 1.5 !important;
+      letter-spacing: 0.02em !important;
+    }
+  }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -98,7 +220,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="law-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('departments/') ?>" class="hover:text-white transition">Faculties</a>
@@ -136,7 +258,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
-<section class="py-20 bg-surface">
+<section class="law-school-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Faculty Vision Spotlight -->
@@ -227,7 +349,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <div class="rkdf-prog-header">
                 <span class="rkdf-prog-badge">
                   <?= lucide_icon($prog['icon'], 'w-3.5 h-3.5 text-amber-600 shrink-0') ?>
-                  <?= e($prog['category']) ?>
+                  <span><?= e($prog['category']) ?></span>
                 </span>
                 <span class="rkdf-duration-badge">
                   <?= lucide_icon('clock', 'w-3.5 h-3.5 text-gold shrink-0') ?>

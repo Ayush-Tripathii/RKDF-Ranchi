@@ -4,8 +4,34 @@ $page_meta_desc = 'Bachelor of Arts (B.A. General) at RKDF University Ranchi. Du
 require_once __DIR__ . '/../includes/header.php';
 ?>
 
+<style>
+  /* Preserve the standard course-detail hero on the mobile/tablet header layout. */
+  .ba-course-page.course-detail-hero {
+    background: linear-gradient(135deg, #071322 0%, #0d1f38 50%, #152e52 100%) !important;
+    color: #ffffff !important;
+  }
+  .ba-course-page .course-hero-badge {
+    display: inline-flex !important; align-items: center !important; gap: .4rem !important;
+    padding: .45rem .75rem !important; border: 1px solid rgba(255,255,255,.18) !important;
+    border-radius: 999px !important; background: rgba(255,255,255,.08) !important; color: #ffffff !important;
+  }
+  .ba-course-page .course-hero-title { color: #ffffff !important; }
+  .ba-course-page .course-hero-lead { color: rgba(255,255,255,.82) !important; }
+  @media (max-width: 1023px) {
+    .ba-course-page .course-hero-actions > a { justify-content: center !important; }
+    .ba-course-content .course-detail-layout { gap: .75rem !important; padding-top: 1rem !important; padding-bottom: 1.5rem !important; }
+    .ba-course-content .course-main-content { gap: .75rem !important; }
+    .ba-course-content .course-section-card { padding: .9rem 1rem !important; }
+    .ba-course-content .course-section-header { margin-bottom: .5rem !important; padding-bottom: .45rem !important; }
+    .ba-course-content .sm\:grid-cols-2,
+    .ba-course-content .sm\:grid-cols-3 { grid-template-columns: minmax(0, 1fr) !important; }
+    .ba-course-content .sm\:flex-row { flex-direction: column !important; align-items: stretch !important; }
+    .ba-course-content .whitespace-nowrap { white-space: normal !important; }
+  }
+</style>
+
 <!-- ==================== LUXURY COURSE DETAIL HERO ==================== -->
-<section class="course-detail-hero">
+<section class="course-detail-hero ba-course-page">
   <div class="course-container">
     
     <!-- Breadcrumb Navigation -->
@@ -62,7 +88,7 @@ require_once __DIR__ . '/../includes/header.php';
 </section>
 
 <!-- ==================== MAIN CONTENT & SIDEBAR ==================== -->
-<section class="py-12 md:py-16 bg-background">
+<section class="py-12 md:py-16 bg-background ba-course-content">
   <div class="course-container">
     <div class="course-detail-layout">
       

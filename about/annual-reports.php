@@ -29,6 +29,11 @@ $annual_reports = [
 ];
 ?>
 
+<style>
+  .annual-reports-main { padding-bottom: 3rem !important; }
+  .audit-reports-section { margin-bottom: 0 !important; }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -71,7 +76,7 @@ $annual_reports = [
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="annual-reports-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner -->
@@ -183,7 +188,7 @@ $annual_reports = [
     </div>
 
     <!-- Audit Reports Section -->
-    <div class="mb-16 section-block space-y-8">
+    <div class="audit-reports-section mb-16 section-block space-y-8">
       <div class="flex items-center gap-3">
         <div class="recognition-icon-box" style="width: 44px !important; height: 44px !important; min-width: 44px !important; border-radius: 12px !important;">
           <?= lucide_icon('scale', 'w-5 h-5') ?>

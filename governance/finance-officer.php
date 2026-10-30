@@ -54,7 +54,34 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+@media (min-width: 641px) {
+  section.finance-officer-main { padding-bottom: 3rem !important; }
+  section.finance-officer-main + section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+}
+@media (max-width: 640px) {
+  section.finance-officer-main { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  section.finance-officer-main + section { padding-top: 1.5rem !important; padding-bottom: 2rem !important; }
+  .finance-contact-cards { grid-template-columns: minmax(0, 1fr) !important; }
+  .finance-contact-cards > div { min-width: 0; max-width: 100%; box-sizing: border-box; padding: 1rem !important; gap: .75rem !important; }
+  .finance-contact-cards > div > .min-w-0 { flex: 1; min-width: 0; }
+  .finance-contact-cards .truncate { white-space: normal !important; overflow: visible !important; overflow-wrap: anywhere; }
+  .finance-contact-cards a { overflow-wrap: anywhere; }
+  .finance-contact-cards p { line-height: 1.5; }
+  .finance-officer-main .leadership-layout-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .finance-officer-main .leadership-layout-grid > * { min-width: 0; max-width: 100%; }
+  .finance-officer-main .finance-direct-support,
+  .finance-officer-main .quote-philosophy-banner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem 1.25rem !important;
+    overflow-wrap: anywhere;
+  }
+  .finance-officer-main .finance-direct-support p { line-height: 1.7; }
+  .finance-officer-main .quote-philosophy-banner blockquote { font-size: 1.5rem !important; line-height: 1.45 !important; }
+}
+</style>
+<section class="py-20 bg-surface finance-officer-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">
@@ -110,7 +137,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-brand text-brand-foreground border border-gold/20 shadow-sm space-y-3">
+        <div class="finance-direct-support p-6 rounded-2xl bg-brand text-brand-foreground border border-gold/20 shadow-sm space-y-3">
           <div class="text-xs font-bold uppercase tracking-wider text-gold flex items-center gap-2">
             <?= lucide_icon('sparkles', 'w-4 h-4') ?> Direct Support
           </div>
@@ -157,7 +184,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
           </div>
 
           <!-- Official Contact Cards -->
-          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+          <div class="finance-contact-cards grid sm:grid-cols-2 gap-4 pt-2">
             <div class="p-5 sm:p-6 rounded-xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-gold/50 transition duration-300 flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
                 <?= lucide_icon('phone-call', 'w-5 h-5 text-gold') ?>

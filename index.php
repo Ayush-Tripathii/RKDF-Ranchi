@@ -12,6 +12,16 @@ $page_meta_desc = DEFAULT_META_DESC;
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .homepage-content > section:not(:first-child) {
+      padding-top: 2.75rem !important;
+      padding-bottom: 2.75rem !important;
+    }
+  }
+</style>
+
+<main class="homepage-content">
 <?php require_once __DIR__ . '/sections/hero.php'; ?>
 <?php require_once __DIR__ . '/sections/about.php'; ?>
 <?php require_once __DIR__ . '/sections/schools.php'; ?>
@@ -23,5 +33,6 @@ require_once __DIR__ . '/includes/header.php';
 <?php require_once __DIR__ . '/sections/alumni.php'; ?>
 <?php require_once __DIR__ . '/sections/gallery.php'; ?>
 <?php require_once __DIR__ . '/sections/cta.php'; ?>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

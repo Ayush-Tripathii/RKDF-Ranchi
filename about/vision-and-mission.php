@@ -12,6 +12,57 @@ $page_meta_desc = 'Discover the Vision and Mission of RKDF University Ranchi —
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  .vision-mission-main { padding-bottom: 3rem !important; }
+  .vision-mission-pillars { margin-bottom: 0 !important; }
+  @media (min-width: 1024px) {
+    .vision-mission-hero-title {
+      font-size: 3.75rem !important;
+      line-height: 1.15 !important;
+      text-wrap: balance;
+    }
+  }
+  @media (max-width: 640px) {
+    .vision-mission-main .about-vision-grid {
+      grid-template-columns: minmax(0, 1fr) !important;
+      gap: 1.25rem !important;
+    }
+    .vision-mission-main .vm-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+      padding: 1.25rem !important;
+    }
+    .vision-mission-main .vm-item {
+      padding: 0.85rem !important;
+      gap: 0.65rem !important;
+    }
+    .vision-mission-main .vm-item > :last-child {
+      min-width: 0 !important;
+      line-height: 1.65 !important;
+    }
+    .vision-mission-main .quote-philosophy-banner {
+      padding: 1.75rem 1.25rem !important;
+    }
+    .vision-mission-main .quote-philosophy-banner > div {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 1rem !important;
+    }
+    .vision-mission-main .quote-philosophy-banner > div > * { margin: 0 !important; }
+    .vision-mission-main .quote-philosophy-banner blockquote {
+      font-size: 1.5rem !important;
+      line-height: 1.45 !important;
+      margin: 0.75rem 0 0 !important;
+    }
+    .vision-mission-main .quote-philosophy-banner > div > div:last-child {
+      line-height: 1.6 !important;
+      letter-spacing: 0.06em !important;
+    }
+  }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -27,7 +78,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <span class="text-white/90">Vision &amp; Mission</span>
     </div>
 
-    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
+    <h1 class="vision-mission-hero-title font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
       Our guiding <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">vision</em> &amp; institutional mission.
     </h1>
 
@@ -57,7 +108,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="vision-mission-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Quote Banner -->
@@ -172,7 +223,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
     </div>
 
     <!-- 4 Core Pillars of Excellence -->
-    <div class="pillars-container mb-16 section-block">
+    <div class="vision-mission-pillars pillars-container mb-16 section-block">
       <div class="pillars-header">
         <span class="pillars-header-tag">Institutional Values</span>
         <h3 class="pillars-header-title">Pillars of RKDF University</h3>

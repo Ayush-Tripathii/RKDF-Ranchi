@@ -87,6 +87,53 @@ $accessibility_pillars = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .accessibility-main { padding-bottom: 2rem !important; }
+    .accessibility-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+  }
+  .accessibility-metric {
+    display: flex;
+    min-height: 8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    .accessibility-metric { min-height: 7.5rem; }
+    .accessibility-metric-value {
+      font-size: 1.5rem !important;
+      line-height: 1.15 !important;
+      white-space: nowrap;
+    }
+    .accessibility-metric-label {
+      font-size: 0.7rem !important;
+      line-height: 1.3 !important;
+    }
+  }
+</style>
+
+<style>
+  @media (max-width: 1023px) {
+    .accessibility-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .accessibility-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -94,7 +141,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="accessibility-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('facilities/') ?>" class="hover:text-white transition">Facilities</a>
@@ -132,26 +179,26 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/facilities_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface accessibility-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">RPwD 2016</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Statutory Compliance</span>
+      <div class="accessibility-metric bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+        <span class="accessibility-metric-value text-3xl sm:text-4xl font-serif text-emerald-700 font-normal block">RPwD 2016</span>
+        <span class="accessibility-metric-label text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Statutory Compliance</span>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-brand font-normal block">100%</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Barrier-Free Ramps</span>
+      <div class="accessibility-metric bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+        <span class="accessibility-metric-value text-3xl sm:text-4xl font-serif text-brand font-normal block">100%</span>
+        <span class="accessibility-metric-label text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Barrier-Free Ramps</span>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-gold font-normal block">Scribe Desk</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Exam Accommodations</span>
+      <div class="accessibility-metric bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+        <span class="accessibility-metric-value text-3xl sm:text-4xl font-serif text-gold font-normal block">Scribe Desk</span>
+        <span class="accessibility-metric-label text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Exam Accommodations</span>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-        <span class="text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">EOC Cell</span>
-        <span class="text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Equal Opportunity Support</span>
+      <div class="accessibility-metric bg-white p-4 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+        <span class="accessibility-metric-value text-3xl sm:text-4xl font-serif text-purple-700 font-normal block">EOC Cell</span>
+        <span class="accessibility-metric-label text-xs sm:text-sm text-slate-600 mt-1 block font-medium">Equal Opportunity Support</span>
       </div>
     </div>
 

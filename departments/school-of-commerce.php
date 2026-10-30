@@ -152,7 +152,69 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
-<section class="py-20 bg-surface">
+<style>
+  @media (max-width: 640px) {
+    section.commerce-school-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    .commerce-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .commerce-school-main .rkdf-corporate-banner { padding: 1.5rem 1.25rem !important; }
+    .commerce-school-main .rkdf-corporate-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    .commerce-school-main .rkdf-corporate-grid > div { min-width: 0 !important; }
+    .commerce-school-main .rkdf-corporate-grid > div:first-child > div:first-child {
+      align-items: flex-start !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .commerce-school-main .rkdf-corporate-grid > div:first-child > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .commerce-school-main .rkdf-corporate-grid h3 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .commerce-school-main .rkdf-corporate-grid p { line-height: 1.7 !important; margin-top: 1rem !important; }
+    .commerce-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .commerce-spotlight-intro > * { margin: 0 !important; }
+    .commerce-spotlight-intro > div:first-child {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .commerce-spotlight-intro > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .commerce-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .commerce-spotlight-intro p { line-height: 1.7 !important; }
+    .commerce-school-main .rkdf-prog-footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.85rem !important;
+    }
+    .commerce-school-main .rkdf-prog-footer .rkdf-apply-btn {
+      justify-content: center !important;
+      min-height: 44px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .commerce-school-main .rkdf-spec-item {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.6rem !important;
+    }
+    .commerce-school-main .rkdf-spec-name {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+    .commerce-school-main .rkdf-spec-tag {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: left !important;
+      overflow-wrap: anywhere !important;
+    }
+  }
+</style>
+<section class="py-20 bg-surface commerce-school-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Faculty Vision Spotlight -->
@@ -161,7 +223,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-5">
+        <div class="space-y-5 commerce-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('landmark', 'w-4 h-4 text-gold') ?> Center of Financial Mastery &amp; Corporate Excellence
           </div>

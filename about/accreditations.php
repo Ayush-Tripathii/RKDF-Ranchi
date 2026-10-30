@@ -57,6 +57,11 @@ $accreditation_cards = [
 ];
 ?>
 
+<style>
+  .accreditations-main { padding-bottom: 3rem !important; }
+  .accreditations-grid-section { margin-bottom: 0 !important; }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -102,7 +107,7 @@ $accreditation_cards = [
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="accreditations-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner -->
@@ -168,7 +173,7 @@ $accreditation_cards = [
 
 
     <!-- Accreditations Grid -->
-    <div class="mb-16 section-block space-y-8">
+    <div class="accreditations-grid-section mb-16 section-block space-y-8">
       <div>
         <div class="text-xs tracking-[0.2em] uppercase text-gold font-bold">Regulatory Framework</div>
         <h3 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900 mt-1">Apex Accreditations</h3>

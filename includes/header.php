@@ -79,17 +79,21 @@ $body_class     = $body_class     ?? '';
         z-index: 9999 !important;
         pointer-events: none !important;
         visibility: hidden !important;
+        opacity: 1 !important;
         transition: visibility 0.3s ease !important;
       }
       #mobile-drawer.open {
         pointer-events: auto !important;
         visibility: visible !important;
+        opacity: 1 !important;
       }
-      #mobile-drawer > div:last-child {
-        transform: translateX(-100%) !important;
+      #mobile-drawer-panel {
+        background-color: #ffffff !important;
+        opacity: 1 !important;
+        transform: translateX(100%) !important;
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
       }
-      #mobile-drawer.open > div:last-child {
+      #mobile-drawer.open #mobile-drawer-panel {
         transform: translateX(0) !important;
       }
       #mobile-drawer-backdrop {
@@ -545,6 +549,29 @@ $body_class     = $body_class     ?? '';
     .inner-page-hero p {
       color: rgba(255, 255, 255, 0.85) !important;
     }
+    /* The desktop hero and section rhythm leaves excessive empty space on phones. */
+    @media (max-width: 640px) {
+      .inner-page-hero {
+        padding: 2.75rem 1rem 2rem !important;
+      }
+      .inner-page-hero .relative.mx-auto {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+      }
+      .inner-page-hero .mb-6 {
+        margin-bottom: 1rem !important;
+      }
+      .inner-page-hero p.mt-6 {
+        margin-top: 1rem !important;
+      }
+      .inner-page-hero .mt-10 {
+        margin-top: 1.5rem !important;
+      }
+      .py-20 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+    }
     .inner-page-hero .hero-pill,
     .hero-pill {
       display: inline-flex !important;
@@ -881,6 +908,15 @@ $body_class     = $body_class     ?? '';
       position: relative !important;
       z-index: 1 !important;
     }
+    /* Give the overview narrative and milestones card more breathing room on desktop. */
+    @media (min-width: 961px) {
+      .about-overview-spotlight-grid {
+        column-gap: 4.5rem !important;
+      }
+      .about-overview-spotlight-grid > :first-child {
+        max-width: 44rem;
+      }
+    }
     @media (max-width: 960px) {
       .gov-spotlight-grid {
         grid-template-columns: 1fr !important;
@@ -898,6 +934,18 @@ $body_class     = $body_class     ?? '';
       flex-direction: column !important;
       justify-content: space-between !important;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    }
+    /* Extra inner breathing room for the milestones card on the About overview. */
+    .about-milestones-card {
+      padding: 2.25rem 2.5rem !important;
+    }
+    @media (max-width: 640px) {
+      .about-milestones-card {
+        padding: 1.75rem 1.5rem !important;
+      }
+      .about-milestones-card .grid > div {
+        padding: .7rem .45rem !important;
+      }
     }
     .spotlight-pill-list {
       display: flex !important;
@@ -1083,6 +1131,22 @@ $body_class     = $body_class     ?? '';
       color: #e58525 !important;
       stroke: #e58525 !important;
       transition: all 0.3s ease !important;
+      flex-shrink: 0 !important;
+    }
+    @media (max-width: 640px) {
+      .faculty-btn {
+        box-sizing: border-box !important;
+        min-height: 44px !important;
+        padding: 0.75rem 0.6rem !important;
+        gap: 0.4rem !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.02em !important;
+      }
+      .faculty-btn span {
+        min-width: 0 !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+      }
     }
     .faculty-card:hover .faculty-btn,
     .faculty-btn:hover {
@@ -1960,6 +2024,23 @@ $body_class     = $body_class     ?? '';
       border-radius: 8px !important;
       white-space: nowrap !important;
     }
+    @media (max-width: 640px) {
+      .rkdf-spec-item {
+        gap: 0.5rem !important;
+      }
+      .rkdf-spec-name {
+        min-width: 0 !important;
+        flex: 1 1 40% !important;
+      }
+      .rkdf-spec-tag {
+        flex: 0 1 60% !important;
+        max-width: 60% !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+        line-height: 1.25 !important;
+        text-align: right !important;
+      }
+    }
     .rkdf-eligibility-card {
       background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
       border: 1px solid rgba(245, 158, 11, 0.35) !important;
@@ -2007,6 +2088,8 @@ $body_class     = $body_class     ?? '';
       align-items: center !important;
       gap: 0.5rem !important;
       padding: 0.65rem 1.25rem !important;
+      flex: 0 0 auto !important;
+      white-space: nowrap !important;
       border-radius: 12px !important;
       background: #071322 !important;
       color: #ffffff !important;
@@ -2500,6 +2583,12 @@ $body_class     = $body_class     ?? '';
       top: 140px !important;
       width: 100% !important;
     }
+    @media (max-width: 1024px) {
+      .leadership-sidebar {
+        position: static !important;
+        top: auto !important;
+      }
+    }
     .leadership-profile-card {
       background: #ffffff !important;
       border: 1px solid #e2e8f0 !important;
@@ -2888,6 +2977,27 @@ $body_class     = $body_class     ?? '';
       transform: translateY(-5px) !important;
       border-color: rgba(229, 133, 37, 0.5) !important;
       box-shadow: 0 20px 35px -10px rgba(15, 27, 45, 0.12), 0 0 0 1px rgba(229, 133, 37, 0.2) !important;
+    }
+    .faculty-card.department-faculty-card {
+      padding: 0 !important;
+    }
+    @media (max-width: 640px) {
+      .department-faculty-card .faculty-stats-row {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 0.65rem !important;
+        margin-bottom: 1rem !important;
+      }
+      .department-faculty-card .faculty-stat-item {
+        min-width: 0 !important;
+        line-height: 1.5 !important;
+      }
+      .department-faculty-card .faculty-header-banner,
+      .department-faculty-card .faculty-card-body {
+        padding: 1.25rem !important;
+      }
+      .department-faculty-card .faculty-header-banner h3 {
+        line-height: 1.3 !important;
+      }
     }
     .faculty-icon-box {
       width: 48px !important;
@@ -4136,6 +4246,7 @@ $body_class     = $body_class     ?? '';
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
       }
+    }
     .course-detail-hero {
       position: relative;
       background: linear-gradient(135deg, #071322 0%, #0d1f38 50%, #152e52 100%) !important;
@@ -4350,6 +4461,29 @@ $body_class     = $body_class     ?? '';
     .course-btn-call:hover {
       color: #e58525 !important;
       border-color: rgba(229, 133, 37, 0.5);
+    }
+    /* Course detail pages use the mobile header up to 1023px; keep their hero controls within that viewport. */
+    @media (max-width: 1023px) {
+      .course-detail-hero {
+        padding: 2.5rem 0 3rem !important;
+      }
+      .course-detail-hero .course-container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+      .course-hero-title {
+        font-size: 2.25rem !important;
+        line-height: 1.05 !important;
+      }
+      .course-hero-badge-strip {
+        gap: 0.5rem !important;
+      }
+      .course-hero-badge {
+        font-size: 0.75rem !important;
+      }
+      .course-hero-actions > a {
+        width: 100% !important;
+      }
     }
 
     /* Course Detail Layout & Sections Normalization */

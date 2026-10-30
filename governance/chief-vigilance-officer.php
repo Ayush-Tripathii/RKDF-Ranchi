@@ -54,7 +54,28 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+@media (max-width: 640px) {
+  section.chief-vigilance-main { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  section.chief-vigilance-main + section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  section.chief-vigilance-main + section + footer > div:first-child { padding-top: 2rem !important; }
+  .chief-vigilance-office-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: .85rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+  .chief-vigilance-office-header > span {
+    display: inline-flex;
+    align-items: center;
+    padding: .4rem .75rem !important;
+    line-height: 1.4;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+</style>
+<section class="py-20 bg-surface chief-vigilance-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">
@@ -136,7 +157,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
         <!-- Main Verbatim Message Document -->
         <div class="leadership-content-card space-y-6">
-          <div class="border-b border-border pb-6 flex items-center justify-between flex-wrap gap-4">
+          <div class="chief-vigilance-office-header border-b border-border pb-6 flex items-center justify-between flex-wrap gap-4">
             <div>
               <div class="text-xs font-bold uppercase tracking-wider text-gold">Official Office</div>
               <h3 class="font-serif text-3xl sm:text-4xl text-foreground font-normal mt-1">

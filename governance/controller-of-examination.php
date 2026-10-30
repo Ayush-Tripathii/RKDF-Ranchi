@@ -19,7 +19,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumbs -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="controller-examination-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('about/') ?>" class="hover:text-white transition">About</a>
@@ -54,7 +54,31 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+@media (max-width: 1023px) {
+  .controller-examination-breadcrumb {
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: .4rem !important;
+    padding: .65rem .75rem !important;
+    border-radius: 16px !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .controller-examination-breadcrumb > span:last-child {
+    grid-column: 1 / -1;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 640px) {
+  section.controller-examination-main { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  section.controller-examination-main + section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  section.controller-examination-main + section + footer > div:first-child { padding-top: 2rem !important; }
+}
+</style>
+<section class="py-20 bg-surface controller-examination-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">

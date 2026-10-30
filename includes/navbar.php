@@ -552,6 +552,8 @@ $alumni_menu_items = [
         type="button"
         id="mobile-menu-btn"
         aria-label="Toggle Navigation Menu"
+        aria-controls="mobile-drawer"
+        aria-expanded="false"
         class="lg:hidden inline-flex items-center justify-center p-2 rounded-xl text-foreground hover:bg-muted transition"
       >
         <?= lucide_icon('menu', 'w-6 h-6') ?>
@@ -562,7 +564,7 @@ $alumni_menu_items = [
 </header>
 
 <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
-<div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300 overflow-hidden lg:hidden">
+<div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none overflow-hidden lg:hidden" aria-hidden="true">
   <!-- Overlay Backdrop -->
   <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
 

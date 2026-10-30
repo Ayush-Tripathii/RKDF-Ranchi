@@ -190,7 +190,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
               Equivalence evaluated under AIU norms for worldwide employment and higher academic progression.
             </p>
           </div>
-          <div class="pt-3 border-t border-white/15 grid grid-cols-2 gap-3 text-xs">
+          <div class="mt-5 pt-4 border-t border-white/15 grid grid-cols-2 gap-3 text-xs">
             <div>
               <div class="font-serif text-xl text-gold">AIU</div>
               <div class="text-[10px] uppercase tracking-wider text-white/70">Global Equivalence</div>
@@ -263,8 +263,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
                   </div>
                 </div>
 
-                <a href="<?= url('admissions/international-students.php') ?>" class="prog-spec-btn">
-                  <span>Apply for <?= e($fac['title']) ?></span>
+                <a href="<?= url('admissions/international-students.php') ?>" class="prog-spec-btn" aria-label="Apply for <?= e($fac['title']) ?>">
+                  <span>Apply Now</span>
                   <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>
                 </a>
               </div>

@@ -9,22 +9,89 @@ require_once dirname(__DIR__) . '/includes/functions.php';
 $page_title     = 'Undergraduate (UG) Degree Programs (All Disciplines) — ' . SITE_NAME;
 $page_meta_desc = 'Explore all ${totalUgCourses} Undergraduate (UG) bachelor degree programs at RKDF University Ranchi. BBA, B.Tech, BCA, B.Sc (Hons), B.Com, B.A. (Hons), B.Pharm, and Law with detailed fees, syllabus, and admission criteria.';
 
-$ug_categories_json = <<<'JSON'
-${JSON.stringify(ugCategories, null, 2)}
-JSON;
-
-$ug_categories = json_decode($ug_categories_json, true);
+$ug_categories = [
+    [
+        'category_name' => 'Engineering & Technology',
+        'tag' => 'Future-Ready Engineering',
+        'icon' => 'cpu',
+        'courses' => [
+            ['name' => 'B.Tech Programs', 'badge' => 'UG Degree', 'duration' => '4 Years (NEP)', 'desc' => 'Engineering programs in CSE, Civil, Mechanical, Mining and Electrical disciplines.', 'href' => 'courses/b-tech.php'],
+            ['name' => 'B.Tech in Computer Science & Engineering', 'badge' => 'UG Degree', 'duration' => '4 Years', 'desc' => 'Industry-aligned computer science education with practical learning.', 'href' => 'courses/b-tech-computer-science-engineering.php'],
+            ['name' => 'B.Tech in Civil Engineering', 'badge' => 'UG Degree', 'duration' => '4 Years', 'desc' => 'Build expertise in infrastructure, construction and sustainable design.', 'href' => 'courses/b-tech-civil-engineering.php'],
+        ],
+    ],
+    [
+        'category_name' => 'Management & Commerce',
+        'tag' => 'Business Leadership',
+        'icon' => 'briefcase',
+        'courses' => [
+            ['name' => 'Bachelor of Business Administration', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'Develop business, entrepreneurship and leadership capabilities.', 'href' => 'courses/bba.php'],
+            ['name' => 'Bachelor of Commerce', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'A strong foundation in accounting, finance and commerce.', 'href' => 'courses/b-com.php'],
+            ['name' => 'Bachelor of Management Studies', 'badge' => 'UG Degree', 'duration' => '3 Years', 'desc' => 'Management education focused on corporate and business analytics.', 'href' => 'courses/bachelor-of-management-studies-bms.php'],
+        ],
+    ],
+    [
+        'category_name' => 'Science & Information Technology',
+        'tag' => 'Scientific Discovery',
+        'icon' => 'flask-conical',
+        'courses' => [
+            ['name' => 'Bachelor of Computer Applications', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'Software, application development and computing foundations.', 'href' => 'courses/bachelor-of-computer-application.php'],
+            ['name' => 'B.Sc. (Hons.) Programs', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'Science programs with contemporary laboratory learning.', 'href' => 'courses/b-sc.php'],
+            ['name' => 'B.Sc. Information Technology', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'Information technology skills for the modern digital economy.', 'href' => 'courses/under-graduate-programs/information-technology-under-graduate-programs.php'],
+        ],
+    ],
+    [
+        'category_name' => 'Arts, Humanities & Social Sciences',
+        'tag' => 'Liberal Studies',
+        'icon' => 'book-open',
+        'courses' => [
+            ['name' => 'Bachelor of Arts', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'Broad-based education in humanities and social sciences.', 'href' => 'courses/ba-bachelor-of-arts.php'],
+            ['name' => 'B.A. in Journalism & Mass Communication', 'badge' => 'UG Degree', 'duration' => '3 Years', 'desc' => 'Media, reporting and digital communication studies.', 'href' => 'courses/ba-in-journalism-mass-communication.php'],
+            ['name' => 'Bachelor of Social Work', 'badge' => 'UG Degree', 'duration' => '3 / 4 Years (NEP)', 'desc' => 'Prepare for impactful community development and welfare practice.', 'href' => 'courses/bachelor-of-social-work-b-s-w.php'],
+        ],
+    ],
+    [
+        'category_name' => 'Professional & Regulated Programs',
+        'tag' => 'Career-Focused Degrees',
+        'icon' => 'graduation-cap',
+        'courses' => [
+            ['name' => 'Bachelor of Pharmacy', 'badge' => 'UG Degree', 'duration' => '4 Years', 'desc' => 'Pharmaceutical science, clinical practice and healthcare learning.', 'href' => 'courses/bachelor-of-pharmacy-b-pharma.php'],
+            ['name' => 'Bachelor of Laws (LL.B.)', 'badge' => 'UG Degree', 'duration' => '3 Years', 'desc' => 'Legal education for litigation, corporate law and public service.', 'href' => 'courses/bachelor-of-laws-llb.php'],
+            ['name' => 'Professional Undergraduate Programs', 'badge' => 'UG Degree', 'duration' => '3 / 4 / 5 Years', 'desc' => 'Explore professional programs across technology, law and management.', 'href' => 'courses/professional-ug.php'],
+        ],
+    ],
+];
 
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 1023px) {
+    .undergraduate-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .undergraduate-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="undergraduate-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('courses/') ?>" class="hover:text-white transition">Courses</a>
@@ -62,7 +129,13 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN UG CONTENT ==================== -->
-<section class="py-16 md:py-20 bg-surface">
+<style>
+  @media (max-width: 640px) {
+    .undergraduate-programs-main { padding-bottom: 2rem !important; }
+    .undergraduate-programs-main > div > :last-child { margin-bottom: 0 !important; }
+  }
+</style>
+<section class="py-16 md:py-20 bg-surface undergraduate-programs-main">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 space-y-16">
 
     <?php foreach ($ug_categories as $cat): ?>

@@ -273,6 +273,82 @@ $institutions_and_partners = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .basic-sciences-main .rkdf-prog-badge {
+      width: fit-content !important;
+      max-width: 100% !important;
+      box-sizing: border-box;
+      align-items: flex-start !important;
+      padding: .5rem .75rem !important;
+      font-size: .68rem !important;
+      letter-spacing: .02em !important;
+      line-height: 1.5 !important;
+    }
+    .basic-sciences-main .rkdf-prog-badge svg { flex-shrink: 0; margin-top: .15rem; }
+    .basic-sciences-main .rkdf-prog-badge > span { min-width: 0; white-space: normal; text-wrap: pretty; }
+    .basic-sciences-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .basic-sciences-spotlight-intro > * { margin: 0 !important; }
+    .basic-sciences-spotlight-intro > div:first-child {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .basic-sciences-spotlight-intro > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .basic-sciences-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .basic-sciences-spotlight-intro p { line-height: 1.7 !important; }
+    section.basic-sciences-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    .basic-sciences-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .basic-sciences-main .rkdf-prog-footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.85rem !important;
+    }
+    .basic-sciences-main .rkdf-prog-footer .rkdf-apply-btn {
+      justify-content: center !important;
+      min-height: 44px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .basic-sciences-main .rkdf-spec-item {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.6rem !important;
+    }
+    .basic-sciences-main .rkdf-spec-name,
+    .basic-sciences-main .rkdf-spec-tag {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+    .basic-sciences-main .rkdf-spec-tag {
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: left !important;
+    }
+    .basic-sciences-breadcrumb {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .basic-sciences-breadcrumb > a,
+    .basic-sciences-breadcrumb > svg { flex-shrink: 0 !important; }
+    .basic-sciences-breadcrumb > span:last-child {
+      flex-basis: 100% !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -280,7 +356,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="basic-sciences-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('departments/') ?>" class="hover:text-white transition">Faculties</a>
@@ -289,7 +365,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
     </div>
 
     <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-normal leading-tight tracking-tight text-white max-w-4xl mx-auto">
-      Faculty of Basic &amp; <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8">Applied Sciences</em>
+      Faculty of Basic &amp; <em class="italic-serif text-gold underline decoration-gold/60 decoration-2 underline-offset-8" style="margin-left: 0.15em;">Applied Sciences</em>
     </h1>
 
     <p class="mt-6 text-white/85 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
@@ -318,7 +394,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface basic-sciences-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Faculty Vision Spotlight -->
@@ -327,7 +403,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-5">
+        <div class="space-y-5 basic-sciences-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('microscope', 'w-4 h-4 text-gold') ?> Scientific Discovery &amp; Research Excellence
           </div>
@@ -409,7 +485,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
               <div class="rkdf-prog-header">
                 <span class="rkdf-prog-badge">
                   <?= lucide_icon($prog['icon'], 'w-3.5 h-3.5 text-amber-600 shrink-0') ?>
-                  <?= e($prog['category']) ?>
+                  <span><?= e($prog['category']) ?></span>
                 </span>
                 <span class="rkdf-duration-badge">
                   <?= lucide_icon('clock', 'w-3.5 h-3.5 text-gold shrink-0') ?>

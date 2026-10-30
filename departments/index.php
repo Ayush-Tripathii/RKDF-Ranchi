@@ -171,6 +171,30 @@ $faculties = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    main.departments-showcase { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    section.departments-endorsements { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  }
+  @media (max-width: 1023px) {
+    .departments-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .departments-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -178,7 +202,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="departments-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <span class="text-white/90">Academics</span>
@@ -216,7 +240,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- 3. Faculties Showcase Grid -->
-<main class="py-20 lg:py-28 bg-slate-50">
+<main class="departments-showcase py-20 lg:py-28 bg-slate-50">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
       <div class="rkdf-section-tag mb-3 inline-flex items-center justify-center">
@@ -234,7 +258,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
     <!-- 12 Faculties Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
       <?php foreach ($faculties as $fac): ?>
-        <article class="faculty-card group">
+        <article class="faculty-card department-faculty-card group">
           <!-- Card Header Banner -->
           <div class="faculty-header-banner">
             <div class="flex items-center justify-between gap-2 mb-3">
@@ -299,7 +323,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </main>
 
 <!-- 4. Academic Council & Statutory Endorsements -->
-<section class="py-20 bg-slate-50/80 border-t border-slate-200">
+<section class="departments-endorsements py-20 bg-slate-50/80 border-t border-slate-200">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Feature 1 -->

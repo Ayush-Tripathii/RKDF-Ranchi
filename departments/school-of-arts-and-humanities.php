@@ -262,6 +262,108 @@ $partners = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .arts-school-main .rkdf-admission-banner { padding: 1.5rem 1.25rem !important; gap: 1.25rem !important; }
+    .arts-school-main .rkdf-admission-content { min-width: 0 !important; width: 100% !important; }
+    .arts-school-main .rkdf-admission-tag {
+      align-items: flex-start !important;
+      font-size: 0.68rem !important;
+      letter-spacing: 0.06em !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .arts-school-main .rkdf-admission-tag svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .arts-school-main .rkdf-admission-title { font-size: 1.85rem !important; line-height: 1.25 !important; margin-bottom: 0.85rem !important; }
+    .arts-school-main .rkdf-admission-actions { flex-direction: column !important; align-items: stretch !important; width: 100% !important; gap: 0.75rem !important; }
+    .arts-school-main .rkdf-admission-actions > a { width: 100% !important; box-sizing: border-box !important; justify-content: center !important; min-height: 44px !important; }
+    .arts-school-main .rkdf-prog-badge {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0.4rem 0.65rem !important;
+      font-size: 0.65rem !important;
+      letter-spacing: 0.02em !important;
+      line-height: 1.5 !important;
+      border-radius: 12px !important;
+      text-wrap: balance;
+    }
+    .arts-school-main .rkdf-prog-badge svg { flex-shrink: 0 !important; }
+    .arts-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .arts-spotlight-intro > * { margin: 0 !important; }
+    .arts-spotlight-intro > div:first-child {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .arts-spotlight-intro > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .arts-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .arts-spotlight-intro p { line-height: 1.7 !important; }
+    .arts-school-main .rkdf-corporate-banner { padding: 1.5rem 1.25rem !important; }
+    .arts-school-main .rkdf-corporate-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    .arts-school-main .rkdf-corporate-grid > div { min-width: 0 !important; }
+    .arts-school-main .rkdf-corporate-grid > div:first-child > div:first-child {
+      align-items: flex-start !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .arts-school-main .rkdf-corporate-grid > div:first-child > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .arts-school-main .rkdf-corporate-grid h3 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .arts-school-main .rkdf-corporate-grid p { line-height: 1.7 !important; margin-top: 1rem !important; }
+    .arts-school-main .rkdf-prog-footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.85rem !important;
+    }
+    .arts-school-main .rkdf-prog-footer .rkdf-apply-btn {
+      justify-content: center !important;
+      min-height: 44px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .arts-school-main .rkdf-spec-item {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.6rem !important;
+    }
+    .arts-school-main .rkdf-spec-name,
+    .arts-school-main .rkdf-spec-tag {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+    .arts-school-main .rkdf-spec-tag {
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: left !important;
+    }
+  }
+  @media (max-width: 1023px) {
+    .arts-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .arts-breadcrumb > a,
+    .arts-breadcrumb > svg { flex-shrink: 0 !important; }
+    .arts-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -269,7 +371,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="arts-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('departments/') ?>" class="hover:text-white transition">Faculties</a>
@@ -307,7 +409,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface arts-school-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Faculty Vision Spotlight -->
@@ -316,7 +418,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-5">
+        <div class="space-y-5 arts-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('book-open', 'w-4 h-4 text-gold') ?> Liberal Arts, Languages &amp; Social Inquiry
           </div>

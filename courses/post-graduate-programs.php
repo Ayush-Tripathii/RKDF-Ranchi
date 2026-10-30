@@ -239,6 +239,73 @@ $pg_categories = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .postgraduate-programs-main { padding-bottom: 2rem !important; }
+    .postgraduate-programs-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .postgraduate-programs-main .rkdf-prog-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.65rem !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .postgraduate-programs-main .rkdf-prog-badge {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0.4rem 0.65rem !important;
+      font-size: 0.65rem !important;
+      letter-spacing: 0.02em !important;
+      line-height: 1.5 !important;
+      border-radius: 12px !important;
+    }
+    .postgraduate-programs-main .rkdf-prog-badge svg { flex-shrink: 0 !important; }
+    .postgraduate-programs-main .rkdf-prog-title {
+      font-size: 1.75rem !important;
+      line-height: 1.3 !important;
+      margin-bottom: 0.85rem !important;
+      overflow-wrap: anywhere !important;
+    }
+    .postgraduate-programs-main .rkdf-prog-desc { line-height: 1.7 !important; margin-bottom: 1.25rem !important; }
+    .postgraduate-programs-main .rkdf-section-header {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 1rem !important;
+      padding-bottom: 1.25rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .postgraduate-programs-main .rkdf-section-tag {
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .postgraduate-programs-main .rkdf-section-tag svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .postgraduate-programs-main .rkdf-section-title {
+      font-size: 1.85rem !important;
+      line-height: 1.25 !important;
+      margin-top: 0.65rem !important;
+      margin-bottom: 0 !important;
+    }
+    .postgraduate-programs-main .rkdf-section-header > a { align-self: flex-start !important; }
+  }
+  @media (max-width: 1023px) {
+    .postgraduate-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .postgraduate-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -246,7 +313,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="postgraduate-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('courses/') ?>" class="hover:text-white transition">Courses</a>
@@ -284,7 +351,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN PG CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface postgraduate-programs-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <?php foreach ($pg_categories as $cat): ?>

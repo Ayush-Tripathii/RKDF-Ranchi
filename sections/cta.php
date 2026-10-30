@@ -3,7 +3,7 @@
  * RKDF University — Call to Action Section
  */
 ?>
-<section class="relative overflow-hidden bg-brand text-brand-foreground py-24">
+<section id="site-admissions-cta" class="relative overflow-hidden bg-brand text-brand-foreground py-24">
   <div class="absolute inset-0 opacity-20">
     <video src="<?= img('hero-video.mp4') ?>" autoplay muted loop playsinline class="w-full h-full object-cover"></video>
   </div>

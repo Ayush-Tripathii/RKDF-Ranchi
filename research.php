@@ -77,6 +77,9 @@ $centres = [
         </div>
       <?php endforeach; ?>
     </div>
+  </div>
+</section>
+
 <!-- Conferences & Symposia -->
 <section class="py-20 bg-background border-t border-border" id="conferences">
   <div class="mx-auto max-w-7xl px-6 space-y-12">

@@ -159,6 +159,24 @@ $facilities_directory = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .facilities-overview-main { padding-bottom: 2rem !important; }
+    .facilities-overview-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .facilities-card-stats {
+      grid-template-columns: minmax(0, 1fr) !important;
+      gap: 0.65rem !important;
+    }
+    .facilities-card-stats .prog-spec-stat-box {
+      min-width: 0 !important;
+      padding: 0.85rem !important;
+    }
+    .facilities-card-stats .prog-spec-stat-val {
+      line-height: 1.5 !important;
+      overflow-wrap: anywhere !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -202,7 +220,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/facilities_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface facilities-overview-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
@@ -335,7 +353,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
               <!-- Stats & CTA -->
               <div class="space-y-4">
-                <div class="prog-spec-stats-grid">
+                <div class="prog-spec-stats-grid facilities-card-stats">
                   <?php foreach ($facility['stats'] as $st): ?>
                     <div class="prog-spec-stat-box">
                       <span class="prog-spec-stat-lbl"><?= e($st['lbl']) ?></span>

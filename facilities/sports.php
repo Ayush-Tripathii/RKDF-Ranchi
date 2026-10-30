@@ -87,14 +87,36 @@ $sports_complex = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 1023px) {
+    .sports-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .sports-breadcrumb > span:last-child { grid-column: 1 / -1 !important; text-align: center !important; line-height: 1.4 !important; }
+  }
+  @media (max-width: 640px) {
+    .sports-main { padding-bottom: 2rem !important; }
+    .sports-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .sports-hero h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
+    .sports-hero h1 em { display: block; margin-top: 0.15em; }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
-<section class="inner-page-hero">
+<section class="inner-page-hero sports-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="sports-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('facilities/') ?>" class="hover:text-white transition">Facilities</a>
@@ -132,7 +154,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/facilities_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface sports-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->

@@ -57,7 +57,27 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+  @media (max-width: 640px) {
+    section.rti-corner-main { padding-bottom: 1.5rem !important; }
+    .rti-corner-main > div > :last-child { margin-bottom: 0 !important; }
+  }
+  @media (max-width: 640px) {
+    .rti-corner-main .officer-card { padding: 1.25rem !important; min-width: 0 !important; }
+    .rti-corner-main .officer-header-wrap {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.85rem !important;
+    }
+    .rti-corner-main .officer-title { font-size: 1.75rem !important; line-height: 1.25 !important; margin-top: 0.35rem !important; }
+    .rti-corner-main .officer-contact-panel { padding: 1rem !important; }
+    .rti-corner-main .officer-contact-item { min-width: 0 !important; gap: 0.65rem !important; }
+    .rti-corner-main .officer-contact-item svg { flex-shrink: 0 !important; }
+    .rti-corner-main .officer-contact-item a,
+    .rti-corner-main .officer-contact-item span { min-width: 0 !important; overflow-wrap: anywhere !important; }
+  }
+</style>
+<section class="py-20 bg-surface rti-corner-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Mandate Spotlight Banner -->

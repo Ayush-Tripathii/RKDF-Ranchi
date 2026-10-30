@@ -54,8 +54,16 @@ $social_icons = [
     ['icon' => 'message-circle', 'href' => defined('SOCIAL_WHATSAPP') ? SOCIAL_WHATSAPP : 'https://wa.me/917091168777'],
 ];
 ?>
+<style>
+  #site-admissions-cta { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  #site-footer-content { padding-top: 3rem !important; }
+  @media (max-width: 640px) {
+    #site-admissions-cta { padding-top: 2rem !important; padding-bottom: 1rem !important; }
+    #site-footer-content { padding-top: 1rem !important; }
+  }
+</style>
 <footer class="bg-brand text-brand-foreground">
-  <div class="mx-auto max-w-7xl px-6 pt-20 pb-10">
+  <div id="site-footer-content" class="mx-auto max-w-7xl px-6 pt-20 pb-10">
     <!-- Newsletter Card -->
     <div class="mb-16 grid items-center gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur lg:grid-cols-[1.5fr_1fr] lg:p-12">
       <div>

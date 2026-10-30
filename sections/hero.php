@@ -68,19 +68,31 @@ $quick_links = [
 
     <!-- Right Column: Quick Access Card -->
     <div class="lg:col-span-5 lg:pt-4">
-      <div class="rounded-2xl bg-background/95 backdrop-blur border border-white/20 shadow-2xl p-6 md:p-7 text-foreground">
+      <style>
+        @media (max-width: 640px) {
+          .hero-quick-access-card { padding: 1rem !important; }
+          .hero-quick-links { gap: .5rem !important; margin-top: .75rem !important; }
+          .hero-quick-link { min-width: 0; padding: .65rem .5rem !important; }
+          .hero-quick-link-content { min-width: 0; gap: .4rem !important; }
+          .hero-quick-link-icon { width: 1.75rem !important; height: 1.75rem !important; }
+          .hero-quick-link-icon svg { width: .8rem !important; height: .8rem !important; }
+          .hero-quick-link-label { font-size: .68rem !important; line-height: 1 !important; white-space: nowrap; }
+          .hero-quick-link > svg { width: .75rem !important; height: .75rem !important; flex-shrink: 0; }
+        }
+      </style>
+      <div class="hero-quick-access-card rounded-2xl bg-background/95 backdrop-blur border border-white/20 shadow-2xl p-6 md:p-7 text-foreground">
         <div class="text-xs tracking-[0.18em] uppercase text-muted-foreground font-medium">Quick Access</div>
         <div class="font-serif text-2xl mt-1">Where would you like to go?</div>
 
-        <div class="grid grid-cols-2 gap-3 mt-5">
+        <div class="hero-quick-links grid grid-cols-2 gap-3 mt-5">
           <?php foreach ($quick_links as $ql): ?>
-            <a href="<?= url($ql['href']) ?>" class="group relative flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 overflow-hidden transition-all duration-300 hover:border-brand hover:shadow-lg hover:-translate-y-0.5">
+            <a href="<?= url($ql['href']) ?>" class="hero-quick-link group relative flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 overflow-hidden transition-all duration-300 hover:border-brand hover:shadow-lg hover:-translate-y-0.5">
               <span class="absolute inset-0 bg-gradient-to-br from-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:to-brand/10 transition-all duration-300"></span>
-              <span class="relative flex items-center gap-3">
-                <span class="w-9 h-9 rounded-full bg-muted flex items-center justify-center transition-all duration-300 group-hover:bg-brand group-hover:scale-110 shrink-0">
+              <span class="hero-quick-link-content relative flex items-center gap-3">
+                <span class="hero-quick-link-icon w-9 h-9 rounded-full bg-muted flex items-center justify-center transition-all duration-300 group-hover:bg-brand group-hover:scale-110 shrink-0">
                   <?= lucide_icon($ql['icon'], 'w-4 h-4 text-brand transition-colors duration-300 group-hover:text-brand-foreground') ?>
                 </span>
-                <span class="text-sm font-medium transition-colors group-hover:text-brand"><?= e($ql['label']) ?></span>
+                <span class="hero-quick-link-label text-sm font-medium transition-colors group-hover:text-brand"><?= e($ql['label']) ?></span>
               </span>
               <?= lucide_icon('chevron-right', 'relative w-4 h-4 text-muted-foreground transition-all duration-300 group-hover:text-brand group-hover:translate-x-1 shrink-0') ?>
             </a>

@@ -112,6 +112,73 @@ $recruiters = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  .engineering-school-main { padding-bottom: 3rem !important; }
+  @media (max-width: 640px) {
+    .engineering-school-main { padding-bottom: 2rem !important; }
+    .engineering-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+    .engineering-school-main .rkdf-corporate-banner { padding: 1.5rem 1.25rem !important; }
+    .engineering-school-main .rkdf-corporate-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    .engineering-school-main .rkdf-corporate-grid > div { min-width: 0 !important; }
+    .engineering-school-main .rkdf-corporate-grid > div:first-child > div:first-child {
+      align-items: flex-start !important;
+      letter-spacing: 0.08em !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0.85rem !important;
+    }
+    .engineering-school-main .rkdf-corporate-grid > div:first-child > div:first-child svg { flex-shrink: 0 !important; margin-top: 0.15rem !important; }
+    .engineering-school-main .rkdf-corporate-grid h3 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+    .engineering-school-main .rkdf-corporate-grid p { line-height: 1.7 !important; margin-top: 1rem !important; }
+    .engineering-breadcrumb {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .engineering-breadcrumb > a,
+    .engineering-breadcrumb > svg {
+      flex-shrink: 0 !important;
+    }
+    .engineering-breadcrumb > span:last-child {
+      flex-basis: 100% !important;
+      line-height: 1.4 !important;
+    }
+    .engineering-school-main .rkdf-prog-footer {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.85rem !important;
+    }
+    .engineering-school-main .rkdf-prog-footer .rkdf-apply-btn {
+      justify-content: center !important;
+      min-height: 44px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .engineering-school-main .rkdf-spec-item {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 0.6rem !important;
+    }
+    .engineering-school-main .rkdf-spec-name {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+    .engineering-school-main .rkdf-spec-tag {
+      flex: 0 1 auto !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      text-align: left !important;
+      overflow-wrap: anywhere !important;
+    }
+  }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -119,7 +186,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="engineering-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('departments/') ?>" class="hover:text-white transition">Faculties</a>
@@ -157,7 +224,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
-<section class="py-20 bg-surface">
+<section class="engineering-school-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Executive Faculty Vision Spotlight -->

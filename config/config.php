@@ -25,8 +25,27 @@ define('SOCIAL_WHATSAPP',      'https://wa.me/917091168777');
 define('DEFAULT_META_DESC',
     'RKDF University Ranchi — a multidisciplinary university shaping the next generation of scientists, physicians, engineers, entrepreneurs and artists.');
 
-// Base path for assets
-define('BASE_PATH', '/RKDF Ranchi/');
+// Base path for assets, derived from the app location under the web root.
+$site_root = realpath(dirname(__DIR__));
+$document_root = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
+$base_path = '/';
+
+if ($site_root !== false && $document_root !== false) {
+    $site_root_url_path = str_replace('\\', '/', $site_root);
+    $document_root_url_path = rtrim(str_replace('\\', '/', $document_root), '/');
+
+    if (strcasecmp($site_root_url_path, $document_root_url_path) === 0) {
+        $base_path = '/';
+    } elseif (stripos($site_root_url_path, $document_root_url_path . '/') === 0) {
+        $relative_path = substr($site_root_url_path, strlen($document_root_url_path));
+        $path_segments = array_map('rawurlencode', explode('/', trim($relative_path, '/')));
+        $base_path = '/' . implode('/', $path_segments) . '/';
+    }
+} elseif ($site_root !== false) {
+    $base_path = '/' . rawurlencode(basename(str_replace('\\', '/', $site_root))) . '/';
+}
+
+define('BASE_PATH', $base_path);
 define('ASSETS_PATH', BASE_PATH);
 $base_url = rtrim(SITE_URL, '/') . '/';
 

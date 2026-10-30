@@ -84,6 +84,44 @@ $phd_process_steps = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .doctoral-programs-main .phd-card-header {
+      position: relative !important;
+      padding: 1.5rem 1.25rem !important;
+      display: block !important;
+    }
+    .doctoral-programs-main .phd-header-left { min-width: 0 !important; width: 100% !important; }
+    .doctoral-programs-main .phd-header-iconbox { position: absolute !important; top: 1.25rem !important; right: 1.25rem !important; width: 36px !important; height: 36px !important; }
+    .doctoral-programs-main .phd-header-badge { max-width: calc(100% - 48px) !important; box-sizing: border-box !important; line-height: 1.5 !important; }
+    .doctoral-programs-main .phd-card-title { font-size: 1.75rem !important; line-height: 1.3 !important; margin-top: 1rem !important; }
+    .doctoral-programs-main .phd-card-body { padding: 1.25rem !important; }
+    .doctoral-programs-main .phd-section-label { flex-direction: column !important; align-items: flex-start !important; gap: 0.65rem !important; }
+    .doctoral-programs-main .phd-section-label > span:first-child { line-height: 1.5 !important; }
+    .doctoral-programs-main .phd-section-label svg { flex-shrink: 0 !important; }
+    .doctoral-programs-main .phd-thrust-count { white-space: nowrap !important; }
+    .doctoral-programs-main { padding-bottom: 2rem !important; }
+    .doctoral-programs-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+  }
+  @media (max-width: 1023px) {
+    .doctoral-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .doctoral-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -91,7 +129,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="doctoral-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('courses/') ?>" class="hover:text-white transition">Courses</a>
@@ -129,7 +167,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN PH.D. CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface doctoral-programs-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Research Framework Overview -->

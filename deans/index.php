@@ -17,7 +17,12 @@ require_once __DIR__ . '/../includes/header.php';
   </div>
 </div>
 
-<section class="py-12 md:py-16 bg-background">
+<style>
+  @media (max-width: 640px) {
+    .deans-directory { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  }
+</style>
+<section class="py-12 md:py-16 bg-background deans-directory">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       

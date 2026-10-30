@@ -12,6 +12,57 @@ $page_meta_desc = 'Discover the legacy of RKDF University Ranchi — established
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  .about-overview-main { padding-bottom: 3rem !important; }
+
+  @media (max-width: 640px) {
+    .about-overview-main { padding-bottom: 2rem !important; }
+    .about-overview-main > div > .section-block:last-child { margin-bottom: 0 !important; }
+    .about-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .about-spotlight-intro > * { margin: 0 !important; }
+    .about-spotlight-intro > div:first-child {
+      align-self: flex-start !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      border-radius: 12px !important;
+      line-height: 1.5 !important;
+      letter-spacing: 0.06em !important;
+    }
+    .about-spotlight-intro svg { flex-shrink: 0 !important; }
+    .about-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.25 !important; }
+    .about-spotlight-intro p { line-height: 1.7 !important; }
+    .about-spotlight-intro .spotlight-pill-list { gap: 0.65rem !important; }
+    .about-spotlight-intro .spotlight-pill-list > span {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      line-height: 1.5 !important;
+    }
+    .about-milestones-card {
+      padding: 2rem 1.5rem !important;
+    }
+
+    .about-milestones-card > .grid > div {
+      display: flex !important;
+      min-height: 4.75rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: .75rem .4rem !important;
+    }
+
+    .about-milestones-card > .grid > div > :last-child {
+      margin-top: .25rem !important;
+      line-height: 1.25;
+    }
+  }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero relative overflow-hidden">
   <!-- Subtle Ambient Glow Orbs -->
@@ -59,13 +110,13 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="about-overview-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-24">
 
     <!-- 1. Executive Spotlight Card -->
     <div class="gov-spotlight-card section-block">
-      <div class="gov-spotlight-grid">
-        <div class="space-y-4">
+      <div class="gov-spotlight-grid about-overview-spotlight-grid">
+        <div class="space-y-4 about-spotlight-intro">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/20 border border-gold/40 text-[11px] font-bold text-gold uppercase tracking-widest">
             <?= lucide_icon('award', 'w-3.5 h-3.5') ?> Statutory University of Jharkhand
           </div>
@@ -89,7 +140,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </div>
 
         <!-- Right Quick Stat Box -->
-        <div class="gazette-seal-inner text-white space-y-4">
+        <div class="gazette-seal-inner about-milestones-card text-white space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-xs uppercase tracking-wider text-gold font-bold">Group Milestones</span>
             <span class="text-[10px] text-white/60">1994 – Present</span>

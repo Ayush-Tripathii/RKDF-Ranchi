@@ -25,8 +25,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && isset($_POST['apply_submit'
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    #downloads .prog-spec-btn {
+      box-sizing: border-box !important;
+      min-height: 44px !important;
+      padding: 0.75rem 0.65rem !important;
+      font-size: 0.7rem !important;
+      letter-spacing: 0.02em !important;
+      gap: 0.4rem !important;
+      text-align: center !important;
+    }
+    #downloads .prog-spec-btn svg { flex-shrink: 0 !important; }
+    #downloads .prog-spec-btn span { min-width: 0 !important; line-height: 1.5 !important; }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
-<section class="inner-page-hero">
+<section class="inner-page-hero" style="padding-bottom: 2rem !important;">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -59,7 +74,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </section>
 
 <!-- Admission Steps -->
-<section class="py-24 bg-surface border-b border-border" id="process">
+<section class="py-24 bg-surface border-b border-border" id="process" style="padding-top: 2rem !important; padding-bottom: 2rem !important;">
   <div class="mx-auto max-w-7xl px-6">
     <div class="text-center max-w-2xl mx-auto mb-16">
       <div class="text-xs tracking-[0.2em] uppercase text-gold font-medium">How to Apply</div>
@@ -88,7 +103,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </section>
 
 <!-- Scholarships -->
-<section class="py-24 bg-background" id="scholarships">
+<section class="py-24 bg-background" id="scholarships" style="padding-top: 2rem !important; padding-bottom: 2rem !important;">
   <div class="mx-auto max-w-7xl px-6">
     <div class="mb-12 max-w-2xl">
       <div class="text-xs tracking-[0.2em] uppercase text-gold font-medium">Financial Aid</div>
@@ -115,7 +130,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </section>
 
 <!-- ==================== OFFICIAL ADMISSION DOWNLOADS ==================== -->
-<section class="py-20 bg-slate-50 border-y border-border" id="downloads">
+<section class="py-20 bg-slate-50 border-y border-border" id="downloads" style="padding-top: 2rem !important; padding-bottom: 2rem !important;">
   <div class="mx-auto max-w-7xl px-6">
     <div class="rkdf-section-header">
       <div>
@@ -231,7 +246,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </section>
 
 <!-- Application Form Section -->
-<section class="py-24 bg-gradient-to-b from-surface via-slate-50/50 to-surface border-t border-border relative overflow-hidden" id="apply-form">
+<section class="py-24 bg-gradient-to-b from-surface via-slate-50/50 to-surface border-t border-border relative overflow-hidden" id="apply-form" style="padding-top: 2rem !important; padding-bottom: 2rem !important;">
   <!-- Ambient Soft Accents -->
   <div class="absolute top-1/4 -left-20 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-brand/5 rounded-full blur-3xl pointer-events-none"></div>

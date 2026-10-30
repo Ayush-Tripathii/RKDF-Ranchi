@@ -20,6 +20,37 @@ $alumni_voices = [
     ],
 ];
 ?>
+<style>
+  .homepage-alumni-cta {
+    min-height: 2.9rem;
+    padding: .8rem 1.5rem;
+    font-size: .75rem;
+    letter-spacing: .05em;
+    line-height: 1.25;
+  }
+
+  .homepage-alumni-cta svg {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .homepage-alumni-cta {
+      width: 100%;
+      max-width: 22rem;
+      justify-content: center;
+      padding: .8rem 1rem;
+      font-size: .72rem;
+      letter-spacing: .035em;
+    }
+
+    .homepage-alumni-cta span {
+      white-space: normal;
+      text-align: center;
+    }
+  }
+</style>
 <section class="bg-surface border-y border-border py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6">
     <div class="mb-12 max-w-2xl">
@@ -45,7 +76,7 @@ $alumni_voices = [
     </div>
 
     <div class="mt-12 text-center">
-      <a href="<?= url('about/alumni-committee.php') ?>" class="inline-flex items-center gap-2 rounded-full bg-brand text-brand-foreground px-7 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-gold hover:text-brand transition shadow-lg">
+      <a href="<?= url('about/alumni-committee.php') ?>" class="homepage-alumni-cta inline-flex items-center gap-2 rounded-full bg-brand text-brand-foreground px-7 py-3.5 font-bold uppercase hover:bg-gold hover:text-brand transition shadow-lg">
         <span>Join Alumni Network &amp; Committee</span>
         <?= lucide_icon('arrow-right', 'w-4 h-4') ?>
       </a>

@@ -87,6 +87,44 @@ $transport_services = [
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<style>
+  @media (max-width: 640px) {
+    .transport-main { padding-bottom: 2rem !important; }
+    .transport-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+  }
+  @media (max-width: 640px) {
+    .transport-route-actions {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr);
+      width: 100%;
+    }
+    .transport-route-actions a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<style>
+  @media (max-width: 1023px) {
+    .transport-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .transport-breadcrumb > span:last-child {
+      grid-column: 1 / -1 !important;
+      text-align: center !important;
+      line-height: 1.4 !important;
+    }
+  }
+</style>
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -94,7 +132,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="transport-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('facilities/') ?>" class="hover:text-white transition">Facilities</a>
@@ -132,7 +170,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/facilities_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface transport-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->
@@ -228,9 +266,9 @@ require_once dirname(__DIR__) . '/includes/header.php';
           <h3 class="rkdf-section-title">Bus Routes &amp; Transit Services</h3>
           <p class="rkdf-section-desc">Reliable university transit operations ensuring punctuality, passenger safety, and subsidized travel.</p>
         </div>
-        <div class="flex flex-wrap items-center gap-3 shrink-0">
+        <div class="transport-route-actions flex flex-wrap items-center gap-3 shrink-0">
           <?php if (file_exists(dirname(__DIR__) . '/documents/Bus-Registration-Form.pdf')): ?>
-            <a href="<?= url('documents/Bus-Registration-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider hover:bg-brand transition shadow-sm">
+            <a href="<?= url('documents/Bus-Registration-Form.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition shadow-sm">
               <?= lucide_icon('file-text', 'w-3.5 h-3.5 text-gold') ?>
               <span>Bus Registration Form (PDF)</span>
               <?= lucide_icon('download', 'w-3.5 h-3.5') ?>

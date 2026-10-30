@@ -60,6 +60,71 @@ $statutory_approvals = [
 ];
 ?>
 
+<style>
+  .government-recognition-main { padding-bottom: 3rem !important; }
+  .government-approvals-section { margin-bottom: 0 !important; }
+
+  @media (max-width: 640px) {
+    .recognition-spotlight-intro {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1rem !important;
+      min-width: 0 !important;
+    }
+    .recognition-spotlight-intro > * { margin: 0 !important; }
+    .recognition-spotlight-intro > div:first-child {
+      line-height: 1.5 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .recognition-spotlight-intro svg { flex-shrink: 0 !important; }
+    .recognition-spotlight-intro h2 { font-size: 1.75rem !important; line-height: 1.25 !important; }
+    .recognition-spotlight-intro p { line-height: 1.7 !important; }
+    .recognition-spotlight-intro .spotlight-pill-list { gap: 0.65rem !important; }
+    .recognition-spotlight-intro .spotlight-pill {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      white-space: normal !important;
+      height: auto !important;
+      line-height: 1.5 !important;
+    }
+    .gov-approvals-table-wrap .overflow-x-auto { overflow: visible !important; }
+    .gov-approvals-table,
+    .gov-approvals-table tbody,
+    .gov-approvals-table tr,
+    .gov-approvals-table td { display: block !important; width: 100% !important; }
+    .gov-approvals-table thead { display: none !important; }
+    .gov-approvals-table tr {
+      padding: 1rem !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .gov-approvals-table tr:last-child { border-bottom: 0 !important; }
+    .gov-approvals-table td {
+      padding: .65rem 0 !important;
+      border: 0 !important;
+      text-align: left !important;
+    }
+    .gov-approvals-table td[data-label] {
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+    }
+    .gov-approvals-table td[data-label]::before {
+      content: attr(data-label);
+      color: #64748b;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .gov-approvals-table .approval-flex { gap: .75rem !important; }
+    .gov-approvals-table .approval-action-btn {
+      min-height: 2.5rem;
+      padding: .65rem .9rem !important;
+    }
+  }
+</style>
+
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
@@ -105,7 +170,7 @@ $statutory_approvals = [
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="government-recognition-main py-20 bg-surface">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner -->
@@ -115,7 +180,7 @@ $statutory_approvals = [
       <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-brand/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="gov-spotlight-grid">
-        <div class="space-y-4">
+        <div class="space-y-4 recognition-spotlight-intro">
           <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold font-bold">
             <?= lucide_icon('shield-check', 'w-4 h-4 text-gold') ?> Statutory Legislative Authority
           </div>
@@ -210,15 +275,15 @@ $statutory_approvals = [
     </div>
 
     <!-- Statutory Approvals Section -->
-    <div class="mb-16 section-block space-y-8">
+    <div class="government-approvals-section mb-16 section-block space-y-8">
       <div>
         <div class="text-xs tracking-[0.2em] uppercase text-gold font-bold">Professional Councils</div>
         <h3 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900 mt-1">Statutory Approvals</h3>
       </div>
 
-      <div class="gov-table-wrap">
+      <div class="gov-table-wrap gov-approvals-table-wrap">
         <div class="overflow-x-auto">
-          <table class="gov-table">
+          <table class="gov-table gov-approvals-table">
             <thead>
               <tr>
                 <th style="width: 55%;">Council</th>
@@ -240,12 +305,12 @@ $statutory_approvals = [
                       </div>
                     </div>
                   </td>
-                  <td>
+                  <td data-label="Academic Year">
                     <span class="approval-year-badge">
                       <?= e($sa['year']) ?>
                     </span>
                   </td>
-                  <td style="text-align: right;">
+                  <td data-label="Approval Letter" style="text-align: right;">
                     <a href="<?= e($sa['url']) ?>" target="_blank" rel="noopener" class="approval-action-btn group">
                       <span>Click to View</span>
                       <?= lucide_icon('arrow-right', 'w-3.5 h-3.5') ?>

@@ -1,8 +1,46 @@
 <?php
 $page_title = "Alumni Association & Committee | RKDF University Ranchi";
-$page_description = "Connect with the RKDF University Ranchi Alumni Association: Global network of graduates, mentorship programs, annual reunions, career networking & alumni registration.";
+$page_meta_desc = "Connect with the RKDF University Ranchi Alumni Association: Global network of graduates, mentorship programs, annual reunions, career networking & alumni registration.";
 require_once __DIR__ . '/../includes/header.php';
 ?>
+
+<style>
+  .alumni-spotlight-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .alumni-spotlight-grid {
+      grid-template-columns: minmax(0, 2fr) minmax(19rem, 1fr);
+    }
+  }
+  .alumni-privileges-card {
+    background: linear-gradient(135deg, #071322 0%, #132a4a 100%);
+    color: #ffffff;
+  }
+  .alumni-privileges-card h3 { color: #f6b344; }
+  .alumni-privileges-card ul { color: rgba(255, 255, 255, 0.82); }
+  .alumni-register-content h3 { color: #0f1b2d; }
+  .alumni-register-content p { color: #475569; }
+  .alumni-register-tag {
+    background: rgba(229, 133, 37, 0.12);
+    color: #b45309;
+  }
+  .alumni-main {
+    padding: 4.5rem 0 5rem;
+  }
+  .alumni-spotlight,
+  .alumni-initiatives {
+    margin-bottom: 5rem;
+  }
+  @media (max-width: 640px) {
+    .alumni-main { padding: 3rem 0 3.5rem; }
+    .alumni-spotlight,
+    .alumni-initiatives { margin-bottom: 3rem; }
+  }
+</style>
 
 <!-- Hero Section -->
 <section class="inner-page-hero">
@@ -10,12 +48,12 @@ require_once __DIR__ . '/../includes/header.php';
         <div class="max-w-3xl">
             <!-- Breadcrumbs -->
             <nav class="flex items-center gap-2 text-xs md:text-sm text-gray-300 mb-4" aria-label="Breadcrumb">
-                <a href="<?php echo $base_url; ?>index.php" class="hover:text-white transition-colors flex items-center gap-1">
+                <a href="<?= url('/') ?>" class="hover:text-white transition-colors flex items-center gap-1">
                     <?php echo lucide_icon('home', ['class' => 'w-3.5 h-3.5']); ?>
                     <span>Home</span>
                 </a>
                 <span class="text-gray-400">/</span>
-                <a href="<?php echo $base_url; ?>about/index.php" class="hover:text-white transition-colors">About</a>
+                <a href="<?= url('about/') ?>" class="hover:text-white transition-colors">About</a>
                 <span class="text-gray-400">/</span>
                 <span class="text-amber-400 font-medium">Alumni Committee</span>
             </nav>
@@ -33,11 +71,11 @@ require_once __DIR__ . '/../includes/header.php';
             </p>
 
             <div class="flex flex-wrap gap-4 pt-2">
-                <a href="<?php echo $base_url; ?>documents/RKDF-Alumni-Form-2025.pdf" target="_blank" class="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all">
+                <a href="<?= url('documents/RKDF-Alumni-Form-2025.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold text-brand hover:bg-white text-sm font-semibold transition-all shadow-sm">
                     <?php echo lucide_icon('download', ['class' => 'w-4 h-4']); ?>
                     <span>Download Alumni Registration Form</span>
                 </a>
-                <a href="#initiatives" class="btn-outline-white inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all">
+                <a href="#initiatives" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/40 text-white hover:bg-white/10 text-sm font-medium transition-all">
                     <?php echo lucide_icon('sparkles', ['class' => 'w-4 h-4']); ?>
                     <span>Alumni Initiatives</span>
                 </a>
@@ -50,13 +88,13 @@ require_once __DIR__ . '/../includes/header.php';
 <?php require_once __DIR__ . '/../includes/about_nav_tabs.php'; ?>
 
 <!-- Main Content Area -->
-<main class="py-14 sm:py-20 bg-slate-50">
+<main class="alumni-main bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Spotlight Card -->
-        <div class="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-gray-100 mb-16">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-8">
+        <div class="alumni-spotlight bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-gray-100">
+            <div class="alumni-spotlight-grid">
+                <div>
                     <span class="text-xs font-bold uppercase tracking-widest text-primary-700 bg-primary-50 px-3 py-1 rounded-full">
                         Alumni Relations
                     </span>
@@ -70,7 +108,7 @@ require_once __DIR__ . '/../includes/header.php';
                         Through interactive masterclasses, guest lectures, hiring referrals, and student project mentoring, our alumni community plays an integral role in shaping the next generation of RKDF graduates.
                     </p>
                 </div>
-                <div class="lg:col-span-4 bg-gradient-to-br from-primary-900 to-slate-900 text-white rounded-xl p-6 shadow-md">
+                <div class="alumni-privileges-card rounded-xl p-6 shadow-md">
                     <h3 class="text-lg font-serif text-amber-300 font-normal mb-3 flex items-center gap-2">
                         <?php echo lucide_icon('award', ['class' => 'w-5 h-5']); ?>
                         Key Alumni Privileges
@@ -98,7 +136,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
 
         <!-- Initiatives Grid -->
-        <div id="initiatives" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div id="initiatives" class="alumni-initiatives grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-xs">
                 <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-3">
                     <?php echo lucide_icon('compass', ['class' => 'w-5 h-5']); ?>
@@ -131,15 +169,15 @@ require_once __DIR__ . '/../includes/header.php';
         <!-- Download & Register CTA -->
         <div class="rkdf-admission-banner">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-                <div class="text-center md:text-left">
-                    <span class="inline-block px-3 py-1 bg-amber-400/20 text-amber-300 text-xs font-semibold rounded-full mb-2">Stay Connected</span>
-                    <h3 class="text-2xl sm:text-3xl font-serif text-white font-normal">Register in the Alumni Directory</h3>
-                    <p class="text-gray-300 text-sm mt-1 max-w-xl">
+                <div class="alumni-register-content text-center md:text-left">
+                    <span class="alumni-register-tag inline-block px-3 py-1 text-xs font-semibold rounded-full mb-2">Stay Connected</span>
+                    <h3 class="text-2xl sm:text-3xl font-serif font-normal">Register in the Alumni Directory</h3>
+                    <p class="text-sm mt-1 max-w-xl">
                         Download the official alumni registration form and submit your updated details to the Alumni Cell: <a href="mailto:info@rkdfuniversity.org" class="underline hover:text-white">info@rkdfuniversity.org</a>
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
-                    <a href="<?php echo $base_url; ?>documents/RKDF-Alumni-Form-2025.pdf" target="_blank" class="btn-gold px-6 py-3 rounded-lg text-sm font-semibold transition-all">
+                    <a href="<?= url('documents/RKDF-Alumni-Form-2025.pdf') ?>" target="_blank" class="inline-flex items-center px-6 py-3 rounded-lg bg-gold text-brand hover:bg-white text-sm font-semibold transition-all shadow-sm">
                         Download Registration Form (PDF)
                     </a>
                 </div>

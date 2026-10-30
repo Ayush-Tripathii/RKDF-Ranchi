@@ -54,7 +54,19 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+@media (min-width: 641px) {
+  section.nodal-officer-main { padding-bottom: 3rem !important; }
+  section.nodal-officer-main + section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  section.nodal-officer-main ~ footer > div:first-child { padding-top: 3rem !important; }
+}
+@media (max-width: 640px) {
+  section.nodal-officer-main { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  section.nodal-officer-main + section { padding-top: 2rem !important; padding-bottom: 1rem !important; }
+  section.nodal-officer-main ~ footer > div:first-child { padding-top: 1rem !important; }
+}
+</style>
+<section class="py-20 bg-surface nodal-officer-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">

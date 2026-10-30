@@ -17,13 +17,34 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <!-- ==================== ELEVATED INNER PAGE HERO ==================== -->
+<style>
+  @media (max-width: 640px) {
+    .governors-main { padding-bottom: 2rem !important; }
+    .governors-main > div > :last-child { margin-bottom: 0 !important; }
+    .governors-main + footer > div:first-child { padding-top: 2rem !important; }
+  }
+  @media (max-width: 1023px) {
+    .governors-breadcrumb {
+      display: grid !important;
+      grid-template-columns: auto auto auto auto !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.65rem 0.75rem !important;
+      border-radius: 16px !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .governors-breadcrumb > span:last-child { grid-column: 1 / -1 !important; text-align: center !important; line-height: 1.4 !important; }
+  }
+</style>
 <section class="inner-page-hero">
   <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand/30 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute top-1/2 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="governors-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('about/') ?>" class="hover:text-white transition">About</a>
@@ -58,7 +79,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/about_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<section class="py-20 bg-surface governors-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Statutory Authority Spotlight Banner Component -->
