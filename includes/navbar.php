@@ -325,11 +325,12 @@ $alumni_menu_items = [
   <div class="mx-auto max-w-7xl px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
     
     <!-- Brand Logo -->
-    <a href="<?= url('/') ?>" class="flex items-center gap-3 group shrink-0">
-      <img src="<?= img('logo.png') ?>" alt="RKDF University" class="h-11 w-auto object-contain transition group-hover:scale-105" />
-      <div class="leading-tight">
-        <div class="font-serif text-xl text-foreground font-normal tracking-tight">RKDF University</div>
-        <div class="text-[10px] tracking-[0.18em] text-muted-foreground uppercase">Education Glorifies Nation</div>
+    <a href="<?= url('/') ?>" class="brand-logo-wrap group">
+      <img src="<?= img('logo.png') ?>" alt="RKDF University" class="brand-logo-img transition group-hover:scale-105" />
+      <div class="brand-text-block">
+        <div class="brand-title">RKDF University</div>
+        <!-- Mobile only: RANCHI, JHARKHAND -->
+        <div class="brand-subtitle-mobile">Ranchi, Jharkhand</div>
       </div>
     </a>
 
@@ -595,32 +596,22 @@ $alumni_menu_items = [
   <div class="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl flex flex-col h-full transform translate-x-full transition-transform duration-300 ease-out" id="mobile-drawer-panel">
     
     <!-- Drawer Header -->
-    <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
-      <a href="<?= url('/') ?>" class="flex items-center gap-2.5">
-        <img src="<?= img('logo.png') ?>" alt="RKDF University" class="h-9 w-auto object-contain" />
-        <div>
-          <div class="font-serif text-lg font-bold text-slate-900 leading-none">RKDF University</div>
-          <div class="text-[9px] tracking-wider text-slate-500 uppercase mt-0.5">Ranchi, Jharkhand</div>
+    <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-white">
+      <a href="<?= url('/') ?>" class="brand-logo-wrap">
+        <img src="<?= img('logo.png') ?>" alt="RKDF University" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <div class="brand-title">RKDF University</div>
+          <div class="brand-subtitle-mobile">Ranchi, Jharkhand</div>
         </div>
       </a>
       <button
         type="button"
         id="mobile-drawer-close"
         aria-label="Close Navigation Menu"
-        class="p-2 rounded-full text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition"
+        class="p-2 rounded-full text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition"
       >
         <?= lucide_icon('x', 'w-5 h-5') ?>
       </button>
-    </div>
-
-    <!-- Quick CTA Header in Drawer -->
-    <div class="p-4 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-center gap-3">
-      <a href="<?= url('admissions/') ?>" class="flex-1 text-center py-2.5 px-4 rounded-xl bg-gold text-slate-950 text-xs font-bold uppercase tracking-wider hover:opacity-90 transition shadow-sm">
-        Apply Online 2026–27
-      </a>
-      <a href="tel:<?= preg_replace('/[^0-9+]/', '', SITE_PHONE) ?>" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition flex items-center justify-center">
-        <?= lucide_icon('phone', 'w-4 h-4 text-gold') ?>
-      </a>
     </div>
 
     <!-- Drawer Navigation Links (Accordion) -->
@@ -804,8 +795,18 @@ $alumni_menu_items = [
         </a>
       </div>
 
+          <!-- Quick CTA Section (Shifted to End of Menu) -->
+      <div class="pt-4 pb-2 border-t border-slate-100">
+        <div class="flex items-center gap-3">
+          <a href="<?= url('admissions/') ?>" class="flex-1 text-center py-2.5 px-5 rounded-full bg-gold text-white text-xs font-bold uppercase tracking-wider hover:opacity-90 transition shadow-sm">
+            Apply Online 2026–27
+          </a>
+          <a href="tel:<?= preg_replace('/[^0-9+]/', '', SITE_PHONE) ?>" class="p-2.5 rounded-full text-gold hover:text-amber-600 hover:bg-amber-50 transition flex items-center justify-center shrink-0" aria-label="Call Admissions">
+            <?= lucide_icon('phone', 'w-5 h-5') ?>
+          </a>
+        </div>
+      </div>
     </div>
-
     <!-- Drawer Footer Links -->
     <div class="p-4 border-t border-slate-200 bg-slate-50 text-xs text-slate-600 space-y-2">
       <div class="flex items-center justify-between text-slate-500">

@@ -48,6 +48,79 @@ $body_class     = $body_class     ?? '';
     #mobile-drawer {
       overflow: hidden !important;
     }
+    header a img,
+    #mobile-drawer a img {
+      flex-shrink: 0 !important;
+      max-height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    /* Brand Logo & Lockup Spacing */
+    .brand-logo-wrap {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      flex-shrink: 0 !important;
+      text-decoration: none !important;
+    }
+    .brand-logo-img {
+      height: 36px !important;
+      width: auto !important;
+      flex-shrink: 0 !important;
+      object-fit: contain !important;
+    }
+    @media (min-width: 640px) {
+      .brand-logo-img {
+        height: 42px !important;
+      }
+    }
+    .brand-text-block {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      line-height: 1 !important;
+    }
+    .brand-title {
+      font-family: var(--font-serif, "Instrument Serif", Georgia, serif) !important;
+      font-size: 1.2rem !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      letter-spacing: -0.015em !important;
+      color: #0f172a !important;
+    }
+    @media (min-width: 640px) {
+      .brand-title {
+        font-size: 1.3rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .brand-logo-img {
+        height: 44px !important;
+      }
+      .brand-title {
+        font-size: 1.35rem !important;
+      }
+    }
+    .brand-subtitle-mobile {
+      font-family: var(--font-sans, "Inter", sans-serif) !important;
+      font-size: 9px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.24em !important;
+      text-transform: uppercase !important;
+      color: #334155 !important;
+      line-height: 1 !important;
+      margin-top: 4px !important;
+    }
+    @media (min-width: 1024px) {
+      .brand-subtitle-mobile {
+        display: none !important;
+      }
+    }
+    @media (max-width: 1023px) {
+      .brand-subtitle-mobile {
+        display: block !important;
+      }
+    }
 
         /* ==================== DESKTOP / LAPTOP / BIG SCREENS (1024px and above) ==================== */
     @media (min-width: 1024px) {
