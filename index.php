@@ -13,10 +13,14 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <style>
+  .homepage-content > section:not(:first-child):not(#site-admissions-cta) {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
   @media (max-width: 640px) {
-    .homepage-content > section:not(:first-child) {
-      padding-top: 2.75rem !important;
-      padding-bottom: 2.75rem !important;
+    .homepage-content > section:not(:first-child):not(#site-admissions-cta) {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
     }
   }
 </style>

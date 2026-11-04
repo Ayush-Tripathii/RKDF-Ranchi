@@ -47,8 +47,18 @@ require_once dirname(__DIR__) . '/includes/header.php';
   </div>
 </section>
 
+<style>
+  .news-page-content > section:first-child { padding-top: 2.5rem !important; }
+  .news-page-content > section:nth-child(2) { padding-bottom: 3rem !important; }
+@media (max-width: 640px) {
+  .news-page-content > section:first-child { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .news-page-content > section:nth-child(2) { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+}
+</style>
+<div class="news-page-content">
 <?php require_once dirname(__DIR__) . '/sections/news.php'; ?>
 <?php require_once dirname(__DIR__) . '/sections/events.php'; ?>
+</div>
 <?php require_once dirname(__DIR__) . '/sections/cta.php'; ?>
 
 <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>

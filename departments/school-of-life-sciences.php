@@ -229,6 +229,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
 <style>
+  section.life-sciences-main { padding-bottom: 3rem !important; }
+  .life-sciences-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
   @media (max-width: 640px) {
     .life-sciences-spotlight-intro {
       display: flex !important;

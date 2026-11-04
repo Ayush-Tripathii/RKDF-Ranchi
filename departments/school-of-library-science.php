@@ -201,8 +201,18 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/schools_nav_tabs.php'; ?>
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
+<style>
+  section.library-science-main { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .library-science-main > div { display: flex; flex-direction: column; gap: 2.5rem; }
+  .library-science-main > div > .section-block { margin-top: 0 !important; margin-bottom: 0 !important; }
+  .library-science-main .rkdf-section-header { margin-bottom: 1.5rem !important; }
+  @media (max-width: 640px) {
+    section.library-science-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    .library-science-main > div { gap: 2rem; }
+  }
+</style>
 <section class="py-20 bg-surface library-science-main">
-  <div class="mx-auto max-w-7xl px-6 space-y-16">
+  <div class="mx-auto max-w-7xl px-6">
 
     <!-- Executive Faculty Vision Spotlight -->
     <div class="gov-spotlight-card section-block">

@@ -58,6 +58,9 @@ $accreditation_cards = [
 ?>
 
 <style>
+  @media (max-width: 640px) {
+    section.accreditations-main { padding-top: 2rem !important; }
+  }
   .accreditations-main { padding-bottom: 3rem !important; }
   .accreditations-grid-section { margin-bottom: 0 !important; }
 </style>

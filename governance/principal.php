@@ -54,7 +54,29 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/leadership_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+@media (max-width: 640px) {
+  .principal-contact-cards { grid-template-columns: minmax(0, 1fr) !important; }
+  .principal-contact-cards > div { min-width: 0; max-width: 100%; box-sizing: border-box; padding: 1rem !important; gap: .75rem !important; }
+  .principal-contact-cards > div > .min-w-0 { flex: 1; min-width: 0; }
+  .principal-contact-cards .truncate { white-space: normal !important; overflow: visible !important; overflow-wrap: anywhere; }
+  .principal-contact-cards a { overflow-wrap: anywhere; }
+  .principal-contact-cards p { line-height: 1.5; }
+  .principal-main .leadership-layout-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .principal-main .leadership-layout-grid > * { min-width: 0; max-width: 100%; }
+  .principal-main .leadership-sidebar > div,
+  .principal-main .quote-philosophy-banner { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; overflow-wrap: anywhere; }
+  .principal-main .leadership-sidebar > div:not(.leadership-profile-card),
+  .principal-main .quote-philosophy-banner { padding: 1.5rem 1.25rem !important; }
+  .principal-main .leadership-stat-text { min-width: 0; overflow-wrap: anywhere; }
+  .principal-main .quote-philosophy-banner { padding: 1.75rem 1.5rem !important; display: flex; flex-direction: column; gap: 1rem; }
+  .principal-main .quote-philosophy-banner > div { margin: 0 !important; }
+  .principal-main .quote-philosophy-banner > div:first-child { justify-content: center; align-items: center; line-height: 1.5; letter-spacing: .06em; }
+  .principal-main .quote-philosophy-banner > div:last-child { font-size: .65rem; line-height: 1.6; }
+  .principal-main .quote-philosophy-banner blockquote { font-size: 1.4rem !important; line-height: 1.5 !important; text-wrap: balance; }
+}
+</style>
+<section class="py-20 bg-surface principal-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <div class="leadership-layout-grid">
@@ -157,7 +179,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
           </div>
 
           <!-- Direct Contact Cards -->
-          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+          <div class="principal-contact-cards grid sm:grid-cols-2 gap-4 pt-2">
             <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md hover:border-gold/40 transition duration-300 flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-gold border border-gold/25 flex items-center justify-center shrink-0 shadow-xs">
                 <?= lucide_icon('phone-call', 'w-5 h-5 text-gold') ?>

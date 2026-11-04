@@ -5,6 +5,15 @@ require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <style>
+  .alumni-hero-content { max-width: 960px; margin: 0 auto; text-align: center; }
+  .alumni-hero-content nav { justify-content: center; flex-wrap: wrap; }
+  .alumni-hero-content h1 { text-wrap: balance; }
+  .alumni-hero-actions { justify-content: center; }
+  @media (max-width: 640px) {
+    .alumni-hero-actions { flex-direction: column; align-items: stretch; }
+    .alumni-hero-actions a { justify-content: center; padding: .85rem 1rem; }
+    .alumni-hero-actions svg { flex-shrink: 0; }
+  }
   .alumni-spotlight-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -20,8 +29,12 @@ require_once __DIR__ . '/../includes/header.php';
     background: linear-gradient(135deg, #071322 0%, #132a4a 100%);
     color: #ffffff;
   }
-  .alumni-privileges-card h3 { color: #f6b344; }
-  .alumni-privileges-card ul { color: rgba(255, 255, 255, 0.82); }
+  .alumni-privileges-card { padding: 1.75rem !important; min-width: 0; }
+  .alumni-privileges-card h3 { color: #f6b344; gap: .75rem !important; margin-bottom: 1rem !important; line-height: 1.4; }
+  .alumni-privileges-card ul { color: rgba(255, 255, 255, 0.82); display: flex; flex-direction: column; gap: .85rem; }
+  .alumni-privileges-card ul > li { margin: 0 !important; align-items: flex-start !important; gap: .65rem !important; line-height: 1.6; }
+  .alumni-privileges-card svg { flex-shrink: 0; }
+  .alumni-privileges-card li svg { margin-top: .2rem; }
   .alumni-register-content h3 { color: #0f1b2d; }
   .alumni-register-content p { color: #475569; }
   .alumni-register-tag {
@@ -45,7 +58,7 @@ require_once __DIR__ . '/../includes/header.php';
 <!-- Hero Section -->
 <section class="inner-page-hero">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-3xl">
+        <div class="alumni-hero-content">
             <!-- Breadcrumbs -->
             <nav class="flex items-center gap-2 text-xs md:text-sm text-gray-300 mb-4" aria-label="Breadcrumb">
                 <a href="<?= url('/') ?>" class="hover:text-white transition-colors flex items-center gap-1">
@@ -70,7 +83,7 @@ require_once __DIR__ . '/../includes/header.php';
                 Fostering lifelong bonds between the university and our distinguished alumni thriving across global corporations, public administration, entrepreneurship, and academia.
             </p>
 
-            <div class="flex flex-wrap gap-4 pt-2">
+            <div class="alumni-hero-actions flex flex-wrap gap-4 pt-2">
                 <a href="<?= url('documents/RKDF-Alumni-Form-2025.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold text-brand hover:bg-white text-sm font-semibold transition-all shadow-sm">
                     <?php echo lucide_icon('download', ['class' => 'w-4 h-4']); ?>
                     <span>Download Alumni Registration Form</span>

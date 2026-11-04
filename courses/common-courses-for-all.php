@@ -88,6 +88,14 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <style>
+  section.common-courses-main { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .common-courses-main > div { display: flex; flex-direction: column; gap: 2.5rem; }
+  .common-courses-main > div > .section-block { margin-top: 0 !important; margin-bottom: 0 !important; }
+  .common-courses-main .rkdf-section-header { margin-bottom: 1.5rem !important; }
+  @media (max-width: 640px) {
+    section.common-courses-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    .common-courses-main > div { gap: 2rem; }
+  }
   @media (max-width: 1023px) {
     .common-courses-breadcrumb {
       display: grid !important;
@@ -175,7 +183,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 <!-- ==================== MAIN CONTENT ==================== -->
 <section class="py-20 bg-surface common-courses-main">
-  <div class="mx-auto max-w-7xl px-6 space-y-16">
+  <div class="mx-auto max-w-7xl px-6">
 
     <!-- Framework Spotlight Card -->
     <div class="gov-spotlight-card section-block">

@@ -163,7 +163,14 @@ require_once dirname(__DIR__) . '/includes/header.php';
 </section>
 
 <!-- ==================== MAIN CONTENT ==================== -->
-<section class="py-20 bg-surface">
+<style>
+  section.placements-main { padding-bottom: 3rem !important; }
+  .placements-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+  @media (max-width: 640px) {
+    section.placements-main { padding-bottom: 2rem !important; }
+  }
+</style>
+<section class="py-20 bg-surface placements-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 
     <!-- Key Metrics Banner -->

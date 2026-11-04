@@ -30,6 +30,13 @@ $about_menu_categories = [
             ['label' => "Chancellor's Profile",            'href' => 'governance/chancellor.php'],
             ['label' => 'Managing Director',               'href' => 'governance/managing-director.php'],
             ['label' => 'Vice Chancellor Desk',            'href' => 'governance/vice-chancellor.php'],
+            ['label' => 'Pro Vice Chancellor',             'href' => 'governance/pro-vice-chancellor.php'],
+            ['label' => 'Registrar Message',               'href' => 'governance/registrar.php'],
+            ['label' => 'Controller of Examination',       'href' => 'governance/controller-of-examination.php'],
+            ['label' => 'Chief Vigilance Officer',          'href' => 'governance/chief-vigilance-officer.php'],
+            ['label' => 'Finance Officer',                 'href' => 'governance/finance-officer.php'],
+            ['label' => 'Ombudsperson',                    'href' => 'governance/ombudsperson.php'],
+            ['label' => 'Principal',                       'href' => 'governance/principal.php'],
             ['label' => 'Academic Deans Directory',        'href' => 'deans/'],
             ['label' => 'Officers of the University',      'href' => 'governance/officers.php'],
         ]
@@ -81,9 +88,8 @@ $about_menu_categories = [
         'href'  => 'about/government-recognition.php',
         'items' => [
             ['label' => 'Government Recognition & Act',    'href' => 'about/government-recognition.php'],
+            ['label' => 'Jharkhand Government Act 2019',   'href' => 'documents/RKDF-Jharkhand-Gazette.pdf'],
             ['label' => 'Statutory Approvals (PCI / BCI)',  'href' => 'about/accreditations.php'],
-            ['label' => 'Annual Audit Reports (2019–25)',  'href' => 'about/annual-reports.php'],
-            ['label' => 'Right to Information (RTI)',      'href' => 'about/rti.php'],
         ]
     ],
     [
@@ -92,10 +98,10 @@ $about_menu_categories = [
         'desc'  => 'Statutory compliances & disclosures',
         'href'  => 'about/annual-reports.php',
         'items' => [
-            ['label' => 'Annual Audit Reports',            'href' => 'about/annual-reports.php'],
-            ['label' => 'Right to Information (RTI)',      'href' => 'about/rti.php'],
-            ['label' => 'Academic Bank of Credits (ABC)',  'href' => 'about/digilocker.php'],
-            ['label' => 'Equal Opportunity Policy',        'href' => 'committees/equal-opportunity-committee.php'],
+            ['label' => 'Public Self Disclosure',          'href' => 'documents/Public-Self-Disclosure.pdf'],
+            ['label' => 'UGC Proforma Appendix',           'href' => 'documents/UGC-Appendix.pdf'],
+            ['label' => 'UGC 2f Proforma',                 'href' => 'documents/UGC-2F-Proforma.pdf'],
+            ['label' => 'UGC Proforma Annexure',           'href' => 'documents/UGC-Annexure.pdf'],
         ]
     ],
 ];
@@ -564,6 +570,23 @@ $alumni_menu_items = [
 </header>
 
 <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+<style>
+  #mobile-drawer-panel details > div {
+    margin-left: .75rem !important;
+    padding-left: 1rem !important;
+    padding-right: .25rem;
+    box-sizing: border-box;
+  }
+  #mobile-drawer-panel details details > div { margin-left: .25rem !important; padding-left: .75rem !important; }
+  #mobile-drawer-panel details summary > span:first-child { min-width: 0; }
+  #mobile-drawer-panel details a { overflow-wrap: anywhere; }
+  #mobile-drawer-panel summary > span:first-child.flex,
+  #mobile-drawer-panel a.flex:has(> svg):has(> span) {
+    gap: .65rem !important;
+  }
+  #mobile-drawer-panel summary > span:first-child > svg,
+  #mobile-drawer-panel a.flex > svg { flex-shrink: 0; }
+</style>
 <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none overflow-hidden lg:hidden" aria-hidden="true">
   <!-- Overlay Backdrop -->
   <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>

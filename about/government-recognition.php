@@ -61,6 +61,17 @@ $statutory_approvals = [
 ?>
 
 <style>
+  section.government-recognition-main { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .government-recognition-main > div { display: flex; flex-direction: column; gap: 2.5rem; }
+  .government-recognition-main > div > .section-block { margin-top: 0 !important; margin-bottom: 0 !important; }
+  @media (max-width: 640px) {
+    section.government-recognition-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    .government-recognition-main > div { gap: 2rem; }
+  }
+  @media (max-width: 640px) {
+    .recognition-breadcrumb { display: grid !important; grid-template-columns: auto auto auto auto; justify-content: center; gap: .4rem !important; padding: .65rem .75rem !important; border-radius: 16px !important; max-width: 100%; box-sizing: border-box; }
+    .recognition-breadcrumb > span:last-child { grid-column: 1 / -1; text-align: center; line-height: 1.4; }
+  }
   .government-recognition-main { padding-bottom: 3rem !important; }
   .government-approvals-section { margin-bottom: 0 !important; }
 
@@ -132,7 +143,7 @@ $statutory_approvals = [
 
   <div class="relative mx-auto max-w-5xl px-6 text-center">
     <!-- Breadcrumb Badge -->
-    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
+    <div class="recognition-breadcrumb inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs tracking-wider uppercase text-gold font-medium mb-6">
       <a href="<?= url('/') ?>" class="hover:text-white transition">Home</a>
       <?= lucide_icon('chevron-right', 'w-3 h-3') ?>
       <a href="<?= url('about/') ?>" class="hover:text-white transition">About</a>
@@ -171,7 +182,7 @@ $statutory_approvals = [
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
 <section class="government-recognition-main py-20 bg-surface">
-  <div class="mx-auto max-w-7xl px-6 space-y-16">
+  <div class="mx-auto max-w-7xl px-6">
 
     <!-- Statutory Authority Spotlight Banner -->
     <div class="gov-spotlight-card mb-16 section-block">

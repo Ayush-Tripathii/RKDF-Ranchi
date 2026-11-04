@@ -108,6 +108,16 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <style>
+  .journalism-directorate { display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem !important; min-width: 0; }
+  .journalism-directorate > div { margin: 0 !important; }
+  .journalism-directorate p { margin-top: .65rem !important; line-height: 1.65 !important; }
+  .journalism-directorate > div:last-child { padding-top: 1rem !important; }
+  .journalism-directorate > div:last-child > div > div:last-child { margin-top: .4rem; line-height: 1.5; }
+  section.journalism-school-main { padding-bottom: 3rem !important; }
+  .journalism-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+  @media (max-width: 640px) {
+    section.journalism-school-main { padding-bottom: 2rem !important; }
+  }
   @media (max-width: 1023px) {
     .journalism-breadcrumb {
       display: grid !important;
@@ -272,7 +282,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </div>
 
         <!-- Metric Seal Box -->
-        <div class="gazette-seal-inner space-y-4">
+        <div class="gazette-seal-inner journalism-directorate space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[11px] uppercase tracking-widest text-gold font-bold flex items-center gap-1.5">
               <?= lucide_icon('landmark', 'w-3.5 h-3.5 text-gold') ?> Media Directorate

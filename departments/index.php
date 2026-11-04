@@ -172,6 +172,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <style>
+  main.departments-showcase { padding-bottom: 3rem !important; }
+  section.departments-endorsements { padding-top: 3rem !important; }
   @media (max-width: 640px) {
     main.departments-showcase { padding-top: 2rem !important; padding-bottom: 2rem !important; }
     section.departments-endorsements { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }

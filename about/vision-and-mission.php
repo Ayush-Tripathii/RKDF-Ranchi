@@ -34,12 +34,19 @@ require_once dirname(__DIR__) . '/includes/header.php';
       padding: 1.25rem !important;
     }
     .vision-mission-main .vm-item {
-      padding: 0.85rem !important;
-      gap: 0.65rem !important;
+      display: grid !important;
+      grid-template-columns: 24px minmax(0, 1fr);
+      padding: 1rem !important;
+      gap: 0.75rem !important;
+      transform: none !important;
     }
+    .vision-mission-main .vm-badge { width: 24px !important; min-width: 24px !important; height: 24px !important; margin-top: 0 !important; }
     .vision-mission-main .vm-item > :last-child {
       min-width: 0 !important;
-      line-height: 1.65 !important;
+      margin: 0 !important;
+      font-size: 0.875rem !important;
+      line-height: 1.6 !important;
+      overflow-wrap: break-word;
     }
     .vision-mission-main .quote-philosophy-banner {
       padding: 1.75rem 1.25rem !important;

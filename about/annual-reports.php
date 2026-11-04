@@ -30,6 +30,13 @@ $annual_reports = [
 ?>
 
 <style>
+  section.annual-reports-main { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .annual-reports-main > div { display: flex; flex-direction: column; gap: 2.5rem; }
+  .annual-reports-main > div > .section-block { margin-top: 0 !important; margin-bottom: 0 !important; }
+  @media (max-width: 640px) {
+    section.annual-reports-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    .annual-reports-main > div { gap: 2rem; }
+  }
   .annual-reports-main { padding-bottom: 3rem !important; }
   .audit-reports-section { margin-bottom: 0 !important; }
 </style>
@@ -77,7 +84,7 @@ $annual_reports = [
 
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
 <section class="annual-reports-main py-20 bg-surface">
-  <div class="mx-auto max-w-7xl px-6 space-y-16">
+  <div class="mx-auto max-w-7xl px-6">
 
     <!-- Statutory Authority Spotlight Banner -->
     <div class="gov-spotlight-card mb-16 section-block">

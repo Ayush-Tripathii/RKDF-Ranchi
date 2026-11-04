@@ -84,8 +84,17 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/media_nav_tabs.php'; ?>
 
 <!-- ==================== MAJOR CONFERENCE & SYMPOSIA BROCHURES ==================== -->
-<section class="py-16 bg-surface">
-  <div class="mx-auto max-w-7xl px-6 space-y-8">
+<style>
+  .events-main .group:hover .event-document-icon svg { color: #ffffff !important; stroke: currentColor !important; }
+  section.events-main { padding-top: 1.5rem !important; padding-bottom: 2rem !important; }
+  section.events-main + section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .events-main .rkdf-section-header { margin-bottom: 1.5rem !important; }
+  @media (max-width: 640px) {
+    section.events-main { padding-top: 1.5rem !important; }
+  }
+</style>
+<section class="py-16 bg-surface events-main">
+  <div class="mx-auto max-w-7xl px-6">
     <div class="rkdf-section-header">
       <div>
         <span class="rkdf-section-tag">
@@ -110,7 +119,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                 <?= lucide_icon('layers', 'w-3 h-3 text-gold shrink-0') ?>
                 <span class="truncate"><?= e($doc['badge']) ?></span>
               </span>
-              <div class="w-9 h-9 rounded-xl bg-brand/5 text-brand flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-all duration-300 shadow-xs group-hover:scale-105">
+              <div class="event-document-icon w-9 h-9 rounded-xl bg-brand/5 text-brand flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-all duration-300 shadow-xs group-hover:scale-105">
                 <?= lucide_icon($doc['icon'], 'w-4 h-4') ?>
               </div>
             </div>

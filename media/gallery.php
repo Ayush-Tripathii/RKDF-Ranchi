@@ -110,7 +110,10 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/media_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN GALLERY SECTION ==================== -->
-<section class="py-20 bg-surface">
+<style>
+  section.gallery-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+</style>
+<section class="py-20 bg-surface gallery-main">
   <div class="mx-auto max-w-7xl px-6 space-y-12">
 
     <!-- Filter Buttons (Pure CSS / JS) -->

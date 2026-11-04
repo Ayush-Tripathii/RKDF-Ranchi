@@ -56,6 +56,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <!-- ==================== MAIN CONTENT SECTION ==================== -->
 <style>
 @media (max-width: 640px) {
+  .ombudsperson-main .ombudsperson-introduction p { font-size: .875rem !important; line-height: 1.65 !important; margin: 0 !important; overflow-wrap: break-word; }
   section.ombudsperson-main { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
   section.ombudsperson-main + section { padding-top: 2rem !important; padding-bottom: 1rem !important; }
   section.ombudsperson-main ~ footer > div:first-child { padding-top: 1rem !important; }
@@ -157,7 +158,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
             </span>
           </div>
 
-          <div class="prose-rkdf space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+          <div class="ombudsperson-introduction prose-rkdf space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed">
             <p>
               In accordance with the University Grants Commission (Redressal of Grievances of Students) Regulations, RKDF University Ranchi has appointed <strong>Prof. (Dr.) Taposh Ghoshal</strong> as the Ombudsperson for hearing and deciding appeals against the decisions of the Students Grievance Redressal Committee (SGRC).
             </p>

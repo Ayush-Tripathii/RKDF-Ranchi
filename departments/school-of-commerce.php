@@ -153,6 +153,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 <!-- ==================== FACULTY SPOTLIGHT OVERVIEW ==================== -->
 <style>
+  section.commerce-school-main { padding-bottom: 3rem !important; }
+  .commerce-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
   @media (max-width: 640px) {
     section.commerce-school-main { padding-top: 2rem !important; padding-bottom: 2rem !important; }
     .commerce-school-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }

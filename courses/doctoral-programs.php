@@ -167,6 +167,13 @@ require_once dirname(__DIR__) . '/includes/header.php';
 <?php require_once dirname(__DIR__) . '/includes/courses_nav_tabs.php'; ?>
 
 <!-- ==================== MAIN PH.D. CONTENT ==================== -->
+<style>
+  section.doctoral-programs-main { padding-bottom: 3rem !important; }
+  .doctoral-programs-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
+  @media (max-width: 640px) {
+    section.doctoral-programs-main { padding-bottom: 2rem !important; }
+  }
+</style>
 <section class="py-20 bg-surface doctoral-programs-main">
   <div class="mx-auto max-w-7xl px-6 space-y-16">
 

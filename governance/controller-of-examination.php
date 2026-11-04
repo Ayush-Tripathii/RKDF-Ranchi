@@ -73,6 +73,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
   }
 }
 @media (max-width: 640px) {
+  .examination-message-header { flex-direction: column !important; align-items: flex-start !important; gap: .85rem !important; padding-bottom: 1.25rem !important; }
+  .examination-message-header > span { display: inline-flex; align-items: center; padding: .4rem .75rem !important; line-height: 1.4; max-width: 100%; box-sizing: border-box; }
   section.controller-examination-main { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
   section.controller-examination-main + section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
   section.controller-examination-main + section + footer > div:first-child { padding-top: 2rem !important; }
@@ -160,7 +162,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
         <!-- Main Verbatim Message Document -->
         <div class="leadership-content-card space-y-6">
-          <div class="border-b border-border pb-6 flex items-center justify-between flex-wrap gap-4">
+          <div class="examination-message-header border-b border-border pb-6 flex items-center justify-between flex-wrap gap-4">
             <div>
               <div class="text-xs font-bold uppercase tracking-wider text-gold">Official Communiqué</div>
               <h3 class="font-serif text-3xl sm:text-4xl text-foreground font-normal mt-1">

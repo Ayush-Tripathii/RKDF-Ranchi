@@ -274,6 +274,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
 <style>
+  section.basic-sciences-main { padding-bottom: 3rem !important; }
+  .basic-sciences-main > div > .rkdf-admission-banner:last-child { margin-bottom: 0 !important; }
   @media (max-width: 640px) {
     .basic-sciences-main .rkdf-prog-badge {
       width: fit-content !important;
