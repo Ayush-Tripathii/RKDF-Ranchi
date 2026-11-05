@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /scratch/
+Disallow: /config/
+
+Sitemap: https://rkdfuniversityranchi.ac.in/sitemap.xml
+

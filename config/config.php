@@ -7,7 +7,6 @@
 // Site Info
 define('SITE_NAME',            'RKDF University');
 define('SITE_TAGLINE',         'Education Glorifies Nation');
-define('SITE_URL',             'http://localhost/RKDF Ranchi');
 define('SITE_YEAR',            '2026');
 define('SITE_EMAIL',           'info@rkdfuniversity.org');
 define('SITE_ADMISSION_EMAIL', 'admission@rkdfuniversity.org');
@@ -47,6 +46,16 @@ if ($site_root !== false && $document_root !== false) {
 
 define('BASE_PATH', $base_path);
 define('ASSETS_PATH', BASE_PATH);
+
+// Auto-detect protocol & host for seamless local and live server deployment
+if (!defined('SITE_URL')) {
+    $is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+                (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443) ||
+                (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+    $protocol = $is_https ? 'https://' : 'http://';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    define('SITE_URL', rtrim($protocol . $host . $base_path, '/'));
+}
 $base_url = rtrim(SITE_URL, '/') . '/';
 
 // Navigation links — main nav
